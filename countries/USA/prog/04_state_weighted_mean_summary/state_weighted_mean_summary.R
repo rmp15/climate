@@ -4,6 +4,8 @@ library(ggplot2)
 library(foreign)
 library(plyr)
 
+ifelse(!dir.exists("../../output/state_weighted_mean_summary"), dir.create("../../output/state_weighted_mean_summary"), FALSE)
+
 # load csv with ERA-Interim grid values
 grid <- read.csv('../../data/lon_lat/global_lon_lat.csv')
 grid <- grid[,c(2:3)]
@@ -80,35 +82,4 @@ state.weighting.filter <- subset(state.weighting.filter,month %in% month.selecte
 dat.temp <-merge(dat.wm,state.weighting.filter,by=c('state.fips','county.fips'))
 temp.state <- ddply(dat.temp,.(state.fips,sex,age),summarize,temp.adj=sum(pop.weighted*temp.wm))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# merge dummy temperature data with weighted area to calculate values
-#weighted.area.temp <- merge(weighted.area,grid.temp,by=c('point.id','poly.id'),all.x=TRUE)
-
-# create weighted mean for each day
-#weighted.mean.total <- data.frame(day=numeric(0),weighted.temp=numeric(0))
-#for(i in c(1:days.in.month)){
-#    dummy <- sum(weighted.area.temp$weighted.area*weighted.area.temp[,i+5])
-#    weighted.mean.total <- rbind(weighted.mean.total,c(i,dummy))
-#}
-#names(weighted.mean.total) <- c('day','weighted.temp')
-#write.csv(weighted.mean.total,'../../output/grid_county_intersection/weighted_mean_total_unproj.csv',row.names=FALSE)
-
-# load weighted grid to county lookup to created weighted mean of climate variables
-# from gridded temperature data
+saveRDS(temp.state,'../../output/state_weighted_mean_summary/state_weighted_summary.rds')
