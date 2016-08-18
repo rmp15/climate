@@ -61,9 +61,10 @@ for(i in unique(wm.lookup$state.county.fips)){
     dat.days <- as.data.frame(colSums(dat.days))
     dat.days <- cbind(dat.days, as.data.frame(matrix(unlist(strsplit(rownames(dat.days),'-')), ncol=3, byrow=TRUE)))
     names(dat.days) <- c('temperature','year','month','day')
-
+    summary <- ddply(dat.days,.(year,month),summarize,temp.weighted=mean(temperature))
+    summary$state.county.fips <- i
+    dat.wm <- rbind(dat.wm,summary)
 }
-names(dat.wm) <- c('state.fips','county.fips','state.county.fips','temp.wm')
 
 # load weightings by county for state summary based on population
 state.weighting <- readRDS('../../output/population_weighted_mean/state_population_weightings.rds')
