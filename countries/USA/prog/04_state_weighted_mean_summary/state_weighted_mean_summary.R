@@ -29,10 +29,17 @@ lat.lim <- c(min(lat),max(lat))
 grid.rows <- length(unique(grid$lon))
 grid.cols <- length(unique(grid$lat))
 
+# FINISH REPLACING WITH REAL DATA INSTEAD OF MADE UP ONE BELOW
+# MIGHT HAVE TO FIX ORIINAL LON LAT COORDS BECAUSE THEY ARE ARRAYS
+
+# load real data
+year <- as.numeric(args[1])
+file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
+grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
+
 # create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
 set.seed(12232)
-year <- as.numeric(args[1])
 dates <- seq(as.Date(paste0(year,"/1/1")), as.Date(paste0(year,"/12/31")), "days")
 dates <- as.character(dates)
 
