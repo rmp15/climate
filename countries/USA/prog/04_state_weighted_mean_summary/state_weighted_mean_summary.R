@@ -3,6 +3,7 @@ rm(list=ls())
 library(ggplot2)
 library(foreign)
 library(plyr)
+library(lubridate)
 
 ifelse(!dir.exists("../../output/state_weighted_mean_summary"), dir.create("../../output/state_weighted_mean_summary"), FALSE)
 
@@ -25,14 +26,16 @@ lat.lim <- c(min(lat),max(lat))
 grid.rows <- length(unique(grid$lon))
 grid.cols <- length(unique(grid$lat))
 
-# create dummy temperature data for testing the weighted mean for a month
+# create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
 set.seed(12232)
-days.in.month <- 30
-for (i in c(1:days.in.month)) {
-    dummy <- rnorm(dim(grid.temp)[1],300,1)
+dates <- seq(as.Date("2005/1/1"), as.Date("2005/12/31"), "days")
+dates <- as.character(dates)
+
+for (i in dates) {
+    dummy <- rnorm(dim(grid.temp)[1],300,10)
     grid.temp <- cbind(grid.temp,dummy)
-    names(grid.temp)[i+2] <- paste0('day',i)
+    names(grid.temp)[match(i,dates)+2] <- i
 }
 
 # load lookup tables for polygons grid points and lon lat
