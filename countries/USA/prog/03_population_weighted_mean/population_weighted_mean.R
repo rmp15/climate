@@ -44,6 +44,7 @@ pop.county.wm.month$month <- rep(1:12,each=dim(pop.county.wm)[1])
 names(pop.county.wm.month)[4]<-'state.fips'
 names(pop.county.wm.month)[5]<-'county.fips'
 names(pop.county.wm.month)[6]<-'pop.county'
+pop.county.wm.month$state.county.fips <- paste0(pop.county.wm.month$state.fips,pop.county.wm.month$county.fips)
 
 saveRDS(pop.county.wm.month,'../../output/population_weighted_mean/state_population_weightings.rds')
 

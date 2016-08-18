@@ -5,6 +5,9 @@ library(foreign)
 library(plyr)
 library(lubridate)
 
+# arguments from Rscript
+args <- commandArgs(trailingOnly=TRUE)
+
 ifelse(!dir.exists("../../output/state_weighted_mean_summary"), dir.create("../../output/state_weighted_mean_summary"), FALSE)
 
 # load csv with ERA-Interim grid values
@@ -29,7 +32,7 @@ grid.cols <- length(unique(grid$lat))
 # create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
 set.seed(12232)
-year <- 2005
+year <- as.numeric(args[1])
 dates <- seq(as.Date(paste0(year,"/1/1")), as.Date(paste0(year,"/12/31")), "days")
 dates <- as.character(dates)
 
@@ -49,8 +52,7 @@ grid.temp <- na.omit(grid.temp)
 # load weighted mean lookup table
 wm.lookup <- readRDS('../../output/grid_county_intersection/weighted_area_unproj_national.rds')
 
-# for each county, summarise by day and then by month (for single month)
-# fix this
+# for each county, summarise by day and then by month (for single year)
 dat.wm <- data.frame()
 for(i in unique(wm.lookup$state.county.fips)){
     fips.match <- subset(wm.lookup,state.county.fips==i)
@@ -65,25 +67,17 @@ for(i in unique(wm.lookup$state.county.fips)){
     summary$state.county.fips <- i
     dat.wm <- rbind(dat.wm,summary)
 }
+dat.wm$year <- as.numeric(as.character(dat.wm$year))
+dat.wm$month <- as.numeric(as.character(dat.wm$month))
 
 # load weightings by county for state summary based on population
 state.weighting <- readRDS('../../output/population_weighted_mean/state_population_weightings.rds')
 
-# filter for a few years and month if desired
-# change to make more general
-years.selected <- c(2005)
-state.weighting.filter <- subset(state.weighting,year %in% years.selected)
-month.selected <- 1
-state.weighting.filter <- subset(state.weighting.filter,month %in% month.selected)
+# filter for a year of interest
+year.selected <- year
+state.weighting.filter <- subset(state.weighting,year %in% year.selected)
 
-# filter age and sex
-# change to make more general
-#age.selected <- 75
-#sex.selected <- 1
-#state.weighting.filter <- subset(state.weighting.filter,age %in% age.selected)
-#state.weighting.filter <- subset(state.weighting.filter,sex %in% sex.selected)
+dat.temp <-merge(dat.wm,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,temp.adj=sum(pop.weighted*temp.weighted))
 
-dat.temp <-merge(dat.wm,state.weighting.filter,by=c('state.fips','county.fips'))
-temp.state <- ddply(dat.temp,.(state.fips,sex,age),summarize,temp.adj=sum(pop.weighted*temp.wm))
-
-saveRDS(temp.state,'../../output/state_weighted_mean_summary/state_weighted_summary.rds')
+saveRDS(temp.state,paste0('../../output/state_weighted_mean_summary/state_weighted_summary_',year.selected,'.rds'))
