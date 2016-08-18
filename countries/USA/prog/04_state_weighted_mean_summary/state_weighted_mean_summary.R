@@ -29,7 +29,8 @@ grid.cols <- length(unique(grid$lat))
 # create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
 set.seed(12232)
-dates <- seq(as.Date("2005/1/1"), as.Date("2005/12/31"), "days")
+year <- 2005
+dates <- seq(as.Date(paste0(year,"/1/1")), as.Date(paste0(year,"/12/31")), "days")
 dates <- as.character(dates)
 
 for (i in dates) {
@@ -54,14 +55,13 @@ dat.wm <- data.frame()
 for(i in unique(wm.lookup$state.county.fips)){
     fips.match <- subset(wm.lookup,state.county.fips==i)
     fips.match <- merge(fips.match,grid.temp,by=c('point.id','poly.id'),all.x=1)
-    dat.days <- fips.match[,grepl('day',names(fips.match))]
-    running.total <- 0
-    for(j in c(1:days.in.month)){
-        weighted.mean <- sum(fips.match$weighted.area*dat.days[,j])
-        running.total <- running.total + weighted.mean
-    }
-    month.average <- running.total / days.in.month
-    dat.wm <- rbind(dat.wm,data.frame(substr(i,1,2),substr(i,3,5),as.character(i),month.average))
+    weightings <- fips.match[ , grepl('weighted.area', names(fips.match) ) ]
+    dat.days <- fips.match[ , grepl( year , names(fips.match) ) ]
+    dat.days <- dat.days * weightings
+    dat.days <- as.data.frame(colSums(dat.days))
+    dat.days <- cbind(dat.days, as.data.frame(matrix(unlist(strsplit(rownames(dat.days),'-')), ncol=3, byrow=TRUE)))
+    names(dat.days) <- c('temperature','year','month','day')
+
 }
 names(dat.wm) <- c('state.fips','county.fips','state.county.fips','temp.wm')
 

@@ -45,7 +45,6 @@ names(pop.county.wm.month)[4]<-'state.fips'
 names(pop.county.wm.month)[5]<-'county.fips'
 names(pop.county.wm.month)[6]<-'pop.county'
 
-#write.csv(pop.county.wm.month,'../../output/population_weighted_mean/state_population_weightings.csv',row.names=FALSE)
 saveRDS(pop.county.wm.month,'../../output/population_weighted_mean/state_population_weightings.rds')
 
 ####################################################################################################
