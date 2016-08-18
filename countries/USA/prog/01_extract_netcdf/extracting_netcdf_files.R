@@ -109,4 +109,4 @@ saveRDS(dat, file=file.name)
 ##USA.lonlat <- subset(lonlat, lon<296)
 ##USA.lonlat <- subset(lonlat, lat>23)
 ##USA.lonlat <- subset(lonlat, lat<50)
-#write.csv(USA.lonlat,'global_lon_lat.csv')
+#write.csv(USA.lonlat,'global_lon_lat.csv') sdfds
