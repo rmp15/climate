@@ -33,9 +33,9 @@ grid.cols <- length(unique(grid$lat))
 # MIGHT HAVE TO FIX ORIINAL LON LAT COORDS BECAUSE THEY ARE ARRAYS
 
 # load real data
-year <- as.numeric(args[1])
-file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
-grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
+#year <- as.numeric(args[1])
+#file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
+#grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
 
 # create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
