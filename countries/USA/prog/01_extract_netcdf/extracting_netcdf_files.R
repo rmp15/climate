@@ -11,8 +11,11 @@ library(lattice)
 library(ncdf4)
 library(lubridate)
 
+# arguments from Rscript
+args <- commandArgs(trailingOnly=TRUE)
+
 # year of interest
-year <- 1982
+year <- as.numeric(args[1])
 
 # names for files
 # monthly data
@@ -91,14 +94,18 @@ tmp.df02 <- data.frame(cbind(lonlat, tmp.mat)) ## important line
 names(tmp.df02) <- c('lon','lat',t.names)
 head(colnames(tmp.df02))
 
-# Fixing longitude values so range is -180 to 180, not 0 to 360
+# fixing longitude values so range is -180 to 180, not 0 to 360
 dat <- as.data.frame(tmp.df02)
 dat$lon <- dat$lon - 180
+
+# find average of temperatures which occur on the same days
+dat.average <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`+`,x) / length(x)))
+names(dat.average) <- c(unique(t.names),'lon','lat')
 
 # write to rds file with naming according to year
 ifelse(!dir.exists("../../output/extracting_netcdf_files"), dir.create("../../output/extracting_netcdf_files"), FALSE)
 file.name <- paste0('../../output/extracting_netcdf_files/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
-saveRDS(dat, file=file.name)
+saveRDS(dat.average, file=file.name)
 
 # extract csv file of latitude longitude for USA if required
 #USA.lonlat <- lonlat

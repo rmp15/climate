@@ -33,9 +33,9 @@ grid.cols <- length(unique(grid$lat))
 # MIGHT HAVE TO FIX ORIINAL LON LAT COORDS BECAUSE THEY ARE ARRAYS
 
 # load real data
-#year <- as.numeric(args[1])
-#file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
-#grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
+year <- as.numeric(args[1])
+file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
+grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
 
 # create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
@@ -86,5 +86,7 @@ state.weighting.filter <- subset(state.weighting,year %in% year.selected)
 
 dat.temp <-merge(dat.wm,state.weighting.filter,by=c('year','month','state.county.fips'))
 temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,temp.adj=sum(pop.weighted*temp.weighted))
+# TO FIX WHY STATE 06 IS NA?
+temp.state <- na.omit(temp.state)
 
 saveRDS(temp.state,paste0('../../output/state_weighted_mean_summary/state_weighted_summary_',year.selected,'.rds'))
