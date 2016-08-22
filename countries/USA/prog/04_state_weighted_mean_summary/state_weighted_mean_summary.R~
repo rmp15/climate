@@ -81,7 +81,7 @@ dat.wm$year <- as.numeric(as.character(dat.wm$year))
 dat.wm$month <- as.numeric(as.character(dat.wm$month))
 
 # load weightings by county for state summary based on population
-state.weighting <- readRDS('~/data/climate/population_weightings/state_population_weightings.rds')
+state.weighting <- readRDS('../../output/population_weighted_mean/state_population_weightings.rds')
 
 # filter for a year of interest
 year.selected <- year

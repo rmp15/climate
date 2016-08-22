@@ -53,8 +53,6 @@ pop.county.wm.month$state.county.fips <- paste0(pop.county.wm.month$state.fips,p
 ifelse(!dir.exists("~/data/climate/population_weightings/"), dir.create("~/data/climate/population_weightings/"), FALSE)
 saveRDS(pop.county.wm.month,'~/data/climate/population_weightings/state_population_weightings.rds')
 
-print('done')
-
 ####################################################################################################
 
 # isolate for a few years if desired

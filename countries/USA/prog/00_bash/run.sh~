@@ -4,7 +4,7 @@ Rscript ~/git/climate/countries/USA/prog/02_grid_county_intersection/grid_county
 
 Rscript ~/git/climate/countries/USA/prog/03_population_weighted_mean/population_weighted_mean.R
 
-for year in $(seq 1982 1983);
+for year in $(seq 1982 1982);
 
 do 
 
