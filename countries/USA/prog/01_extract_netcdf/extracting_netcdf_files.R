@@ -17,6 +17,8 @@ args <- commandArgs(trailingOnly=TRUE)
 # year of interest
 year <- as.numeric(args[1])
 
+print(paste0('running extracting_netcdf_files.R for ',year))
+
 # names for files
 # monthly data
 #ncname <- 'worldwide_monthly.nc'

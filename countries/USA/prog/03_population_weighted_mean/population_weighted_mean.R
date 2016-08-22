@@ -1,5 +1,7 @@
 rm(list=ls())
 
+print('running population_weighted_mean.R')
+
 library(ggplot2)
 library(plyr)
 library(foreign)

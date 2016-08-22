@@ -1,5 +1,7 @@
 rm(list=ls())
 
+print('running grid_county_intersection_unproj_function.R')
+
 library(maptools)
 library(mapproj)
 library(rgeos)
@@ -141,7 +143,7 @@ return(weighted.area)
 # perform for every state in the USA
 #states <- unique(as.character(us.main$STATEFP))
 # perform for just a few to test
-states <- c('01','06')
+states <- c('10')
 weighted.area.national <- data.frame()
 for(i in states){
 analysis.dummy <- state.analysis(i)

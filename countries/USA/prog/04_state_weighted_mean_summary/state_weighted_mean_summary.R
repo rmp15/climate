@@ -37,6 +37,8 @@ year <- as.numeric(args[1])
 file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
 grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
 
+print(paste0('running state_weighted_mean_summary.R for ',year))
+
 # create dummy temperature data for testing the weighted mean for a year
 grid.temp <- grid
 set.seed(12232)
