@@ -79,4 +79,6 @@ temp.state <- na.omit(temp.state)
 # convert kelvin to degrees
 temp.state$temp.cel <- temp.state$temp.adj- 273.15
 
+# save output
+saveRDS(dat.wm,paste0('../../output/state_weighted_mean_summary/county_summary_',year.selected,'.rds'))
 saveRDS(temp.state,paste0('../../output/state_weighted_mean_summary/state_weighted_summary_',year.selected,'.rds'))
