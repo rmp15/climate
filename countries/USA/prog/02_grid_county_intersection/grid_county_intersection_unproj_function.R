@@ -30,7 +30,7 @@ grid <- read.csv('../../data/lon_lat/global_lon_lat.csv')
 grid <- grid[,c(2:3)]
 
 # adjust grid lon values in table to go from -180 to 180
-grid$lon <- grid$lon - 180
+grid <- transform(grid,lon=ifelse(lon>180,lon-360,lon))
 
 # limit grid to extent of USA
 grid <- subset(grid, lon>-179 & lon< -50 & lat>15 & lat<85)
