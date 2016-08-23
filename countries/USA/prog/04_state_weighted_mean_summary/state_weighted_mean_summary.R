@@ -34,6 +34,7 @@ year <- as.numeric(args[1])
 file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
 grid.temp <- readRDS(paste0('~/data/climate/net_cdf/t2m/processed/',file.name))
 
+
 print(paste0('running state_weighted_mean_summary.R for ',year))
 
 # load lookup tables for polygons grid points and lon lat
