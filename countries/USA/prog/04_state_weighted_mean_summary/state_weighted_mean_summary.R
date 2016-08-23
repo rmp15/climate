@@ -29,28 +29,12 @@ lat.lim <- c(min(lat),max(lat))
 grid.rows <- length(unique(grid$lon))
 grid.cols <- length(unique(grid$lat))
 
-# FINISH REPLACING WITH REAL DATA INSTEAD OF MADE UP ONE BELOW
-# MIGHT HAVE TO FIX ORIINAL LON LAT COORDS BECAUSE THEY ARE ARRAYS
-
 # load real data
 year <- as.numeric(args[1])
 file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
-#grid.temp <- readRDS(paste0('../../output/extracting_netcdf_files/',file.name))
 grid.temp <- readRDS(paste0('~/data/climate/net_cdf/t2m/processed/',file.name))
 
 print(paste0('running state_weighted_mean_summary.R for ',year))
-
-# create dummy temperature data for testing the weighted mean for a year
-grid.temp <- grid
-set.seed(12232)
-dates <- seq(as.Date(paste0(year,"/1/1")), as.Date(paste0(year,"/12/31")), "days")
-dates <- as.character(dates)
-
-for (i in dates) {
-    dummy <- rnorm(dim(grid.temp)[1],300,10)
-    grid.temp <- cbind(grid.temp,dummy)
-    names(grid.temp)[match(i,dates)+2] <- i
-}
 
 # load lookup tables for polygons grid points and lon lat
 poly.lookup <- readRDS('../../output/grid_county_intersection/point_poly_lookup.rds')
@@ -89,7 +73,9 @@ state.weighting.filter <- subset(state.weighting,year %in% year.selected)
 
 dat.temp <-merge(dat.wm,state.weighting.filter,by=c('year','month','state.county.fips'))
 temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,temp.adj=sum(pop.weighted*temp.weighted))
-# TO FIX WHY STATE 06 IS NA?
 temp.state <- na.omit(temp.state)
+
+# convert kelvin to degrees
+temp.state$temp.cel <- temp.state$temp.adj- 273.15
 
 saveRDS(temp.state,paste0('../../output/state_weighted_mean_summary/state_weighted_summary_',year.selected,'.rds'))

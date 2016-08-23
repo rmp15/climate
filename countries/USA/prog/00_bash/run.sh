@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Rscript ~/git/climate/countries/USA/prog/02_grid_county_intersection/grid_county_intersection_unproj_function.R
+Rscript ~/git/climate/countries/USA/prog/02_grid_county_intersection/grid_county_intersection_unproj_function.R
 
 #Rscript ~/git/climate/countries/USA/prog/03_population_weighted_mean/population_weighted_mean.R
 

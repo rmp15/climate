@@ -53,7 +53,6 @@ grid.cols <- length(unique(grid$lat))
 interval <- 0.75
 grid$lon <- grid$lon - interval/2
 grid$lat <- grid$lat - interval/2
-#points.proj <- SpatialPoints(grid)
 points.proj <- SpatialPointsDataFrame(coords=grid,data=grid)
 proj4string(points.proj) <- original.proj
 points.proj$id <- 1:nrow(points.proj)
@@ -70,9 +69,7 @@ point.poly.lookup <- point.in.poly(points.proj,grat.poly)
 names(point.poly.lookup) <- c('lon','lat','point.id','poly.id')
 point.poly.lookup@data$lon <- point.poly.lookup@data$lon + interval/2
 point.poly.lookup@data$lat <- point.poly.lookup@data$lat + interval/2
-#write.csv(point.poly.lookup@data,'../../output/grid_county_intersection/point_poly_lookup.csv',row.names=FALSE)
 saveRDS(point.poly.lookup@data,'../../output/grid_county_intersection/point_poly_lookup.rds')
-
 
 ################################################################
 # function to perform analysis for entire state
@@ -97,7 +94,6 @@ for(i in counties) {
 county      <- as.character(i)
 print(paste('current status:',county))
 county.fips <- county
-#county.fips <- paste0(state.fips,county)
 
 # isolate county to highlight
 us.county <- us.state[us.state$GEOID %in% county.fips,]
@@ -112,15 +108,12 @@ for(i in weighted.area$point.id) {plot(points.proj[points.proj$id==i,],col='red'
 }
 
 # create weighted mean for how much of each grid crosses the county of interest
-#weighted.area <- data.frame(point.id=numeric(0),poly.id=numeric(0),weighted.area=numeric(0))
 weighted.area.temp <- data.frame()
 for(i in seq(1:length(county.polys))) {
 poly.id <- county.polys[i]
 point.id <- point.poly.lookup@data[which(point.poly.lookup@data$poly.id ==poly.id),3]
 w.a <- gArea(gIntersection(us.county,grat.poly[grat.poly@data$layer==county.polys[i],]))/gArea(us.county)
-#weighted.area.temp <- rbind(weighted.area.temp,c(as.numeric(state.fips),as.numeric(county.fips),point.id,poly.id,w.a))
 weighted.area.temp <- rbind(weighted.area.temp,data.frame(state.fips,county.fips,point.id,poly.id,w.a))
-#print(weighted.area.temp)
 }
 
 names(weighted.area.temp) <- c('','','','','')
@@ -141,9 +134,9 @@ return(weighted.area)
 ################################################################
 
 # perform for every state in the USA
-#states <- unique(as.character(us.main$STATEFP))
-# perform for just a few to test
-states <- c('10')
+states <- unique(as.character(us.main$STATEFP))
+# OR perform for just a few to test
+#states <- c('06')
 weighted.area.national <- data.frame()
 for(i in states){
 analysis.dummy <- state.analysis(i)
