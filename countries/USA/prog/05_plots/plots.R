@@ -52,3 +52,7 @@ geom_point(data=subset(dat,sex==1),aes(x=month,y=temp.cel,color=age)) +
 geom_hline(yintercept=0, linetype=2,alpha=0.5) +
 facet_wrap(~state.fips) +
 theme_bw()
+
+# dat.12 <- subset(dat.county,state.fips==12 & year==1982)
+# ggplot() + geom_line(data=dat.12,aes(x=month,y=temp.weighted,color=state.county.fips))
+
