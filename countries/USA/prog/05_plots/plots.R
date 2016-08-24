@@ -45,3 +45,10 @@ xlab('month') +
 ylab('mean temperature') +
 theme_bw()
 dev.off()
+
+# plot temperature against time, facetting by gender,sex,location
+ggplot() +
+geom_point(data=subset(dat,sex==1),aes(x=month,y=temp.cel,color=age)) +
+geom_hline(yintercept=0, linetype=2,alpha=0.5) +
+facet_wrap(~state.fips) +
+theme_bw()
