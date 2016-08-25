@@ -54,28 +54,3 @@ ifelse(!dir.exists("~/data/climate/population_weightings/"), dir.create("~/data/
 saveRDS(pop.county.wm.month,'~/data/climate/population_weightings/state_population_weightings.rds')
 
 print('done')
-
-####################################################################################################
-
-# isolate for a few years if desired
-#years.selected <- unique(pop.county.wm.month$year)
-#pop.county.wm.month <- subset(pop.county.wm.month,year %in% years.selected)
-
-# load temperature data (create dummy for now)
-#temp.dummy <- expand.grid(year=unique(pop.county.wm.month$year),month=c(1:12),stateFips=unique(pop.county.wm$stateFips),countyFips=unique(pop.county.wm$countyFips))
-#set.seed(112331)
-#temp.dummy$temp <- rnorm(mean=300,dim(temp.dummy)[1],10)
-#temp.dummy$heatwaves <- ceiling(runif(max=10,min=0,n=dim(temp.dummy)[1]))
-
-# merge temperature data with population data
-# not every county will exist throughout the history of the pop data
-#pop.county.temp <- merge(pop.county.wm.month,temp.dummy,by=c('year','month','stateFips','countyFips'),all.x=1)
-
-# summarise temperature data by state to get weighted mean value for use in model
-#climate.weighted <- ddply(pop.county.temp,.(sex,age,year,month,stateFips),summarize,temp.weighted=sum(pop.weighted*temp),heatwave.weighted=sum(pop.weighted*heatwaves))
-
-#write.csv(climate.weighted,'../../output/population_weighted_mean/climate_weighted_test.csv',row.names=FALSE)
-
-# plot to check how the temperature for each age group for the same month varies
-#plot(climate.weighted$temp.weighted[climate.weighted$age==0],climate.weighted$temp.weighted[climate.weighted$age==85])
-#plot(climate.weighted$heatwaves[climate.weighted$age==0],climate.weighted$heatwaves[climate.weighted$age==85]

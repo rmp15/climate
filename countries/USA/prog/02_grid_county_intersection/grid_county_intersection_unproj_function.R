@@ -77,7 +77,7 @@ state.analysis <- function(state.arg='01',output=0) {
     
 weighted.area <- data.frame()
 
-# isolate state for test
+# isolate state
 state.fips  <- as.character(state.arg)
 us.state <- us.main[us.main$STATEFP %in% state.fips,]
 
@@ -98,7 +98,7 @@ county.fips <- county
 # isolate county to highlight
 us.county <- us.state[us.state$GEOID %in% county.fips,]
 
-# perform intersection test to establish which grid point intersect with county
+# perform intersection test to establish which grid points intersect with county
 county.polys <- which(gIntersects(us.county,grat.poly,byid=TRUE)==TRUE,arr.ind=FALSE)
 
 if(output==1){

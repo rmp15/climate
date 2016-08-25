@@ -14,6 +14,12 @@ echo $year;
 
 #Rscript ~/git/climate/countries/USA/prog/04_state_weighted_mean_summary/state_weighted_mean_summary.R $year
 
-Rscript ~/git/climate/countries/USA/prog/05_plots/plots.R $year
+#Rscript ~/git/climate/countries/USA/prog/05_plots/plots.R $year
+
+for month in $(seq 1 12);
+
+Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month $year
+
+done
 
 done
