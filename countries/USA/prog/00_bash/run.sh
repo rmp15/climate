@@ -16,7 +16,7 @@ echo $year;
 
 #Rscript ~/git/climate/countries/USA/prog/05_plots/plots.R $year
 
-for month in $(seq 1 12);
+for month in $(seq 2 1);
 
 Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month $year
 

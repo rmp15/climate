@@ -11,6 +11,7 @@ library(sp)
 library(plyr)
 library(graticule)
 library(spatialEco)
+library(reshape)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
@@ -62,7 +63,7 @@ if(substr(dummy,1,5)!='Error'){
     dat.output <- try(rbind(dat.output,dummy),silent=1)}
 }
 
-names(dat.output) <- c('month','year','poly.id','temperature')
+names(dat.output) <- c('month','year','poly.id','prism.temp')
 dat.output <- na.omit(dat.output)
 dat.output <- dat.output[complete.cases(dat.output),]
 
@@ -85,9 +86,36 @@ names(dat.average) <- c(1:12,'lat','lon')
 # load lookup tables for polygons grid points and lon lat
 poly.lookup <- readRDS('../../output/grid_county_intersection/point_poly_lookup.rds')
 
+# merge dummy temperature data with polygon ids
+grid.temp <- merge(dat.average,poly.lookup,by=c('lon','lat'),all.x=1)
+grid.temp <- na.omit(grid.temp)
 
+# mutate grid.temp into long form
+grid.melt <- melt(grid.temp,id=c('poly.id','point.id','lon','lat'))
+grid.melt <- grid.melt[,c(1,5,6)]
+names(grid.melt)[c(2,3)] <- c('month','era.temp')
+grid.melt$era.temp <- grid.melt$era.temp - 273.15
 
+# merge by month and poly.id
+dat.merged <- merge(dat.output,grid.melt,by=c('month','poly.id'),all.x=1)
 
+# carry out linear regression
+fit <- lm(prism.temp ~ era.temp, data=dat.merged)
+
+# get R squared values
+r.squared <- summary(fit)$r.squared
+print(paste0('R squared value is ',round(r.squared,2)))
+
+# plot with line of best fit overlaid
+pdf(paste0("../../output/bil_files/era_prism_correlation_",month,year,'.pdf'))
+ggplot() +
+geom_point(data=dat.merged,aes(x=prism.temp,y=era.temp)) +
+geom_abline(intercept=coef(fit)[1],slope=coef(fit)[2],color='red') +
+ggtitle(paste0('ERA-Interim derived values against PRISM derived values ',month,' ',year,':\n R^2=',round(r.squared,2))) +
+xlab('PRISM Temperature') +
+ylab('ERA Temperature') +
+theme_bw()
+dev.off()
 
 # overlay grid on raster map if required
 #plot(grat.poly);plot(dat.prism,add=1)
