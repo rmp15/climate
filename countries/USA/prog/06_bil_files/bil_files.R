@@ -26,7 +26,7 @@ ifelse(!dir.exists("../../output/bil_files"), dir.create("../../output/bil_files
 #latlong = "+init=epsg:4326"
 
 # load PRISM bil dataset
-dat.prism <- raster(paste0('~/data/climate/prism/bil/PRISM_tmean_stable_4kmM2_1982_all_bil/PRISM_tmean_stable_4kmM2_198207_bil.bil'))
+dat.prism <- raster(paste0('~/data/climate/prism/bil/PRISM_tmean_stable_4kmM2_1982_all_bil/PRISM_tmean_stable_4kmM2_',year,month,'_bil.bil'))
 # transform the projection of raster
 #dat.prism <- projectRaster(dat.prism, crs = latlong)
 
@@ -57,7 +57,7 @@ poly <- grat.poly[grat.poly@data$layer==i,]
 # perform intersection test to establish which grid points intersect with county
 cropped <-  try(crop(dat.prism,extent(poly),snap='out'),silent=1)
 value <- try(mean(na.omit(cropped@data@values)),silent=1)
-#print(c(i,value))
+print(c(i,value))
 dummy <- try(data.frame(month,year,i,value),silent=1)
 if(substr(dummy,1,5)!='Error'){
     dat.output <- try(rbind(dat.output,dummy),silent=1)}
@@ -66,6 +66,7 @@ if(substr(dummy,1,5)!='Error'){
 names(dat.output) <- c('month','year','poly.id','prism.temp')
 dat.output <- na.omit(dat.output)
 dat.output <- dat.output[complete.cases(dat.output),]
+dat.output$month <- as.numeric(as.character(dat.output$month))
 
 # load ERA-Interim values
 dname <- 't2m'
