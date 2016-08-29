@@ -26,7 +26,7 @@ ifelse(!dir.exists("../../output/bil_files"), dir.create("../../output/bil_files
 #latlong = "+init=epsg:4326"
 
 # load PRISM bil dataset
-dat.prism <- raster(paste0('~/data/climate/prism/bil/PRISM_tmean_stable_4kmM2_1982_all_bil/PRISM_tmean_stable_4kmM2_',year,month,'_bil.bil'))
+dat.prism <- raster(paste0('~/data/climate/prism/bil/PRISM_tmean_stable_4kmM2_',year,'_all_bil/PRISM_tmean_stable_4kmM2_',year,month,'_bil.bil'))
 # transform the projection of raster
 #dat.prism <- projectRaster(dat.prism, crs = latlong)
 
@@ -49,19 +49,20 @@ grat.poly <- graticule(lons=lon,lats=lat,proj=projection(dat.prism),tiles=TRUE)
 
 dat.output <- data.frame()
 
+# process rasters with grid summaries
 for(i in unique(grat.poly@data$layer)){
 
-# isolate grid value
-poly <- grat.poly[grat.poly@data$layer==i,]
+    # isolate grid value
+    poly <- grat.poly[grat.poly@data$layer==i,]
 
-# perform intersection test to establish which grid points intersect with county
-cropped <-  try(crop(dat.prism,extent(poly),snap='out'),silent=1)
-value <- try(mean(na.omit(cropped@data@values)),silent=1)
-print(c(i,value))
-dummy <- try(data.frame(month,year,i,value),silent=1)
-if(substr(dummy,1,5)!='Error'){
-    dat.output <- try(rbind(dat.output,dummy),silent=1)}
-}
+    # perform intersection test to establish which grid points intersect with county
+    cropped <-  try(crop(dat.prism,extent(poly),snap='out'),silent=1)
+    value <- try(mean(na.omit(cropped@data@values)),silent=1)
+    print(c(i,value))
+    dummy <- try(data.frame(month,year,i,value),silent=1)
+    if(substr(dummy,1,5)!='Error'){
+        dat.output <- try(rbind(dat.output,dummy),silent=1)}
+    }
 
 names(dat.output) <- c('month','year','poly.id','prism.temp')
 dat.output <- na.omit(dat.output)
@@ -99,6 +100,9 @@ grid.melt$era.temp <- grid.melt$era.temp - 273.15
 
 # merge by month and poly.id
 dat.merged <- merge(dat.output,grid.melt,by=c('month','poly.id'),all.x=1)
+
+# output result RDS
+saveRDS(dat.merged,paste0('../../output/bil_files/era_prism_correlaton_',month,year,'.rds'))
 
 # carry out linear regression
 fit <- lm(prism.temp ~ era.temp, data=dat.merged)

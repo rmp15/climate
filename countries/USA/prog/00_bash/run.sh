@@ -4,7 +4,7 @@
 
 #Rscript ~/git/climate/countries/USA/prog/03_population_weighted_mean/population_weighted_mean.R
 
-#for year in $(seq 1982);
+#for year in $(seq 1983);
 
 #do
 
@@ -16,34 +16,17 @@
 
 #Rscript ~/git/climate/countries/USA/prog/05_plots/plots.R $year
 
-#for month in $(seq 2 12);
+#done;
+
+#for month in $(seq 1 12);
 
 #do
 
+#echo $month;
+
 #Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 3 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 4 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 5 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 6 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 7 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 8 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 9 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 10 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 11 $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 12 $year
-
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 2 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 3 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 4 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 5 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 6 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 7 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 8 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 9 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 10 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 11 1982
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R 12 1982
+#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month 1983
 
 #done
 
-#done
+Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files_year.R 1983
