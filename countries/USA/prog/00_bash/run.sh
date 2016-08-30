@@ -4,15 +4,15 @@
 
 #Rscript ~/git/climate/countries/USA/prog/03_population_weighted_mean/population_weighted_mean.R
 
-#for year in $(seq 1983);
+for year in $(seq 1982 1983);
 
-#do
+do
 
-#echo $year;
+echo $year;
 
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year
 
-#Rscript ~/git/climate/countries/USA/prog/04_state_weighted_mean_summary/state_weighted_mean_summary.R $year
+Rscript ~/git/climate/countries/USA/prog/04_state_weighted_mean_summary/state_weighted_mean_summary.R $year
 
 #Rscript ~/git/climate/countries/USA/prog/05_plots/plots.R $year
 
@@ -27,6 +27,6 @@
 #Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month $year
 #Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month 1983
 
-#done
+done
 
-Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files_year.R 1983
+#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files_year.R 1983

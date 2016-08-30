@@ -34,7 +34,6 @@ year <- as.numeric(args[1])
 file.name <- paste0('worldwide_t2m_daily_twice_',year,'.rds')
 grid.temp <- readRDS(paste0('~/data/climate/net_cdf/t2m/processed/',file.name))
 
-
 print(paste0('running state_weighted_mean_summary.R for ',year))
 
 # load lookup tables for polygons grid points and lon lat
@@ -49,7 +48,9 @@ wm.lookup <- readRDS('../../output/grid_county_intersection/weighted_area_unproj
 
 # for each county, summarise by day and then by month (for single year)
 dat.wm <- data.frame()
+dat.long <- data.frame()
 for(i in unique(wm.lookup$state.county.fips)){
+    print(i)
     fips.match <- subset(wm.lookup,state.county.fips==i)
     fips.match <- merge(fips.match,grid.temp,by=c('point.id','poly.id'),all.x=1)
     weightings <- fips.match[ , grepl('weighted.area', names(fips.match) ) ]
@@ -58,10 +59,18 @@ for(i in unique(wm.lookup$state.county.fips)){
     dat.days <- as.data.frame(colSums(dat.days))
     dat.days <- cbind(dat.days, as.data.frame(matrix(unlist(strsplit(rownames(dat.days),'-')), ncol=3, byrow=TRUE)))
     names(dat.days) <- c('temperature','year','month','day')
+    dat.days$state.county.fips <- i
+    dat.long <- rbind(dat.long,dat.days)
     summary <- ddply(dat.days,.(year,month),summarize,temp.weighted=mean(temperature))
     summary$state.county.fips <- i
     dat.wm <- rbind(dat.wm,summary)
 }
+
+# correct some variables
+rownames(dat.long) <- seq(1,nrow(dat.long))
+dat.long$year <- as.numeric(as.character(dat.long$year))
+dat.long$month <- as.numeric(as.character(dat.long$month))
+dat.long$day <- as.numeric(as.character(dat.long$day))
 dat.wm$year <- as.numeric(as.character(dat.wm$year))
 dat.wm$month <- as.numeric(as.character(dat.wm$month))
 
@@ -80,5 +89,6 @@ temp.state <- na.omit(temp.state)
 temp.state$temp.cel <- temp.state$temp.adj- 273.15
 
 # save output
+saveRDS(dat.long,paste0('../../output/state_weighted_mean_summary/county_daily_',year.selected,'.rds'))
 saveRDS(dat.wm,paste0('../../output/state_weighted_mean_summary/county_summary_',year.selected,'.rds'))
 saveRDS(temp.state,paste0('../../output/state_weighted_mean_summary/state_weighted_summary_',year.selected,'.rds'))
