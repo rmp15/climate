@@ -10,6 +10,10 @@
 # creates a weighted mean per state based on county populations
 #Rscript ~/git/climate/countries/USA/prog/03_population_weighted_mean/population_weighted_mean.R
 
+#################################################
+# 2. TEMPERATURE PROCESSING
+#################################################
+
 for year in $(seq 1982 1983);
 
 do
