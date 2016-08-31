@@ -11,7 +11,6 @@ args <- commandArgs(trailingOnly=TRUE)
 # create output file locations
 ifelse(!dir.exists("../../output/county_weighted_mean_summary"), dir.create("../../output/county_weighted_mean_summary"), FALSE)
 ifelse(!dir.exists("../../output/county_weighted_mean_summary/county_daily"), dir.create("../../output/county_weighted_mean_summary/county_daily"), FALSE)
-#ifelse(!dir.exists("../../output/county_weighted_mean_summary/county_monthly"), dir.create("../../output/county_weighted_mean_summary/county_monthly"), FALSE)
 
 # load csv with ERA-Interim grid values
 grid <- read.csv('../../data/lon_lat/global_lon_lat.csv')
@@ -53,7 +52,6 @@ grid.temp <- na.omit(grid.temp)
 wm.lookup <- readRDS('../../output/grid_county_intersection/weighted_area_unproj_national.rds')
 
 # for each county, summarise by day (for single year)
-#dat.wm <- data.frame()
 dat.long <- data.frame()
 for(i in unique(wm.lookup$state.county.fips)){
     print(i)
@@ -66,9 +64,7 @@ for(i in unique(wm.lookup$state.county.fips)){
     dat.days <- cbind(dat.days, as.data.frame(matrix(unlist(strsplit(rownames(dat.days),'-')), ncol=3, byrow=TRUE)))
     dat.days$state.county.fips <- i
     dat.long <- rbind(dat.long,dat.days)
-    #summary <- ddply(dat.days,.(year,month),summarize,temp.weighted=mean(temperature))
-    #summary$state.county.fips <- i
-    #dat.wm <- rbind(dat.wm,summary)
+
 }
 
 # correct some variables
@@ -77,26 +73,7 @@ rownames(dat.long) <- seq(1,nrow(dat.long))
 dat.long$year <- as.numeric(as.character(dat.long$year))
 dat.long$month <- as.numeric(as.character(dat.long$month))
 dat.long$day <- as.numeric(as.character(dat.long$day))
-#dat.wm$year <- as.numeric(as.character(dat.wm$year))
-#dat.wm$month <- as.numeric(as.character(dat.wm$month))
-
-# load weightings by county for state summary based on population
-#state.weighting <- readRDS('~/data/climate/population_weightings/state_population_weightings.rds')
-
-# filter for a year of interest
-#year.selected <- year
-#state.weighting.filter <- subset(state.weighting,year %in% year.selected)
-
-#dat.temp <-merge(dat.wm,state.weighting.filter,by=c('year','month','state.county.fips'))
-#temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,temp.adj=sum(pop.weighted*temp.weighted))
-#temp.state <- na.omit(temp.state)
-
-# convert kelvin to degrees
-#dat.long <- 
-#temp.state$temp.cel <- temp.state$temp.adj- 273.15
 
 # save output
 ifelse(!dir.exists(paste0("../../output/county_weighted_mean_summary/county_daily/",dname)), dir.create(paste0("../../output/county_weighted_mean_summary/county_daily/",dname)), FALSE)
 saveRDS(dat.long,paste0('../../output/county_weighted_mean_summary/county_daily/',dname,'/county_daily_',dname,'_',year,'.rds'))
-#saveRDS(dat.wm,paste0('../../output/county_weighted_mean_summary/county_monthly/county_monthly_',year.selected,'.rds'))
-#saveRDS(temp.state,paste0('../../output/state_weighted_mean_summary/state_weighted_summary_',year.selected,'.rds'))
