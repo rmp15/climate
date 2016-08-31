@@ -87,7 +87,6 @@ tmp.vec.long <- as.vector(tmp.array)
 tmp.mat <- matrix(tmp.vec.long, nrow = nlon * nlat, ncol = nt)
 
 # create second data frame
-# NOT RIGHT WHY???
 lonlat <- expand.grid(lon, lat)
 tmp.df02 <- data.frame(cbind(lonlat, tmp.mat))
 names(tmp.df02) <- c('lon','lat',t.names)
@@ -107,7 +106,7 @@ names(dat.average) <- c(unique(t.names),'lat','lon')
 # write to rds file with naming according to year
 ifelse(!dir.exists("../../output/extracting_netcdf_files"), dir.create("../../output/extracting_netcdf_files"), FALSE)
 file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
-saveRDS(dat.average, file=file.name)
+saveRDS(dat.average, file.name)
 
 # extract csv file of latitude longitude for USA if required
 #USA.lonlat <- lonlat

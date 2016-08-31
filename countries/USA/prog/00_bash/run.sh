@@ -14,32 +14,22 @@
 # 2. TEMPERATURE PROCESSING
 #################################################
 
-for year in $(seq 1982 1983);
+for year in $(seq 1982);
 
 do
 
 echo $year;
 
 # processes net_cdf files
-#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year
+#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year t2m daily four
 
-# 
+# creates a weighted mean from grid county intersection of temperature per day per county for year 
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year 2tm daily four
 
-Rscript ~/git/climate/countries/USA/prog/04_state_weighted_mean_summary/state_weighted_mean_summary.R $year
+# creates metrics from the temperature values processed
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year 2tm
 
-#Rscript ~/git/climate/countries/USA/prog/05_plots/plots.R $year
-
-#done;
-
-#for month in $(seq 1 12);
-
-#do
-
-#echo $month;
-
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month $year
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files.R $month 1983
+# plots
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year
 
 done
-
-#Rscript ~/git/climate/countries/USA/prog/06_bil_files/bil_files_year.R 1983

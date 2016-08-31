@@ -20,9 +20,12 @@ year <- as.numeric(args[1])
 print(paste0('running extracting_netcdf_files.R for ',year))
 
 # names for files
-dname <- 't2m'
-freq <- 'daily'
-num <- 'four'
+#dname <- 't2m'
+dname <- as.character(args[2])
+#freq <- 'daily'
+freq <- as.character(args[3])
+#num <- 'four'
+num <- as.character(args[4])
 ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',year,'.nc')
 
 year <- unlist(strsplit(ncname, "_"))
@@ -84,7 +87,6 @@ tmp.vec.long <- as.vector(tmp.array)
 tmp.mat <- matrix(tmp.vec.long, nrow = nlon * nlat, ncol = nt)
 
 # create second data frame
-# NOT RIGHT WHY???
 lonlat <- expand.grid(lon, lat)
 tmp.df02 <- data.frame(cbind(lonlat, tmp.mat))
 names(tmp.df02) <- c('lon','lat',t.names)
