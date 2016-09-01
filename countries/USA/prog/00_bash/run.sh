@@ -14,7 +14,7 @@
 # 2. TEMPERATURE PROCESSING
 #################################################
 
-for year in $(seq 2009 2010);
+for year in $(seq 1982 1982);
 
 do
 
@@ -30,10 +30,10 @@ echo $year;
 Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year t2m
 
 # plots
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m mean
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_below_10
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_above_30
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m sd
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m mean
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_below_10
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_above_30
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m sd
 Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_changing_by_5
 
 done;

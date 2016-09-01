@@ -13,6 +13,7 @@ metric <- as.character(args[3])
 # create output directory
 ifelse(!dir.exists("../../output/plots"), dir.create("../../output/plots"), FALSE)
 ifelse(!dir.exists(paste0("../../output/plots/",dname)), dir.create(paste0("../../output/plots/",dname)), FALSE)
+ifelse(!dir.exists(paste0("../../output/plots/",dname,'/',metric)), dir.create(paste0("../../output/plots/",dname,'/',metric)), FALSE)
 
 # load state fips lookup code
 fips.lookup <- read.csv('~/git/countries/USA/state/data/name_fips_lookup.csv')
@@ -29,7 +30,7 @@ age.filter <- unique(dat$age)
 colourCount <- length(age.filter)
 
 # 1. male
-pdf(paste0('../../output/plots/',dname,'/',dname,'_',metric,'_male_',year,'.pdf'),height=0,width=0,paper='a4r')
+pdf(paste0('../../output/plots/',dname,'/',metric,'/',dname,'_',metric,'_male_',year,'.pdf'),height=0,width=0,paper='a4r')
 ggplot(data=subset(dat,sex==1),aes(x=month,y=variable)) +
 geom_line(aes(color=as.factor(age))) +
 geom_hline(yintercept=0, linetype=2,alpha=0.5) +
@@ -43,7 +44,7 @@ theme_bw()
 dev.off()
 
 # 2. female
-pdf(paste0('../../output/plots/',dname,'/',dname,'_',metric,'_female_',year,'.pdf'),height=0,width=0,paper='a4r')
+pdf(paste0('../../output/plots/',dname,'/',metric,'/',dname,'_',metric,'_female_',year,'.pdf'),height=0,width=0,paper='a4r')
 ggplot(data=subset(dat,sex==2),aes(x=month,y=variable)) +
 geom_line(aes(color=as.factor(age))) +
 geom_hline(yintercept=0, linetype=2,alpha=0.5) +
