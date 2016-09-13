@@ -166,7 +166,7 @@ temp.state <- na.omit(temp.state)
 
 # round (is this right?)
 temp.state$var.adj <- round(temp.state$var.adj)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dcb.',threshold)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dib.',threshold)
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
@@ -193,7 +193,7 @@ temp.state <- na.omit(temp.state)
 
 # round (is this right?)
 temp.state$var.adj <- round(temp.state$var.adj)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dcb.',threshold)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.ddb.',threshold)
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
