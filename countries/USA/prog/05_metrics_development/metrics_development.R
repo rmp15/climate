@@ -130,7 +130,6 @@ var <- paste0('days_changing_by_',threshold,'_',dname)
 dat.ch <- dat.county
 names(dat.ch)[grep(dname,names(dat.ch))] <- 'variable'
 dat.ch <- ddply(dat.ch, .(month,year,state.county.fips), transform, diff=c(0,diff(variable)))
-#dat.count <- ddply(dat.ch,.(month,year,state.county.fips),summarize,over=sum(diff>threshold),under=sum(diff<(-1*threshold)),from=sum(abs(diff)>threshold))
 dat.ch <- ddply(dat.ch,.(month,year,state.county.fips),summarize,day.changed.by.threshold=sum(abs(diff)>threshold))
 
 # merge and create weighted mean for state
@@ -147,19 +146,65 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 6. NUMBER OF DAYS CHANGED UP BY A VALUE FROM DAY BEFORE
+# 6. NUMBER OF DAYS INCREASING BY A VALUE FROM DAY BEFORE
 ####################################################
+threshold <- 5
+var <- paste0('days_increasing_by_',threshold,'_',dname)
+
+# process for counting days changing by threshold
+# do i need to make days above threshold as a proportion of number of days in month?
+dat.ch <- dat.county
+names(dat.ch)[grep(dname,names(dat.ch))] <- 'variable'
+dat.ch <- ddply(dat.ch, .(month,year,state.county.fips), transform, diff=c(0,diff(variable)))
+#dat.count <- ddply(dat.ch,.(month,year,state.county.fips),summarize,over=sum(diff>threshold),under=sum(diff<(-1*threshold)),from=sum(abs(diff)>threshold))
+dat.ch <- ddply(dat.ch,.(month,year,state.county.fips),summarize,day.increased.by.threshold=sum(diff>threshold))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.ch,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*day.increased.by.threshold))
+temp.state <- na.omit(temp.state)
+
+# round (is this right?)
+temp.state$var.adj <- round(temp.state$var.adj)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dcb.',threshold)
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 6. NUMBER OF DAYS CHANGED DOWN BY A VALUE FROM DAY BEFORE
+# 7. NUMBER OF DAYS DECREASING BY A VALUE FROM DAY BEFORE
 ####################################################
+threshold <- 5
+var <- paste0('days_decreasing_by_',threshold,'_',dname)
+
+# process for counting days changing by threshold
+# do i need to make days above threshold as a proportion of number of days in month?
+dat.ch <- dat.county
+names(dat.ch)[grep(dname,names(dat.ch))] <- 'variable'
+dat.ch <- ddply(dat.ch, .(month,year,state.county.fips), transform, diff=c(0,diff(variable)))
+#dat.count <- ddply(dat.ch,.(month,year,state.county.fips),summarize,over=sum(diff>threshold),under=sum(diff<(-1*threshold)),from=sum(abs(diff)>threshold))
+dat.ch <- ddply(dat.ch,.(month,year,state.county.fips),summarize,day.decreased.by.threshold=sum(diff<(-1*threshold)))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.ch,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*day.decreased.by.threshold))
+temp.state <- na.omit(temp.state)
+
+# round (is this right?)
+temp.state$var.adj <- round(temp.state$var.adj)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dcb.',threshold)
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 8. NUMBER OF UPWAVES METHOD 1
+# 8. NUMBER OF UPWAVES 1(ABSOLUTE THRESHOLD)
 ####################################################
 threshold <- 25
 num.days <- 3
-var <- paste0('number_of_min_',num.days,'_day_above_',threshold,'_',dname,'.upwaves')
+var <- paste0('number_of_min_',num.days,'_day_above_',threshold,'_upwaves_',dname)
 
 # process for counting number of upwaves
 # do i need to make number of upwaves as a proportion of number of days in month?
@@ -182,11 +227,11 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 9. NUMBER OF DOWNWAVES METHOD 1
+# 9. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD)
 ####################################################
 threshold <- 5
 num.days <- 3
-var <- paste0('number_of_min_',num.days,'_day_below_',threshold,'_',dname,'.downwaves')
+var <- paste0('number_of_min_',num.days,'_day_below_',threshold,'_downwaves_',dname)
 
 # process for counting number of downwaves
 # do i need to make number of upwaves as a proportion of number of days in month?
