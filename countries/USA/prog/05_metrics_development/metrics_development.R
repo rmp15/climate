@@ -149,6 +149,16 @@ saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/st
 ####################################################
 # 6. NUMBER OF UPWAVES
 ####################################################
+threshold <- 5
+num.days <- 3
+var <- paste0('number_of_',num.days,'_day_',threshold,'_delta_',dname,'.waves')
+
+# process for counting number of upwaves
+# do i need to make number of upwaves as a proportion of number of days in month?
+dat.uw <- dat.county
+names(dat.uw)[grep(dname,names(dat.uw))] <- 'variable'
+
+
 
 ####################################################
 # 7. NUMBER OF DOWNWAVES
