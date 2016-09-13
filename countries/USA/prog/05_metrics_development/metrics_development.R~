@@ -257,10 +257,14 @@ saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/st
 # 10. NUMBER OF UPWAVES 2
 ####################################################
 
+# THIS IS UPWAVES BY USING A JUMP (SAY UP BY 5 FROM DAY BEFORE)
+# AND THEN HOW LONG IT SUSTAINS IT
+
 ####################################################
 # 11. NUMBER OF DOWNWAVES 2
 ####################################################
 
-
+# THIS IS DOWNWAVES BY USING A JUMP (SAY DOWN BY 5 FROM DAY BEFORE)
+# AND THEN HOW LONG IT SUSTAINS IT
 
 
