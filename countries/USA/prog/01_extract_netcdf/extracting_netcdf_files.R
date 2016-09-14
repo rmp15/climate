@@ -49,7 +49,7 @@ t.sec <- t * 3600
 tunits <- ncatt_get(ncin, "time", "units")
 nt <- dim(t)
 
-# extract 2-metre temperature
+# extract climate variable
 tmp.array <- ncvar_get(ncin, dname)
 dlname <- ncatt_get(ncin, dname, "long_name")
 dunits <- ncatt_get(ncin, dname, "units")
@@ -105,6 +105,7 @@ names(dat.average) <- c(unique(t.names),'lat','lon')
 
 # write to rds file with naming according to year
 ifelse(!dir.exists("../../output/extracting_netcdf_files"), dir.create("../../output/extracting_netcdf_files"), FALSE)
+ifelse(!dir.exists(paste0('~/data/climate/net_cdf/',dname,'/processed/')), dir.create(paste0('~/data/climate/net_cdf/',dname,'/processed/')), FALSE)
 file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
 saveRDS(dat.average, file.name)
 

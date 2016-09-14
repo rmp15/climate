@@ -11,7 +11,7 @@
 #Rscript ~/git/climate/countries/USA/prog/03_population_weighted_mean/population_weighted_mean.R
 
 #################################################
-# 2. TEMPERATURE PROCESSING
+# 2. 2-METRE TEMPERATURE PROCESSING (t2m)
 #################################################
 
 for year in $(seq 1982 1982);
@@ -30,19 +30,48 @@ echo $year;
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year t2m
 
 # plots
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m mean
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_below_10
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_above_30
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m sd
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_changing_by_5
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_increasing_by_5
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_decreasing_by_5
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m number_of_min_3_day_above_25_upwaves
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m number_of_min_3_day_below_5_downwaves
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m mean
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_below_10
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_above_30
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m sd
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_changing_by_5
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_increasing_by_5
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m days_decreasing_by_5
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m number_of_min_3_day_above_25_upwaves
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year t2m number_of_min_3_day_below_5_downwaves
 
 done;
 
 #################################################
-# 3. PRECIPITATION PROCESSING
+# 3. TOTAL PRECIPITATION PROCESSING (tp)
 #################################################
+
+for year in $(seq 1982 1982);
+
+do
+
+echo $year;
+
+# processes net_cdf files
+#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year tp daily four
+
+# creates a weighted mean from grid county intersection of temperature per day per county for year
+Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year tp daily four
+
+# creates metrics from the temperature values processed
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year tp
+
+# plots
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp mean
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp days_below_10
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp days_above_30
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp sd
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp days_changing_by_5
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp days_increasing_by_5
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp days_decreasing_by_5
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp number_of_min_3_day_above_25_upwaves
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp number_of_min_3_day_below_5_downwaves
+
+done;
+
 
