@@ -56,7 +56,7 @@ echo $year;
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year tp daily four
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year tp daily four
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year tp daily four
 
 # creates metrics from the temperature values processed
 Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year tp

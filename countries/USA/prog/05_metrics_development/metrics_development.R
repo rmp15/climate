@@ -20,6 +20,11 @@ if(dname=='t2m'){
 dat.county$t2m <- dat.county$t2m - 273.15
 }
 
+# fix precipitation if loaded
+if(dname=='tp'){
+    dat.county$tp <- dat.county$tp * 1000
+}
+
 # load weightings by county for state summary based on population
 state.weighting <- readRDS('~/data/climate/population_weightings/state_population_weightings.rds')
 
