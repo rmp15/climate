@@ -73,5 +73,3 @@ Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp number_of_min
 Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year tp number_of_min_3_day_below_5_downwaves
 
 done;
-
-
