@@ -26,5 +26,5 @@ for (i in seq(length(years))) {
 }
 
 # save output
-saveRDS(dat,paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',year.start,'_',year.end,'.rds'))
+saveRDS(dat,paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
 
