@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1992 2001))
+declare -a years=($(seq 2014 2015))
 declare freq="daily"
 declare num="four"
 
@@ -43,11 +43,12 @@ echo "plotting temperature metric results for $year";
 
 for metric in "${metrics[@]}"; do
 
-:
 # plots
 Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
-done; done;
+done; 
+
+done;
 
 for metric in "${metrics[@]}"; do
 
@@ -92,7 +93,9 @@ for metric in "${metrics[@]}"; do
 # plots
 #Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
-done; done;
+done; 
+
+done;
 
 for metric in "${metrics[@]}"; do
 
