@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 2014 2015))
+declare -a years=($(seq 2002 2015))
 declare freq="daily"
 declare num="four"
 
@@ -23,7 +23,7 @@ echo "processing temperature variables for $year";
 echo "converting temperature netcdf file for $year";
 
 # processes net_cdf files
-Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num
+#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num
 
 echo "creating temperature metric for counties for $year";
 
@@ -43,17 +43,17 @@ echo "plotting temperature metric results for $year";
 
 for metric in "${metrics[@]}"; do
 
+:
 # plots
 Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
-done; 
-
-done;
+done; done;
 
 for metric in "${metrics[@]}"; do
 
+:
 # bind together data for each variable
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 
 done;
 
