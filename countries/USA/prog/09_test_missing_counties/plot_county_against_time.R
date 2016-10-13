@@ -29,6 +29,7 @@ for(i in unique(pop.county$stateFips)) {
 		for(k in unique(pop.county$age)){
 			plot.function(k,j,i)
 	}}
+	dev.off()
 }
 
 
