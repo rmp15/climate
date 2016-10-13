@@ -13,23 +13,23 @@ ifelse(!dir.exists("../../output/county_weighted_mean_summary"), dir.create("../
 ifelse(!dir.exists("../../output/county_weighted_mean_summary/county_daily"), dir.create("../../output/county_weighted_mean_summary/county_daily"), FALSE)
 
 # load csv with ERA-Interim grid values
-grid <- read.csv('../../data/lon_lat/global_lon_lat.csv')
-grid <- grid[,c(2:3)]
+#grid <- read.csv('../../data/lon_lat/global_lon_lat.csv')
+#grid <- grid[,c(2:3)]
 
 # adjust grid lon values in table to go from -180 to 180
-grid$lon <- grid$lon - 180
+#grid$lon <- grid$lon - 180
 
 # objects with lon and lat values
-lon <- sort(unique(grid$lon))
-lat <- sort(unique(grid$lat))
+#lon <- sort(unique(grid$lon))
+#lat <- sort(unique(grid$lat))
 
 # limits of lat and lon values
-lon.lim <- c(min(lon),max(lon))
-lat.lim <- c(min(lat),max(lat))
+#lon.lim <- c(min(lon),max(lon))
+#lat.lim <- c(min(lat),max(lat))
 
 # establish how many rows and columns there are in grid file
-grid.rows <- length(unique(grid$lon))
-grid.cols <- length(unique(grid$lat))
+#grid.rows <- length(unique(grid$lon))
+#grid.cols <- length(unique(grid$lat))
 
 # load real data
 year <- as.numeric(args[1])

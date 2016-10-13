@@ -25,7 +25,7 @@ pop.county$age[pop.county$age==70] <- 65
 pop.county$age[pop.county$age==80] <- 75
 
 # summarise over new age groups
-pop.county <- summarise(group_by(pop.county,sex,age,year,stateFips,countyFips),sum(pop))
+pop.county <- summarise(dplyr::group_by(pop.county,sex,age,year,stateFips,countyFips),sum(pop))
 names(pop.county)[6] <- 'pop'
 
 # remove '99' age, which is the summation of all ages in a county
