@@ -69,7 +69,7 @@ dat.wm.entire <- ddply(dat.wm,.(month,sex,age,climate_region),function(x) data.f
 # DIRECTORY CREATION
 
 # create directories for output
-file.loc <- paste0('../../output/climate_regions/',dname,'/',metric,'/')
+file.loc <- paste0('../../output/metrics_climate_regions/',dname,'/',metric,'/')
 ifelse(!dir.exists(file.loc), dir.create(file.loc, recursive=TRUE), FALSE)
 
 # PLOTTING
