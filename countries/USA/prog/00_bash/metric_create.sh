@@ -63,7 +63,15 @@ for metric in "${metrics[@]}"; do
 
 :
 # create climate region values
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1982 2015 1982 2013 $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1982 2015 1982 2013 $dname $metric
+
+done;
+
+for metric in "${metrics[@]}"; do
+
+:
+# create seasonality index climate values
+Rscript ~/git/climate/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions.R 1982 2013 1982 2013 $dname $metric
 
 done;
 

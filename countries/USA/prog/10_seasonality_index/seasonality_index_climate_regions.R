@@ -57,17 +57,20 @@ dat.max.min.fixed <- merge(dat,dat.COM,by=c('age','sex','month'))
 dat.max.min.fixed <- ddply(dat.max.min.fixed,.(sex,age,year,climate_region), summarize,max=variable[type=='max'],month.max=month[type=='max'],min=variable[type=='min'],month.min=month[type=='min'])
 dat.max.min.fixed$ratio <- with(dat.max.min.fixed,abs(max-min)/abs(min))
 dat.max.min.fixed$percent.change <- round(100*(dat.max.min.fixed$ratio),1)
+dat.max.min.fixed$diff <- with(dat.max.min.fixed,max-min)
 
 # add time value that starts at 0
 dat.max.min.fixed$year.centre <- with(dat.max.min.fixed,year-year.start)
 
 # apply linear regression to each group by sex, age, month to find gradient
-lin.reg.grad <- ddply(dat.max.min.fixed, .(sex,age,climate_region), function(z)coef(lm(percent.change ~ year.centre, data=z)))
+#lin.reg.grad <- ddply(dat.max.min.fixed, .(sex,age,climate_region), function(z)coef(lm(percent.change ~ year.centre, data=z)))
+lin.reg.grad <- ddply(dat.max.min.fixed, .(sex,age,climate_region), function(z)coef(lm(diff ~ year.centre, data=z)))
 lin.reg.grad$end.value <- with(lin.reg.grad,`(Intercept)`+year.centre*(num.years-1))
 lin.reg.grad$start.value <- lin.reg.grad$`(Intercept)`
 
 # obtain significance of slopes
-lin.reg.sig <- ddply(dat.max.min.fixed, .(sex,age,climate_region), function(z)coef(summary(lm(percent.change ~ year.centre, data=z))))
+#lin.reg.sig <- ddply(dat.max.min.fixed, .(sex,age,climate_region), function(z)coef(summary(lm(percent.change ~ year.centre, data=z))))
+lin.reg.sig <- ddply(dat.max.min.fixed, .(sex,age,climate_region), function(z)coef(summary(lm(diff ~ year.centre, data=z))))
 lin.reg.sig <- lin.reg.sig[!c(TRUE,FALSE),]
 lin.reg.sig$sig.test.10 <- ifelse(lin.reg.sig[,7]<0.10,1,0)
 lin.reg.sig$sig.test.5 <- ifelse(lin.reg.sig[,7]<0.05,1,0)
@@ -81,17 +84,20 @@ lin.reg.grad <- merge(lin.reg.grad,lin.reg.sig,by=c('sex','age','climate_region'
 dat.max.min <-  ddply(dat, .(sex,age,year,climate_region), summarize, max=max(variable),month.max=month[variable==max(variable)],min=min(variable),month.min=month[variable==min(variable)])
 dat.max.min$ratio <- with(dat.max.min,abs(max-min)/abs(min))
 dat.max.min$percent.change <- round(100*(dat.max.min$ratio),1)
+dat.max.min$diff <- with(dat.max.min,max-min)
 
 # add time value that starts at 0
 dat.max.min$year.centre <- with(dat.max.min,year-year.start)
 
 # apply linear regression to each group by sex, age, month to find gradient
-lin.reg.grad.region <- ddply(dat.max.min, .(sex,age,climate_region), function(z)coef(lm(percent.change ~ year.centre, data=z)))
+#lin.reg.grad.region <- ddply(dat.max.min, .(sex,age,climate_region), function(z)coef(lm(percent.change ~ year.centre, data=z)))
+lin.reg.grad.region <- ddply(dat.max.min, .(sex,age,climate_region), function(z)coef(lm(diff ~ year.centre, data=z)))
 lin.reg.grad.region$start.value <- lin.reg.grad.region$`(Intercept)`
 lin.reg.grad.region$end.value <- with(lin.reg.grad.region,`(Intercept)`+year.centre*(num.years-1))
 
 # obtain significance of slopes
-lin.reg.sig.region <- ddply(dat.max.min, .(sex,age,climate_region), function(z)coef(summary(lm(percent.change ~ year.centre, data=z))))
+#lin.reg.sig.region <- ddply(dat.max.min, .(sex,age,climate_region), function(z)coef(summary(lm(percent.change ~ year.centre, data=z))))
+lin.reg.sig.region <- ddply(dat.max.min, .(sex,age,climate_region), function(z)coef(summary(lm(diff ~ year.centre, data=z))))
 lin.reg.sig.region <- lin.reg.sig.region[!c(TRUE,FALSE),]
 lin.reg.sig.region$sig.test.10 <- ifelse(lin.reg.sig.region[,7]<0.10,1,0)
 lin.reg.sig.region$sig.test.5 <- ifelse(lin.reg.sig.region[,7]<0.05,1,0)

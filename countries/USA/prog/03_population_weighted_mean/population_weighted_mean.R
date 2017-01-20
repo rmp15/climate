@@ -23,9 +23,24 @@ pop.county$age[pop.county$age==60] <- 55
 pop.county$age[pop.county$age==70] <- 65
 pop.county$age[pop.county$age==80] <- 75
 
+# fix county codes for transient fips codes
+# 08 013 to 08 014
+# 12 025 to 12 086
+# 30 113 to 30 031
+# 46 113 to 46 102
+# 51 560 to 51 005
+# 51 780 to 51 083
+# 51 515 to 51 019
+pop.county$countyFips[pop.county$stateFips=='08' & pop.county$countyFips=='013'] <- '014'
+pop.county$countyFips[pop.county$stateFips=='12' & pop.county$countyFips=='025'] <- '086'
+pop.county$countyFips[pop.county$stateFips=='30' & pop.county$countyFips=='113'] <- '031'
+pop.county$countyFips[pop.county$stateFips=='46' & pop.county$countyFips=='113'] <- '102'
+pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='560'] <- '005'
+pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='780'] <- '083'
+pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='515'] <- '019's
+
 # summarise over new age groups
-pop.county <- summarise(dplyr::group_by(pop.county,sex,age,year,stateFips,countyFips),sum(pop))
-names(pop.county)[6] <- 'pop'
+pop.county <- summarise(dplyr::group_by(pop.county,sex,age,year,stateFips,countyFips),pop=sum(pop))
 
 # remove '99' age, which is the summation of all ages in a county
 # could use this if wanted to population weight across all age groups to create one temperature per state-month
