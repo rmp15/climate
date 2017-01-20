@@ -37,7 +37,7 @@ pop.county$countyFips[pop.county$stateFips=='30' & pop.county$countyFips=='113']
 pop.county$countyFips[pop.county$stateFips=='46' & pop.county$countyFips=='113'] <- '102'
 pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='560'] <- '005'
 pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='780'] <- '083'
-pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='515'] <- '019's
+pop.county$countyFips[pop.county$stateFips=='51' & pop.county$countyFips=='515'] <- '019'
 
 # summarise over new age groups
 pop.county <- summarise(dplyr::group_by(pop.county,sex,age,year,stateFips,countyFips),pop=sum(pop))
