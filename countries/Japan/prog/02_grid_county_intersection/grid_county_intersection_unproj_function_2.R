@@ -18,7 +18,7 @@ library(spatialEco)
 ifelse(!dir.exists("../../output/grid_county_intersection"), dir.create("../../output/grid_county_intersection"), FALSE)
 
 # load shapefile
-jp_national <- readOGR(dsn="../../data/shapefiles/",layer="JPN_adm2")
+jp_national <- readOGR(dsn="../../data/shapefiles/",layer="JPN_adm1")
 
 original.proj <- proj4string(jp_national)
 
@@ -94,16 +94,16 @@ for(i in weighted.area$point.id) {plot(points.proj[points.proj$id==i,],col='red'
 # create weighted mean for how much of each grid crosses the state of interest
 weighted.area.temp <- data.frame()
 for(i in seq(1:length(state.polys))) {
-poly.id <- county.polys[i]
+poly.id <- state.polys[i]
 point.id <- point.poly.lookup@data[which(point.poly.lookup@data$poly.id ==poly.id),3]
-w.a <- gArea(gIntersection(jp_state,grat.poly[grat.poly@data$layer==county.polys[i],]))/gArea(jp_state)
-weighted.area.temp <- rbind(weighted.area.temp,data.frame(state.fips,county.fips,point.id,poly.id,w.a))
+w.a <- gArea(gIntersection(jp_state,grat.poly[grat.poly@data$layer==state.polys[i],]))/gArea(jp_state)
+weighted.area.temp <- rbind(weighted.area.temp,data.frame(state.fips,point.id,poly.id,w.a))
 }
 
-names(weighted.area.temp) <- c('','','','','')
+names(weighted.area.temp) <- c('','','','')
 weighted.area <- rbind(weighted.area,weighted.area.temp)
 
-names(weighted.area) <- c('state_id','county_id','point_id','poly_id','weighted_area')
+names(weighted.area) <- c('state_id','point_id','poly_id','weighted_area')
 
 if(output==1){
     write.csv(weighted.area,paste0('../../output/grid_county_intersection/weighted_area_unproj_',state.fips,'.csv'),row.names=FALSE)
@@ -115,19 +115,15 @@ return(weighted.area)
 
 ################################################################
 
-# perform for every state in the USA
+# perform for every state in the Japan
 states <- unique(as.character(jp_national$ID_1))
 # OR perform for just a few to test
-#states <- c('06')
 weighted.area.national <- data.frame()
 for(i in states){
 analysis.dummy <- state.analysis(i)
 weighted.area.national <- rbind(weighted.area.national,analysis.dummy)
 }
 
-names(weighted.area.national)[2] <- 'state_county_id'
-weighted.area.national$county_fips <- substr(weighted.area.national$state_county_id,3,5)
-weighted.area.national <- weighted.area.national[,c(1,6,2:5)]
 saveRDS(weighted.area.national,paste0('../../output/grid_county_intersection/weighted_area_unproj_national.rds'))
 
 # PLOTS
