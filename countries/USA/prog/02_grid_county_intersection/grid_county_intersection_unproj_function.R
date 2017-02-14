@@ -1,6 +1,6 @@
 rm(list=ls())
 
-print('running grid_county_intersection_unproj_function.R')
+print('running grid_county_intersection_unproj_function_3.R')
 
 library(maptools)
 library(mapproj)

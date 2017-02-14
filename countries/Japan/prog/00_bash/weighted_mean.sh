@@ -9,7 +9,7 @@ clear
 # 1. WEIGHTED MEAN PREPARATION
 #################################################
 
-echo "indentifying overlap between grids and counties for climate variable processing";
+echo "identifying overlap between grids and counties for climate variable processing";
 
 # identifies the overlap between grids and counties and creates weighted means
 Rscript ~/git/climate/countries/Japan/prog/02_grid_county_intersection/grid_county_intersection_unproj_function.R
