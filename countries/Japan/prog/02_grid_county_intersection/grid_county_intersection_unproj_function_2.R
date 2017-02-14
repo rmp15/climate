@@ -82,40 +82,26 @@ jp_state <- jp_national[jp_national$ID_1 %in% state.fips,]
 if(output==1){
     pdf(paste0('../../output/grid_county_intersection/county_graticule_highlighted_unproj_',state.fips,'.pdf'))}
 
-counties <- unique(as.character(jp_state$ID_2))
-print(counties)
-
-for(i in counties) {
-
-county      <- as.character(i)
-print(paste('current status:',county))
-county.fips <- county
-
-# isolate county to highlight
-jp_county <- jp_state[jp_state$ID_2 %in% county.fips,]
-
-# perform intersection test to establish which grid points intersect with county
-county.polys <- which(gIntersects(jp_county,grat.poly,byid=TRUE)==TRUE,arr.ind=FALSE)
+# perform intersection test to establish which grid points intersect with state
+state.polys <- which(gIntersects(jp_state,grat.poly,byid=TRUE)==TRUE,arr.ind=FALSE)
 
 if(output==1){
-plot(jp_state);plot(grat,add=1);plot(jp_county,col='green',add=1)
-for(i in county.polys) {plot(grat.poly[grat.poly@data$layer==i,],border='blue',lwd=2,add=TRUE)}
+plot(jp_state);plot(grat,add=1)
+for(i in state.polys) {plot(grat.poly[grat.poly@data$layer==i,],border='blue',lwd=2,add=TRUE)}
 for(i in weighted.area$point.id) {plot(points.proj[points.proj$id==i,],col='red',add=TRUE)}
 }
 
-# create weighted mean for how much of each grid crosses the county of interest
+# create weighted mean for how much of each grid crosses the state of interest
 weighted.area.temp <- data.frame()
-for(i in seq(1:length(county.polys))) {
+for(i in seq(1:length(state.polys))) {
 poly.id <- county.polys[i]
 point.id <- point.poly.lookup@data[which(point.poly.lookup@data$poly.id ==poly.id),3]
-w.a <- gArea(gIntersection(jp_county,grat.poly[grat.poly@data$layer==county.polys[i],]))/gArea(jp_county)
+w.a <- gArea(gIntersection(jp_state,grat.poly[grat.poly@data$layer==county.polys[i],]))/gArea(jp_state)
 weighted.area.temp <- rbind(weighted.area.temp,data.frame(state.fips,county.fips,point.id,poly.id,w.a))
 }
 
 names(weighted.area.temp) <- c('','','','','')
 weighted.area <- rbind(weighted.area,weighted.area.temp)
-
-}
 
 names(weighted.area) <- c('state_id','county_id','point_id','poly_id','weighted_area')
 
