@@ -11,7 +11,7 @@ library(dplyr)
 ifelse(!dir.exists("../../output/population_weighted_mean"), dir.create("../../output/population_weighted_mean"), FALSE)
 
 # load county based population data
-pop.county <- read.dta("~/data/mortality/US/state/processed/county/countyPopulationsnewyears.dta")
+pop.county <- readRDS('~/git/mortality/Japan/pref/data/population/processed/prefPopulations_infer_by_days')
 
 # fix ages to fit age groups in model data
 pop.county$age[pop.county$age==10] <- 5
