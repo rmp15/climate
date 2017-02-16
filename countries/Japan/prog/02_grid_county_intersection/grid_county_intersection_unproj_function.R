@@ -7,7 +7,6 @@ library(mapproj)
 library(rgeos)
 library(rgdal)
 library(RColorBrewer)
-
 library(ggplot2)
 library(raster)
 library(sp)
