@@ -30,7 +30,7 @@ echo "converting temperature netcdf file for $year";
 echo "creating temperature metric for counties for $year";
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
-#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num &
+Rscript ~/git/climate/countries/Japan/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num 
 
 echo "creating temperature metric for states for $year";
 
@@ -58,7 +58,7 @@ for metric in "${metrics[@]}"; do
 
 echo "${years[1]}";
 
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 
 done;
 
