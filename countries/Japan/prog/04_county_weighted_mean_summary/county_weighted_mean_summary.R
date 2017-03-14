@@ -53,22 +53,22 @@ wm.lookup <- readRDS('../../output/grid_county_intersection/weighted_area_unproj
 
 # for each county, summarise by day (for single year)
 dat.long <- data.frame()
-for(i in unique(wm.lookup$state.county.fips)){
+for(i in unique(wm.lookup$state_id)){
     print(i)
-    fips.match <- subset(wm.lookup,state.county.fips==i)
-    fips.match <- merge(fips.match,grid.temp,by=c('point.id','poly.id'),all.x=1)
-    weightings <- fips.match[ , grepl('weighted.area', names(fips.match) ) ]
+    fips.match <- subset(wm.lookup,state_id==i)
+    fips.match <- merge(fips.match,grid.temp,by.x=c('point_id','poly_id'),by.y=c('point.id','poly.id'),all.x=1)
+    weightings <- fips.match[ , grepl('weighted_area', names(fips.match) ) ]
     dat.days <- fips.match[ , grepl( year , names(fips.match) ) ]
     dat.days <- dat.days * weightings
     dat.days <- as.data.frame(colSums(dat.days))
     dat.days <- cbind(dat.days, as.data.frame(matrix(unlist(strsplit(rownames(dat.days),'-')), ncol=3, byrow=TRUE)))
-    dat.days$state.county.fips <- i
+    dat.days$state_id <- i
     dat.long <- rbind(dat.long,dat.days)
 
 }
 
 # correct some variables
-names(dat.long) <- c(dname,'year','month','day','state.county.fips')
+names(dat.long) <- c(dname,'year','month','day','state_id')
 rownames(dat.long) <- seq(1,nrow(dat.long))
 dat.long$year <- as.numeric(as.character(dat.long$year))
 dat.long$month <- as.numeric(as.character(dat.long$month))
