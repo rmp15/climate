@@ -118,7 +118,7 @@ dat.sd <- ddply(dat.sd,.(year,month,state_id),summarize,var.weighted=round(sd(va
 temp.state <- dat.sd
 #temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
 #temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.sd')
+names(temp.state)[grep('var.weighted',names(temp.state))] <- paste0(dname,'.sd')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
@@ -216,20 +216,20 @@ var <- paste0('number_of_min_',num.days,'_day_above_',threshold,'_upwaves_',dnam
 dat.uw <- dat.county
 names(dat.uw)[grep(dname,names(dat.uw))] <- 'variable'
 dat.uw$above.threshold <- ifelse(dat.uw$variable>threshold,1,0)
-#dat.uw <- ddply(dat.uw, .(month,year,state_id), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+dat.uw <- ddply(dat.uw, .(month,year,state_id), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
-#dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- dat.uw
 #temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
 #temp.state <- na.omit(temp.state)
 
 # round (is this right?)
-#temp.state$var.adj <- round(temp.state$var.adj)
-#names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.uwo.',threshold,'.',num.days,'d')
+temp.state$up.waves <- round(temp.state$up.waves)
+names(temp.state)[grep('up.waves',names(temp.state))] <- paste0(dname,'.uwo.',threshold,'.',num.days,'d')
 
 # save output
-#ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-#saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
 # 9. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD) FIX
@@ -243,24 +243,26 @@ var <- paste0('number_of_min_',num.days,'_day_below_',threshold,'_downwaves_',dn
 dat.dw <- dat.county
 names(dat.dw)[grep(dname,names(dat.dw))] <- 'variable'
 dat.dw$below.threshold <- ifelse(dat.dw$variable<threshold,1,0)
-#dat.dw <- ddply(dat.dw, .(month,year,state_id), summarize, down.waves=length(rle(below.threshold)$lengths[rle(below.threshold)$values==1 & rle(below.threshold)$lengths>=num.days]))
+dat.dw <- ddply(dat.dw, .(month,year,state_id), summarize, down.waves=length(rle(below.threshold)$lengths[rle(below.threshold)$values==1 & rle(below.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
-#dat.temp <-merge(dat.dw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- dat.dw
 #temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*down.waves))
 #temp.state <- na.omit(temp.state)
 
 # round (is this right?)
-#temp.state$var.adj <- round(temp.state$var.adj)
-#names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dwu.',threshold,'.',num.days,'d')
+temp.state$down.waves <- round(temp.state$down.waves)
+names(temp.state)[grep('down.waves',names(temp.state))] <- paste0(dname,'.dwu.',threshold,'.',num.days,'d')
 
 # save output
-#ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-#saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
 # 10. NUMBER OF UPWAVES 2
 ####################################################
+
+# USE LANCET COUNTDOWN DATA
 
 # THIS IS UPWAVES BY USING A JUMP (SAY UP BY 5 FROM DAY BEFORE)
 # AND THEN HOW LONG IT SUSTAINS IT
