@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1982 2015))
+declare -a years=($(seq 1979 1981))
 declare freq="daily"
 declare num="four"
 declare -i start=1982
@@ -55,7 +55,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 
 done;
 
@@ -63,7 +63,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # create climate region values
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1982 2015 1982 2013 $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1982 2015 1982 2013 $dname $metric
 
 done;
 
@@ -71,7 +71,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # create seasonality index climate values
-Rscript ~/git/climate/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions.R 1982 2013 1982 2013 $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions.R 1982 2013 1982 2013 $dname $metric
 
 done;
 
