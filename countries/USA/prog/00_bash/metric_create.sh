@@ -55,7 +55,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 
 done;
 
