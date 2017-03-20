@@ -49,6 +49,28 @@ state.weighting.filter <- subset(state.weighting,year %in% years)
 # replace name of var
 var <- paste0('mean_',dname)
 
+# COUNTY
+
+# process for finding average
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(month,state.county.fips),summarize,var.weighted=round(mean(variable),1),var.sd=round(sd(variable),1))
+
+# get 99 percentiles from assuming normal dist
+dat.at$ul <- dat.at$var.weighted + 2.326 * dat.at$var.sd
+dat.at$ll <- dat.at$var.weighted - 2.326 * dat.at$var.sd
+
+# rename
+names(dat.at)[grep('var.weighted',names(dat.at))] <- paste0(dname,'.',length(years),'yr.mean')
+names(dat.at)[grep('var.sd',names(dat.at))] <- paste0(dname,'.',length(years),'yr.sd')
+names(dat.at)[grep('ul',names(dat.at))] <- paste0(dname,'.',length(years),'yr.ul')
+names(dat.at)[grep('ll',names(dat.at))] <- paste0(dname,'.',length(years),'yr.ll')
+
+# save output
+saveRDS(dat.at,paste0("../../output/longterm_normals/",dname,"/",metric,'/county_longterm_normals_',var,'_',year.start,'_',year.end,'.rds'))
+
+# STATE
+
 # process for finding average
 dat.at <- dat.county
 names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
