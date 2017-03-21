@@ -52,7 +52,7 @@ var <- paste0('mean_',dname)
 # COUNTY
 
 # process for finding average
-dat.at <- dat.county
+dat.at <- dat
 names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
 dat.at <- ddply(dat.at,.(month,state.county.fips),summarize,var.weighted=round(mean(variable),1),var.sd=round(sd(variable),1))
 
@@ -72,7 +72,7 @@ saveRDS(dat.at,paste0("../../output/longterm_normals/",dname,"/",metric,'/county
 # STATE
 
 # process for finding average
-dat.at <- dat.county
+dat.at <- dat
 names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
 dat.at <- ddply(dat.at,.(month,state.county.fips),summarize,var.weighted=round(mean(variable),1),var.sd=round(sd(variable),1))
 

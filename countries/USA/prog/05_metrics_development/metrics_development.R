@@ -282,7 +282,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 8. NUMBER OF UPWAVES 1 (ABSOLUTE THRESHOLD) TO BE FIXED!
+# 8. NUMBER OF UPWAVES 1 (ABSOLUTE THRESHOLD)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_99_upwaves_',dname)
@@ -330,7 +330,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 9. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD) TO BE FIXED!
+# 9. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_99_downwaves_',dname)
