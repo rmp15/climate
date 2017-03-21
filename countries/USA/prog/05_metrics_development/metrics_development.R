@@ -117,7 +117,7 @@ dat.th.do <- ddply(dat.th.do,.(year,leap,month,state.county.fips),summarize,days
 dat.temp <-merge(dat.th.do,state.weighting.filter,by=c('year','month','state.county.fips'))
 temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,days.below.threshold=sum(pop.weighted*days.below.threshold))
 temp.state <- na.omit(temp.state)
-temp.state$days.below.threshold <- as.numeric(temp.state$days.above.threshold)
+temp.state$days.below.threshold <- as.numeric(temp.state$days.below.threshold)
 
 # adjust to a 31-day month
 # 30-day months = April, June, September, November (4,6,9,11)
@@ -284,7 +284,6 @@ saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/st
 ####################################################
 # 8. NUMBER OF UPWAVES 1 (ABSOLUTE THRESHOLD) TO BE FIXED!
 ####################################################
-#threshold <- 25
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_99_upwaves_',dname)
 
@@ -333,7 +332,6 @@ saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/st
 ####################################################
 # 9. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD) TO BE FIXED!
 ####################################################
-#threshold <- 5
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_99_downwaves_',dname)
 

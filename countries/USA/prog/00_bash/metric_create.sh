@@ -36,10 +36,10 @@ echo "creating temperature metric for counties for $year";
 
 # creates metrics from the temperature values processed
 # NEEDS TO OUTPUT VARIABLES TO A LOCATION WHERE THEY CAN BE READ BY THE PLOTTING FUNCTION
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname 
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname
 
 # SEE ABOVE ABOUT LOCATION OF VARIABLES FOR PLOTTING FUNCTION
-declare -a metrics=("mean" "days_below_10" "days_above_30" "sd" "days_changing_by_5" "days_increasing_by_5" "days_decreasing_by_5" "number_of_min_3_day_above_25_upwaves" "number_of_min_3_day_below_5_downwaves")
+declare -a metrics=("mean" "days_below_10" "days_above_30" "sd" "days_changing_by_5" "days_increasing_by_5" "days_decreasing_by_5" "number_of_min_3_day_above_99_upwaves" "number_of_min_3_day_below_99_downwaves")
 
 #echo "plotting temperature metric results for $year";
 
