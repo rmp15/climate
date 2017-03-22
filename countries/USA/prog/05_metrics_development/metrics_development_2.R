@@ -57,11 +57,11 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 # process for counting upwaves
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
-dat.uw <- ddply(dat.uw, .(month,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
 dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
 temp.state <- na.omit(temp.state)
 temp.state <- temp.state[complete.cases(temp.state),]
 
@@ -105,11 +105,11 @@ dat.dw <- merge(dat.dw,dat.perc,by=c('month','state.county.fips'))
 # process for counting downwaves
 colnames(dat.dw) = gsub(dname, "variable", colnames(dat.dw))
 dat.dw$below.threshold <- ifelse(dat.dw$variable<dat.dw$variable.20yr.ll,1,0)
-dat.dw <- ddply(dat.dw, .(month,year,state.county.fips), summarize, down.waves=length(rle(below.threshold)$lengths[rle(below.threshold)$values==1 & rle(below.threshold)$lengths>=num.days]))
+dat.dw <- ddply(dat.dw, .(month,leap,year,state.county.fips), summarize, down.waves=length(rle(below.threshold)$lengths[rle(below.threshold)$values==1 & rle(below.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
 dat.temp <-merge(dat.dw,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*down.waves))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*down.waves))
 temp.state <- na.omit(temp.state)
 temp.state <- temp.state[complete.cases(temp.state),]
 
