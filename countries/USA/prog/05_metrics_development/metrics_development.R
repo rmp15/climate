@@ -85,6 +85,8 @@ names(temp.state)[grep(paste0(dname,'.20yr.mean') ,names(temp.state))] <- '20yr.
 temp.state$var.adj <- with(temp.state,var.adj-`20yr.mean`)
 names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc')
 
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
