@@ -60,6 +60,36 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
+# 1a. AVERAGE VALUE CENTRED BY LONGTERM NORMAL
+####################################################
+var <- paste0('meanc_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
+
+# load multiyear normal for 1986-2005
+dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_normals_mean_',dname,'_1986_2005.rds'))
+
+# merge state-month mean values just calculated and subtract multiyear normal
+temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
+names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
+names(temp.state)[grep(paste0(dname,'.20yr.mean') ,names(temp.state))] <- '20yr.mean'
+temp.state$var.adj <- with(temp.state,var.adj-`20yr.mean`)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
 # 2. NUMBER OF DAYS ABOVE A THRESHOLD
 ####################################################
 threshold.upper <- 30
@@ -288,7 +318,7 @@ num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_99_upwaves_',dname)
 
 # load 99th percentile data for state
-dat.perc <- readRDS(paste0('../../output/longterm_normals/',dname,'/mean/county_longterm_normals_mean_t2m_1986_2005.rds'))
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_multiyear_normals_mean_t2m_1986_2005.rds'))
 
 # process for counting number of upwaves
 dat.uw <- dat.county
@@ -336,7 +366,7 @@ num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_99_downwaves_',dname)
 
 # load 99th percentile data for state
-dat.perc <- readRDS(paste0('../../output/longterm_normals/',dname,'/mean/county_longterm_normals_mean_t2m_1986_2005.rds'))
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_multiyear_normals_mean_t2m_1986_2005.rds'))
 
 # process for counting number of downwaves
 dat.dw <- dat.county
