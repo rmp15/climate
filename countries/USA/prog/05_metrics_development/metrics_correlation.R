@@ -35,3 +35,10 @@ for(i in metrics) {
 
 # remove first 5 columns
 dat.metrics[,c(1:6)] <- NULL
+
+# plot all against all
+for(i in c(1:ncol(dat.metrics))){
+    for j in c(1:ncol(dat.metrics))) {
+        plot(dat.metrics[,i],dat.metrics[,j])
+    }
+}
