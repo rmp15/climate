@@ -56,15 +56,18 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 
 done;
+
+# SEE ABOVE ABOUT LOCATION OF VARIABLES FOR PLOTTING FUNCTION
+declare -a metrics=("meanc")
 
 for metric in "${metrics[@]}"; do
 
 :
 # create climate region values
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1982 2015 1982 2013 $dname $metric
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1982 2015 1982 2013 $dname $metric
 
 done;
 
