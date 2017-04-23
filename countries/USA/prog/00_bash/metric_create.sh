@@ -36,7 +36,7 @@ echo "creating temperature metric for counties for $year";
 
 # creates metrics from the temperature values processed
 # NEEDS TO OUTPUT VARIABLES TO A LOCATION WHERE THEY CAN BE READ BY THE PLOTTING FUNCTION
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end
 
 # SEE ABOVE ABOUT LOCATION OF VARIABLES FOR PLOTTING FUNCTION
@@ -67,7 +67,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # create climate region values
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1979 2015 1982 2013 $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1979 2015 1982 2013 $dname $metric
 
 done;
 
