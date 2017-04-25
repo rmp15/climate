@@ -23,7 +23,7 @@ num.years <- year.end - year.start + 1
 
 # load the data
 # create directories for output
-file.loc.input <- paste0('../../output/metrics_climate_regions/',dname,'/',metric,'/')
+file.loc.input <- paste0('~/git/climate/countries/USA/output/metrics_climate_regions/',dname,'/',metric,'/')
 dat <- readRDS(paste0(file.loc.input,'climate_region_values_',dname,'_',metric,'_',year.start.2,'_',year.end.2))
 
 # rename climate variable to generic name
@@ -110,7 +110,7 @@ lin.reg.grad.region <- merge(lin.reg.grad.region,lin.reg.sig.region,by=c('sex','
 ###############################################################
 
 # create directories for output
-file.loc <- paste0('../../output/seasonality_index_climate_region/',dname,'/',metric,'/')
+file.loc <- paste0('~/git/climate/countries/USA/output/seasonality_index_climate_region/',dname,'/',metric,'/')
 ifelse(!dir.exists(file.loc), dir.create(file.loc, recursive=TRUE), FALSE)
 
 ###############################################################
