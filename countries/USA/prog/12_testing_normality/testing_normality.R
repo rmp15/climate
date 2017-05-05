@@ -22,7 +22,6 @@ dat$state.fips <- as.numeric(as.character(dat$state.fips))
 # load state names
 state.lookup <- read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lookup.csv')
 
-
 # merge state names
 dat <- merge(dat,state.lookup,by.x='state.fips',by.y='fips')
 
@@ -49,3 +48,32 @@ pdf(paste0("../../output/testing_normality/",dname,"/",metric,"/","qqplot_",dnam
     scale_colour_discrete(guide=FALSE)
 
 dev.off()
+
+# histogram to test for normality by state and month
+pdf(paste0("../../output/testing_normality/",dname,"/",metric,"/","histogram_by_month_state_",dname,"_",metric,"_",year.start,"_",year.end,".pdf"),height=0,width=0,paper='a4r')
+
+for(i in unique(dat$state.fips)){
+   print(ggplot(subset(dat,sex==2 & age==85 & state.fips==i), aes(variable))+ geom_histogram() + facet_wrap(~month) + xlab(paste0(dname,'_',metric)) + ggtitle(state.lookup[state.lookup$fips==i,1]))
+}
+
+dev.off()
+
+# qqplot to test for normality by state and month
+pdf(paste0("../../output/testing_normality/",dname,"/",metric,"/","qqplot_by_month_state_",dname,"_",metric,"_",year.start,"_",year.end,".pdf"),height=0,width=0,paper='a4r')
+
+for(i in c(1:12)){
+    print(ggplot(subset(dat,sex==2 & age==85 & month==i), aes(sample=variable,color=full_name))+stat_qq() +
+    #geom_abline(slope=1,intercept=0) +
+    ggtitle('Q-Q plot') +
+    xlab(paste0(dname,'_',metric)) +
+    scale_colour_discrete(guide=FALSE) + ggtitle(i))
+
+}
+
+dev.off()
+
+
+
+
+
+
