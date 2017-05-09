@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1979 2015))
+declare -a years=($(seq 1979 1979))
 declare freq="daily"
 declare num="four"
 declare -i start=1982
@@ -36,9 +36,12 @@ echo "creating temperature metric for counties for $year";
 
 # creates metrics from the temperature values processed
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end
+
+
 
 #declare -a metrics=("number_of_min_3_day_above_99_upwaves" "number_of_min_3_day_above_95_upwaves" "number_of_min_3_day_above_90_upwaves" "number_of_min_3_day_below_99_downwaves" "number_of_min_3_day_below_95_downwaves" "number_of_min_3_day_below_90_downwaves")
+
 declare -a metrics=("number_of_days_above_90" "number_of_days_below_90")
 
 #echo "plotting temperature metric results for $year";
@@ -47,7 +50,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
 done; done;
 
@@ -55,7 +58,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2015 $dname $metric
 
 done;
