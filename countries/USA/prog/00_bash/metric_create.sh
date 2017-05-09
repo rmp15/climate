@@ -39,7 +39,7 @@ echo "creating temperature metric for counties for $year";
 Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
 
 #declare -a metrics=("number_of_min_3_day_above_99_upwaves" "number_of_min_3_day_above_95_upwaves" "number_of_min_3_day_above_90_upwaves" "number_of_min_3_day_below_99_downwaves" "number_of_min_3_day_below_95_downwaves" "number_of_min_3_day_below_90_downwaves")
-declare -a metrics=("number_of_days_above_90","number_of_days_below_90")
+declare -a metrics=("number_of_days_above_90" "number_of_days_below_90")
 
 #echo "plotting temperature metric results for $year";
 
