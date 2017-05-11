@@ -42,34 +42,31 @@ is.leapyear=function(year){
 dat.county$leap <- as.integer(is.leapyear(dat.county$year))
 
 ####################################################
-# 14. NUMBER OF DAYS ABOVE ABSOLUTE 90th PERCENTILE THRESHOLD
+# 14. NUMBER OF UPWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY)
 ####################################################
-var <- paste0('number_of_days_above_90_',dname)
+num.days <- 3
+var <- paste0('number_of_min_',num.days,'_day_above_nonnormal_90_upwaves_',dname)
 
-# load 99th percentile data for state
-dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_normals_mean_t2m_1986_2005.rds'))
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_nonnormals_mean_t2m_1986_2005.rds'))
 
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
-# get 95 percentiles from assuming normal dist
-dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + 1.65 * dat.perc$variable.20yr.sd
-dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - 1.65 * dat.perc$variable.20yr.sd
-
-# process for counting number of days above 90th percentile
+# process for counting number of upwaves
 dat.uw <- dat.county
 
-# merge 90th percentile data with county temperature data
+# merge 99th percentile data with county temperature data
 dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
 dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
-dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, days.above.threshold=sum(above.threshold))
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
 dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*days.above.threshold))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
 temp.state <- na.omit(temp.state)
 temp.state <- temp.state[complete.cases(temp.state),]
 
@@ -89,41 +86,38 @@ temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
 #temp.state$days.above.threshold <- round(temp.state$days.above.threshold)
 
 # rename variable
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.da.90')
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.uwo.',num.days,'.nn.d')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 15. NUMBER OF DAYS BELOW 90th PERCENTILE THRESHOLD
+# 15. NUMBER OF DOWNWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY)
 ####################################################
-var <- paste0('number_of_days_below_90_',dname)
+num.days <- 3
+var <- paste0('number_of_min_',num.days,'_day_below_nonnormal_90_downwaves_',dname)
 
-# load 99th percentile data for state
-dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_normals_mean_t2m_1986_2005.rds'))
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_nonnormals_mean_t2m_1986_2005.rds'))
 
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
-# get 95 percentiles from assuming normal dist
-dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + 1.65 * dat.perc$variable.20yr.sd
-dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - 1.65 * dat.perc$variable.20yr.sd
-
-# process for counting number of days above 90th percentile
+# process for counting number of upwaves
 dat.uw <- dat.county
 
-# merge 90th percentile data with county temperature data
+# merge 99th percentile data with county temperature data
 dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
 dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
-dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, days.above.threshold=sum(above.threshold))
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
 dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*days.above.threshold))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
 temp.state <- na.omit(temp.state)
 temp.state <- temp.state[complete.cases(temp.state),]
 
@@ -143,21 +137,21 @@ temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
 #temp.state$days.above.threshold <- round(temp.state$days.above.threshold)
 
 # rename variable
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.db.90')
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dwb.',num.days,'.nn.d')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 16. NUMBER OF UPWAVES (JUMP)
+# 17. NUMBER OF UPWAVES (JUMP)
 ####################################################
 
 # THIS IS UPWAVES BY USING A JUMP (SAY UP BY 5 FROM DAY BEFORE)
 # AND THEN HOW LONG IT SUSTAINS IT
 
 ####################################################
-# 17. NUMBER OF DOWNWAVES (JUMP)
+# 18. NUMBER OF DOWNWAVES (JUMP)
 ####################################################
 
 # THIS IS DOWNWAVES BY USING A JUMP (SAY DOWN BY 5 FROM DAY BEFORE)
