@@ -40,7 +40,7 @@ echo "creating temperature metric for counties for $year";
 
 #declare -a metrics=("number_of_min_3_day_above_99_upwaves" "number_of_min_3_day_above_95_upwaves" "number_of_min_3_day_above_90_upwaves" "number_of_min_3_day_below_99_downwaves" "number_of_min_3_day_below_95_downwaves" "number_of_min_3_day_below_90_downwaves")
 
-declare -a metrics=("number_of_min_3_day_above_nonnormal_90_upwaves" "number_of_min_3_day_below_nonnormal_90_downwaves")
+declare -a metrics=("number_of_days_above_nonnormal_90" "number_of_days_below_nonnormal_90")
 
 echo "plotting temperature metric results for $year";
 
@@ -48,7 +48,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
 done; done;
 
