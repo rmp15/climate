@@ -51,6 +51,8 @@ state.weighting.filter <- subset(state.weighting,year %in% years)
 # replace name of var
 var <- paste0('mean_',dname)
 
+# 90 PERCENTILE (10% ABOVE AND 10% BELOW)
+
 # COUNTY
 
 # process for finding average and 90th percentile upper and lower limits
@@ -92,4 +94,49 @@ names(temp.state)[grep('10',names(temp.state))] <- paste0(dname,'.',length(years
 
 # save output
 saveRDS(temp.state,paste0("../../output/multiyear_normals/",dname,"/",metric,'/state_longterm_nonnormals_',var,'_',year.start,'_',year.end,'.rds'))
+
+# 95 PERCENTILE (5% ABOVE AND 5% BELOW)
+
+# COUNTY
+
+# process for finding average and 90th percentile upper and lower limits
+dat.at <- dat
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.mean <- ddply(dat.at,.(month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+dat.perc <- ddply(dat.at, .(month,state.county.fips),function(x) round(quantile(x$variable,c(0.05,0.95)),1))
+dat.at <- merge(dat.mean,dat.perc,by=c('month','state.county.fips'))
+
+# rename
+names(dat.at)[grep('var.weighted',names(dat.at))] <- paste0(dname,'.',length(years),'yr.mean')
+names(dat.at)[grep('95',names(dat.at))] <- paste0(dname,'.',length(years),'yr.ul')
+names(dat.at)[grep('5',names(dat.at))] <- paste0(dname,'.',length(years),'yr.ll')
+
+# save output
+saveRDS(dat.at,paste0("../../output/multiyear_normals/",dname,"/",metric,'/county_longterm_95_nonnormals_',var,'_',year.start,'_',year.end,'.rds'))
+
+# STATE
+
+# process for finding average
+dat.at <- dat
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.mean <- ddply(dat.at,.(month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+dat.perc <- ddply(dat.at, .(month,state.county.fips),function(x) round(quantile(x$variable,c(0.05,0.95)),1))
+dat.at <- merge(dat.mean,dat.perc,by=c('month','state.county.fips'))
+
+# take weighted mean for state by population of middle year
+dat.at$year <- years[round(length(years)/2)]
+
+# merge and create weighted mean and 90th percentile upper and lower limits for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted),var.10=sum(pop.weighted*`5%`),var.90=sum(pop.weighted*`95%`))
+temp.state <- na.omit(temp.state)
+
+# rename
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.',length(years),'yr.mean')
+names(temp.state)[grep('90',names(temp.state))] <- paste0(dname,'.',length(years),'yr.ul')
+names(temp.state)[grep('10',names(temp.state))] <- paste0(dname,'.',length(years),'yr.ll')
+
+# save output
+saveRDS(temp.state,paste0("../../output/multiyear_normals/",dname,"/",metric,'/state_longterm_95_nonnormals_',var,'_',year.start,'_',year.end,'.rds'))
+
 
