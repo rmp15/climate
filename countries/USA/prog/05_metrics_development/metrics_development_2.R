@@ -42,20 +42,26 @@ is.leapyear=function(year){
 dat.county$leap <- as.integer(is.leapyear(dat.county$year))
 
 ####################################################
-# 16. NUMBER OF UPWAVES 5 (ABSOLUTE THRESHOLD 95th PERCENTILE NOT ASSUMING NORMALITY)
+# 22. NUMBER OF JUMPUPWAVES (JUMP UP TO OVER 5 ABOVE LONGRUN MEAN NOT ASSUMING NORMALITY)
 ####################################################
+
 num.days <- 3
-var <- paste0('number_of_min_',num.days,'_day_above_nonnormal_95_upwaves_',dname)
+jump = 5
+var <- paste0('number_of_min_',num.days,'_day_above_+',jump,'_jumpupwaves_',dname)
 
 # load 90th percentile data for state
 dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_95_nonnormals_mean_t2m_1986_2005.rds'))
 
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
+# establish the 'jump' limits
+dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
+dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+
 # process for counting number of upwaves
 dat.uw <- dat.county
 
-# merge 99th percentile data with county temperature data
+# merge jump limit data with county temperature data
 dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
@@ -82,31 +88,34 @@ ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
 ))))
 temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
 
-# round (is this right?) NO!
-#temp.state$days.above.threshold <- round(temp.state$days.above.threshold)
-
 # rename variable
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.uwo.',num.days,'.nn95.d')
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.juwo.',num.days,'d.jo5')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 17. NUMBER OF DOWNWAVES 5 (ABSOLUTE THRESHOLD 95th PERCENTILE NOT ASSUMING NORMALITY)
+# 23. NUMBER OF JUMPDOWNWAVES (JUMP UP TO OVER 5 BELOW LONGRUN MEAN NOT ASSUMING NORMALITY)
 ####################################################
+
 num.days <- 3
-var <- paste0('number_of_min_',num.days,'_day_below_nonnormal_95_upwaves_',dname)
+jump = 5
+var <- paste0('number_of_min_',num.days,'_day_below_+',jump,'_jumpdownwaves_',dname)
 
 # load 90th percentile data for state
 dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_95_nonnormals_mean_t2m_1986_2005.rds'))
 
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
+# establish the 'jump' limits
+dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
+dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+
 # process for counting number of upwaves
 dat.uw <- dat.county
 
-# merge 99th percentile data with county temperature data
+# merge jump limit data with county temperature data
 dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
@@ -133,12 +142,11 @@ ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
 ))))
 temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
 
-# round (is this right?) NO!
-#temp.state$days.above.threshold <- round(temp.state$days.above.threshold)
-
 # rename variable
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dwb.',num.days,'.nn95.d')
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.jdwb.',num.days,'d.jo5')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+
