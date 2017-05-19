@@ -27,33 +27,39 @@ source('../../data/objects/objects.R')
 dat.1 <- readRDS(paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/state_weighted_summary_',metric.1,'_',dname,'_',year.start,'_',year.end,'.rds'))
 dat.2 <- readRDS(paste0('../../output/metrics_development/',dname,'/',metric.2,'_',dname,'/state_weighted_summary_',metric.2,'_',dname,'_',year.start,'_',year.end,'.rds'))
 
+# subset for only one age-sex group
+dat.1 <- subset(dat.1,age==85&sex==2)
+dat.2 <- subset(dat.2,age==85&sex==2)
+
 # establish linear fit for R-squared value
-dat.plot = data.frame(metric.1=dat.1[,ncol(dat.1)],metric.2=dat.2[,ncol(dat.2)])
+dat.plot = data.frame(month=dat.1$month,state.fips=dat.1$state.fips,metric.1=dat.1[,ncol(dat.1)],metric.2=dat.2[,ncol(dat.2)])
 lm = lm(metric.2~metric.1,data=dat.plot)
 r.squared = round(summary(lm)$r.squared,2)
 
-# plot metric 1 against metric 2
+# plot metric 1 against metric 2 for all states and all months
 pdf(paste0(dir,dname,'_',metric.2,'_against_',metric.1,'_',year.start,'_',year.end,'.pdf'),paper='a4r',height=0,width=0)
 ggplot() + geom_point(data=dat.plot,aes(x=metric.1,y=metric.2)) +
 xlab(metric.1) + ylab(metric.2) +
 ggtitle(paste0(metric.2,' against ',metric.1,' with R^2=',r.squared))
 dev.off()
 
-# LEGACY CODE
+# load state fips lookup
+state.lookup = read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lookup.csv')
 
-# load all other climate variables
-#dat.metrics <- dat[,c(1:5)]
-#for(i in metrics) {
-#    dat.temp <- readRDS(paste0('../../output/metrics_development/',dname,'/',i,'_',dname,'/state_weighted_summary_',i,'_',dname,'_',year.start,'_',year.end,'.rds'))
-#    dat.metrics <- merge(dat.metrics,dat.temp)
-#}
+# plot metric 1 against metric 2 for an individual state and facetted by month
+pdf(paste0(dir,dname,'_',metric.2,'_against_',metric.1,'_by_state_and_month_',year.start,'_',year.end,'.pdf'),paper='a4r',height=0,width=0)
 
-# remove first 6 columns
-#dat.metrics[,c(1:6)] <- NULL
+for (i in (unique(dat.plot$state.fips))) {
 
-# plot all against all
-#for(i in c(1:ncol(dat.metrics))){
-#    for j in c(1:ncol(dat.metrics))) {
-#        plot(dat.metrics[,i],dat.metrics[,j])
-#    }
-#}
+state.name = state.lookup[state.lookup$fips==as.numeric(i),][1,1]
+
+print(ggplot() + geom_point(data=subset(dat.plot,state.fips==i),aes(x=metric.1,y=metric.2)) +
+xlab(metric.1) + ylab(metric.2) +
+ggtitle(paste0(state.name,' ',metric.2,' against ',metric.1,' with R^2=',r.squared)) +
+facet_wrap(~month))
+
+}
+
+dev.off()
+
+
