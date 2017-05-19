@@ -116,7 +116,7 @@ names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
 dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_normals_mean_',dname,'_1980_2013.rds'))
 
 # establish number of years of study
-num.years <- length(year.start:year.end)
+num.years <- 34
 
 # merge state-month mean values just calculated and subtract multiyear normal
 temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
@@ -153,13 +153,13 @@ names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
 dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_normals_mean_',dname,'_',year.start,'_',year.end,'.rds'))
 
 # establish number of years of study
-num.years <- length(year.start:year.end)
+num.years <- 30
 
 # merge state-month mean values just calculated and subtract multiyear normal
 temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
 names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
 names(temp.state)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.state))] <- paste0(num.years,'yr.mean')
-temp.state$var.adj <- with(temp.state,var.adj-`32yr.mean`)
+temp.state$var.adj <- with(temp.state,var.adj-`30yr.mean`)
 names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
 
 # ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
@@ -313,7 +313,7 @@ names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90perc')
 dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_1986_2005.rds'))
 
 # establish number of years of study
-num.years <- length(year.start:year.end)
+num.years <- 20
 
 # merge state-month 90th percentile values just calculated and subtract multiyear 90th percentile
 temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
@@ -353,7 +353,7 @@ names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90perc')
 dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_1980_2013.rds'))
 
 # establish number of years of study
-num.years <- length(year.start:year.end)
+num.years <- 34
 
 # merge state-month 90th percentile values just calculated and subtract multiyear 90th percentile
 temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
@@ -410,7 +410,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 2. NUMBER OF DAYS ABOVE A THRESHOLD
+# 4. NUMBER OF DAYS ABOVE A THRESHOLD
 ####################################################
 threshold.upper <- 30
 var <- paste0('days_above_',threshold.upper,'_',dname)
@@ -451,7 +451,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 3. NUMBER OF DAYS BELOW A THRESHOLD
+# 5. NUMBER OF DAYS BELOW A THRESHOLD
 ####################################################
 threshold.lower <- 10
 var <- paste0('days_below_',threshold.lower,'_',dname)
@@ -492,7 +492,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 4. STANDARD DEVIATION
+# 6. STANDARD DEVIATION
 ####################################################
 var <- paste0('sd_',dname)
 
@@ -512,7 +512,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 5. NUMBER OF DAYS CHANGED BY A VALUE FROM DAY BEFORE
+# 7. NUMBER OF DAYS CHANGED BY A VALUE FROM DAY BEFORE
 ####################################################
 threshold <- 5
 var <- paste0('days_changing_by_',threshold,'_',dname)
@@ -552,7 +552,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 6. NUMBER OF DAYS INCREASING BY A VALUE FROM DAY BEFORE
+# 8. NUMBER OF DAYS INCREASING BY A VALUE FROM DAY BEFORE
 ####################################################
 threshold <- 5
 var <- paste0('days_increasing_by_',threshold,'_',dname)
@@ -592,7 +592,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 7. NUMBER OF DAYS DECREASING BY A VALUE FROM DAY BEFORE
+# 9. NUMBER OF DAYS DECREASING BY A VALUE FROM DAY BEFORE
 ####################################################
 threshold <- 5
 var <- paste0('days_decreasing_by_',threshold,'_',dname)
@@ -632,7 +632,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 8. NUMBER OF UPWAVES 1 (ABSOLUTE THRESHOLD 99th PERCENTILE)
+# 10. NUMBER OF UPWAVES 1 (ABSOLUTE THRESHOLD 99th PERCENTILE)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_99_upwaves_',dname)
@@ -680,7 +680,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 9. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD 99th PERCENTILE)
+# 11. NUMBER OF DOWNWAVES 1 (ABSOLUTE THRESHOLD 99th PERCENTILE)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_99_downwaves_',dname)
@@ -729,7 +729,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 10. NUMBER OF UPWAVES 2 (ABSOLUTE THRESHOLD 95th PERCENTILE)
+# 12. NUMBER OF UPWAVES 2 (ABSOLUTE THRESHOLD 95th PERCENTILE)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_95_upwaves_',dname)
@@ -784,7 +784,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 11. NUMBER OF DOWNWAVES 2 (ABSOLUTE THRESHOLD 95th PERCENTILE)
+# 13. NUMBER OF DOWNWAVES 2 (ABSOLUTE THRESHOLD 95th PERCENTILE)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_95_downwaves_',dname)
@@ -839,7 +839,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 12. NUMBER OF UPWAVES 3 (ABSOLUTE THRESHOLD 90th PERCENTILE)
+# 14. NUMBER OF UPWAVES 3 (ABSOLUTE THRESHOLD 90th PERCENTILE)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_90_upwaves_',dname)
@@ -894,7 +894,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 13. NUMBER OF DOWNWAVES 3 (ABSOLUTE THRESHOLD 90th PERCENTILE)
+# 15. NUMBER OF DOWNWAVES 3 (ABSOLUTE THRESHOLD 90th PERCENTILE)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_90_downwaves_',dname)
@@ -949,7 +949,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 14. NUMBER OF UPWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY)
+# 16. NUMBER OF UPWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_nonnormal_90_upwaves_',dname)
@@ -1000,7 +1000,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 15. NUMBER OF DOWNWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY)
+# 17. NUMBER OF DOWNWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_nonnormal_90_downwaves_',dname)
@@ -1051,7 +1051,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 16. NUMBER OF UPWAVES 5 (ABSOLUTE THRESHOLD 95th PERCENTILE NOT ASSUMING NORMALITY)
+# 18. NUMBER OF UPWAVES 5 (ABSOLUTE THRESHOLD 95th PERCENTILE NOT ASSUMING NORMALITY)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_above_nonnormal_95_upwaves_',dname)
@@ -1102,7 +1102,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 17. NUMBER OF DOWNWAVES 5 (ABSOLUTE THRESHOLD 95th PERCENTILE NOT ASSUMING NORMALITY)
+# 19. NUMBER OF DOWNWAVES 5 (ABSOLUTE THRESHOLD 95th PERCENTILE NOT ASSUMING NORMALITY)
 ####################################################
 num.days <- 3
 var <- paste0('number_of_min_',num.days,'_day_below_nonnormal_95_upwaves_',dname)
@@ -1153,7 +1153,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 18. NUMBER OF DAYS ABOVE ABSOLUTE 90th PERCENTILE THRESHOLD
+# 20. NUMBER OF DAYS ABOVE ABSOLUTE 90th PERCENTILE THRESHOLD
 ####################################################
 var <- paste0('number_of_days_above_90_',dname)
 
@@ -1207,7 +1207,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 19. NUMBER OF DAYS BELOW 90th PERCENTILE THRESHOLD
+# 21. NUMBER OF DAYS BELOW 90th PERCENTILE THRESHOLD
 ####################################################
 var <- paste0('number_of_days_below_90_',dname)
 
@@ -1261,7 +1261,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 20. NUMBER OF DAYS ABOVE ABSOLUTE 90th PERCENTILE THRESHOLD (NOT ASSUMING NORMALITY)
+# 22. NUMBER OF DAYS ABOVE ABSOLUTE 90th PERCENTILE THRESHOLD (NOT ASSUMING NORMALITY)
 ####################################################
 var <- paste0('number_of_days_above_nonnormal_90_',dname)
 
@@ -1311,7 +1311,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 21. NUMBER OF DAYS BELOW 90th PERCENTILE THRESHOLD (NOT ASSUMING NORMALITY)
+# 23. NUMBER OF DAYS BELOW 90th PERCENTILE THRESHOLD (NOT ASSUMING NORMALITY)
 ####################################################
 var <- paste0('number_of_days_below_nonnormal_90_',dname)
 
@@ -1361,7 +1361,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 22. NUMBER OF JUMPUPWAVES (JUMP UP TO OVER 5 ABOVE LONGRUN MEAN NOT ASSUMING NORMALITY)
+# 24. NUMBER OF JUMPUPWAVES (JUMP UP TO OVER 5 ABOVE LONGRUN MEAN NOT ASSUMING NORMALITY)
 ####################################################
 
 num.days <- 3
@@ -1415,7 +1415,7 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 23. NUMBER OF JUMPDOWNWAVES (JUMP UP TO OVER 5 BELOW LONGRUN MEAN NOT ASSUMING NORMALITY)
+# 25. NUMBER OF JUMPDOWNWAVES (JUMP UP TO OVER 5 BELOW LONGRUN MEAN NOT ASSUMING NORMALITY)
 ####################################################
 
 num.days <- 3

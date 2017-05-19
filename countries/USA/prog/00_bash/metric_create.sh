@@ -9,8 +9,8 @@ clear
 declare -a years=($(seq 1979 2015))
 declare freq="daily"
 declare num="four"
-declare -i start=1986
-declare -i end=2005
+declare -i start=1980
+declare -i end=2009
 
 #################################################
 # 1. 2-METRE TEMPERATURE PROCESSING (t2m)
