@@ -160,7 +160,7 @@ temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
 names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
 names(temp.state)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.state))] <- paste0(num.years,'yr.mean')
 temp.state$var.adj <- with(temp.state,var.adj-`32yr.mean`)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc2')
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
 
 # ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
 temp.state <- temp.state[,c(1:6)]
@@ -170,7 +170,127 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
-# 1d. 90TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
+# 2a. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
+####################################################
+
+var <- paste0('10percc_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.1)),1))
+
+# rename
+names(dat.at)[grep('10',names(dat.at))] <- 'var.weighted'
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10perc')
+
+# load 10th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_1986_2005.rds'))
+
+# establish number of years of study
+num.years <- 20
+
+# merge state-month 10th percentile values just calculated and subtract multiyear 90th percentile
+temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
+names(temp.state)[grep(paste0(dname,'.10perc') ,names(temp.state))] <- 'var.adj'
+names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ll') ,names(temp.state))] <- paste0('ll')
+temp.state$var.adj <- with(temp.state,var.adj-ll)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10percc')
+
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+temp.state <- temp.state[,c(1:6)]
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 2b. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (entire period of study)
+####################################################
+
+var <- paste0('10percc2_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.1)),1))
+
+# rename
+names(dat.at)[grep('10',names(dat.at))] <- 'var.weighted'
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10perc')
+
+# load 10th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_1980_2013.rds'))
+
+# establish number of years of study
+num.years <- 34
+
+# merge state-month 10th percentile values just calculated and subtract multiyear 90th percentile
+temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
+names(temp.state)[grep(paste0(dname,'.10perc') ,names(temp.state))] <- 'var.adj'
+names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ll') ,names(temp.state))] <- paste0('ll')
+temp.state$var.adj <- with(temp.state,var.adj-ll)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10percc2')
+
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+temp.state <- temp.state[,c(1:6)]
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 2c. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
+####################################################
+
+var <- paste0('10percc3_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.1)),1))
+
+# rename
+names(dat.at)[grep('10',names(dat.at))] <- 'var.weighted'
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10percc3')
+
+# load 10th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_',year.start,'_',year.end,'.rds'))
+
+# establish number of years of study
+num.years <- 30
+
+# merge state-month 10th percentile values just calculated and subtract multiyear 90th percentile
+temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
+names(temp.state)[grep(paste0(dname,'.10perc') ,names(temp.state))] <- 'var.adj'
+names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ll') ,names(temp.state))] <- paste0('ll')
+temp.state$var.adj <- with(temp.state,var.adj-ll)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10percc3')
+
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+temp.state <- temp.state[,c(1:6)]
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 3a. 90TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
 ####################################################
 
 var <- paste0('90percc_',dname)
@@ -190,7 +310,7 @@ temp.state <- na.omit(temp.state)
 names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90perc')
 
 # load 90th percentile data for state
-dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_',year.start,'_',year.end,'.rds'))
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_1986_2005.rds'))
 
 # establish number of years of study
 num.years <- length(year.start:year.end)
@@ -201,6 +321,86 @@ names(temp.state)[grep(paste0(dname,'.90perc') ,names(temp.state))] <- 'var.adj'
 names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ul') ,names(temp.state))] <- paste0('ul')
 temp.state$var.adj <- with(temp.state,var.adj-ul)
 names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90percc')
+
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+temp.state <- temp.state[,c(1:6)]
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 3b. 90TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (entire period of study)
+####################################################
+
+var <- paste0('90percc2_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.9)),1))
+
+# rename
+names(dat.at)[grep('90',names(dat.at))] <- 'var.weighted'
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90perc')
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_1980_2013.rds'))
+
+# establish number of years of study
+num.years <- length(year.start:year.end)
+
+# merge state-month 90th percentile values just calculated and subtract multiyear 90th percentile
+temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
+names(temp.state)[grep(paste0(dname,'.90perc') ,names(temp.state))] <- 'var.adj'
+names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ul') ,names(temp.state))] <- paste0('ul')
+temp.state$var.adj <- with(temp.state,var.adj-ul)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90percc2')
+
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+temp.state <- temp.state[,c(1:6)]
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 3c. 90TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
+####################################################
+
+var <- paste0('90percc3_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.9)),1))
+
+# rename
+names(dat.at)[grep('90',names(dat.at))] <- 'var.weighted'
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90percc3')
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_',year.start,'_',year.end,'.rds'))
+
+# establish number of years of study
+num.years <- length(year.start:year.end)
+
+# merge state-month 90th percentile values just calculated and subtract multiyear 90th percentile
+temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
+names(temp.state)[grep(paste0(dname,'.90perc') ,names(temp.state))] <- 'var.adj'
+names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ul') ,names(temp.state))] <- paste0('ul')
+temp.state$var.adj <- with(temp.state,var.adj-ul)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90percc3')
 
 # ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
 temp.state <- temp.state[,c(1:6)]
