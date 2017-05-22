@@ -42,118 +42,322 @@ is.leapyear=function(year){
 dat.county$leap <- as.integer(is.leapyear(dat.county$year))
 
 ####################################################
-# 1c. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
+# 18. NUMBER OF UPWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY) (1980-2009)
 ####################################################
-
-var <- paste0('meanc3_',dname)
-
-# process for finding average temperature
-dat.at <- dat.county
-names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
-
-# merge and create weighted mean for state
-dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-
-# load multiyear normal for period of study
-dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_normals_mean_',dname,'_',year.start,'_',year.end,'.rds'))
-
-# establish number of years of study
-num.years <- 30
-
-# merge state-month mean values just calculated and subtract multiyear normal
-temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
-names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
-names(temp.state)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.state))] <- paste0(num.years,'yr.mean')
-temp.state$var.adj <- with(temp.state,var.adj-`30yr.mean`)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
-
-# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
-temp.state <- temp.state[,c(1:6)]
-
-# save output
-ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
-
-####################################################
-# 2c. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
-####################################################
-
-var <- paste0('10percc3_',dname)
-
-# process for finding average temperature
-dat.at <- dat.county
-names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.1)),1))
-
-# rename
-names(dat.at)[grep('10',names(dat.at))] <- 'var.weighted'
-
-# merge and create weighted mean for state
-dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10percc3')
-
-# load 10th percentile data for state
-dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_',year.start,'_',year.end,'.rds'))
-
-# establish number of years of study
-num.years <- 30
-
-# merge state-month 10th percentile values just calculated and subtract multiyear 90th percentile
-temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
-names(temp.state)[grep(paste0(dname,'.10perc') ,names(temp.state))] <- 'var.adj'
-names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ll') ,names(temp.state))] <- paste0('ll')
-temp.state$var.adj <- with(temp.state,var.adj-ll)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.10percc3')
-
-# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
-temp.state <- temp.state[,c(1:6)]
-
-# save output
-ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
-
-####################################################
-# 3c. 90TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
-####################################################
-
-var <- paste0('90percc3_',dname)
-
-# process for finding average temperature
-dat.at <- dat.county
-names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-dat.at <- ddply(dat.at,.(year,month,state.county.fips),function(x) round(quantile(x$variable,c(0.9)),1))
-
-# rename
-names(dat.at)[grep('90',names(dat.at))] <- 'var.weighted'
-
-# merge and create weighted mean for state
-dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90percc3')
+num.days <- 3
+var <- paste0('number_of_min_',num.days,'_day_above_nonnormal_90_upwaves_2_',dname)
 
 # load 90th percentile data for state
-dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_nonnormals_mean_t2m_',year.start,'_',year.end,'.rds'))
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_nonnormals_mean_t2m_1980_2009.rds'))
 
-# establish number of years of study
-num.years <- length(year.start:year.end)
+colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
-# merge state-month 90th percentile values just calculated and subtract multiyear 90th percentile
-temp.state <- merge(temp.state,dat.perc,by=c('month','state.fips','sex','age'))
-names(temp.state)[grep(paste0(dname,'.90perc') ,names(temp.state))] <- 'var.adj'
-names(temp.state)[grep(paste0(dname,'.',num.years,'yr.ul') ,names(temp.state))] <- paste0('ul')
-temp.state$var.adj <- with(temp.state,var.adj-ul)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.90percc3')
+# process for counting number of upwaves
+dat.uw <- dat.county
 
-# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
-temp.state <- temp.state[,c(1:6)]
+# merge 99th percentile data with county temperature data
+dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
+
+colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
+
+# process for counting upwaves
+dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- na.omit(temp.state)
+temp.state <- temp.state[complete.cases(temp.state),]
+
+# adjust to a 31-day month
+# 30-day months = April, June, September, November (4,6,9,11)
+# 31-day months = January, March, May, July, August, October, December (1,3,5,7,8,10,12)
+# 28/29-day months = Februray (2)
+temp.state$var.adj <- ifelse(temp.state$month %in% c(1,3,5,7,8,10,12), temp.state$var.adj,
+ifelse(temp.state$month %in% c(4,6,9,11), temp.state$var.adj*(31/30),
+ifelse((temp.state$month==2 & temp.state$leap==0), temp.state$var.adj*(31/28),
+ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
+'ERROR'
+))))
+temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
+
+# round (is this right?) NO!
+#temp.state$days.above.threshold <- round(temp.state$days.above.threshold)
+
+# rename variable
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.uwo.',num.days,'.nn.d')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 19. NUMBER OF DOWNWAVES 4 (ABSOLUTE THRESHOLD 90th PERCENTILE NOT ASSUMING NORMALITY) (1980-2009)
+####################################################
+num.days <- 3
+var <- paste0('number_of_min_',num.days,'_day_below_nonnormal_90_downwaves_2_',dname)
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_nonnormals_mean_t2m_1980_2009.rds'))
+
+colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
+
+# process for counting number of upwaves
+dat.uw <- dat.county
+
+# merge 99th percentile data with county temperature data
+dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
+
+colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
+
+# process for counting upwaves
+dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- na.omit(temp.state)
+temp.state <- temp.state[complete.cases(temp.state),]
+
+# adjust to a 31-day month
+# 30-day months = April, June, September, November (4,6,9,11)
+# 31-day months = January, March, May, July, August, October, December (1,3,5,7,8,10,12)
+# 28/29-day months = Februray (2)
+temp.state$var.adj <- ifelse(temp.state$month %in% c(1,3,5,7,8,10,12), temp.state$var.adj,
+ifelse(temp.state$month %in% c(4,6,9,11), temp.state$var.adj*(31/30),
+ifelse((temp.state$month==2 & temp.state$leap==0), temp.state$var.adj*(31/28),
+ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
+'ERROR'
+))))
+temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
+
+# round (is this right?) NO!
+#temp.state$days.above.threshold <- round(temp.state$days.above.threshold)
+
+# rename variable
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.dwb.',num.days,'.nn.d')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 27. NUMBER OF JUMPUPWAVES 2 (JUMP UP TO OVER 5 FOR 3 DAYS ABOVE LONGRUN MEAN (1980-2009) NOT ASSUMING NORMALITY)
+####################################################
+
+num.days <- 3
+jump = 5
+var <- paste0('number_of_min_',num.days,'_day_above_+',jump,'_jumpupwaves_2_',dname)
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_95_nonnormals_mean_t2m_1980_2009.rds'))
+
+colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
+
+# establish the 'jump' limits
+dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
+dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+
+# process for counting number of upwaves
+dat.uw <- dat.county
+
+# merge jump limit data with county temperature data
+dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
+
+colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
+
+# process for counting upwaves
+dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- na.omit(temp.state)
+temp.state <- temp.state[complete.cases(temp.state),]
+
+# adjust to a 31-day month
+# 30-day months = April, June, September, November (4,6,9,11)
+# 31-day months = January, March, May, July, August, October, December (1,3,5,7,8,10,12)
+# 28/29-day months = Februray (2)
+temp.state$var.adj <- ifelse(temp.state$month %in% c(1,3,5,7,8,10,12), temp.state$var.adj,
+ifelse(temp.state$month %in% c(4,6,9,11), temp.state$var.adj*(31/30),
+ifelse((temp.state$month==2 & temp.state$leap==0), temp.state$var.adj*(31/28),
+ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
+'ERROR'
+))))
+temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
+
+# rename variable
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.juwo.',num.days,'d.jo5')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 28. NUMBER OF JUMPUPWAVES 3 (JUMP UP TO OVER 5 FOR 5 DAYS ABOVE LONGRUN MEAN (1980-2009) NOT ASSUMING NORMALITY)
+####################################################
+
+num.days <- 5
+jump = 5
+var <- paste0('number_of_min_',num.days,'_day_above_+',jump,'_jumpupwaves_2_',dname)
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_95_nonnormals_mean_t2m_1980_2009.rds'))
+
+colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
+
+# establish the 'jump' limits
+dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
+dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+
+# process for counting number of upwaves
+dat.uw <- dat.county
+
+# merge jump limit data with county temperature data
+dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
+
+colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
+
+# process for counting upwaves
+dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- na.omit(temp.state)
+temp.state <- temp.state[complete.cases(temp.state),]
+
+# adjust to a 31-day month
+# 30-day months = April, June, September, November (4,6,9,11)
+# 31-day months = January, March, May, July, August, October, December (1,3,5,7,8,10,12)
+# 28/29-day months = Februray (2)
+temp.state$var.adj <- ifelse(temp.state$month %in% c(1,3,5,7,8,10,12), temp.state$var.adj,
+ifelse(temp.state$month %in% c(4,6,9,11), temp.state$var.adj*(31/30),
+ifelse((temp.state$month==2 & temp.state$leap==0), temp.state$var.adj*(31/28),
+ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
+'ERROR'
+))))
+temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
+
+# rename variable
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.juwo.',num.days,'d.jo5')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 30. NUMBER OF JUMPDOWNWAVES (JUMP DOWN TO OVER 5 FOR 3 DAYS BELOW LONGRUN MEAN (1980-2009) NOT ASSUMING NORMALITY)
+####################################################
+
+num.days <- 3
+jump = 5
+var <- paste0('number_of_min_',num.days,'_day_below_+',jump,'_jumpdownwaves_2_',dname)
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_95_nonnormals_mean_t2m_1980_2009.rds'))
+
+colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
+
+# establish the 'jump' limits
+dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
+dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+
+# process for counting number of upwaves
+dat.uw <- dat.county
+
+# merge jump limit data with county temperature data
+dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
+
+colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
+
+# process for counting upwaves
+dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- na.omit(temp.state)
+temp.state <- temp.state[complete.cases(temp.state),]
+
+# adjust to a 31-day month
+# 30-day months = April, June, September, November (4,6,9,11)
+# 31-day months = January, March, May, July, August, October, December (1,3,5,7,8,10,12)
+# 28/29-day months = Februray (2)
+temp.state$var.adj <- ifelse(temp.state$month %in% c(1,3,5,7,8,10,12), temp.state$var.adj,
+ifelse(temp.state$month %in% c(4,6,9,11), temp.state$var.adj*(31/30),
+ifelse((temp.state$month==2 & temp.state$leap==0), temp.state$var.adj*(31/28),
+ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
+'ERROR'
+))))
+temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
+
+# rename variable
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.jdwb.',num.days,'d.jo5')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+####################################################
+# 31. NUMBER OF JUMPDOWNWAVES (JUMP DOWN TO OVER 5 FOR 5 DAYS BELOW LONGRUN MEAN (1980-2009) NOT ASSUMING NORMALITY)
+####################################################
+
+num.days <- 5
+jump = 5
+var <- paste0('number_of_min_',num.days,'_day_below_+',jump,'_jumpdownwaves_2_',dname)
+
+# load 90th percentile data for state
+dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_95_nonnormals_mean_t2m_1980_2009.rds'))
+
+colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
+
+# establish the 'jump' limits
+dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
+dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+
+# process for counting number of upwaves
+dat.uw <- dat.county
+
+# merge jump limit data with county temperature data
+dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
+
+colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
+
+# process for counting upwaves
+dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
+dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.uw,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,leap,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*up.waves))
+temp.state <- na.omit(temp.state)
+temp.state <- temp.state[complete.cases(temp.state),]
+
+# adjust to a 31-day month
+# 30-day months = April, June, September, November (4,6,9,11)
+# 31-day months = January, March, May, July, August, October, December (1,3,5,7,8,10,12)
+# 28/29-day months = Februray (2)
+temp.state$var.adj <- ifelse(temp.state$month %in% c(1,3,5,7,8,10,12), temp.state$var.adj,
+ifelse(temp.state$month %in% c(4,6,9,11), temp.state$var.adj*(31/30),
+ifelse((temp.state$month==2 & temp.state$leap==0), temp.state$var.adj*(31/28),
+ifelse((temp.state$month==2 & temp.state$leap==1), temp.state$var.adj*(31/29),
+'ERROR'
+))))
+temp.state$var.adj <- round(as.numeric(temp.state$var.adj),2)
+
+# rename variable
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.jdwb.',num.days,'d.jo5')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+
+
