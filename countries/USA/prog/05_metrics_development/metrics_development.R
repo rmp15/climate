@@ -1070,7 +1070,7 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
-dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
+dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.30yr.ul,1,0)
 dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
@@ -1121,7 +1121,7 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
-dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
+dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.30yr.ll,1,0)
 dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
@@ -1530,8 +1530,8 @@ dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
 # establish the 'jump' limits
-dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
-dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+dat.perc$variable.30yr.ul <- dat.perc$variable.30yr.mean + jump
+dat.perc$variable.30yr.ll <- dat.perc$variable.30yr.mean - jump
 
 # process for counting number of upwaves
 dat.uw <- dat.county
@@ -1542,7 +1542,7 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
-dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
+dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.30yr.ul,1,0)
 dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
@@ -1584,8 +1584,8 @@ dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
 # establish the 'jump' limits
-dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
-dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+dat.perc$variable.30yr.ul <- dat.perc$variable.30yr.mean + jump
+dat.perc$variable.30yr.ll <- dat.perc$variable.30yr.mean - jump
 
 # process for counting number of upwaves
 dat.uw <- dat.county
@@ -1596,7 +1596,7 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
-dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.20yr.ul,1,0)
+dat.uw$above.threshold <- ifelse(dat.uw$variable>dat.uw$variable.30yr.ul,1,0)
 dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
@@ -1692,8 +1692,8 @@ dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
 # establish the 'jump' limits
-dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
-dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+dat.perc$variable.30yr.ul <- dat.perc$variable.30yr.mean + jump
+dat.perc$variable.30yr.ll <- dat.perc$variable.30yr.mean - jump
 
 # process for counting number of upwaves
 dat.uw <- dat.county
@@ -1704,7 +1704,7 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
-dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
+dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.30yr.ll,1,0)
 dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
@@ -1746,8 +1746,8 @@ dat.perc <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county
 colnames(dat.perc) = gsub(dname, "variable", colnames(dat.perc))
 
 # establish the 'jump' limits
-dat.perc$variable.20yr.ul <- dat.perc$variable.20yr.mean + jump
-dat.perc$variable.20yr.ll <- dat.perc$variable.20yr.mean - jump
+dat.perc$variable.30yr.ul <- dat.perc$variable.30yr.mean + jump
+dat.perc$variable.30yr.ll <- dat.perc$variable.30yr.mean - jump
 
 # process for counting number of upwaves
 dat.uw <- dat.county
@@ -1758,7 +1758,7 @@ dat.uw <- merge(dat.uw,dat.perc,by=c('month','state.county.fips'))
 colnames(dat.uw) = gsub(dname, "variable", colnames(dat.uw))
 
 # process for counting upwaves
-dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.20yr.ll,1,0)
+dat.uw$above.threshold <- ifelse(dat.uw$variable<dat.uw$variable.30yr.ll,1,0)
 dat.uw <- ddply(dat.uw, .(month,leap,year,state.county.fips), summarize, up.waves=length(rle(above.threshold)$lengths[rle(above.threshold)$values==1 & rle(above.threshold)$lengths>=num.days]))
 
 # merge and create weighted mean for state
