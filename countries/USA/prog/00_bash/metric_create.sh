@@ -38,7 +38,7 @@ echo "creating temperature metric for counties for $year";
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
 
-declare -a metrics=('meanc3' '10percc3' '90percc3' 'number_of_min_3_day_below_+5_jumpdownwaves_2' 'number_of_min_5_day_below_+5_jumpdownwaves_2' 'number_of_min_5_day_above_+5_jumpupwaves_2' 'number_of_min_3_day_above_+5_jumpupwaves_2' 'number_of_min_3_day_above_nonnormal_90_upwaves_2' 'number_of_min_3_day_below_nonnormal_90_downwaves_2')
+declare -a metrics=('number_of_min_3_day_below_+5_jumpdownwaves_2' 'number_of_min_5_day_below_+5_jumpdownwaves_2' 'number_of_min_5_day_above_+5_jumpupwaves_2' 'number_of_min_3_day_above_+5_jumpupwaves_2' 'number_of_min_3_day_above_nonnormal_90_upwaves_2' 'number_of_min_3_day_below_nonnormal_90_downwaves_2')
 
 echo "plotting temperature metric results for $year";
 
