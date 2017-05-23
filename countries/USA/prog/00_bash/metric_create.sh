@@ -36,9 +36,9 @@ echo "creating temperature metric for counties for $year";
 
 # creates metrics from the temperature values processed
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
 
-declare -a metrics=('meanc3' '10percc3' '90percc3')
+declare -a metrics=('meanc3' '10percc3' '90percc3' 'number_of_min_3_day_below_+5_jumpdownwaves_2' 'number_of_min_5_day_below_+5_jumpdownwaves_2' 'number_of_min_5_day_above_+5_jumpupwaves_2' 'number_of_min_3_day_above_+5_jumpupwaves_2' 'number_of_min_3_day_above_nonnormal_90_upwaves_2' 'number_of_min_3_day_below_nonnormal_90_downwaves_2')
 
 echo "plotting temperature metric results for $year";
 
@@ -46,7 +46,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric &
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric &
 
 done; done;
 
@@ -54,7 +54,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2015 $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
 
