@@ -1,0 +1,1657 @@
+"","full_name","variable.rounded","freq","percentage"
+"1","Alabama",3,5,1.1
+"2","Alabama",4,9,2
+"3","Alabama",5,5,1.1
+"4","Alabama",6,14,3.2
+"5","Alabama",7,19,4.3
+"6","Alabama",8,16,3.6
+"7","Alabama",9,20,4.5
+"8","Alabama",10,28,6.3
+"9","Alabama",11,20,4.5
+"10","Alabama",12,12,2.7
+"11","Alabama",13,14,3.2
+"12","Alabama",14,18,4.1
+"13","Alabama",15,11,2.5
+"14","Alabama",16,20,4.5
+"15","Alabama",17,25,5.6
+"16","Alabama",18,12,2.7
+"17","Alabama",19,9,2
+"18","Alabama",20,11,2.5
+"19","Alabama",21,14,3.2
+"20","Alabama",22,22,5
+"21","Alabama",23,22,5
+"22","Alabama",24,13,2.9
+"23","Alabama",25,41,9.2
+"24","Alabama",26,32,7.2
+"25","Alabama",27,23,5.2
+"26","Alabama",28,8,1.8
+"27","Alabama",29,1,0.2
+"28","Alaska",-22,1,0.2
+"29","Alaska",-21,1,0.2
+"30","Alaska",-20,3,0.7
+"31","Alaska",-19,1,0.2
+"32","Alaska",-18,6,1.4
+"33","Alaska",-17,5,1.1
+"34","Alaska",-16,6,1.4
+"35","Alaska",-15,18,4.1
+"36","Alaska",-14,13,2.9
+"37","Alaska",-13,9,2
+"38","Alaska",-12,14,3.2
+"39","Alaska",-11,22,5
+"40","Alaska",-10,16,3.6
+"41","Alaska",-9,18,4.1
+"42","Alaska",-8,16,3.6
+"43","Alaska",-7,19,4.3
+"44","Alaska",-6,10,2.3
+"45","Alaska",-5,9,2
+"46","Alaska",-4,8,1.8
+"47","Alaska",-3,9,2
+"48","Alaska",-2,13,2.9
+"49","Alaska",-1,15,3.4
+"50","Alaska",0,17,3.8
+"51","Alaska",1,10,2.3
+"52","Alaska",2,2,0.5
+"53","Alaska",3,5,1.1
+"54","Alaska",4,13,2.9
+"55","Alaska",5,25,5.6
+"56","Alaska",6,20,4.5
+"57","Alaska",7,8,1.8
+"58","Alaska",8,10,2.3
+"59","Alaska",9,32,7.2
+"60","Alaska",10,30,6.8
+"61","Alaska",11,25,5.6
+"62","Alaska",12,9,2
+"63","Alaska",13,6,1.4
+"64","Arizona",6,1,0.2
+"65","Arizona",7,13,2.9
+"66","Arizona",8,19,4.3
+"67","Arizona",9,29,6.5
+"68","Arizona",10,23,5.2
+"69","Arizona",11,18,4.1
+"70","Arizona",12,23,5.2
+"71","Arizona",13,17,3.8
+"72","Arizona",14,20,4.5
+"73","Arizona",15,13,2.9
+"74","Arizona",16,9,2
+"75","Arizona",17,11,2.5
+"76","Arizona",18,13,2.9
+"77","Arizona",19,18,4.1
+"78","Arizona",20,15,3.4
+"79","Arizona",21,20,4.5
+"80","Arizona",22,12,2.7
+"81","Arizona",23,8,1.8
+"82","Arizona",24,10,2.3
+"83","Arizona",25,5,1.1
+"84","Arizona",26,20,4.5
+"85","Arizona",27,23,5.2
+"86","Arizona",28,27,6.1
+"87","Arizona",29,30,6.8
+"88","Arizona",30,32,7.2
+"89","Arizona",31,12,2.7
+"90","Arizona",32,3,0.7
+"91","Arkansas",-2,1,0.2
+"92","Arkansas",-1,3,0.7
+"93","Arkansas",0,1,0.2
+"94","Arkansas",1,5,1.1
+"95","Arkansas",2,8,1.8
+"96","Arkansas",3,12,2.7
+"97","Arkansas",4,14,3.2
+"98","Arkansas",5,18,4.1
+"99","Arkansas",6,20,4.5
+"100","Arkansas",7,14,3.2
+"101","Arkansas",8,20,4.5
+"102","Arkansas",9,16,3.6
+"103","Arkansas",10,14,3.2
+"104","Arkansas",11,15,3.4
+"105","Arkansas",12,18,4.1
+"106","Arkansas",13,6,1.4
+"107","Arkansas",14,6,1.4
+"108","Arkansas",15,17,3.8
+"109","Arkansas",16,19,4.3
+"110","Arkansas",17,21,4.7
+"111","Arkansas",18,8,1.8
+"112","Arkansas",19,11,2.5
+"113","Arkansas",20,11,2.5
+"114","Arkansas",21,19,4.3
+"115","Arkansas",22,17,3.8
+"116","Arkansas",23,14,3.2
+"117","Arkansas",24,16,3.6
+"118","Arkansas",25,22,5
+"119","Arkansas",26,32,7.2
+"120","Arkansas",27,23,5.2
+"121","Arkansas",28,12,2.7
+"122","Arkansas",29,9,2
+"123","Arkansas",30,2,0.5
+"124","California",5,1,0.2
+"125","California",6,6,1.4
+"126","California",7,20,4.5
+"127","California",8,27,6.1
+"128","California",9,28,6.3
+"129","California",10,31,7
+"130","California",11,24,5.4
+"131","California",12,24,5.4
+"132","California",13,21,4.7
+"133","California",14,18,4.1
+"134","California",15,13,2.9
+"135","California",16,20,4.5
+"136","California",17,16,3.6
+"137","California",18,18,4.1
+"138","California",19,18,4.1
+"139","California",20,12,2.7
+"140","California",21,12,2.7
+"141","California",22,25,5.6
+"142","California",23,20,4.5
+"143","California",24,37,8.3
+"144","California",25,24,5.4
+"145","California",26,25,5.6
+"146","California",27,4,0.9
+"147","Colorado",-9,1,0.2
+"148","Colorado",-8,1,0.2
+"149","Colorado",-6,3,0.7
+"150","Colorado",-5,8,1.8
+"151","Colorado",-4,15,3.4
+"152","Colorado",-3,20,4.5
+"153","Colorado",-2,29,6.5
+"154","Colorado",-1,20,4.5
+"155","Colorado",0,13,2.9
+"156","Colorado",1,17,3.8
+"157","Colorado",2,20,4.5
+"158","Colorado",3,20,4.5
+"159","Colorado",4,12,2.7
+"160","Colorado",5,9,2
+"161","Colorado",6,10,2.3
+"162","Colorado",7,12,2.7
+"163","Colorado",8,13,2.9
+"164","Colorado",9,24,5.4
+"165","Colorado",10,10,2.3
+"166","Colorado",11,11,2.5
+"167","Colorado",12,9,2
+"168","Colorado",13,15,3.4
+"169","Colorado",14,8,1.8
+"170","Colorado",15,13,2.9
+"171","Colorado",16,14,3.2
+"172","Colorado",17,16,3.6
+"173","Colorado",18,11,2.5
+"174","Colorado",19,16,3.6
+"175","Colorado",20,22,5
+"176","Colorado",21,25,5.6
+"177","Colorado",22,15,3.4
+"178","Colorado",23,10,2.3
+"179","Colorado",24,2,0.5
+"180","Connecticut",-8,1,0.2
+"181","Connecticut",-7,6,1.4
+"182","Connecticut",-5,4,0.9
+"183","Connecticut",-4,12,2.7
+"184","Connecticut",-3,6,1.4
+"185","Connecticut",-2,16,3.6
+"186","Connecticut",-1,22,5
+"187","Connecticut",0,15,3.4
+"188","Connecticut",1,19,4.3
+"189","Connecticut",2,14,3.2
+"190","Connecticut",3,17,3.8
+"191","Connecticut",4,16,3.6
+"192","Connecticut",5,10,2.3
+"193","Connecticut",6,11,2.5
+"194","Connecticut",7,11,2.5
+"195","Connecticut",8,17,3.8
+"196","Connecticut",9,13,2.9
+"197","Connecticut",10,16,3.6
+"198","Connecticut",11,18,4.1
+"199","Connecticut",12,10,2.3
+"200","Connecticut",13,7,1.6
+"201","Connecticut",14,10,2.3
+"202","Connecticut",15,13,2.9
+"203","Connecticut",16,11,2.5
+"204","Connecticut",17,17,3.8
+"205","Connecticut",18,14,3.2
+"206","Connecticut",19,15,3.4
+"207","Connecticut",20,24,5.4
+"208","Connecticut",21,26,5.9
+"209","Connecticut",22,19,4.3
+"210","Connecticut",23,23,5.2
+"211","Connecticut",24,8,1.8
+"212","Connecticut",25,3,0.7
+"213","Delaware",-3,5,1.1
+"214","Delaware",-2,3,0.7
+"215","Delaware",-1,7,1.6
+"216","Delaware",0,9,2
+"217","Delaware",1,16,3.6
+"218","Delaware",2,15,3.4
+"219","Delaware",3,18,4.1
+"220","Delaware",4,19,4.3
+"221","Delaware",5,22,5
+"222","Delaware",6,14,3.2
+"223","Delaware",7,22,5
+"224","Delaware",8,9,2
+"225","Delaware",9,10,2.3
+"226","Delaware",10,13,2.9
+"227","Delaware",11,19,4.3
+"228","Delaware",12,15,3.4
+"229","Delaware",13,10,2.3
+"230","Delaware",14,17,3.8
+"231","Delaware",15,14,3.2
+"232","Delaware",16,14,3.2
+"233","Delaware",17,13,2.9
+"234","Delaware",18,8,1.8
+"235","Delaware",19,7,1.6
+"236","Delaware",20,15,3.4
+"237","Delaware",21,23,5.2
+"238","Delaware",22,19,4.3
+"239","Delaware",23,26,5.9
+"240","Delaware",24,20,4.5
+"241","Delaware",25,29,6.5
+"242","Delaware",26,10,2.3
+"243","Delaware",27,3,0.7
+"244","District of Columbia",-4,1,0.2
+"245","District of Columbia",-3,3,0.7
+"246","District of Columbia",-2,4,0.9
+"247","District of Columbia",-1,6,1.4
+"248","District of Columbia",0,7,1.6
+"249","District of Columbia",1,12,2.7
+"250","District of Columbia",2,18,4.1
+"251","District of Columbia",3,12,2.7
+"252","District of Columbia",4,20,4.5
+"253","District of Columbia",5,20,4.5
+"254","District of Columbia",6,15,3.4
+"255","District of Columbia",7,16,3.6
+"256","District of Columbia",8,22,5
+"257","District of Columbia",9,10,2.3
+"258","District of Columbia",10,10,2.3
+"259","District of Columbia",11,9,2
+"260","District of Columbia",12,17,3.8
+"261","District of Columbia",13,12,2.7
+"262","District of Columbia",14,24,5.4
+"263","District of Columbia",15,13,2.9
+"264","District of Columbia",16,9,2
+"265","District of Columbia",17,10,2.3
+"266","District of Columbia",18,10,2.3
+"267","District of Columbia",19,11,2.5
+"268","District of Columbia",20,16,3.6
+"269","District of Columbia",21,19,4.3
+"270","District of Columbia",22,13,2.9
+"271","District of Columbia",23,19,4.3
+"272","District of Columbia",24,30,6.8
+"273","District of Columbia",25,22,5
+"274","District of Columbia",26,24,5.4
+"275","District of Columbia",27,7,1.6
+"276","District of Columbia",28,3,0.7
+"277","Florida",11,1,0.2
+"278","Florida",12,1,0.2
+"279","Florida",13,2,0.5
+"280","Florida",14,5,1.1
+"281","Florida",15,11,2.5
+"282","Florida",16,22,5
+"283","Florida",17,26,5.9
+"284","Florida",18,27,6.1
+"285","Florida",19,33,7.4
+"286","Florida",20,37,8.3
+"287","Florida",21,22,5
+"288","Florida",22,24,5.4
+"289","Florida",23,22,5
+"290","Florida",24,37,8.3
+"291","Florida",25,23,5.2
+"292","Florida",26,46,10.4
+"293","Florida",27,79,17.8
+"294","Florida",28,25,5.6
+"295","Florida",29,1,0.2
+"296","Georgia",3,4,0.9
+"297","Georgia",4,9,2
+"298","Georgia",5,7,1.6
+"299","Georgia",6,16,3.6
+"300","Georgia",7,16,3.6
+"301","Georgia",8,20,4.5
+"302","Georgia",9,21,4.7
+"303","Georgia",10,29,6.5
+"304","Georgia",11,19,4.3
+"305","Georgia",12,15,3.4
+"306","Georgia",13,12,2.7
+"307","Georgia",14,15,3.4
+"308","Georgia",15,13,2.9
+"309","Georgia",16,24,5.4
+"310","Georgia",17,22,5
+"311","Georgia",18,9,2
+"312","Georgia",19,10,2.3
+"313","Georgia",20,10,2.3
+"314","Georgia",21,20,4.5
+"315","Georgia",22,28,6.3
+"316","Georgia",23,12,2.7
+"317","Georgia",24,21,4.7
+"318","Georgia",25,41,9.2
+"319","Georgia",26,30,6.8
+"320","Georgia",27,17,3.8
+"321","Georgia",28,4,0.9
+"322","Hawaii",21,4,0.9
+"323","Hawaii",22,81,18.2
+"324","Hawaii",23,87,19.6
+"325","Hawaii",24,77,17.3
+"326","Hawaii",25,89,20
+"327","Hawaii",26,99,22.3
+"328","Hawaii",27,7,1.6
+"329","Idaho",-11,1,0.2
+"330","Idaho",-9,1,0.2
+"331","Idaho",-8,3,0.7
+"332","Idaho",-7,5,1.1
+"333","Idaho",-6,8,1.8
+"334","Idaho",-5,14,3.2
+"335","Idaho",-4,14,3.2
+"336","Idaho",-3,25,5.6
+"337","Idaho",-2,18,4.1
+"338","Idaho",-1,23,5.2
+"339","Idaho",0,14,3.2
+"340","Idaho",1,19,4.3
+"341","Idaho",2,17,3.8
+"342","Idaho",3,17,3.8
+"343","Idaho",4,6,1.4
+"344","Idaho",5,14,3.2
+"345","Idaho",6,18,4.1
+"346","Idaho",7,18,4.1
+"347","Idaho",8,16,3.6
+"348","Idaho",9,10,2.3
+"349","Idaho",10,15,3.4
+"350","Idaho",11,13,2.9
+"351","Idaho",12,8,1.8
+"352","Idaho",13,15,3.4
+"353","Idaho",14,19,4.3
+"354","Idaho",15,17,3.8
+"355","Idaho",16,14,3.2
+"356","Idaho",17,11,2.5
+"357","Idaho",18,10,2.3
+"358","Idaho",19,18,4.1
+"359","Idaho",20,18,4.1
+"360","Idaho",21,18,4.1
+"361","Idaho",22,5,1.1
+"362","Idaho",23,2,0.5
+"363","Illinois",-9,1,0.2
+"364","Illinois",-8,4,0.9
+"365","Illinois",-7,7,1.6
+"366","Illinois",-6,3,0.7
+"367","Illinois",-5,8,1.8
+"368","Illinois",-4,12,2.7
+"369","Illinois",-3,14,3.2
+"370","Illinois",-2,10,2.3
+"371","Illinois",-1,15,3.4
+"372","Illinois",0,13,2.9
+"373","Illinois",1,16,3.6
+"374","Illinois",2,20,4.5
+"375","Illinois",3,10,2.3
+"376","Illinois",4,15,3.4
+"377","Illinois",5,17,3.8
+"378","Illinois",6,7,1.6
+"379","Illinois",7,11,2.5
+"380","Illinois",8,13,2.9
+"381","Illinois",9,13,2.9
+"382","Illinois",10,11,2.5
+"383","Illinois",11,13,2.9
+"384","Illinois",12,17,3.8
+"385","Illinois",13,16,3.6
+"386","Illinois",14,13,2.9
+"387","Illinois",15,8,1.8
+"388","Illinois",16,7,1.6
+"389","Illinois",17,12,2.7
+"390","Illinois",18,16,3.6
+"391","Illinois",19,23,5.2
+"392","Illinois",20,15,3.4
+"393","Illinois",21,18,4.1
+"394","Illinois",22,26,5.9
+"395","Illinois",23,19,4.3
+"396","Illinois",24,11,2.5
+"397","Illinois",25,8,1.8
+"398","Illinois",26,1,0.2
+"399","Illinois",27,1,0.2
+"400","Indiana",-7,7,1.6
+"401","Indiana",-6,7,1.6
+"402","Indiana",-5,2,0.5
+"403","Indiana",-4,11,2.5
+"404","Indiana",-3,12,2.7
+"405","Indiana",-2,10,2.3
+"406","Indiana",-1,12,2.7
+"407","Indiana",0,15,3.4
+"408","Indiana",1,16,3.6
+"409","Indiana",2,17,3.8
+"410","Indiana",3,14,3.2
+"411","Indiana",4,13,2.9
+"412","Indiana",5,17,3.8
+"413","Indiana",6,13,2.9
+"414","Indiana",7,8,1.8
+"415","Indiana",8,11,2.5
+"416","Indiana",9,11,2.5
+"417","Indiana",10,9,2
+"418","Indiana",11,19,4.3
+"419","Indiana",12,16,3.6
+"420","Indiana",13,16,3.6
+"421","Indiana",14,7,1.6
+"422","Indiana",15,10,2.3
+"423","Indiana",16,7,1.6
+"424","Indiana",17,14,3.2
+"425","Indiana",18,16,3.6
+"426","Indiana",19,16,3.6
+"427","Indiana",20,14,3.2
+"428","Indiana",21,22,5
+"429","Indiana",22,25,5.6
+"430","Indiana",23,33,7.4
+"431","Indiana",24,12,2.7
+"432","Indiana",25,8,1.8
+"433","Indiana",26,2,0.5
+"434","Indiana",27,2,0.5
+"435","Iowa",-14,2,0.5
+"436","Iowa",-13,1,0.2
+"437","Iowa",-12,2,0.5
+"438","Iowa",-11,4,0.9
+"439","Iowa",-10,7,1.6
+"440","Iowa",-9,5,1.1
+"441","Iowa",-8,10,2.3
+"442","Iowa",-7,13,2.9
+"443","Iowa",-6,8,1.8
+"444","Iowa",-5,9,2
+"445","Iowa",-4,9,2
+"446","Iowa",-3,10,2.3
+"447","Iowa",-2,17,3.8
+"448","Iowa",-1,19,4.3
+"449","Iowa",0,11,2.5
+"450","Iowa",1,11,2.5
+"451","Iowa",2,8,1.8
+"452","Iowa",3,11,2.5
+"453","Iowa",4,14,3.2
+"454","Iowa",5,8,1.8
+"455","Iowa",6,4,0.9
+"456","Iowa",7,9,2
+"457","Iowa",8,8,1.8
+"458","Iowa",9,14,3.2
+"459","Iowa",10,13,2.9
+"460","Iowa",11,19,4.3
+"461","Iowa",12,12,2.7
+"462","Iowa",13,3,0.7
+"463","Iowa",14,8,1.8
+"464","Iowa",15,6,1.4
+"465","Iowa",16,22,5
+"466","Iowa",17,11,2.5
+"467","Iowa",18,16,3.6
+"468","Iowa",19,11,2.5
+"469","Iowa",20,15,3.4
+"470","Iowa",21,21,4.7
+"471","Iowa",22,28,6.3
+"472","Iowa",23,22,5
+"473","Iowa",24,12,2.7
+"474","Iowa",25,7,1.6
+"475","Iowa",26,3,0.7
+"476","Iowa",27,1,0.2
+"477","Kansas",-10,1,0.2
+"478","Kansas",-9,1,0.2
+"479","Kansas",-6,2,0.5
+"480","Kansas",-5,3,0.7
+"481","Kansas",-4,5,1.1
+"482","Kansas",-3,9,2
+"483","Kansas",-2,11,2.5
+"484","Kansas",-1,19,4.3
+"485","Kansas",0,11,2.5
+"486","Kansas",1,7,1.6
+"487","Kansas",2,22,5
+"488","Kansas",3,15,3.4
+"489","Kansas",4,13,2.9
+"490","Kansas",5,12,2.7
+"491","Kansas",6,8,1.8
+"492","Kansas",7,17,3.8
+"493","Kansas",8,17,3.8
+"494","Kansas",9,7,1.6
+"495","Kansas",10,8,1.8
+"496","Kansas",11,6,1.4
+"497","Kansas",12,12,2.7
+"498","Kansas",13,11,2.5
+"499","Kansas",14,24,5.4
+"500","Kansas",15,12,2.7
+"501","Kansas",16,10,2.3
+"502","Kansas",17,5,1.1
+"503","Kansas",18,18,4.1
+"504","Kansas",19,12,2.7
+"505","Kansas",20,15,3.4
+"506","Kansas",21,8,1.8
+"507","Kansas",22,19,4.3
+"508","Kansas",23,11,2.5
+"509","Kansas",24,21,4.7
+"510","Kansas",25,24,5.4
+"511","Kansas",26,22,5
+"512","Kansas",27,15,3.4
+"513","Kansas",28,7,1.6
+"514","Kansas",29,1,0.2
+"515","Kansas",30,2,0.5
+"516","Kansas",31,1,0.2
+"517","Kentucky",-4,2,0.5
+"518","Kentucky",-3,5,1.1
+"519","Kentucky",-2,8,1.8
+"520","Kentucky",-1,7,1.6
+"521","Kentucky",0,8,1.8
+"522","Kentucky",1,14,3.2
+"523","Kentucky",2,14,3.2
+"524","Kentucky",3,16,3.6
+"525","Kentucky",4,14,3.2
+"526","Kentucky",5,24,5.4
+"527","Kentucky",6,11,2.5
+"528","Kentucky",7,16,3.6
+"529","Kentucky",8,16,3.6
+"530","Kentucky",9,15,3.4
+"531","Kentucky",10,11,2.5
+"532","Kentucky",11,8,1.8
+"533","Kentucky",12,13,2.9
+"534","Kentucky",13,11,2.5
+"535","Kentucky",14,25,5.6
+"536","Kentucky",15,14,3.2
+"537","Kentucky",16,9,2
+"538","Kentucky",17,11,2.5
+"539","Kentucky",18,6,1.4
+"540","Kentucky",19,22,5
+"541","Kentucky",20,16,3.6
+"542","Kentucky",21,14,3.2
+"543","Kentucky",22,17,3.8
+"544","Kentucky",23,25,5.6
+"545","Kentucky",24,38,8.6
+"546","Kentucky",25,16,3.6
+"547","Kentucky",26,15,3.4
+"548","Kentucky",27,2,0.5
+"549","Kentucky",28,1,0.2
+"550","Louisiana",6,4,0.9
+"551","Louisiana",7,6,1.4
+"552","Louisiana",8,7,1.6
+"553","Louisiana",9,9,2
+"554","Louisiana",10,23,5.2
+"555","Louisiana",11,17,3.8
+"556","Louisiana",12,20,4.5
+"557","Louisiana",13,29,6.5
+"558","Louisiana",14,19,4.3
+"559","Louisiana",15,21,4.7
+"560","Louisiana",16,13,2.9
+"561","Louisiana",17,16,3.6
+"562","Louisiana",18,11,2.5
+"563","Louisiana",19,22,5
+"564","Louisiana",20,25,5.6
+"565","Louisiana",21,12,2.7
+"566","Louisiana",22,13,2.9
+"567","Louisiana",23,11,2.5
+"568","Louisiana",24,27,6.1
+"569","Louisiana",25,20,4.5
+"570","Louisiana",26,30,6.8
+"571","Louisiana",27,48,10.8
+"572","Louisiana",28,32,7.2
+"573","Louisiana",29,8,1.8
+"574","Louisiana",30,1,0.2
+"575","Maine",-13,3,0.7
+"576","Maine",-12,3,0.7
+"577","Maine",-11,4,0.9
+"578","Maine",-10,1,0.2
+"579","Maine",-9,6,1.4
+"580","Maine",-8,13,2.9
+"581","Maine",-7,10,2.3
+"582","Maine",-6,18,4.1
+"583","Maine",-5,17,3.8
+"584","Maine",-4,14,3.2
+"585","Maine",-3,18,4.1
+"586","Maine",-2,12,2.7
+"587","Maine",-1,12,2.7
+"588","Maine",0,11,2.5
+"589","Maine",1,14,3.2
+"590","Maine",2,9,2
+"591","Maine",3,11,2.5
+"592","Maine",4,11,2.5
+"593","Maine",5,19,4.3
+"594","Maine",6,12,2.7
+"595","Maine",7,14,3.2
+"596","Maine",8,15,3.4
+"597","Maine",9,7,1.6
+"598","Maine",10,12,2.7
+"599","Maine",11,7,1.6
+"600","Maine",12,15,3.4
+"601","Maine",13,10,2.3
+"602","Maine",14,24,5.4
+"603","Maine",15,11,2.5
+"604","Maine",16,14,3.2
+"605","Maine",17,19,4.3
+"606","Maine",18,27,6.1
+"607","Maine",19,23,5.2
+"608","Maine",20,21,4.7
+"609","Maine",21,7,1.6
+"610","Maryland",-4,4,0.9
+"611","Maryland",-3,4,0.9
+"612","Maryland",-2,6,1.4
+"613","Maryland",-1,8,1.8
+"614","Maryland",0,14,3.2
+"615","Maryland",1,17,3.8
+"616","Maryland",2,12,2.7
+"617","Maryland",3,21,4.7
+"618","Maryland",4,15,3.4
+"619","Maryland",5,18,4.1
+"620","Maryland",6,16,3.6
+"621","Maryland",7,21,4.7
+"622","Maryland",8,10,2.3
+"623","Maryland",9,8,1.8
+"624","Maryland",10,11,2.5
+"625","Maryland",11,15,3.4
+"626","Maryland",12,12,2.7
+"627","Maryland",13,23,5.2
+"628","Maryland",14,18,4.1
+"629","Maryland",15,5,1.1
+"630","Maryland",16,11,2.5
+"631","Maryland",17,5,1.1
+"632","Maryland",18,15,3.4
+"633","Maryland",19,16,3.6
+"634","Maryland",20,17,3.8
+"635","Maryland",21,14,3.2
+"636","Maryland",22,16,3.6
+"637","Maryland",23,35,7.9
+"638","Maryland",24,18,4.1
+"639","Maryland",25,20,4.5
+"640","Maryland",26,15,3.4
+"641","Maryland",27,4,0.9
+"642","Massachusetts",-7,6,1.4
+"643","Massachusetts",-6,1,0.2
+"644","Massachusetts",-5,4,0.9
+"645","Massachusetts",-4,8,1.8
+"646","Massachusetts",-3,10,2.3
+"647","Massachusetts",-2,16,3.6
+"648","Massachusetts",-1,22,5
+"649","Massachusetts",0,19,4.3
+"650","Massachusetts",1,23,5.2
+"651","Massachusetts",2,16,3.6
+"652","Massachusetts",3,15,3.4
+"653","Massachusetts",4,8,1.8
+"654","Massachusetts",5,14,3.2
+"655","Massachusetts",6,17,3.8
+"656","Massachusetts",7,20,4.5
+"657","Massachusetts",8,21,4.7
+"658","Massachusetts",9,3,0.7
+"659","Massachusetts",10,11,2.5
+"660","Massachusetts",11,19,4.3
+"661","Massachusetts",12,17,3.8
+"662","Massachusetts",13,19,4.3
+"663","Massachusetts",14,4,0.9
+"664","Massachusetts",15,6,1.4
+"665","Massachusetts",16,23,5.2
+"666","Massachusetts",17,21,4.7
+"667","Massachusetts",18,21,4.7
+"668","Massachusetts",19,20,4.5
+"669","Massachusetts",20,21,4.7
+"670","Massachusetts",21,29,6.5
+"671","Massachusetts",22,8,1.8
+"672","Massachusetts",23,2,0.5
+"673","Michigan",-11,1,0.2
+"674","Michigan",-10,2,0.5
+"675","Michigan",-9,4,0.9
+"676","Michigan",-8,6,1.4
+"677","Michigan",-7,7,1.6
+"678","Michigan",-6,13,2.9
+"679","Michigan",-5,9,2
+"680","Michigan",-4,14,3.2
+"681","Michigan",-3,16,3.6
+"682","Michigan",-2,13,2.9
+"683","Michigan",-1,22,5
+"684","Michigan",0,14,3.2
+"685","Michigan",1,11,2.5
+"686","Michigan",2,17,3.8
+"687","Michigan",3,9,2
+"688","Michigan",4,8,1.8
+"689","Michigan",5,14,3.2
+"690","Michigan",6,14,3.2
+"691","Michigan",7,12,2.7
+"692","Michigan",8,14,3.2
+"693","Michigan",9,12,2.7
+"694","Michigan",10,13,2.9
+"695","Michigan",11,16,3.6
+"696","Michigan",12,9,2
+"697","Michigan",13,8,1.8
+"698","Michigan",14,7,1.6
+"699","Michigan",15,14,3.2
+"700","Michigan",16,20,4.5
+"701","Michigan",17,17,3.8
+"702","Michigan",18,13,2.9
+"703","Michigan",19,23,5.2
+"704","Michigan",20,21,4.7
+"705","Michigan",21,26,5.9
+"706","Michigan",22,14,3.2
+"707","Michigan",23,9,2
+"708","Michigan",24,2,0.5
+"709","Minnesota",-18,1,0.2
+"710","Minnesota",-17,1,0.2
+"711","Minnesota",-16,2,0.5
+"712","Minnesota",-15,1,0.2
+"713","Minnesota",-14,7,1.6
+"714","Minnesota",-13,9,2
+"715","Minnesota",-12,7,1.6
+"716","Minnesota",-11,8,1.8
+"717","Minnesota",-10,7,1.6
+"718","Minnesota",-9,17,3.8
+"719","Minnesota",-8,8,1.8
+"720","Minnesota",-7,11,2.5
+"721","Minnesota",-6,6,1.4
+"722","Minnesota",-5,19,4.3
+"723","Minnesota",-4,10,2.3
+"724","Minnesota",-3,16,3.6
+"725","Minnesota",-2,9,2
+"726","Minnesota",-1,9,2
+"727","Minnesota",0,11,2.5
+"728","Minnesota",1,13,2.9
+"729","Minnesota",2,6,1.4
+"730","Minnesota",3,3,0.7
+"731","Minnesota",4,9,2
+"732","Minnesota",5,6,1.4
+"733","Minnesota",6,10,2.3
+"734","Minnesota",7,14,3.2
+"735","Minnesota",8,17,3.8
+"736","Minnesota",9,11,2.5
+"737","Minnesota",10,7,1.6
+"738","Minnesota",11,8,1.8
+"739","Minnesota",12,7,1.6
+"740","Minnesota",13,7,1.6
+"741","Minnesota",14,15,3.4
+"742","Minnesota",15,19,4.3
+"743","Minnesota",16,12,2.7
+"744","Minnesota",17,14,3.2
+"745","Minnesota",18,13,2.9
+"746","Minnesota",19,18,4.1
+"747","Minnesota",20,22,5
+"748","Minnesota",21,25,5.6
+"749","Minnesota",22,14,3.2
+"750","Minnesota",23,9,2
+"751","Minnesota",24,5,1.1
+"752","Minnesota",25,1,0.2
+"753","Mississippi",3,4,0.9
+"754","Mississippi",4,3,0.7
+"755","Mississippi",5,9,2
+"756","Mississippi",6,9,2
+"757","Mississippi",7,18,4.1
+"758","Mississippi",8,19,4.3
+"759","Mississippi",9,15,3.4
+"760","Mississippi",10,25,5.6
+"761","Mississippi",11,22,5
+"762","Mississippi",12,15,3.4
+"763","Mississippi",13,13,2.9
+"764","Mississippi",14,20,4.5
+"765","Mississippi",15,13,2.9
+"766","Mississippi",16,10,2.3
+"767","Mississippi",17,21,4.7
+"768","Mississippi",18,22,5
+"769","Mississippi",19,14,3.2
+"770","Mississippi",20,5,1.1
+"771","Mississippi",21,13,2.9
+"772","Mississippi",22,19,4.3
+"773","Mississippi",23,21,4.7
+"774","Mississippi",24,16,3.6
+"775","Mississippi",25,26,5.9
+"776","Mississippi",26,42,9.5
+"777","Mississippi",27,27,6.1
+"778","Mississippi",28,21,4.7
+"779","Mississippi",29,2,0.5
+"780","Missouri",-8,1,0.2
+"781","Missouri",-7,1,0.2
+"782","Missouri",-6,3,0.7
+"783","Missouri",-5,2,0.5
+"784","Missouri",-4,3,0.7
+"785","Missouri",-3,11,2.5
+"786","Missouri",-2,9,2
+"787","Missouri",-1,14,3.2
+"788","Missouri",0,9,2
+"789","Missouri",1,15,3.4
+"790","Missouri",2,13,2.9
+"791","Missouri",3,13,2.9
+"792","Missouri",4,22,5
+"793","Missouri",5,12,2.7
+"794","Missouri",6,11,2.5
+"795","Missouri",7,13,2.9
+"796","Missouri",8,13,2.9
+"797","Missouri",9,14,3.2
+"798","Missouri",10,4,0.9
+"799","Missouri",11,9,2
+"800","Missouri",12,12,2.7
+"801","Missouri",13,14,3.2
+"802","Missouri",14,21,4.7
+"803","Missouri",15,15,3.4
+"804","Missouri",16,7,1.6
+"805","Missouri",17,7,1.6
+"806","Missouri",18,12,2.7
+"807","Missouri",19,20,4.5
+"808","Missouri",20,14,3.2
+"809","Missouri",21,9,2
+"810","Missouri",22,20,4.5
+"811","Missouri",23,14,3.2
+"812","Missouri",24,25,5.6
+"813","Missouri",25,27,6.1
+"814","Missouri",26,20,4.5
+"815","Missouri",27,10,2.3
+"816","Missouri",28,2,0.5
+"817","Missouri",29,2,0.5
+"818","Missouri",30,1,0.2
+"819","Montana",-15,2,0.5
+"820","Montana",-12,2,0.5
+"821","Montana",-11,1,0.2
+"822","Montana",-10,6,1.4
+"823","Montana",-9,8,1.8
+"824","Montana",-8,6,1.4
+"825","Montana",-7,10,2.3
+"826","Montana",-6,10,2.3
+"827","Montana",-5,17,3.8
+"828","Montana",-4,21,4.7
+"829","Montana",-3,19,4.3
+"830","Montana",-2,21,4.7
+"831","Montana",-1,15,3.4
+"832","Montana",0,14,3.2
+"833","Montana",1,14,3.2
+"834","Montana",2,12,2.7
+"835","Montana",3,12,2.7
+"836","Montana",4,8,1.8
+"837","Montana",5,16,3.6
+"838","Montana",6,17,3.8
+"839","Montana",7,17,3.8
+"840","Montana",8,7,1.6
+"841","Montana",9,16,3.6
+"842","Montana",10,13,2.9
+"843","Montana",11,8,1.8
+"844","Montana",12,13,2.9
+"845","Montana",13,20,4.5
+"846","Montana",14,13,2.9
+"847","Montana",15,20,4.5
+"848","Montana",16,13,2.9
+"849","Montana",17,7,1.6
+"850","Montana",18,15,3.4
+"851","Montana",19,20,4.5
+"852","Montana",20,18,4.1
+"853","Montana",21,7,1.6
+"854","Montana",22,5,1.1
+"855","Montana",23,1,0.2
+"856","Nebraska",-13,2,0.5
+"857","Nebraska",-11,1,0.2
+"858","Nebraska",-9,2,0.5
+"859","Nebraska",-8,6,1.4
+"860","Nebraska",-7,10,2.3
+"861","Nebraska",-6,11,2.5
+"862","Nebraska",-5,13,2.9
+"863","Nebraska",-4,11,2.5
+"864","Nebraska",-3,7,1.6
+"865","Nebraska",-2,13,2.9
+"866","Nebraska",-1,24,5.4
+"867","Nebraska",0,11,2.5
+"868","Nebraska",1,9,2
+"869","Nebraska",2,17,3.8
+"870","Nebraska",3,11,2.5
+"871","Nebraska",4,13,2.9
+"872","Nebraska",5,10,2.3
+"873","Nebraska",6,10,2.3
+"874","Nebraska",7,6,1.4
+"875","Nebraska",8,8,1.8
+"876","Nebraska",9,7,1.6
+"877","Nebraska",10,12,2.7
+"878","Nebraska",11,18,4.1
+"879","Nebraska",12,16,3.6
+"880","Nebraska",13,11,2.5
+"881","Nebraska",14,5,1.1
+"882","Nebraska",15,10,2.3
+"883","Nebraska",16,11,2.5
+"884","Nebraska",17,12,2.7
+"885","Nebraska",18,14,3.2
+"886","Nebraska",19,15,3.4
+"887","Nebraska",20,11,2.5
+"888","Nebraska",21,16,3.6
+"889","Nebraska",22,20,4.5
+"890","Nebraska",23,25,5.6
+"891","Nebraska",24,19,4.3
+"892","Nebraska",25,15,3.4
+"893","Nebraska",26,7,1.6
+"894","Nebraska",27,4,0.9
+"895","Nebraska",28,1,0.2
+"896","Nevada",-2,1,0.2
+"897","Nevada",-1,2,0.5
+"898","Nevada",0,3,0.7
+"899","Nevada",1,12,2.7
+"900","Nevada",2,15,3.4
+"901","Nevada",3,18,4.1
+"902","Nevada",4,25,5.6
+"903","Nevada",5,18,4.1
+"904","Nevada",6,20,4.5
+"905","Nevada",7,18,4.1
+"906","Nevada",8,13,2.9
+"907","Nevada",9,15,3.4
+"908","Nevada",10,18,4.1
+"909","Nevada",11,12,2.7
+"910","Nevada",12,8,1.8
+"911","Nevada",13,14,3.2
+"912","Nevada",14,13,2.9
+"913","Nevada",15,19,4.3
+"914","Nevada",16,13,2.9
+"915","Nevada",17,9,2
+"916","Nevada",18,14,3.2
+"917","Nevada",19,7,1.6
+"918","Nevada",20,6,1.4
+"919","Nevada",21,16,3.6
+"920","Nevada",22,21,4.7
+"921","Nevada",23,13,2.9
+"922","Nevada",24,9,2
+"923","Nevada",25,22,5
+"924","Nevada",26,15,3.4
+"925","Nevada",27,25,5.6
+"926","Nevada",28,15,3.4
+"927","Nevada",29,9,2
+"928","Nevada",30,6,1.4
+"929","New Hampshire",-12,2,0.5
+"930","New Hampshire",-11,5,1.1
+"931","New Hampshire",-10,1,0.2
+"932","New Hampshire",-9,3,0.7
+"933","New Hampshire",-8,5,1.1
+"934","New Hampshire",-7,8,1.8
+"935","New Hampshire",-6,12,2.7
+"936","New Hampshire",-5,17,3.8
+"937","New Hampshire",-4,18,4.1
+"938","New Hampshire",-3,16,3.6
+"939","New Hampshire",-2,17,3.8
+"940","New Hampshire",-1,14,3.2
+"941","New Hampshire",0,11,2.5
+"942","New Hampshire",1,15,3.4
+"943","New Hampshire",2,10,2.3
+"944","New Hampshire",3,12,2.7
+"945","New Hampshire",4,10,2.3
+"946","New Hampshire",5,12,2.7
+"947","New Hampshire",6,15,3.4
+"948","New Hampshire",7,14,3.2
+"949","New Hampshire",8,17,3.8
+"950","New Hampshire",9,14,3.2
+"951","New Hampshire",10,7,1.6
+"952","New Hampshire",11,7,1.6
+"953","New Hampshire",12,10,2.3
+"954","New Hampshire",13,10,2.3
+"955","New Hampshire",14,14,3.2
+"956","New Hampshire",15,22,5
+"957","New Hampshire",16,12,2.7
+"958","New Hampshire",17,11,2.5
+"959","New Hampshire",18,16,3.6
+"960","New Hampshire",19,29,6.5
+"961","New Hampshire",20,20,4.5
+"962","New Hampshire",21,28,6.3
+"963","New Hampshire",22,8,1.8
+"964","New Hampshire",23,2,0.5
+"965","New Jersey",-6,2,0.5
+"966","New Jersey",-5,3,0.7
+"967","New Jersey",-4,2,0.5
+"968","New Jersey",-3,7,1.6
+"969","New Jersey",-2,7,1.6
+"970","New Jersey",-1,13,2.9
+"971","New Jersey",0,18,4.1
+"972","New Jersey",1,16,3.6
+"973","New Jersey",2,16,3.6
+"974","New Jersey",3,20,4.5
+"975","New Jersey",4,17,3.8
+"976","New Jersey",5,16,3.6
+"977","New Jersey",6,15,3.4
+"978","New Jersey",7,14,3.2
+"979","New Jersey",8,5,1.1
+"980","New Jersey",9,15,3.4
+"981","New Jersey",10,21,4.7
+"982","New Jersey",11,15,3.4
+"983","New Jersey",12,12,2.7
+"984","New Jersey",13,15,3.4
+"985","New Jersey",14,10,2.3
+"986","New Jersey",15,12,2.7
+"987","New Jersey",16,11,2.5
+"988","New Jersey",17,11,2.5
+"989","New Jersey",18,14,3.2
+"990","New Jersey",19,17,3.8
+"991","New Jersey",20,15,3.4
+"992","New Jersey",21,23,5.2
+"993","New Jersey",22,27,6.1
+"994","New Jersey",23,17,3.8
+"995","New Jersey",24,25,5.6
+"996","New Jersey",25,10,2.3
+"997","New Jersey",26,3,0.7
+"998","New Mexico",-2,3,0.7
+"999","New Mexico",-1,11,2.5
+"1000","New Mexico",0,9,2
+"1001","New Mexico",1,22,5
+"1002","New Mexico",2,27,6.1
+"1003","New Mexico",3,19,4.3
+"1004","New Mexico",4,16,3.6
+"1005","New Mexico",5,16,3.6
+"1006","New Mexico",6,18,4.1
+"1007","New Mexico",7,20,4.5
+"1008","New Mexico",8,16,3.6
+"1009","New Mexico",9,8,1.8
+"1010","New Mexico",10,7,1.6
+"1011","New Mexico",11,10,2.3
+"1012","New Mexico",12,25,5.6
+"1013","New Mexico",13,13,2.9
+"1014","New Mexico",14,15,3.4
+"1015","New Mexico",15,10,2.3
+"1016","New Mexico",16,15,3.4
+"1017","New Mexico",17,6,1.4
+"1018","New Mexico",18,16,3.6
+"1019","New Mexico",19,18,4.1
+"1020","New Mexico",20,13,2.9
+"1021","New Mexico",21,26,5.9
+"1022","New Mexico",22,25,5.6
+"1023","New Mexico",23,27,6.1
+"1024","New Mexico",24,22,5
+"1025","New Mexico",25,8,1.8
+"1026","New Mexico",26,3,0.7
+"1027","New York",-9,1,0.2
+"1028","New York",-8,1,0.2
+"1029","New York",-7,5,1.1
+"1030","New York",-6,1,0.2
+"1031","New York",-5,8,1.8
+"1032","New York",-4,8,1.8
+"1033","New York",-3,10,2.3
+"1034","New York",-2,18,4.1
+"1035","New York",-1,19,4.3
+"1036","New York",0,14,3.2
+"1037","New York",1,20,4.5
+"1038","New York",2,16,3.6
+"1039","New York",3,14,3.2
+"1040","New York",4,16,3.6
+"1041","New York",5,10,2.3
+"1042","New York",6,10,2.3
+"1043","New York",7,12,2.7
+"1044","New York",8,14,3.2
+"1045","New York",9,16,3.6
+"1046","New York",10,17,3.8
+"1047","New York",11,15,3.4
+"1048","New York",12,10,2.3
+"1049","New York",13,11,2.5
+"1050","New York",14,5,1.1
+"1051","New York",15,15,3.4
+"1052","New York",16,9,2
+"1053","New York",17,23,5.2
+"1054","New York",18,12,2.7
+"1055","New York",19,16,3.6
+"1056","New York",20,22,5
+"1057","New York",21,24,5.4
+"1058","New York",22,23,5.2
+"1059","New York",23,21,4.7
+"1060","New York",24,8,1.8
+"1061","North Carolina",1,7,1.6
+"1062","North Carolina",2,10,2.3
+"1063","North Carolina",3,8,1.8
+"1064","North Carolina",4,17,3.8
+"1065","North Carolina",5,17,3.8
+"1066","North Carolina",6,12,2.7
+"1067","North Carolina",7,23,5.2
+"1068","North Carolina",8,27,6.1
+"1069","North Carolina",9,13,2.9
+"1070","North Carolina",10,21,4.7
+"1071","North Carolina",11,17,3.8
+"1072","North Carolina",12,13,2.9
+"1073","North Carolina",13,6,1.4
+"1074","North Carolina",14,16,3.6
+"1075","North Carolina",15,26,5.9
+"1076","North Carolina",16,15,3.4
+"1077","North Carolina",17,11,2.5
+"1078","North Carolina",18,8,1.8
+"1079","North Carolina",19,13,2.9
+"1080","North Carolina",20,21,4.7
+"1081","North Carolina",21,23,5.2
+"1082","North Carolina",22,11,2.5
+"1083","North Carolina",23,24,5.4
+"1084","North Carolina",24,31,7
+"1085","North Carolina",25,26,5.9
+"1086","North Carolina",26,22,5
+"1087","North Carolina",27,6,1.4
+"1088","North Dakota",-22,1,0.2
+"1089","North Dakota",-20,1,0.2
+"1090","North Dakota",-19,1,0.2
+"1091","North Dakota",-18,3,0.7
+"1092","North Dakota",-17,4,0.9
+"1093","North Dakota",-16,4,0.9
+"1094","North Dakota",-15,11,2.5
+"1095","North Dakota",-14,8,1.8
+"1096","North Dakota",-13,7,1.6
+"1097","North Dakota",-12,15,3.4
+"1098","North Dakota",-11,6,1.4
+"1099","North Dakota",-10,7,1.6
+"1100","North Dakota",-9,12,2.7
+"1101","North Dakota",-8,10,2.3
+"1102","North Dakota",-7,10,2.3
+"1103","North Dakota",-6,18,4.1
+"1104","North Dakota",-5,11,2.5
+"1105","North Dakota",-4,10,2.3
+"1106","North Dakota",-3,11,2.5
+"1107","North Dakota",-2,10,2.3
+"1108","North Dakota",-1,10,2.3
+"1109","North Dakota",0,7,1.6
+"1110","North Dakota",1,6,1.4
+"1111","North Dakota",2,6,1.4
+"1112","North Dakota",3,3,0.7
+"1113","North Dakota",4,8,1.8
+"1114","North Dakota",5,13,2.9
+"1115","North Dakota",6,15,3.4
+"1116","North Dakota",7,15,3.4
+"1117","North Dakota",8,8,1.8
+"1118","North Dakota",9,9,2
+"1119","North Dakota",10,3,0.7
+"1120","North Dakota",11,10,2.3
+"1121","North Dakota",12,9,2
+"1122","North Dakota",13,12,2.7
+"1123","North Dakota",14,20,4.5
+"1124","North Dakota",15,12,2.7
+"1125","North Dakota",16,14,3.2
+"1126","North Dakota",17,13,2.9
+"1127","North Dakota",18,15,3.4
+"1128","North Dakota",19,19,4.3
+"1129","North Dakota",20,18,4.1
+"1130","North Dakota",21,24,5.4
+"1131","North Dakota",22,7,1.6
+"1132","North Dakota",23,7,1.6
+"1133","North Dakota",24,1,0.2
+"1134","Ohio",-8,1,0.2
+"1135","Ohio",-7,5,1.1
+"1136","Ohio",-6,4,0.9
+"1137","Ohio",-5,6,1.4
+"1138","Ohio",-4,7,1.6
+"1139","Ohio",-3,14,3.2
+"1140","Ohio",-2,12,2.7
+"1141","Ohio",-1,15,3.4
+"1142","Ohio",0,17,3.8
+"1143","Ohio",1,20,4.5
+"1144","Ohio",2,12,2.7
+"1145","Ohio",3,19,4.3
+"1146","Ohio",4,10,2.3
+"1147","Ohio",5,17,3.8
+"1148","Ohio",6,9,2
+"1149","Ohio",7,9,2
+"1150","Ohio",8,13,2.9
+"1151","Ohio",9,13,2.9
+"1152","Ohio",10,19,4.3
+"1153","Ohio",11,10,2.3
+"1154","Ohio",12,21,4.7
+"1155","Ohio",13,11,2.5
+"1156","Ohio",14,9,2
+"1157","Ohio",15,5,1.1
+"1158","Ohio",16,8,1.8
+"1159","Ohio",17,16,3.6
+"1160","Ohio",18,21,4.7
+"1161","Ohio",19,11,2.5
+"1162","Ohio",20,24,5.4
+"1163","Ohio",21,24,5.4
+"1164","Ohio",22,26,5.9
+"1165","Ohio",23,19,4.3
+"1166","Ohio",24,13,2.9
+"1167","Ohio",25,4,0.9
+"1168","Oklahoma",-4,2,0.5
+"1169","Oklahoma",-1,3,0.7
+"1170","Oklahoma",0,3,0.7
+"1171","Oklahoma",1,7,1.6
+"1172","Oklahoma",2,15,3.4
+"1173","Oklahoma",3,9,2
+"1174","Oklahoma",4,19,4.3
+"1175","Oklahoma",5,21,4.7
+"1176","Oklahoma",6,17,3.8
+"1177","Oklahoma",7,12,2.7
+"1178","Oklahoma",8,14,3.2
+"1179","Oklahoma",9,13,2.9
+"1180","Oklahoma",10,14,3.2
+"1181","Oklahoma",11,19,4.3
+"1182","Oklahoma",12,10,2.3
+"1183","Oklahoma",13,8,1.8
+"1184","Oklahoma",14,9,2
+"1185","Oklahoma",15,11,2.5
+"1186","Oklahoma",16,21,4.7
+"1187","Oklahoma",17,21,4.7
+"1188","Oklahoma",18,9,2
+"1189","Oklahoma",19,11,2.5
+"1190","Oklahoma",20,12,2.7
+"1191","Oklahoma",21,16,3.6
+"1192","Oklahoma",22,13,2.9
+"1193","Oklahoma",23,13,2.9
+"1194","Oklahoma",24,19,4.3
+"1195","Oklahoma",25,13,2.9
+"1196","Oklahoma",26,22,5
+"1197","Oklahoma",27,25,5.6
+"1198","Oklahoma",28,20,4.5
+"1199","Oklahoma",29,12,2.7
+"1200","Oklahoma",30,6,1.4
+"1201","Oklahoma",31,3,0.7
+"1202","Oklahoma",32,2,0.5
+"1203","Oregon",-4,1,0.2
+"1204","Oregon",-2,2,0.5
+"1205","Oregon",-1,5,1.1
+"1206","Oregon",0,6,1.4
+"1207","Oregon",1,13,2.9
+"1208","Oregon",2,27,6.1
+"1209","Oregon",3,39,8.8
+"1210","Oregon",4,31,7
+"1211","Oregon",5,26,5.9
+"1212","Oregon",6,27,6.1
+"1213","Oregon",7,19,4.3
+"1214","Oregon",8,17,3.8
+"1215","Oregon",9,28,6.3
+"1216","Oregon",10,18,4.1
+"1217","Oregon",11,14,3.2
+"1218","Oregon",12,17,3.8
+"1219","Oregon",13,24,5.4
+"1220","Oregon",14,16,3.6
+"1221","Oregon",15,20,4.5
+"1222","Oregon",16,25,5.6
+"1223","Oregon",17,19,4.3
+"1224","Oregon",18,22,5
+"1225","Oregon",19,17,3.8
+"1226","Oregon",20,9,2
+"1227","Oregon",21,2,0.5
+"1228","Pennsylvania",-7,2,0.5
+"1229","Pennsylvania",-6,5,1.1
+"1230","Pennsylvania",-5,6,1.4
+"1231","Pennsylvania",-4,6,1.4
+"1232","Pennsylvania",-3,7,1.6
+"1233","Pennsylvania",-2,18,4.1
+"1234","Pennsylvania",-1,14,3.2
+"1235","Pennsylvania",0,15,3.4
+"1236","Pennsylvania",1,18,4.1
+"1237","Pennsylvania",2,19,4.3
+"1238","Pennsylvania",3,14,3.2
+"1239","Pennsylvania",4,21,4.7
+"1240","Pennsylvania",5,14,3.2
+"1241","Pennsylvania",6,8,1.8
+"1242","Pennsylvania",7,7,1.6
+"1243","Pennsylvania",8,13,2.9
+"1244","Pennsylvania",9,14,3.2
+"1245","Pennsylvania",10,17,3.8
+"1246","Pennsylvania",11,21,4.7
+"1247","Pennsylvania",12,16,3.6
+"1248","Pennsylvania",13,3,0.7
+"1249","Pennsylvania",14,13,2.9
+"1250","Pennsylvania",15,5,1.1
+"1251","Pennsylvania",16,12,2.7
+"1252","Pennsylvania",17,20,4.5
+"1253","Pennsylvania",18,16,3.6
+"1254","Pennsylvania",19,16,3.6
+"1255","Pennsylvania",20,20,4.5
+"1256","Pennsylvania",21,28,6.3
+"1257","Pennsylvania",22,26,5.9
+"1258","Pennsylvania",23,16,3.6
+"1259","Pennsylvania",24,10,2.3
+"1260","Pennsylvania",25,4,0.9
+"1261","Rhode Island",-7,1,0.2
+"1262","Rhode Island",-6,5,1.1
+"1263","Rhode Island",-5,1,0.2
+"1264","Rhode Island",-4,3,0.7
+"1265","Rhode Island",-3,11,2.5
+"1266","Rhode Island",-2,8,1.8
+"1267","Rhode Island",-1,16,3.6
+"1268","Rhode Island",0,25,5.6
+"1269","Rhode Island",1,14,3.2
+"1270","Rhode Island",2,20,4.5
+"1271","Rhode Island",3,19,4.3
+"1272","Rhode Island",4,16,3.6
+"1273","Rhode Island",5,10,2.3
+"1274","Rhode Island",6,13,2.9
+"1275","Rhode Island",7,13,2.9
+"1276","Rhode Island",8,17,3.8
+"1277","Rhode Island",9,18,4.1
+"1278","Rhode Island",10,12,2.7
+"1279","Rhode Island",11,13,2.9
+"1280","Rhode Island",12,16,3.6
+"1281","Rhode Island",13,11,2.5
+"1282","Rhode Island",14,13,2.9
+"1283","Rhode Island",15,15,3.4
+"1284","Rhode Island",16,6,1.4
+"1285","Rhode Island",17,15,3.4
+"1286","Rhode Island",18,18,4.1
+"1287","Rhode Island",19,19,4.3
+"1288","Rhode Island",20,17,3.8
+"1289","Rhode Island",21,24,5.4
+"1290","Rhode Island",22,20,4.5
+"1291","Rhode Island",23,23,5.2
+"1292","Rhode Island",24,9,2
+"1293","Rhode Island",25,3,0.7
+"1294","South Carolina",3,6,1.4
+"1295","South Carolina",4,5,1.1
+"1296","South Carolina",5,12,2.7
+"1297","South Carolina",6,14,3.2
+"1298","South Carolina",7,21,4.7
+"1299","South Carolina",8,14,3.2
+"1300","South Carolina",9,20,4.5
+"1301","South Carolina",10,32,7.2
+"1302","South Carolina",11,15,3.4
+"1303","South Carolina",12,17,3.8
+"1304","South Carolina",13,19,4.3
+"1305","South Carolina",14,10,2.3
+"1306","South Carolina",15,11,2.5
+"1307","South Carolina",16,26,5.9
+"1308","South Carolina",17,17,3.8
+"1309","South Carolina",18,15,3.4
+"1310","South Carolina",19,6,1.4
+"1311","South Carolina",20,15,3.4
+"1312","South Carolina",21,16,3.6
+"1313","South Carolina",22,29,6.5
+"1314","South Carolina",23,14,3.2
+"1315","South Carolina",24,21,4.7
+"1316","South Carolina",25,38,8.6
+"1317","South Carolina",26,29,6.5
+"1318","South Carolina",27,19,4.3
+"1319","South Carolina",28,3,0.7
+"1320","South Dakota",-17,1,0.2
+"1321","South Dakota",-16,2,0.5
+"1322","South Dakota",-14,2,0.5
+"1323","South Dakota",-13,3,0.7
+"1324","South Dakota",-12,4,0.9
+"1325","South Dakota",-11,9,2
+"1326","South Dakota",-10,8,1.8
+"1327","South Dakota",-9,10,2.3
+"1328","South Dakota",-8,16,3.6
+"1329","South Dakota",-7,4,0.9
+"1330","South Dakota",-6,14,3.2
+"1331","South Dakota",-5,9,2
+"1332","South Dakota",-4,14,3.2
+"1333","South Dakota",-3,16,3.6
+"1334","South Dakota",-2,16,3.6
+"1335","South Dakota",-1,12,2.7
+"1336","South Dakota",0,8,1.8
+"1337","South Dakota",1,12,2.7
+"1338","South Dakota",2,12,2.7
+"1339","South Dakota",3,8,1.8
+"1340","South Dakota",4,4,0.9
+"1341","South Dakota",5,7,1.6
+"1342","South Dakota",6,5,1.1
+"1343","South Dakota",7,13,2.9
+"1344","South Dakota",8,15,3.4
+"1345","South Dakota",9,13,2.9
+"1346","South Dakota",10,12,2.7
+"1347","South Dakota",11,10,2.3
+"1348","South Dakota",12,6,1.4
+"1349","South Dakota",13,6,1.4
+"1350","South Dakota",14,14,3.2
+"1351","South Dakota",15,10,2.3
+"1352","South Dakota",16,15,3.4
+"1353","South Dakota",17,16,3.6
+"1354","South Dakota",18,11,2.5
+"1355","South Dakota",19,17,3.8
+"1356","South Dakota",20,16,3.6
+"1357","South Dakota",21,15,3.4
+"1358","South Dakota",22,23,5.2
+"1359","South Dakota",23,18,4.1
+"1360","South Dakota",24,9,2
+"1361","South Dakota",25,6,1.4
+"1362","South Dakota",26,2,0.5
+"1363","South Dakota",27,1,0.2
+"1364","Tennessee",-2,1,0.2
+"1365","Tennessee",-1,4,0.9
+"1366","Tennessee",0,8,1.8
+"1367","Tennessee",1,7,1.6
+"1368","Tennessee",2,8,1.8
+"1369","Tennessee",3,15,3.4
+"1370","Tennessee",4,17,3.8
+"1371","Tennessee",5,16,3.6
+"1372","Tennessee",6,20,4.5
+"1373","Tennessee",7,25,5.6
+"1374","Tennessee",8,10,2.3
+"1375","Tennessee",9,17,3.8
+"1376","Tennessee",10,16,3.6
+"1377","Tennessee",11,19,4.3
+"1378","Tennessee",12,4,0.9
+"1379","Tennessee",13,11,2.5
+"1380","Tennessee",14,24,5.4
+"1381","Tennessee",15,18,4.1
+"1382","Tennessee",16,10,2.3
+"1383","Tennessee",17,12,2.7
+"1384","Tennessee",18,8,1.8
+"1385","Tennessee",19,17,3.8
+"1386","Tennessee",20,15,3.4
+"1387","Tennessee",21,23,5.2
+"1388","Tennessee",22,13,2.9
+"1389","Tennessee",23,21,4.7
+"1390","Tennessee",24,35,7.9
+"1391","Tennessee",25,29,6.5
+"1392","Tennessee",26,14,3.2
+"1393","Tennessee",27,6,1.4
+"1394","Tennessee",28,1,0.2
+"1395","Texas",3,1,0.2
+"1396","Texas",4,1,0.2
+"1397","Texas",5,2,0.5
+"1398","Texas",6,3,0.7
+"1399","Texas",7,6,1.4
+"1400","Texas",8,16,3.6
+"1401","Texas",9,11,2.5
+"1402","Texas",10,27,6.1
+"1403","Texas",11,25,5.6
+"1404","Texas",12,20,4.5
+"1405","Texas",13,14,3.2
+"1406","Texas",14,15,3.4
+"1407","Texas",15,18,4.1
+"1408","Texas",16,21,4.7
+"1409","Texas",17,7,1.6
+"1410","Texas",18,9,2
+"1411","Texas",19,22,5
+"1412","Texas",20,28,6.3
+"1413","Texas",21,9,2
+"1414","Texas",22,13,2.9
+"1415","Texas",23,16,3.6
+"1416","Texas",24,16,3.6
+"1417","Texas",25,19,4.3
+"1418","Texas",26,26,5.9
+"1419","Texas",27,23,5.2
+"1420","Texas",28,39,8.8
+"1421","Texas",29,27,6.1
+"1422","Texas",30,7,1.6
+"1423","Texas",31,2,0.5
+"1424","Texas",32,1,0.2
+"1425","Utah",-10,1,0.2
+"1426","Utah",-9,2,0.5
+"1427","Utah",-8,3,0.7
+"1428","Utah",-7,7,1.6
+"1429","Utah",-6,15,3.4
+"1430","Utah",-5,16,3.6
+"1431","Utah",-4,17,3.8
+"1432","Utah",-3,21,4.7
+"1433","Utah",-2,23,5.2
+"1434","Utah",-1,10,2.3
+"1435","Utah",0,17,3.8
+"1436","Utah",1,15,3.4
+"1437","Utah",2,21,4.7
+"1438","Utah",3,12,2.7
+"1439","Utah",4,11,2.5
+"1440","Utah",5,10,2.3
+"1441","Utah",6,14,3.2
+"1442","Utah",7,14,3.2
+"1443","Utah",8,18,4.1
+"1444","Utah",9,13,2.9
+"1445","Utah",10,13,2.9
+"1446","Utah",11,8,1.8
+"1447","Utah",12,16,3.6
+"1448","Utah",13,8,1.8
+"1449","Utah",14,13,2.9
+"1450","Utah",15,18,4.1
+"1451","Utah",16,15,3.4
+"1452","Utah",17,12,2.7
+"1453","Utah",18,11,2.5
+"1454","Utah",19,16,3.6
+"1455","Utah",20,23,5.2
+"1456","Utah",21,15,3.4
+"1457","Utah",22,11,2.5
+"1458","Utah",23,4,0.9
+"1459","Utah",24,1,0.2
+"1460","Vermont",-14,4,0.9
+"1461","Vermont",-13,3,0.7
+"1462","Vermont",-12,2,0.5
+"1463","Vermont",-11,2,0.5
+"1464","Vermont",-10,4,0.9
+"1465","Vermont",-9,9,2
+"1466","Vermont",-8,9,2
+"1467","Vermont",-7,15,3.4
+"1468","Vermont",-6,16,3.6
+"1469","Vermont",-5,17,3.8
+"1470","Vermont",-4,11,2.5
+"1471","Vermont",-3,17,3.8
+"1472","Vermont",-2,13,2.9
+"1473","Vermont",-1,12,2.7
+"1474","Vermont",0,13,2.9
+"1475","Vermont",1,8,1.8
+"1476","Vermont",2,15,3.4
+"1477","Vermont",3,6,1.4
+"1478","Vermont",4,11,2.5
+"1479","Vermont",5,11,2.5
+"1480","Vermont",6,17,3.8
+"1481","Vermont",7,18,4.1
+"1482","Vermont",8,12,2.7
+"1483","Vermont",9,10,2.3
+"1484","Vermont",10,6,1.4
+"1485","Vermont",11,7,1.6
+"1486","Vermont",12,5,1.1
+"1487","Vermont",13,16,3.6
+"1488","Vermont",14,24,5.4
+"1489","Vermont",15,11,2.5
+"1490","Vermont",16,13,2.9
+"1491","Vermont",17,14,3.2
+"1492","Vermont",18,32,7.2
+"1493","Vermont",19,19,4.3
+"1494","Vermont",20,29,6.5
+"1495","Vermont",21,12,2.7
+"1496","Vermont",22,1,0.2
+"1497","Virginia",-2,3,0.7
+"1498","Virginia",-1,2,0.5
+"1499","Virginia",0,12,2.7
+"1500","Virginia",1,7,1.6
+"1501","Virginia",2,13,2.9
+"1502","Virginia",3,20,4.5
+"1503","Virginia",4,13,2.9
+"1504","Virginia",5,23,5.2
+"1505","Virginia",6,19,4.3
+"1506","Virginia",7,19,4.3
+"1507","Virginia",8,18,4.1
+"1508","Virginia",9,17,3.8
+"1509","Virginia",10,8,1.8
+"1510","Virginia",11,15,3.4
+"1511","Virginia",12,8,1.8
+"1512","Virginia",13,23,5.2
+"1513","Virginia",14,19,4.3
+"1514","Virginia",15,14,3.2
+"1515","Virginia",16,9,2
+"1516","Virginia",17,11,2.5
+"1517","Virginia",18,12,2.7
+"1518","Virginia",19,12,2.7
+"1519","Virginia",20,20,4.5
+"1520","Virginia",21,15,3.4
+"1521","Virginia",22,17,3.8
+"1522","Virginia",23,31,7
+"1523","Virginia",24,25,5.6
+"1524","Virginia",25,24,5.4
+"1525","Virginia",26,11,2.5
+"1526","Virginia",27,4,0.9
+"1527","Washington",-7,1,0.2
+"1528","Washington",-5,2,0.5
+"1529","Washington",-4,5,1.1
+"1530","Washington",-3,2,0.5
+"1531","Washington",-2,5,1.1
+"1532","Washington",-1,15,3.4
+"1533","Washington",0,32,7.2
+"1534","Washington",1,27,6.1
+"1535","Washington",2,28,6.3
+"1536","Washington",3,24,5.4
+"1537","Washington",4,23,5.2
+"1538","Washington",5,20,4.5
+"1539","Washington",6,13,2.9
+"1540","Washington",7,24,5.4
+"1541","Washington",8,23,5.2
+"1542","Washington",9,14,3.2
+"1543","Washington",10,13,2.9
+"1544","Washington",11,17,3.8
+"1545","Washington",12,16,3.6
+"1546","Washington",13,27,6.1
+"1547","Washington",14,15,3.4
+"1548","Washington",15,21,4.7
+"1549","Washington",16,19,4.3
+"1550","Washington",17,23,5.2
+"1551","Washington",18,18,4.1
+"1552","Washington",19,14,3.2
+"1553","Washington",20,3,0.7
+"1554","West Virginia",-5,3,0.7
+"1555","West Virginia",-4,7,1.6
+"1556","West Virginia",-3,8,1.8
+"1557","West Virginia",-2,5,1.1
+"1558","West Virginia",-1,14,3.2
+"1559","West Virginia",0,11,2.5
+"1560","West Virginia",1,20,4.5
+"1561","West Virginia",2,17,3.8
+"1562","West Virginia",3,21,4.7
+"1563","West Virginia",4,15,3.4
+"1564","West Virginia",5,16,3.6
+"1565","West Virginia",6,18,4.1
+"1566","West Virginia",7,13,2.9
+"1567","West Virginia",8,10,2.3
+"1568","West Virginia",9,11,2.5
+"1569","West Virginia",10,13,2.9
+"1570","West Virginia",11,16,3.6
+"1571","West Virginia",12,27,6.1
+"1572","West Virginia",13,12,2.7
+"1573","West Virginia",14,8,1.8
+"1574","West Virginia",15,10,2.3
+"1575","West Virginia",16,7,1.6
+"1576","West Virginia",17,17,3.8
+"1577","West Virginia",18,20,4.5
+"1578","West Virginia",19,15,3.4
+"1579","West Virginia",20,20,4.5
+"1580","West Virginia",21,35,7.9
+"1581","West Virginia",22,24,5.4
+"1582","West Virginia",23,22,5
+"1583","West Virginia",24,9,2
+"1584","Wisconsin",-12,3,0.7
+"1585","Wisconsin",-11,4,0.9
+"1586","Wisconsin",-10,4,0.9
+"1587","Wisconsin",-9,9,2
+"1588","Wisconsin",-8,8,1.8
+"1589","Wisconsin",-7,11,2.5
+"1590","Wisconsin",-6,10,2.3
+"1591","Wisconsin",-5,12,2.7
+"1592","Wisconsin",-4,16,3.6
+"1593","Wisconsin",-3,11,2.5
+"1594","Wisconsin",-2,13,2.9
+"1595","Wisconsin",-1,23,5.2
+"1596","Wisconsin",0,15,3.4
+"1597","Wisconsin",1,10,2.3
+"1598","Wisconsin",2,12,2.7
+"1599","Wisconsin",3,8,1.8
+"1600","Wisconsin",4,13,2.9
+"1601","Wisconsin",5,10,2.3
+"1602","Wisconsin",6,12,2.7
+"1603","Wisconsin",7,14,3.2
+"1604","Wisconsin",8,10,2.3
+"1605","Wisconsin",9,13,2.9
+"1606","Wisconsin",10,13,2.9
+"1607","Wisconsin",11,17,3.8
+"1608","Wisconsin",12,9,2
+"1609","Wisconsin",13,7,1.6
+"1610","Wisconsin",14,9,2
+"1611","Wisconsin",15,12,2.7
+"1612","Wisconsin",16,25,5.6
+"1613","Wisconsin",17,18,4.1
+"1614","Wisconsin",18,16,3.6
+"1615","Wisconsin",19,12,2.7
+"1616","Wisconsin",20,24,5.4
+"1617","Wisconsin",21,22,5
+"1618","Wisconsin",22,7,1.6
+"1619","Wisconsin",23,11,2.5
+"1620","Wisconsin",24,1,0.2
+"1621","Wyoming",-12,2,0.5
+"1622","Wyoming",-10,1,0.2
+"1623","Wyoming",-9,2,0.5
+"1624","Wyoming",-8,3,0.7
+"1625","Wyoming",-7,12,2.7
+"1626","Wyoming",-6,10,2.3
+"1627","Wyoming",-5,19,4.3
+"1628","Wyoming",-4,14,3.2
+"1629","Wyoming",-3,29,6.5
+"1630","Wyoming",-2,16,3.6
+"1631","Wyoming",-1,17,3.8
+"1632","Wyoming",0,11,2.5
+"1633","Wyoming",1,21,4.7
+"1634","Wyoming",2,16,3.6
+"1635","Wyoming",3,10,2.3
+"1636","Wyoming",4,9,2
+"1637","Wyoming",5,10,2.3
+"1638","Wyoming",6,17,3.8
+"1639","Wyoming",7,17,3.8
+"1640","Wyoming",8,17,3.8
+"1641","Wyoming",9,7,1.6
+"1642","Wyoming",10,14,3.2
+"1643","Wyoming",11,7,1.6
+"1644","Wyoming",12,16,3.6
+"1645","Wyoming",13,9,2
+"1646","Wyoming",14,11,2.5
+"1647","Wyoming",15,16,3.6
+"1648","Wyoming",16,16,3.6
+"1649","Wyoming",17,13,2.9
+"1650","Wyoming",18,11,2.5
+"1651","Wyoming",19,14,3.2
+"1652","Wyoming",20,19,4.3
+"1653","Wyoming",21,17,3.8
+"1654","Wyoming",22,16,3.6
+"1655","Wyoming",23,2,0.5
+"1656","Wyoming",24,3,0.7

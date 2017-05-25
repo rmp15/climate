@@ -1,0 +1,182 @@
+"","full_name","variable.rounded","freq","percentage"
+"1","Alabama",0,81,67.5
+"2","Alabama",1,34,28.3
+"3","Alabama",2,4,3.3
+"4","Alabama",3,1,0.8
+"5","Alaska",0,80,66.7
+"6","Alaska",1,27,22.5
+"7","Alaska",2,13,10.8
+"8","Arizona",0,99,82.5
+"9","Arizona",1,18,15
+"10","Arizona",2,2,1.7
+"11","Arizona",3,1,0.8
+"12","Arkansas",0,68,56.7
+"13","Arkansas",1,45,37.5
+"14","Arkansas",2,6,5
+"15","Arkansas",3,1,0.8
+"16","California",0,99,82.5
+"17","California",1,20,16.7
+"18","California",2,1,0.8
+"19","Colorado",0,72,60
+"20","Colorado",1,43,35.8
+"21","Colorado",2,5,4.2
+"22","Connecticut",0,90,75
+"23","Connecticut",1,22,18.3
+"24","Connecticut",2,7,5.8
+"25","Connecticut",3,1,0.8
+"26","Delaware",0,88,73.3
+"27","Delaware",1,27,22.5
+"28","Delaware",2,4,3.3
+"29","Delaware",3,1,0.8
+"30","District of Columbia",0,88,73.3
+"31","District of Columbia",1,29,24.2
+"32","District of Columbia",2,3,2.5
+"33","Florida",0,99,82.5
+"34","Florida",1,18,15
+"35","Florida",2,3,2.5
+"36","Georgia",0,87,72.5
+"37","Georgia",1,30,25
+"38","Georgia",2,3,2.5
+"39","Hawaii",0,120,100
+"40","Idaho",0,77,64.2
+"41","Idaho",1,33,27.5
+"42","Idaho",2,10,8.3
+"43","Illinois",0,71,59.2
+"44","Illinois",1,40,33.3
+"45","Illinois",2,9,7.5
+"46","Indiana",0,65,54.2
+"47","Indiana",1,43,35.8
+"48","Indiana",2,11,9.2
+"49","Indiana",3,1,0.8
+"50","Iowa",0,62,51.7
+"51","Iowa",1,44,36.7
+"52","Iowa",2,14,11.7
+"53","Kansas",0,66,55
+"54","Kansas",1,44,36.7
+"55","Kansas",2,8,6.7
+"56","Kansas",3,2,1.7
+"57","Kentucky",0,71,59.2
+"58","Kentucky",1,44,36.7
+"59","Kentucky",2,5,4.2
+"60","Louisiana",0,87,72.5
+"61","Louisiana",1,28,23.3
+"62","Louisiana",2,4,3.3
+"63","Louisiana",3,1,0.8
+"64","Maine",0,81,67.5
+"65","Maine",1,31,25.8
+"66","Maine",2,7,5.8
+"67","Maine",3,1,0.8
+"68","Maryland",0,88,73.3
+"69","Maryland",1,28,23.3
+"70","Maryland",2,3,2.5
+"71","Maryland",3,1,0.8
+"72","Massachusetts",0,96,80
+"73","Massachusetts",1,20,16.7
+"74","Massachusetts",2,3,2.5
+"75","Massachusetts",3,1,0.8
+"76","Michigan",0,77,64.2
+"77","Michigan",1,32,26.7
+"78","Michigan",2,9,7.5
+"79","Michigan",3,2,1.7
+"80","Minnesota",0,61,50.8
+"81","Minnesota",1,41,34.2
+"82","Minnesota",2,15,12.5
+"83","Minnesota",3,3,2.5
+"84","Mississippi",0,73,60.8
+"85","Mississippi",1,42,35
+"86","Mississippi",2,2,1.7
+"87","Mississippi",3,3,2.5
+"88","Missouri",0,65,54.2
+"89","Missouri",1,44,36.7
+"90","Missouri",2,10,8.3
+"91","Missouri",3,1,0.8
+"92","Montana",0,61,50.8
+"93","Montana",1,48,40
+"94","Montana",2,10,8.3
+"95","Montana",3,1,0.8
+"96","Nebraska",0,60,50
+"97","Nebraska",1,42,35
+"98","Nebraska",2,15,12.5
+"99","Nebraska",3,3,2.5
+"100","Nevada",0,87,72.5
+"101","Nevada",1,29,24.2
+"102","Nevada",2,4,3.3
+"103","New Hampshire",0,82,68.3
+"104","New Hampshire",1,29,24.2
+"105","New Hampshire",2,6,5
+"106","New Hampshire",3,3,2.5
+"107","New Jersey",0,91,75.8
+"108","New Jersey",1,24,20
+"109","New Jersey",2,3,2.5
+"110","New Jersey",3,2,1.7
+"111","New Mexico",0,101,84.2
+"112","New Mexico",1,18,15
+"113","New Mexico",2,1,0.8
+"114","New York",0,88,73.3
+"115","New York",1,26,21.7
+"116","New York",2,4,3.3
+"117","New York",3,2,1.7
+"118","North Carolina",0,86,71.7
+"119","North Carolina",1,29,24.2
+"120","North Carolina",2,5,4.2
+"121","North Dakota",0,54,45
+"122","North Dakota",1,45,37.5
+"123","North Dakota",2,19,15.8
+"124","North Dakota",3,2,1.7
+"125","Ohio",0,74,61.7
+"126","Ohio",1,38,31.7
+"127","Ohio",2,6,5
+"128","Ohio",3,2,1.7
+"129","Oklahoma",0,70,58.3
+"130","Oklahoma",1,40,33.3
+"131","Oklahoma",2,8,6.7
+"132","Oklahoma",3,2,1.7
+"133","Oregon",0,102,85
+"134","Oregon",1,17,14.2
+"135","Oregon",2,1,0.8
+"136","Pennsylvania",0,86,71.7
+"137","Pennsylvania",1,28,23.3
+"138","Pennsylvania",2,5,4.2
+"139","Pennsylvania",3,1,0.8
+"140","Rhode Island",0,87,72.5
+"141","Rhode Island",1,27,22.5
+"142","Rhode Island",2,5,4.2
+"143","Rhode Island",3,1,0.8
+"144","South Carolina",0,82,68.3
+"145","South Carolina",1,36,30
+"146","South Carolina",2,1,0.8
+"147","South Carolina",3,1,0.8
+"148","South Dakota",0,56,46.7
+"149","South Dakota",1,47,39.2
+"150","South Dakota",2,15,12.5
+"151","South Dakota",3,2,1.7
+"152","Tennessee",0,77,64.2
+"153","Tennessee",1,38,31.7
+"154","Tennessee",2,4,3.3
+"155","Tennessee",3,1,0.8
+"156","Texas",0,85,70.8
+"157","Texas",1,30,25
+"158","Texas",2,5,4.2
+"159","Utah",0,68,56.7
+"160","Utah",1,45,37.5
+"161","Utah",2,7,5.8
+"162","Vermont",0,75,62.5
+"163","Vermont",1,34,28.3
+"164","Vermont",2,9,7.5
+"165","Vermont",3,2,1.7
+"166","Virginia",0,84,70
+"167","Virginia",1,34,28.3
+"168","Virginia",2,2,1.7
+"169","Washington",0,104,86.7
+"170","Washington",1,16,13.3
+"171","West Virginia",0,81,67.5
+"172","West Virginia",1,30,25
+"173","West Virginia",2,9,7.5
+"174","Wisconsin",0,73,60.8
+"175","Wisconsin",1,36,30
+"176","Wisconsin",2,10,8.3
+"177","Wisconsin",3,1,0.8
+"178","Wyoming",0,62,51.7
+"179","Wyoming",1,44,36.7
+"180","Wyoming",2,13,10.8
+"181","Wyoming",3,1,0.8

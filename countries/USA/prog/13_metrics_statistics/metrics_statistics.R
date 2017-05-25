@@ -11,7 +11,7 @@ dname <- as.character(args[3])
 metric <- as.character(args[4])
 
 # create directory
-dir = paste0("../../output/metrics_statistics/",dname,"/",metric)
+dir = paste0("../../output/metrics_statistics/",dname,"/",metric,"/")
 ifelse(!dir.exists(dir), dir.create(dir, recursive=TRUE), FALSE)
 
 # load file with climate data
@@ -24,37 +24,75 @@ state.lookup <- read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_l
 # merge state names
 dat <- merge(dat,state.lookup,by.x='state.fips',by.y='fips')
 
+# rename to generalise code
 names(dat)[grep(dname,names(dat))] <- 'variable'
-
 dat$variable.rounded <- round(dat$variable)
 
+# max and min for pdf graph
+max = max(dat$variable.rounded)
+min = min(dat$variable.rounded)
+
+# function to decide which period to cover
+summary.function = function(year.start.arg,year.end.arg) {
+    
+    # create directory
+    dir.sub = paste0(dir,year.start.arg,"_",year.end.arg,"/")
+    ifelse(!dir.exists(dir.sub), dir.create(dir.sub, recursive=TRUE), FALSE)
+    
+    # create year range for inclusion in analysis
+    years = c(year.start.arg:year.end.arg)
+    
+    # trim years of interest
+    dat = subset(dat,age==85 & sex==2 & year %in% years)
+
 # summarise how many for one age-sex group (they're all essentially equivalent here)
-dat.summary <- count(subset(dat,age==85 & sex==2),'variable.rounded')
+dat.summary <- count(subset(dat,age==85 & sex==2 & year %in% years),'variable.rounded')
 dat.summary$percentage <- with(dat.summary, round(100*freq/nrow(subset(dat,age==85 & sex==2)),1))
 
-dat.summary.state <- count(subset(dat,age==85 & sex==2),c('full_name','variable.rounded'))
+dat.summary.state <- count(subset(dat,age==85 & sex==2 & year %in% years),c('full_name','variable.rounded'))
 dat.summary.state$percentage <- with(dat.summary.state, round(100*freq/nrow(subset(dat,age==85 & sex==2 & full_name=='Alabama')),1))
 
 # histogram of varaiable nationally
-pdf(paste0(dir,'/','histogram_',dname,'_',metric,'_',year.start,'_',year.end,'_national.pdf'),paper='a4r',height=0,width=0)
+pdf(paste0(dir.sub,'histogram_',dname,'_',metric,'_',year.start.arg,'_',year.end.arg,'_national.pdf'),paper='a4r',height=0,width=0)
 #hist(dat$variable,nclass=10,main=paste0('histogram_',dname,'_',metric,'_',year.start,'_',year.end))
-ggplot() + geom_histogram(data=dat,aes(variable)) + ggtitle(paste0('histogram nationally ',dname,' ',metric,' ',year.start,' ',year.end))
+print(ggplot() + geom_histogram(data=dat,aes(variable)) + ggtitle(paste0('histogram nationally ',dname,' ',metric,' ',year.start.arg,' ',year.end.arg)))
 dev.off()
 
 # histogram of varaiable subnationally
-pdf(paste0(dir,'/','histogram_',dname,'_',metric,'_',year.start,'_',year.end,'_subnational.pdf'),paper='a4r',height=0,width=0)
-ggplot() + geom_histogram(data=dat,aes(variable)) + facet_wrap(~full_name) + ggtitle(paste0('histogram subnationally ',dname,' ',metric,' ',year.start,' ',year.end))
+pdf(paste0(dir.sub,'histogram_',dname,'_',metric,'_',year.start.arg,'_',year.end.arg,'_subnational.pdf'),paper='a4r',height=0,width=0)
+print(ggplot() + geom_histogram(data=dat,aes(variable)) + facet_wrap(~full_name) + ggtitle(paste0('histogram subnationally ',dname,' ',metric,' ',year.start.arg,' ',year.end.arg)))
 dev.off()
 
+# special case for up or downwaves
+wave.test = grepl('waves', metric)
+ymax=50
+if(wave.test==TRUE){ymax=100}
+
 # line graph of percentage of variable subnationally
-pdf(paste0(dir,'/','linegraph_',dname,'_',metric,'_',year.start,'_',year.end,'_subnational.pdf'),paper='a4r',height=0,width=0)
-ggplot() + geom_line(data=dat.summary.state,aes(x=variable.rounded,y=percentage,color=full_name)) + ggtitle(paste0('proportion subnationally ',dname,' ',metric,' ',year.start,' ',year.end))
+pdf(paste0(dir.sub,'linegraph_',dname,'_',metric,'_',year.start.arg,'_',year.end.arg,'_subnational.pdf'),paper='a4r',height=0,width=0)
+print(ggplot() + geom_line(data=dat.summary.state,aes(x=variable.rounded,y=percentage,color=full_name)) + xlim(c(min,max)) + ylim(c(0,ymax)) + ggtitle(paste0('proportion subnationally ',dname,' ',metric,' ',year.start.arg,' ',year.end.arg)))
 dev.off()
 
 # export data
-saveRDS(dat.summary,paste0("../../output/metrics_statistics/",dname,"/",metric,"/national_summary_",dname,"_",metric,"_",year.start,"_",year.end))
-write.csv(dat.summary,paste0("../../output/metrics_statistics/",dname,"/",metric,"/national_summary_",dname,"_",metric,"_",year.start,"_",year.end,'.csv'))
+saveRDS(dat.summary,paste0(dir.sub,"national_summary_",dname,"_",metric,"_",year.start.arg,"_",year.end.arg))
+write.csv(dat.summary,paste0(dir.sub,"national_summary_",dname,"_",metric,"_",year.start.arg,"_",year.end.arg,'.csv'))
 
-saveRDS(dat.summary.state,paste0("../../output/metrics_statistics/",dname,"/",metric,"/subnational_summary_",dname,"_",metric,"_",year.start,"_",year.end))
-write.csv(dat.summary.state,paste0("../../output/metrics_statistics/",dname,"/",metric,"/subnational_summary_",dname,"_",metric,"_",year.start,"_",year.end,'.csv'))
+saveRDS(dat.summary.state,paste0(dir.sub,"subnational_summary_",dname,"_",metric,"_",year.start.arg,"_",year.end.arg))
+write.csv(dat.summary.state,paste0(dir.sub,"subnational_summary_",dname,"_",metric,"_",year.start.arg,"_",year.end.arg,'.csv'))
+
+}
+
+# ENTIRE PERIOD
+summary.function(year.start,year.end)
+
+# FIRST DECADE
+summary.function(1980,1989)
+
+# SECOND DECADE
+summary.function(1990,1999)
+
+# THIRD DECADE
+summary.function(2000,2009)
+
+
 
