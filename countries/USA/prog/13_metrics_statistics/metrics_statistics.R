@@ -28,6 +28,24 @@ dat <- merge(dat,state.lookup,by.x='state.fips',by.y='fips')
 names(dat)[grep(dname,names(dat))] <- 'variable'
 dat$variable.rounded <- round(dat$variable)
 
+# trim years of interest
+dat = subset(dat,age==85 & sex==2)
+
+# add short names for months
+month.short <- c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
+month.lookup = data.frame(month=c(1:12),month.short=month.short)
+dat = merge(dat,month.lookup,by=('month'))
+dat$month.short <- reorder(dat$month.short,dat$month)
+
+# create directory
+dir.sub = paste0(dir,year.start,"_",year.end,"/")
+ifelse(!dir.exists(dir.sub), dir.create(dir.sub, recursive=TRUE), FALSE)
+
+# plot values per state over time
+pdf(paste0(dir.sub,'linegraph_over_time_',dname,'_',metric,'_',year.start,'_',year.end,'_state.pdf'),paper='a4r',height=0,width=0)
+ggplot() + geom_line(data=dat,aes(x=year,y=variable,color=full_name)) + ylab(paste0(dname,'_',metric)) + facet_wrap(~month.short)
+dev.off()
+
 # max and min for pdf graph
 max = max(dat$variable.rounded)
 min = min(dat$variable.rounded)
