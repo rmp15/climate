@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1979 2015))
+declare -a years=($(seq 1979 1979))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -46,7 +46,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric &
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric &
 
 done; done;
 
@@ -54,7 +54,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2015 $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
 
