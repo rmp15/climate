@@ -1,9 +1,9 @@
 rm(list=ls())
 
-library(ggplot2)
+#library(ggplot2)
 library(foreign)
 library(plyr)
-library(lubridate)
+#library(lubridate)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
