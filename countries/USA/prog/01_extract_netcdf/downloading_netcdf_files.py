@@ -2,10 +2,17 @@
 
 from ecmwfapi import ECMWFDataServer
 import os
+import sys
+
+print(sys.argv)
+
+# ADD SOME ARGUMENTS TO THE SCRIPT FOR PROCESSING OF YEARS AND CLIMATE VARIABLE
+
+# CREATE DICTIONARY FOR PARAMETERS
 
 # define metrics to download
-param = 165.128
-dname = 't2m'  # need to automate the lookup to create this name
+param = 165.128  # REPLACE WITH argv[1]
+dname = 't2m'  # REPLACE WITH DICTIONARY LOOK_UP
 
 # define directory to place files
 home = os.getenv("HOME")
