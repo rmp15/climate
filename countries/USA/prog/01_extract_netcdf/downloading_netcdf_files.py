@@ -6,12 +6,14 @@ import sys
 
 print(sys.argv)
 
+args = sys.argv
+
 # ADD SOME ARGUMENTS TO THE SCRIPT FOR PROCESSING OF YEARS AND CLIMATE VARIABLE
 
 # CREATE DICTIONARY FOR PARAMETERS
 
 # define metrics to download
-param = 165.128  # REPLACE WITH argv[1]
+param = 165.128  # REPLACE WITH args[1]
 dname = 't2m'  # REPLACE WITH DICTIONARY LOOK_UP
 
 # define directory to place files
