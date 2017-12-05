@@ -3,13 +3,14 @@
 from ecmwfapi import ECMWFDataServer
 import os
 import sys
+import pandas as pd
 
 print(sys.argv)
 
 args = sys.argv
 
-year_start = args[1]
-year_end = args[2]
+year_start = pd.to_numeric(args[1])
+year_end = pd.to_numeric(args[2])
 dname = args[3]
 
 param_dic = {'t2m': '165.128', 'name': '168.128'}
