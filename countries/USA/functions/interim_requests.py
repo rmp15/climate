@@ -1,40 +1,6 @@
-#!/usr/bin/env python
-
-from ecmwfapi import ECMWFDataServer
-import os
-import sys
-import pandas as pd
-print(sys.argv)
-
-args = sys.argv
-
-year_start = pd.to_numeric(args[1])
-year_end = pd.to_numeric(args[2])
-dname = args[3]
-
-param_dic = {'t2m': '167.128', 'd2m': '168.128'}
-
-# define metrics to download
-param = param_dic[dname]
-
-# define directory to place files
-home = os.getenv("HOME")
-path = home + '/data/climate/net_cdf/' + dname + '/raw/'
-
-# check if file directory exists
-if not os.path.exists(path):
-    os.makedirs(path)
-
-# change directory to desired file location
-os.chdir(path)
-
-# create server object
-server = ECMWFDataServer()
-
-
 def retrieve_interim_worldwide_sep_onevar(start, end):
-    """      
-       A function to demonstrate how to iterate efficiently over several years and months etc    
+    """
+       A function to demonstrate how to iterate efficiently over several years and months etc
        for a particular interim_request.
     """
 
@@ -60,7 +26,7 @@ def retrieve_interim_worldwide_together_onevar(year_start, year_end):
 
 
 def interim_request_worldwide(requestDates, target):
-    """      
+    """
         An ERA interim request from server.
     """
     f = open(target, 'w+')
@@ -82,6 +48,3 @@ def interim_request_worldwide(requestDates, target):
     })
 
     f.close()
-
-if __name__ == '__main__':
-    retrieve_interim_worldwide_sep_onevar(year_start, year_end)
