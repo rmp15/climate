@@ -134,4 +134,4 @@ def interim_request_usa(requestDates, target):
 
 
 if __name__ == '__main__':
-    retrieve_interim_worldwide_together_onevar(year_start, year_end)
+    retrieve_interim_usa_sep_onevar(year_start, year_end)

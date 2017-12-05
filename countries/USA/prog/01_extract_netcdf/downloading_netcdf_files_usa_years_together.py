@@ -53,7 +53,7 @@ def retrieve_interim_usa_sep_onevar(start, end):
     for year in list(range(start, end + 1)):
         startDate = '%04d%02d%02d' % (year, 1, 1)
         lastDate = '%04d%02d%02d' % (year, 12, 31)
-        target = "worldwide_" + dname + "_daily_four_%04d.nc" % year
+        target = "usa_" + dname + "_daily_four_%04d.nc" % year
         requestDates = (startDate + "/TO/" + lastDate)
         interim_request_usa(requestDates, target)
 
