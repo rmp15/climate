@@ -6,17 +6,16 @@ import sys
 
 print(sys.argv)
 
-print('hello')
-
 args = sys.argv
 
-# ADD SOME ARGUMENTS TO THE SCRIPT FOR PROCESSING OF YEARS AND CLIMATE VARIABLE
+year_start = args[1]
+year_end = args[2]
+dname = args[3]
 
-# CREATE DICTIONARY FOR PARAMETERS
+param_dic = {'t2m': '165.128', 'name': '168.128'}
 
 # define metrics to download
-param = 165.128  # REPLACE WITH args[1]
-dname = 't2m'  # REPLACE WITH DICTIONARY LOOK_UP
+param = param_dic[dname]
 
 # define directory to place files
 home = os.getenv("HOME")
@@ -26,7 +25,7 @@ os.chdir(path)
 server = ECMWFDataServer()
 
 
-def retrieve_interim(start,end):
+def retrieve_interim(start, end):
     """      
        A function to demonstrate how to iterate efficiently over several years and months etc    
        for a particular interim_request.
@@ -65,4 +64,4 @@ def interim_request(requestDates, target):
     f.close()
 
 if __name__ == '__main__':
-    retrieve_interim(1980, 1981)
+    retrieve_interim(year_start, year_end)
