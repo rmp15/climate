@@ -5,14 +5,19 @@
 
 clear
 
-declare -i start=1980
+declare -i start=1979
 declare -i end=1980
-declare -a dnames=("t2m" "name")
+declare -a dnames=("t2m" "d2m")
 
-for dname in "${dnames[@]}"; do
+#for dname in "${dnames[@]}"; do
 
-echo "processing for $dname years $start - $end"
+#echo "processing for $dname years $start - $end"
 
-python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_years_sep.py $start $end $dname
+(
 
-done;
+python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_years_sep.py $start $end 't2m';
+python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_years_sep.py $start $end 'd2m';
+
+) &
+
+#done;

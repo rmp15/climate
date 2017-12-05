@@ -13,7 +13,7 @@ year_start = pd.to_numeric(args[1])
 year_end = pd.to_numeric(args[2])
 dname = args[3]
 
-param_dic = {'t2m': '167.128', 'name': '168.128'}
+param_dic = {'t2m': '167.128', 'd2m': '168.128'}
 
 # define metrics to download
 param = param_dic[dname]
@@ -21,12 +21,19 @@ param = param_dic[dname]
 # define directory to place files
 home = os.getenv("HOME")
 path = home + '/data/climate/net_cdf/' + dname + '/raw/'
+
+# check if file directory exists
+if not os.path.exists(path):
+    os.makedirs(path)
+
+# change directory to desired file location
 os.chdir(path)
 
+# create server object
 server = ECMWFDataServer()
 
 
-def retrieve_interim(start, end):
+def retrieve_interim_sep_onevar(start, end):
     """      
        A function to demonstrate how to iterate efficiently over several years and months etc    
        for a particular interim_request.
@@ -38,6 +45,19 @@ def retrieve_interim(start, end):
         target = "worldwide_" + dname + "_daily_four_%04d.nc" % year
         requestDates = (startDate + "/TO/" + lastDate)
         interim_request(requestDates, target)
+
+
+def retrieve_interim_together_onevar(year_start, year_end):
+    """
+       A function to demonstrate how to iterate efficiently over several years and months etc
+       for a particular interim_request.
+    """
+
+    startDate = '%04d%02d%02d' % (year_start, 1, 1)
+    lastDate = '%04d%02d%02d' % (year_end, 12, 31)
+    target = "worldwide_" + dname + "_daily_four_%04d_%04d.nc" % (year_start, year_end)
+    requestDates = (startDate + "/TO/" + lastDate)
+    interim_request(requestDates, target)
 
 
 def interim_request(requestDates, target):
@@ -65,4 +85,4 @@ def interim_request(requestDates, target):
     f.close()
 
 if __name__ == '__main__':
-    retrieve_interim(year_start, year_end)
+    retrieve_interim_sep_onevar(year_start, year_end)
