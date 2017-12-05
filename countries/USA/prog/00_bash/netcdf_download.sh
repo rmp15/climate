@@ -28,3 +28,10 @@ python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_fil
 python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_usa_years_sep.py $start $end 'd2m';
 
 ) &
+
+#(
+
+#python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_usa_years_together.py $start $end 't2m';
+#python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_usa_years_together.py $start $end 'd2m';
+
+#) &

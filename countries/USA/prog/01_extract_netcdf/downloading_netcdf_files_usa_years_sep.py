@@ -126,7 +126,7 @@ def interim_request_usa(requestDates, target):
         "time": "00:00:00/06:00:00/12:00:00/18:00:00",
         "type": "an",
         "target": target,
-        "area": "85/-179/15/-50",
+        "area": "50/-126/24/-60",
         "format": "netcdf"
     })
 
