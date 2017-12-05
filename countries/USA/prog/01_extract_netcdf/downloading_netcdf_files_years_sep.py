@@ -33,7 +33,7 @@ os.chdir(path)
 server = ECMWFDataServer()
 
 
-def retrieve_interim_sep_onevar(start, end):
+def retrieve_interim_worldwide_sep_onevar(start, end):
     """      
        A function to demonstrate how to iterate efficiently over several years and months etc    
        for a particular interim_request.
@@ -44,10 +44,10 @@ def retrieve_interim_sep_onevar(start, end):
         lastDate = '%04d%02d%02d' % (year, 12, 31)
         target = "worldwide_" + dname + "_daily_four_%04d.nc" % year
         requestDates = (startDate + "/TO/" + lastDate)
-        interim_request(requestDates, target)
+        interim_request_worldwide(requestDates, target)
 
 
-def retrieve_interim_together_onevar(year_start, year_end):
+def retrieve_interim_worldwide_together_onevar(year_start, year_end):
     """
        A function to demonstrate how to iterate efficiently over several years and months etc
        for a particular interim_request.
@@ -57,10 +57,10 @@ def retrieve_interim_together_onevar(year_start, year_end):
     lastDate = '%04d%02d%02d' % (year_end, 12, 31)
     target = "worldwide_" + dname + "_daily_four_%04d_%04d.nc" % (year_start, year_end)
     requestDates = (startDate + "/TO/" + lastDate)
-    interim_request(requestDates, target)
+    interim_request_worldwide(requestDates, target)
 
 
-def interim_request(requestDates, target):
+def interim_request_worldwide(requestDates, target):
     """      
         An ERA interim request from server.
     """
@@ -85,4 +85,4 @@ def interim_request(requestDates, target):
     f.close()
 
 if __name__ == '__main__':
-    retrieve_interim_sep_onevar(year_start, year_end)
+    retrieve_interim_worldwide_sep_onevar(year_start, year_end)

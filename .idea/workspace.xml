@@ -22,8 +22,8 @@
       <file leaf-file-name="downloading_netcdf_files_years_sep.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_years_sep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="690">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
                 <element signature="e#23#59#0" expanded="true" />
               </folding>
@@ -34,8 +34,8 @@
       <file leaf-file-name="netcdf_download.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -59,7 +59,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-203" />
-    <option name="y" value="-1393" />
+    <option name="y" value="-1394" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -460,11 +460,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512472860687</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add python script for downloading ERA-Interim files">
+      <created>1512476196214</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1512476196214</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-203" y="-1393" width="1440" height="877" extended-state="0" />
+    <frame x="-203" y="-1394" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -541,8 +548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_years_sep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="690">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
             <element signature="e#23#59#0" expanded="true" />
           </folding>
@@ -551,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding />
         </state>
       </provider>
