@@ -13,7 +13,7 @@ year_start = pd.to_numeric(args[1])
 year_end = pd.to_numeric(args[2])
 dname = args[3]
 
-param_dic = {'t2m': '165.128', 'name': '168.128'}
+param_dic = {'t2m': '167.128', 'name': '168.128'}
 
 # define metrics to download
 param = param_dic[dname]
