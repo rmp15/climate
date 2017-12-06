@@ -5,9 +5,8 @@
 
 clear
 
-#declare -i start=1979
-declare -i start=1985
-declare -i end=2015
+declare -i start=1979
+declare -i end=1984
 declare -a dnames=("t2m" "d2m")
 
 #for dname in "${dnames[@]}"; do
