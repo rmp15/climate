@@ -5,7 +5,8 @@
 
 clear
 
-declare -i start=1979
+#declare -i start=1979
+declare -i start=1985
 declare -i end=2015
 declare -a dnames=("t2m" "d2m")
 
