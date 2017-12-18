@@ -14,7 +14,7 @@ for model = 4:4
         tdps = v.o;
         tdps = tdps - 273.15;
         clear v
-        appt = (0.0153*(tdps.*tdps)) +(0.994*tas) - 2.653;
+        appt = (0.0153*(tdps.*tdps)) + (0.994*tas) - 2.653;
         variable_name = 'appt';
         v.name = variable_name;
         v.lbound = NaN;
