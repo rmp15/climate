@@ -13,6 +13,8 @@ year.end.2 <- as.numeric(args[4])
 dname <- as.character(args[5])
 metric <- as.character(args[6])
 
+# year.start = 1979 ; year.end = 2015 ; year.start.2 = 1980 ; year.end.2 = 2013 ; dname = 't2m' ; metric = 'mean'
+
 print(args)
 
 # declare years
@@ -52,7 +54,7 @@ dat.pop$fips <- as.integer(as.character(dat.pop$fips))
 
 # merge data
 dat.merged <- merge(dat.climate,dat.region)
-dat.merged <- merge(dat.merged,dat.pop)
+dat.merged <- merge(dat.merged,dat.pop, all.x=0)
 
 # isolate years of interest
 dat.merged <- subset(dat.merged, year %in% years)
