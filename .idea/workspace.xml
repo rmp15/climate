@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py" afterPath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +22,10 @@
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-              <folding />
+              <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding>
+                <element signature="e#122#136#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -546,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515770077249</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add python script for downloading ERA-Interim files">
+      <created>1515770576080</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1515770576080</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -862,8 +872,10 @@
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding />
+          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <element signature="e#122#136#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
