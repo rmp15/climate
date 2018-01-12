@@ -64,7 +64,7 @@ d2m_var.setncatts({k: d2m_old.getncattr(k) for k in d2m_old.ncattrs()})
 
 # Copy of the data, split this up so it doesn't use so much memory
 for t in range(combi.dimensions['time'].size):
-    d2m_var[t, :, :] = d2m_old[t,:,:]
+    d2m_var[t, :, :] = d2m_old[t, :, :]
 
 # All done
 print('loading d2m file')
@@ -75,12 +75,13 @@ t2m_var = combi.variables['t2m']
 d2m_var = combi.variables['d2m']
 
 # Make a new variable for it.
-new_guy = combi.createVariable('new_guy', d2m_var.datatype, d2m_var.dimensions)
-new_guy.units = 'Joules'
-new_guy.long_name = 'the official or at least technical name for the thing you made'
+tapp = combi.createVariable('tapp', d2m_var.datatype, d2m_var.dimensions)
+tapp.units = 'K'
+tapp.long_name = 'Apparent temperature = combination of humidity and temperature for'
 
 # Make it but sequentially at each time so that no so much memory is used at once.
+# NEED TO CONVERT t2m and d2m into correct units (kelvin/celsius???)
 for t in range(combi.dimensions['time'].size):
-    new_guy[t,:,:] = t2m_var[t,:,:]*32 - d2m_var[t,:,:]**2
+    tapp[t, :, :] = -2.653 + 0.994*t2m_var[t, :, :] + 0.0153*d2m_var[t, :, :]*d2m_var[t, :, :]
 
 combi.close()
