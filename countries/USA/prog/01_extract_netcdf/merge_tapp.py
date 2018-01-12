@@ -3,9 +3,12 @@ Following https://gist.github.com/guziy/8543562
 """
 
 import netCDF4
+import os
 
-filename_t2m = 'worldwide_t2m_daily_four_1981.nc'
-filename_d2m = 'worldwide_d2m_daily_four_1981.nc'
+netcdf_loc = os.path.join('~/data/climate/net_cdf')
+
+filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_1981.nc')
+filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_1981.nc')
 
 # Read in the first dataset.
 t2m = netCDF4.Dataset(filename_t2m)
