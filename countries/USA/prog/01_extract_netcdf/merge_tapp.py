@@ -5,10 +5,14 @@ Following https://gist.github.com/guziy/8543562
 import netCDF4
 import os
 
+# set year of analysis
+year = 1980
+print('processing tapp for ' + year)
+
 netcdf_loc = os.path.join('/home/rmp15/data/climate/net_cdf')
 
-filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_1980.nc')
-filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_1980.nc')
+filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + year + '.nc')
+filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + year + '.nc')
 
 # Read in the first dataset.
 print('loading t2m file')
