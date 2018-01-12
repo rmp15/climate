@@ -11,6 +11,7 @@ filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_
 filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_1980.nc')
 
 # Read in the first dataset.
+print('loading t2m file')
 t2m = netCDF4.Dataset(filename_t2m)
 
 # Make a new dataset and give it useful high-level meta information.
