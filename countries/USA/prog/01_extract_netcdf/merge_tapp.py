@@ -11,8 +11,8 @@ print('processing tapp for ' + str(year))
 
 netcdf_loc = os.path.join('/home/rmp15/data/climate/net_cdf')
 
-filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + year + '.nc')
-filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + year + '.nc')
+filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + str(year) + '.nc')
+filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
 
 # Read in the first dataset.
 print('loading t2m file')
