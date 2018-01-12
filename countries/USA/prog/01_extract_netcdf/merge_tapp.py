@@ -7,7 +7,7 @@ import os
 
 # set year of analysis
 year = 1980
-print('processing tapp for ' + year)
+print('processing tapp for ' + str(year))
 
 netcdf_loc = os.path.join('/home/rmp15/data/climate/net_cdf')
 
