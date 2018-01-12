@@ -43,8 +43,10 @@ for v_name, var in t2m.variables.items():
 
 # Now combi is a copy of t2m. We can close t2m now for memory reasons.
 t2m.close()
+print('closing t2m file')
 
 # Open the other data file.
+print('loading d2m file')
 d2m = netCDF4.Dataset(filename_d2m)
 
 # To add the variable of interest from d2m first get a handle on the old variable.
@@ -61,12 +63,10 @@ for t in range(combi.dimensions['time'].size):
     d2m_var[t, :, :] = d2m_old[t,:,:]
 
 # All done
+print('loading d2m file')
 d2m.close()
 
-# Now suppose you wanted to make a new variable with a new formula
-
 # Get the things you want to build it from in hand.
-
 t2m_var = combi.variables['t2m']
 d2m_var = combi.variables['d2m']
 
