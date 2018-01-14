@@ -9,7 +9,7 @@ import os
 k_to_c = 273.15
 
 # years to process
-years = range(1980, 1980+1)
+years = range(1980, 2015+1)
 print(years)
 
 for year in years:
@@ -80,7 +80,7 @@ for year in years:
         d2m_var[t, :, :] = d2m_old[t, :, :]
 
     # All done
-    print('loading d2m file for ' + str(year))
+    print('closing d2m file for ' + str(year))
     d2m.close()
 
     # Get the things you want to build it from in hand.
