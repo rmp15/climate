@@ -14,15 +14,19 @@ print('processing tapp for ' + str(year))
 
 netcdf_loc = os.path.join('/home/rmp15/data/climate/net_cdf')
 
+# input filenames
 filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + str(year) + '.nc')
 filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
+
+#output filesname
+filename_tapp = os.path.join(netcdf_loc, 'tapp', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
 
 # Read in the first dataset.
 print('loading t2m file')
 t2m = netCDF4.Dataset(filename_t2m)
 
 # Make a new dataset and give it useful high-level meta information.
-combi = netCDF4.Dataset('combined.nc',  'w', format='NETCDF4')
+combi = netCDF4.Dataset(filename_tapp,  'w', format='NETCDF4')
 combi.Conventions = 'Extended ' + t2m.Conventions
 combi.history = 'Merged manually from ERA - Interim downloads'
 
@@ -79,7 +83,7 @@ d2m_var = combi.variables['d2m']
 
 # Make a new variable for it.
 tapp = combi.createVariable('tapp', d2m_var.datatype, d2m_var.dimensions)
-tapp.units = 'K'
+tapp.units = 'C'
 tapp.long_name = 'Apparent temperature = combination of humidity and temperature for'
 
 print('processing tapp for ' + str(year))
@@ -91,6 +95,7 @@ for t in range(combi.dimensions['time'].size):
     print(tapp[t, :, :])
     #tapp[t, :, :] = -2.653 + 0.994*t2m_var[t, :, :] + 0.0153*(d2m_var[t, :, :])**2
 
-print('processed tapp for ' + str(year))
+print('processed and saved tapp for ' + str(year))
 
+# close file to save
 combi.close()
