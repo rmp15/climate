@@ -84,4 +84,6 @@ tapp.long_name = 'Apparent temperature = combination of humidity and temperature
 for t in range(combi.dimensions['time'].size):
     tapp[t, :, :] = -2.653 + 0.994*t2m_var[t, :, :] + 0.0153*d2m_var[t, :, :]*d2m_var[t, :, :]
 
+print('processed tapp for ' + year)
+
 combi.close()
