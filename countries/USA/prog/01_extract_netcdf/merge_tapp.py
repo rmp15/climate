@@ -9,7 +9,8 @@ import os
 k_to_c = 273.15
 
 # years to process
-years = list(1979, 2015)
+years = range(1979, 2015+1)
+print(years)
 
 for year in years:
 
