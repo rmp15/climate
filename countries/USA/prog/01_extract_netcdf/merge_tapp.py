@@ -8,92 +8,99 @@ import os
 # variable for converting kelvin to celsius
 k_to_c = 273.15
 
-# set year of analysis
-year = 1980
-print('processing tapp for ' + str(year))
+# years to process
+years = list(1979, 2015)
 
-netcdf_loc = os.path.join('/home/rmp15/data/climate/net_cdf')
+for year in years:
 
-# input filenames
-filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + str(year) + '.nc')
-filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
+    # set year of analysis
+    year = year
+    print('processing tapp for ' + str(year))
 
-#output filesname
-filename_tapp = os.path.join(netcdf_loc, 'tapp', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
+    netcdf_loc = os.path.join('/home/rmp15/data/climate/net_cdf')
 
-# Read in the first dataset.
-print('loading t2m file')
-t2m = netCDF4.Dataset(filename_t2m)
+    # input filenames
+    filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + str(year) + '.nc')
+    filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
 
-# Make a new dataset and give it useful high-level meta information.
-combi = netCDF4.Dataset(filename_tapp,  'w', format='NETCDF4')
-combi.Conventions = 'Extended ' + t2m.Conventions
-combi.history = 'Merged manually from ERA - Interim downloads'
+    #output filesname
+    filename_tapp = os.path.join(netcdf_loc, 'tapp', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
 
-# Now copy over all of the dimensional information. (Manually here, but see link for auto)
-combi.createDimension('latitude', t2m.dimensions['latitude'].size)
-combi.createDimension('longitude', t2m.dimensions['longitude'].size)
-combi.createDimension('time', t2m.dimensions['time'].size)
+    # Read in the first dataset.
+    print('loading t2m file')
+    t2m = netCDF4.Dataset(filename_t2m)
 
-# For the variables we make copies in combi from t2m using a loop.
-# The items() command makes a ordered pair with the variable name and a handle to it appear.
-for v_name, var in t2m.variables.items():
-    # The new variable should have the same name, dataype and dimensions.
-    new_var = combi.createVariable(v_name, var.datatype, var.dimensions)
+    # Make a new dataset and give it useful high-level meta information.
+    combi = netCDF4.Dataset(filename_tapp,  'w', format='NETCDF4')
+    combi.Conventions = 'Extended ' + t2m.Conventions
+    combi.history = 'Merged manually from ERA - Interim downloads'
 
-    # We also want it to have the same meta-data attributes.
-    new_var.setncatts({k: var.getncattr(k) for k in var.ncattrs()})
+    # Now copy over all of the dimensional information. (Manually here, but see link for auto)
+    combi.createDimension('latitude', t2m.dimensions['latitude'].size)
+    combi.createDimension('longitude', t2m.dimensions['longitude'].size)
+    combi.createDimension('time', t2m.dimensions['time'].size)
 
-    # We have to do it in chunks for t2m variable, since it's so big that it eats up the memory.
-    # This is a bit hack-y
-    if new_var.size > 10**4:
-        for t in range(combi.dimensions['time'].size):
-            new_var[t, :, :] = var[t, :, :]
-    else:
-        new_var[:] = var[:]
+    # For the variables we make copies in combi from t2m using a loop.
+    # The items() command makes a ordered pair with the variable name and a handle to it appear.
+    for v_name, var in t2m.variables.items():
+        # The new variable should have the same name, dataype and dimensions.
+        new_var = combi.createVariable(v_name, var.datatype, var.dimensions)
 
-# Now combi is a copy of t2m. We can close t2m now for memory reasons.
-t2m.close()
-print('closing t2m file')
+        # We also want it to have the same meta-data attributes.
+        new_var.setncatts({k: var.getncattr(k) for k in var.ncattrs()})
 
-# Open the other data file.
-print('loading d2m file')
-d2m = netCDF4.Dataset(filename_d2m)
+        # We have to do it in chunks for t2m variable, since it's so big that it eats up the memory.
+        # This is a bit hack-y
+        if new_var.size > 10**4:
+            for t in range(combi.dimensions['time'].size):
+                new_var[t, :, :] = var[t, :, :]
+        else:
+            new_var[:] = var[:]
 
-# To add the variable of interest from d2m first get a handle on the old variable.
-d2m_old = d2m.variables['d2m'] # Give the netCDF variable a name.
+    # Now combi is a copy of t2m. We can close t2m now for memory reasons.
+    t2m.close()
+    print('closing t2m file')
 
-# Make a slot for it in the combi netcdf file.
-d2m_var = combi.createVariable('d2m', d2m_old.datatype, d2m_old.dimensions)
+    # Open the other data file.
+    print('loading d2m file')
+    d2m = netCDF4.Dataset(filename_d2m)
 
-# Copy over attributes.
-d2m_var.setncatts({k: d2m_old.getncattr(k) for k in d2m_old.ncattrs()})
+    # To add the variable of interest from d2m first get a handle on the old variable.
+    d2m_old = d2m.variables['d2m'] # Give the netCDF variable a name.
 
-# Copy of the data, split this up so it doesn't use so much memory
-for t in range(combi.dimensions['time'].size):
-    d2m_var[t, :, :] = d2m_old[t, :, :]
+    # Make a slot for it in the combi netcdf file.
+    d2m_var = combi.createVariable('d2m', d2m_old.datatype, d2m_old.dimensions)
 
-# All done
-print('loading d2m file')
-d2m.close()
+    # Copy over attributes.
+    d2m_var.setncatts({k: d2m_old.getncattr(k) for k in d2m_old.ncattrs()})
 
-# Get the things you want to build it from in hand.
-t2m_var = combi.variables['t2m']
-d2m_var = combi.variables['d2m']
+    # Copy of the data, split this up so it doesn't use so much memory
+    for t in range(combi.dimensions['time'].size):
+        d2m_var[t, :, :] = d2m_old[t, :, :]
 
-# Make a new variable for it.
-tapp = combi.createVariable('tapp', d2m_var.datatype, d2m_var.dimensions)
-tapp.units = 'C'
-tapp.long_name = 'Apparent temperature = combination of humidity and temperature for'
+    # All done
+    print('loading d2m file')
+    d2m.close()
 
-print('processing tapp for ' + str(year))
+    # Get the things you want to build it from in hand.
+    t2m_var = combi.variables['t2m']
+    d2m_var = combi.variables['d2m']
 
-# Make it but sequentially at each time so that no so much memory is used at once.
-# NEED TO CONVERT t2m and d2m into correct units (kelvin/celsius???)
-for t in range(combi.dimensions['time'].size):
-    tapp[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)**2
+    # Make a new variable for it.
+    tapp = combi.createVariable('tapp', d2m_var.datatype, d2m_var.dimensions)
+    tapp.units = 'C'
+    tapp.long_name = 'Apparent temperature = combination of humidity and temperature for'
 
-print('processed and saved tapp for ' + str(year))
+    print('processing tapp for ' + str(year))
 
-# close file to save
-combi.close()
+    # Make it but sequentially at each time so that no so much memory is used at once.
+    # NEED TO CONVERT t2m and d2m into correct units (kelvin/celsius???)
+    for t in range(combi.dimensions['time'].size):
+        tapp[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)**2
+
+    print('processed and saved tapp for ' + str(year))
+
+    # close file to save
+    combi.close()
+
+
