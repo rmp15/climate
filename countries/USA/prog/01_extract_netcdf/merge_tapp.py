@@ -24,11 +24,11 @@ for year in years:
     filename_t2m = os.path.join(netcdf_loc, 't2m', 'raw', 'worldwide_t2m_daily_four_' + str(year) + '.nc')
     filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
 
-    #output filesname
+    # output filename
     filename_tapp = os.path.join(netcdf_loc, 'tapp', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
 
-    # Read in the first dataset.
-    print('loading t2m file')
+    # Read in the first data set.
+    print('loading t2m file for ' + str(year))
     t2m = netCDF4.Dataset(filename_t2m)
 
     # Make a new dataset and give it useful high-level meta information.
@@ -60,10 +60,10 @@ for year in years:
 
     # Now combi is a copy of t2m. We can close t2m now for memory reasons.
     t2m.close()
-    print('closing t2m file')
+    print('closing t2m file for ' + str(year))
 
     # Open the other data file.
-    print('loading d2m file')
+    print('loading d2m file for ' + str(year))
     d2m = netCDF4.Dataset(filename_d2m)
 
     # To add the variable of interest from d2m first get a handle on the old variable.
@@ -80,7 +80,7 @@ for year in years:
         d2m_var[t, :, :] = d2m_old[t, :, :]
 
     # All done
-    print('loading d2m file')
+    print('loading d2m file for ' + str(year))
     d2m.close()
 
     # Get the things you want to build it from in hand.
@@ -90,7 +90,7 @@ for year in years:
     # Make a new variable for it.
     tapp = combi.createVariable('tapp', d2m_var.datatype, d2m_var.dimensions)
     tapp.units = 'C'
-    tapp.long_name = 'Apparent temperature = combination of humidity and temperature for'
+    tapp.long_name = 'Apparent temperature = combination of humidity and temperature as metric for heat stress'
 
     print('processing tapp for ' + str(year))
 
