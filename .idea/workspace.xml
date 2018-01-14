@@ -22,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
-              <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+              <caret line="87" column="5" lean-forward="false" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
               <folding>
                 <element signature="e#122#136#0" expanded="true" />
               </folding>
@@ -621,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515936671429</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add python script for downloading ERA-Interim files">
+      <created>1515936771387</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1515936771387</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -954,7 +961,7 @@
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+          <caret line="87" column="5" lean-forward="false" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
           <folding>
             <element signature="e#122#136#0" expanded="true" />
           </folding>
