@@ -88,6 +88,7 @@ print('processing tapp for ' + str(year))
 # NEED TO CONVERT t2m and d2m into correct units (kelvin/celsius???)
 for t in range(combi.dimensions['time'].size):
     tapp[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)**2
+    print(tapp[t, :, :])
     #tapp[t, :, :] = -2.653 + 0.994*t2m_var[t, :, :] + 0.0153*(d2m_var[t, :, :])**2
 
 print('processed tapp for ' + str(year))
