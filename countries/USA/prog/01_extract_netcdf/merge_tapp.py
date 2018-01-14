@@ -82,12 +82,13 @@ tapp = combi.createVariable('tapp', d2m_var.datatype, d2m_var.dimensions)
 tapp.units = 'K'
 tapp.long_name = 'Apparent temperature = combination of humidity and temperature for'
 
+print('processing tapp for ' + year)
+
 # Make it but sequentially at each time so that no so much memory is used at once.
 # NEED TO CONVERT t2m and d2m into correct units (kelvin/celsius???)
 for t in range(combi.dimensions['time'].size):
-    #tapp[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)^2
-    tapp[t, :, :] = -2.653 + 0.994*t2m_var[t, :, :] + 0.0153*(d2m_var[t, :, :])^2
-
+    tapp[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)**2
+    #tapp[t, :, :] = -2.653 + 0.994*t2m_var[t, :, :] + 0.0153*(d2m_var[t, :, :])**2
 
 print('processed tapp for ' + year)
 
