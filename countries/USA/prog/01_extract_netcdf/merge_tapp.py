@@ -95,13 +95,15 @@ for year in years:
     print('processing tapp for ' + str(year))
 
     # Make it but sequentially at each time so that no so much memory is used at once.
-    # NEED TO CONVERT t2m and d2m into correct units (kelvin/celsius???)
     for t in range(combi.dimensions['time'].size):
-        # work out tapp in Fahrenheit
-        tapp[t, :, :] = -2.653 + 0.994*(32+1.8*(t2m_var[t, :, :]-k_to_c)) + 0.0153*(32+1.8*(d2m_var[t, :, :]-k_to_c))**2
+        # work out tapp in celsius
+        tapp[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)**2
+
+        # # work out tapp in Fahrenheit
+        # tapp[t, :, :] = -2.653 + 0.994*(32+1.8*(t2m_var[t, :, :]-k_to_c)) + 0.0153*(32+1.8*(d2m_var[t, :, :]-k_to_c))**2
 
         # convert tapp back to celsius
-        tapp[t, :, :] = (tapp[t, :, :] - 32)/1.8
+        # tapp[t, :, :] = (tapp[t, :, :] - 32)/1.8
 
     print('processed and saved tapp for ' + str(year))
 
