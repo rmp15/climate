@@ -21,8 +21,8 @@
       <file leaf-file-name="merge_tapp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+            <state relative-caret-position="165">
+              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding>
                 <element signature="e#122#136#0" expanded="true" />
               </folding>
@@ -715,7 +715,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516008753045</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Add python script for downloading ERA-Interim files">
+      <created>1516028205905</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1516028205905</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1048,8 +1055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <element signature="e#122#136#0" expanded="true" />
           </folding>
