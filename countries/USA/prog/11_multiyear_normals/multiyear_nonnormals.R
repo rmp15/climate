@@ -84,7 +84,8 @@ dat.at$year <- years[round(length(years)/2)]
 
 # merge and create weighted mean and 90th percentile upper and lower limits for state
 dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted),var.10=sum(pop.weighted*`10%`),var.90=sum(pop.weighted*`90%`))
+temp.state <- ddply(dat.temp,.(month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted),
+                                    var.10=sum(pop.weighted*`10%`),var.90=sum(pop.weighted*`90%`))
 temp.state <- na.omit(temp.state)
 
 # rename

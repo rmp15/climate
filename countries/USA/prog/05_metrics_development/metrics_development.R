@@ -12,6 +12,8 @@ dname <- as.character(args[2])
 year.start <- as.numeric(args[3])
 year.end <- as.numeric(args[4])
 
+# year = 1979 ; dname = 't2m' ; year.start = 1980 ; year.end = 2009
+
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname)), dir.create(paste0("../../output/metrics_development/",dname)), FALSE)
 
 # load county summary by day (for single year)
@@ -144,7 +146,7 @@ names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
 dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
 
 # merge and create weighted mean for state
-dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+dat.temp <- merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
 temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
 temp.state <- na.omit(temp.state)
 names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
