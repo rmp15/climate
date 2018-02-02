@@ -12,6 +12,9 @@ declare num="four"
 declare -i start=1980
 declare -i end=2009
 
+# go to correct location
+cd ~/git/climate/countries/USA/prog/00_bash
+
 #################################################
 # 1. 2-METRE TEMPERATURE PROCESSING (t2m)
 #################################################
