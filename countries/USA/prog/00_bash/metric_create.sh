@@ -9,8 +9,8 @@ clear
 declare -a years=($(seq 1979 2015))
 declare freq="daily"
 declare num="four"
-declare -i start=1980
-declare -i end=2009
+declare -i start=1979
+declare -i end=2015
 
 # go to correct location
 cd ~/git/climate/countries/USA/prog/00_bash
