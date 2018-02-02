@@ -22,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="35" column="124" lean-forward="false" selection-start-line="35" selection-start-column="124" selection-end-line="35" selection-end-column="124" />
+              <caret line="35" column="127" lean-forward="false" selection-start-line="35" selection-start-column="127" selection-end-line="35" selection-end-column="127" />
               <folding />
             </state>
           </provider>
@@ -471,13 +471,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00013" summary="Add python script for downloading ERA-Interim files">
-      <created>1512472860687</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1512472860687</updated>
-    </task>
     <task id="LOCAL-00014" summary="Add python script for downloading ERA-Interim files">
       <created>1512476196214</created>
       <option name="number" value="00014" />
@@ -814,7 +807,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517586960696</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Add python script for downloading ERA-Interim files">
+      <created>1517586980257</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1517586980257</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1229,7 +1229,7 @@
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="35" column="124" lean-forward="false" selection-start-line="35" selection-start-column="124" selection-end-line="35" selection-end-column="124" />
+          <caret line="35" column="127" lean-forward="false" selection-start-line="35" selection-start-column="127" selection-end-line="35" selection-end-column="127" />
           <folding />
         </state>
       </provider>
