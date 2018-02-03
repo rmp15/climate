@@ -49,7 +49,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
 done; done;
 
