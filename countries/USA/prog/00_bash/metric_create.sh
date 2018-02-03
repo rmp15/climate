@@ -38,10 +38,10 @@ echo "creating temperature metric for counties for $year";
 #echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
 
-declare -a metrics=('number_of_days_below_nonnormal_90_2' 'number_of_days_above_nonnormal_90_2')
+declare -a metrics=('meanc3')
 
 echo "plotting temperature metric results for $year";
 
@@ -60,7 +60,6 @@ for metric in "${metrics[@]}"; do
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2015 $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
-
 
 done;
 
