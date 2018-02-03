@@ -38,10 +38,10 @@ echo "creating temperature metric for counties for $year";
 #echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
 
-declare -a metrics=('meanc3')
+declare -a metrics=('mean')
 
 echo "plotting temperature metric results for $year";
 
@@ -49,7 +49,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
 done; done;
 
