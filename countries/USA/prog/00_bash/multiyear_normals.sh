@@ -3,6 +3,9 @@
 # this script
 # creates longterm normals of variables for states and counties in the USA
 
+# go to correct location
+cd ~/git/climate/countries/USA/prog/00_bash
+
 clear
 
 #################################################
