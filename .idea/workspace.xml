@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metric_create.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="metric_create.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics_development.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="metrics_development.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-375">
-              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,8 +98,8 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_together.py" />
         <option value="$PROJECT_DIR$/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" />
-        <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
       </list>
     </option>
   </component>
@@ -254,43 +254,40 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1979.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1980.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1981.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1982.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1983.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1984.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1985.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1986.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1987.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1988.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1989.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1990.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1991.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1992.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1993.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1994.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1995.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1996.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1997.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1998.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1999.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2000.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2001.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2002.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2003.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2004.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2005.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2006.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2007.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2008.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2009.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2010.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2011.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2012.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2013.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2014.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2015.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1979.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1980.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1981.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1982.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1983.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1984.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1985.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1986.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1987.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1988.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1989.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1990.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1991.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1992.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1993.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_female_1994.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1979.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1980.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1981.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1982.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1983.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1984.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1985.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1986.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1987.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1988.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1989.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1990.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1991.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1992.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1993.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1994.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1995.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/plots/tapp/mean/tapp_mean_male_1996.pdf</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -624,13 +621,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Add python script for downloading ERA-Interim files">
-      <created>1515771719371</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1515771719371</updated>
     </task>
     <task id="LOCAL-00025" summary="Add python script for downloading ERA-Interim files">
       <created>1515771838090</created>
@@ -968,7 +958,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517673676433</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Add python script for downloading ERA-Interim files">
+      <created>1517673774682</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1517673774682</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1349,14 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1103">
@@ -1373,18 +1362,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
