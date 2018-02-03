@@ -24,7 +24,7 @@ for metric in "${metrics[@]}"; do
 
 echo "processing multiyear normals for $dname $metric";
 
-Rscript ~/git/climate/countries/USA/prog/11_multiyear_normals/multiyear_normals.R 1980 2013 $dname $metric
+Rscript ~/git/climate/countries/USA/prog/11_multiyear_normals/multiyear_normals.R 1980 2009 $dname $metric
 
 done; 
 
