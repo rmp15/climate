@@ -33,12 +33,12 @@ echo "converting temperature netcdf file for $year";
 echo "creating temperature metric for counties for $year";
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num &
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num &
 
 #echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
 
 declare -a metrics=('number_of_days_below_nonnormal_90_2' 'number_of_days_above_nonnormal_90_2')
@@ -49,7 +49,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # plots
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric &
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
 
 done; done;
 
