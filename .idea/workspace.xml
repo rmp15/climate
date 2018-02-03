@@ -21,8 +21,8 @@
       <file leaf-file-name="metric_create.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+            <state relative-caret-position="570">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -254,43 +254,43 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1979.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1980.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1981.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1982.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1983.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1984.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1985.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1986.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1987.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1988.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1989.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1990.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1991.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1992.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1993.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1994.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1995.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1996.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1997.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1998.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_1999.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2000.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2001.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2002.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2003.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2004.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2005.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2006.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2007.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2008.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2009.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2010.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2011.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2012.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2013.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2014.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/county_weighted_mean_summary/county_daily/tapp/county_daily_tapp_2015.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1979.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1980.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1981.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1982.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1983.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1984.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1985.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1986.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1987.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1988.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1989.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1990.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1991.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1992.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1993.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1994.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1995.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1996.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1997.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1998.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_1999.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2000.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2001.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2002.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2003.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2004.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2005.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2006.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2007.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2008.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2009.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2010.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2011.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2012.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2013.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2014.rds</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/mean_tapp/state_weighted_summary_mean_tapp_2015.rds</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -624,13 +624,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Add python script for downloading ERA-Interim files">
-      <created>1515770576080</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1515770576080</updated>
     </task>
     <task id="LOCAL-00024" summary="Add python script for downloading ERA-Interim files">
       <created>1515771719371</created>
@@ -968,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517673480599</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Add python script for downloading ERA-Interim files">
+      <created>1517673676433</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1517673676433</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1383,8 +1383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="570">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
