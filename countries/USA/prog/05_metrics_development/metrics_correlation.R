@@ -15,13 +15,14 @@ library(plyr)
 args <- commandArgs(trailingOnly=TRUE)
 year.start <- as.numeric(args[1])
 year.end <- as.numeric(args[2])
-dname <- as.character(args[3])
+dname.1 <- as.character(args[3])
 metric.1 <- as.character(args[4])
 metric.2 <- as.character(args[5])
 
-year.start = 1979 ; year.end = 2015 ; dname = 't2m'# ; metric.1 = 'meanc3'
-metric.2 = 'number_of_days_below_nonnormal_90_2'
+year.start = 1979 ; year.end = 2015 ;
+dname = 't2m'
 metric.1 = 'meanc3'
+metric.2 = 'meanc3'
 
 # create output directory
 dir = paste0("../../output/metrics_correlation/",dname,"/",metric.1,"/")
