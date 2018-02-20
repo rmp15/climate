@@ -60,9 +60,38 @@ dev.off()
 # load state fips lookup
 state.lookup = read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lookup.csv')
 
+# plot metric 1 against metric 2 for an individual state
+pdf(paste0(dir,dname.1,'_',metric.2,'_against_',dname.2,'_',metric.2,'_against_',metric.1,'_by_state_',year.start,'_',year.end,'.pdf'), paper='a4r',height=0,width=0)
+
+for (i in (unique(dat.plot$state.fips))) {
+
+state.name = state.lookup[state.lookup$fips==as.numeric(i),][1,1]
+
+print(ggplot(data=subset(dat.plot,state.fips==i),aes(x=metric.1,y=metric.2)) + geom_point() +
+xlab(paste0(dname.1,'_',metric.1)) + ylab(paste0(dname.2,'_',metric.2)) +
+geom_abline(a=1,b=0,lintype='dotted') +
+stat_smooth(method='loess') +
+ggtitle(paste0(state.name,' ',metric.2,' against ',metric.1)))
+
+}
+
+dev.off()
+
+# plot metric 1 against metric 2 for an individual state and facetted by month
+pdf(paste0(dir,dname.1,'_',metric.2,'_against_',dname.2,'_',metric.2,'_against_',metric.1,'_facet_by_state_',year.start,'_',year.end,'.pdf'), paper='a4r',height=0,width=0)
+
+print(ggplot(data=subset(dat.plot),aes(x=metric.1,y=metric.2)) + geom_point() +
+xlab(paste0(dname.1,'_',metric.1)) + ylab(paste0(dname.2,'_',metric.2)) +
+geom_abline(a=1,b=0,lintype='dotted') +
+stat_smooth(method='loess') +
+ggtitle(paste0(state.name,' ',metric.2,' against ',metric.1)) +
+facet_wrap(~state.fips))
+
+dev.off()
+
+
 # plot metric 1 against metric 2 for an individual state and facetted by month
 pdf(paste0(dir,dname.1,'_',metric.2,'_against_',dname.2,'_',metric.2,'_against_',metric.1,'_by_state_and_month_',year.start,'_',year.end,'.pdf'), paper='a4r',height=0,width=0)
-
 for (i in (unique(dat.plot$state.fips))) {
 
 state.name = state.lookup[state.lookup$fips==as.numeric(i),][1,1]
@@ -75,7 +104,4 @@ ggtitle(paste0(state.name,' ',metric.2,' against ',metric.1)) +
 facet_wrap(~month))
 
 }
-
 dev.off()
-
-

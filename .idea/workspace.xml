@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_correlation/t2m/meanc3/t2m_meanc3_against_meanc3_1979_2015.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_correlation/t2m/meanc3/t2m_meanc3_against_meanc3_by_state_and_month_1979_2015.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation.R" />
     </list>
@@ -43,8 +41,8 @@
       <file leaf-file-name="metrics_correlation.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+            <state relative-caret-position="681">
+              <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -156,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,77 +180,10 @@
               <option name="myItemId" value="countries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="USA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="climate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="climate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="countries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="USA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="00_bash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="climate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="climate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="countries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="USA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="climate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="climate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="countries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,155 +198,6 @@
       <recent name="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf" />
       <recent name="$PROJECT_DIR$/countries/USA/prog/00_bash" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1979.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1979_2015.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1980.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1981.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1982.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1983.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1984.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1985.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1986.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1987.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1988.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1989.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1990.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1991.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1992.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1993.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1994.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1995.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1996.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1997.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1998.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1999.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2000.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2001.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2002.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2003.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2004.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2005.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2006.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2007.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2008.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2009.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2010.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2011.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2012.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2013.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2014.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_2015.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/multiyear_normals/tapp/mean/county_longterm_normals_mean_tapp_1980_2009.rds</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/countries/USA/output/multiyear_normals/tapp/mean/state_longterm_normals_mean_tapp_1980_2009.rds</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="R.metrics_correlation">
     <configuration default="false" name="downloading_netcdf_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -661,13 +444,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add python script for downloading ERA-Interim files">
-      <created>1515936771387</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1515936771387</updated>
     </task>
     <task id="LOCAL-00033" summary="Add python script for downloading ERA-Interim files">
       <created>1515936876704</created>
@@ -1005,32 +781,39 @@
       <option name="project" value="LOCAL" />
       <updated>1517752734706</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Add python script for downloading ERA-Interim files">
+      <created>1517754188758</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1517754188758</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28040057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28755364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53975904" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7433735" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1383,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,8 +1187,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+        <state relative-caret-position="681">
+          <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding />
         </state>
       </provider>
