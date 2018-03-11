@@ -1,8 +1,8 @@
 # this script
-# loads 2 particular metrics
-# plots them against each other
-# establishes r^2 values
-
+# loads particular metrics of interest
+# establishes r^2 values for each state-month
+# find average for country for each metric based on state-month values
+# plots on a matrix/heat map
 # go to correct directory
 setwd('~/git/climate/countries/USA/prog/00_bash')
 
@@ -17,24 +17,27 @@ year.start <- as.numeric(args[1])
 year.end <- as.numeric(args[2])
 dname.1 <- as.character(args[3])
 dname.2 <- as.character(args[4])
-metric.1 <- as.character(args[5])
-metric.2 <- as.character(args[6])
 
+# declare variables
 year.start = 1979 ; year.end = 2015 ;
-dname.1 = 'tapp' ; dname.2 = 't2m'
-metric.1 = 'meanc3'
-metric.2 = 'meanc3'
+dname.1 = 't2m' ; dname.2 = 't2m'
 
 # create output directory
-dir = paste0("../../output/metrics_correlation/",dname.1,"/",metric.1,"/")
+dir = paste0("../../output/metrics_correlation_matrix/",dname.1,"/")
 ifelse(!dir.exists(dir), dir.create(dir,recursive=TRUE), FALSE)
 
 # load climate metrics
 source('../../data/objects/objects.R')
 
-# load metric of interest
-dat.1 <- readRDS(paste0('../../output/metrics_development/',dname.1,'/',metric.1,'_',dname.1,'/state_weighted_summary_',metric.1,'_',dname.1,'_',year.start,'_',year.end,'.rds'))
-dat.2 <- readRDS(paste0('../../output/metrics_development/',dname.2,'/',metric.2,'_',dname.2,'/state_weighted_summary_',metric.2,'_',dname.2,'_',year.start,'_',year.end,'.rds'))
+# load all metrics of interest
+i=1 # label counter
+for (metric in metrics.matrix) {
+    dat.metric <- readRDS(paste0('../../output/metrics_development/',dname.1,'/',
+                            metric,'_',dname.1,'/state_weighted_summary_',
+                            metric,'_',dname.1,'_',year.start,'_',year.end,'.rds'))
+    assign(paste0('dat.',i),dat.metric)
+    i=i+1
+}
 
 # subset for only one age-sex group
 dat.1 <- subset(dat.1,age==85&sex==2)
