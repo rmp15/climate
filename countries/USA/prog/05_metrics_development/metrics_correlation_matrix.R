@@ -42,7 +42,30 @@ for (metric in metrics.matrix) {
 }
 
 # create an average of r^2 values for each state month combination
-dat.plot = data.frame(month=dat.1$month,state.fips=dat.1$state.fips,metric.1=dat.1[,ncol(dat.1)],metric.2=dat.2[,ncol(dat.2)])
-lm = lm(metric.2~metric.1,data=dat.plot)
-r.squared = round(summary(lm)$r.squared,2)
+dat.rsq.all = data.frame(metric.1=character(0),metric.2=character(0),r.mean=numeric(0),r.min=numeric(0),r.max=numeric(0))
+for (j in length(metrics.matrix)) {
+    for (k in length(metrics.matrix)) {
+        assign('dat.a',data.frame(get(paste0('dat.',j))))  ; assign('dat.b',data.frame(get(paste0('dat.',k))))
+        dat.corr = data.frame(month=dat.1$month,state.fips=dat.a$state.fips,metric.1=dat.a[,ncol(dat.a)],metric.2=dat.b[,ncol(dat.b)])
+        # loop through state-months and find r^2 values
+        dat.rsq = data.frame(month=numeric(0),state.fips=character(0),r.squared=numeric(0))
+        for (month.temp in sort(unique(dat.corr$month))){
+            for(state in sort(unique(dat.corr$state.fips))){
+                dat.temp = subset(dat.corr,month==month.temp & state.fips==state)
+                lm = lm(metric.2~metric.1,data=dat.temp)
+                r.squared = round(summary(lm)$r.squared,2)
+                print(c(month,state.fips,r.squared))
+                dat.add = data.frame(month=month,state.fips=state,r.squared=r.squared)
+                dat.rsq = rbind(dat.rsq,dat.add)
+            }}
+        # find average of squared values (and the max/min?)
+        # CODE HERE dat.add = ...
+        dat.rsq.all = rbind(dat.rsq.all,dat.add)
+}}
 
+# use the data frame of all the correlations to make a national heatmap, with numbers filled-in to express
+# the average and the max/min values
+
+# IDEAS -> make heat map per
+#               - month over all states
+#               - state over all months
