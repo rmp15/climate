@@ -67,3 +67,5 @@ dat.complete = merge(dat.complete,dat.state.month, by=c('month','state.fips'),al
 # define a least-squares regression model in INLA
 fml = t2m.meanc3 ~ f(state.month,t2m.10percc3,model='iid')
 mod = inla(fml, family="gaussian", data=dat.complete)
+
+# need to then reconstruct the values by combining the parameters...
