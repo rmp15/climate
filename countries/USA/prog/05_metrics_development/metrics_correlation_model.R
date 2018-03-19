@@ -50,4 +50,20 @@ for (metric in metrics.matrix) {
     i=i+1
 }
 
+dat.complete$month = as.integer(dat.complete$month)
+
+# eliminate unnecessary columns
+dat.complete$sex = NULL ; dat.complete$age = NULL ;
+dat.complete$year = NULL ; dat.complete$leap = NULL
+
+# extract unique table of state and months to generate state.month
+dat.state.month = unique(dat.complete[,c('month', 'state.fips')])
+dat.state.month$month = as.integer(dat.state.month$month)
+dat.state.month$state.month = seq(nrow(dat.state.month))
+
+# merge year.month table with population table to create year.month id
+dat.complete = merge(dat.complete,dat.state.month, by=c('month','state.fips'),all.x=1)
+
 # define a least-squares regression model in INLA
+fml = t2m.meanc3 ~ f(state.month,t2m.10percc3,model='iid')
+mod = inla(fml, family="gaussian", data=dat.complete)
