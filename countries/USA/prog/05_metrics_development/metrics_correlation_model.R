@@ -64,6 +64,17 @@ dat.state.month$state.month = seq(nrow(dat.state.month))
 # merge year.month table with population table to create year.month id
 dat.complete = merge(dat.complete,dat.state.month, by=c('month','state.fips'),all.x=1)
 
+#######################################
+# LM
+#######################################
+
+# define and run model
+lmod = lm(t2m.meanc3 ~ t2m.10percc3 + month + state.fips, dat.complete)
+
+#######################################
+# INLA
+#######################################
+
 # define a least-squares regression model in INLA
 fml = t2m.meanc3 ~ f(state.month,t2m.10percc3,model='iid')
 mod = inla(fml, family="gaussian", data=dat.complete)
