@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_model.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_model.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_model.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,31 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metrics_correlation_matrix.R" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_matrix.R">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="151" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="metrics_correlation_model.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_model.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="objects.R" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/USA/data/objects/objects.R">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="780">
+              <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -85,12 +65,15 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py" />
         <option value="$PROJECT_DIR$/countries/USA/data/objects/objects.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_matrix.R" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_model.R" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="-1280" />
+    <option name="y" value="-472" />
+    <option name="width" value="730" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -512,13 +495,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00041" summary="Add python script for downloading ERA-Interim files">
-      <created>1515957759800</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1515957759800</updated>
-    </task>
     <task id="LOCAL-00042" summary="Add python script for downloading ERA-Interim files">
       <created>1515973920230</created>
       <option name="number" value="00042" />
@@ -855,14 +831,21 @@
       <option name="project" value="LOCAL" />
       <updated>1520866175381</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Add python script for downloading ERA-Interim files">
+      <created>1521480821045</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1521480821045</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-1280" y="-472" width="730" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34978542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34978542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1237,8 +1220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_model.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="780">
+          <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding />
         </state>
       </provider>
