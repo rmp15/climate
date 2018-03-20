@@ -69,7 +69,8 @@ dat.complete = merge(dat.complete,dat.state.month, by=c('month','state.fips'),al
 #######################################
 
 # define and run model
-lmod = lm(t2m.meanc3 ~ t2m.10percc3 + month + state.fips, dat.complete)
+lmod = lm(t2m.meanc3 ~ t2m.10percc3 + as.factor(month) + state.fips, dat.complete)
+lmod = lm(t2m.meanc3 ~ t2m.10percc3, dat.complete)
 
 #######################################
 # INLA
