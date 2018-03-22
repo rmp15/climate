@@ -10,11 +10,6 @@ metrics.matrix.short = c('Mean','SD','10%','90%',
                 'DA90', 'DB10',
                 'UW90','DW10')
 
-metrics.matrix.short = c('10%','90%','Mean',
-                'DA90', 'DB10',
-                'UW90','DW10',
-                'SD')
-
 # create dictionary for variables
 dat.dict = data.frame(  metric=metrics.matrix,
                         name=metrics.matrix.short,
@@ -32,3 +27,7 @@ colors.reg = c(mycols[c(          10,       # 0
                                 'white',    # 0.5
              c(mycols[c(        4,          # 0.75
                                 9)]))       # 1
+
+colors.rsq = c('white',                     # 0
+                mycols[c(       4,          # 0.5
+                                9)])        # 1
