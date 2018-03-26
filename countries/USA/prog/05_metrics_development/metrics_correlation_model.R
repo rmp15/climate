@@ -65,6 +65,10 @@ dat.state.month$state.month = seq(nrow(dat.state.month))
 dat.complete = merge(dat.complete,dat.state.month, by=c('month','state.fips'),all.x=1)
 
 #######################################
+# ANOVA
+#######################################
+
+#######################################
 # LM
 #######################################
 
