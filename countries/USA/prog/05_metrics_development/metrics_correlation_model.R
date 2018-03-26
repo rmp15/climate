@@ -2,6 +2,7 @@
 # loads particular metrics of interest
 # finds particular values of R^2 values
 # plots on a matrix/heat map
+
 # go to correct directory
 setwd('~/git/climate/countries/USA/prog/00_bash')
 
@@ -69,15 +70,18 @@ dat.complete = merge(dat.complete,dat.state.month, by=c('month','state.fips'),al
 
 # define and run model
 table.names = names(dat.complete[3:10])
-dat.plot = data.frame(metric.1=character(0),metric.2=character(0),rsq=numeric(0))
+dat.plot = data.frame(metric.1=character(0),metric.2=character(0),r=numeric(0),rsq=numeric(0))
 for (i in seq(length(table.names))){
     for (j in seq(length(table.names))) {
         lmod = lm(get(table.names[i]) ~ get(table.names[j]) + as.factor(month) + state.fips, dat.complete)
         print(c(table.names[i],table.names[j]))
-        print(summary(lmod)$adj.r.squared)
-        dat.add = data.frame(metric.1=metrics.matrix[i],metric.2=metrics.matrix[j],rsq=summary(lmod)$adj.r.squared)
+        print(c(lmod$coefficients[2],summary(lmod)$adj.r.squared))
+        dat.add = data.frame(metric.1=metrics.matrix[i],metric.2=metrics.matrix[j],r=lmod$coefficients[2], rsq=summary(lmod)$adj.r.squared)
         dat.plot = rbind(dat.plot,dat.add)
 }}
+
+lmod.1 = lm(t2m.meanc3 ~ t2m.sd + as.factor(month) + state.fips, dat.complete)
+lmod.2 = lm(t2m.sd  ~ t2m.meanc3 + as.factor(month) + state.fips, dat.complete)
 
 
 #######################################
@@ -89,6 +93,10 @@ for (i in seq(length(table.names))){
 #mod = inla(fml, family="gaussian", data=dat.complete)
 
 # need to then reconstruct the values by combining the parameters...
+
+#######################################
+# PLOTTING
+#######################################
 
 # reorder dataframe variables for plotting
 dat = merge(dat.plot,dat.dict,by.x=c('metric.1'),by.y=c('metric'))
@@ -112,7 +120,7 @@ na.value = "grey98", limits = c(0, 1)) +
 guides(fill = guide_colorbar(barwidth = 20, barheight = 1,title = 'R-squared')) +
 ggtitle('') +
 scale_size(guide = 'none') +
-xlab("") + ylab('') +
+xlab("Input variable") + ylab('Output Variable') +
 theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
 panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
 panel.border = element_rect(colour = "black"),strip.background = element_blank(),
