@@ -80,8 +80,8 @@ for (i in seq(length(table.names))){
         dat.plot = rbind(dat.plot,dat.add)
 }}
 
-lmod.1 = lm(t2m.meanc3 ~ t2m.sd + as.factor(month) + state.fips, dat.complete)
-lmod.2 = lm(t2m.sd  ~ t2m.meanc3 + as.factor(month) + state.fips, dat.complete)
+lmod.1 = lm(t2m.meanc3 ~ t2m.sd + as.factor(month) + as.factor(state.fips), dat.complete)
+lmod.2 = lm(t2m.sd  ~ t2m.meanc3 + as.factor(month) + as.factor(state.fips), dat.complete)
 
 
 #######################################
@@ -120,7 +120,7 @@ na.value = "grey98", limits = c(0, 1)) +
 guides(fill = guide_colorbar(barwidth = 20, barheight = 1,title = 'R-squared')) +
 ggtitle('') +
 scale_size(guide = 'none') +
-xlab("Input variable") + ylab('Output Variable') +
+xlab('Dependent (output) variable') + ylab('Independent (input) variable') +
 theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
 panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
 panel.border = element_rect(colour = "black"),strip.background = element_blank(),
