@@ -22,4 +22,10 @@ var <- paste0('mean_',dname)
 # load data
 dat = readRDS(paste0("../../output/multiyear_normals/",dname,"/",metric,'/state_longterm_95_nonnormals_',var,'_',year.start,'_',year.end,'.rds'))
 
-#
+# isolate one age-sex group and remove alaska and hawaii
+dat = subset(dat,age==65&sex==1)
+dat = subset(dat, !(state.fips%in%c('02','15')))
+
+library(ggplot2)
+
+# plot by average values by month

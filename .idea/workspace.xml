@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/sophie_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" afterPath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="multiyear_nonnormals_plots.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="465">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -478,13 +475,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00051" summary="Add python script for downloading ERA-Interim files">
-      <created>1516642373393</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1516642373393</updated>
-    </task>
     <task id="LOCAL-00052" summary="Add python script for downloading ERA-Interim files">
       <created>1517326973516</created>
       <option name="number" value="00052" />
@@ -821,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522078305056</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Add python script for downloading ERA-Interim files">
+      <created>1524156882714</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1524156882714</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1142,6 +1139,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="88" lean-forward="false" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,6 +1155,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,8 +1192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
