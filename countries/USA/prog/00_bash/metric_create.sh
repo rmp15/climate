@@ -10,7 +10,7 @@ declare -a years=($(seq 1979 2015))
 declare freq="daily"
 declare num="four"
 declare -i start=1979
-declare -i end=2015
+declare -i end=1980
 
 # go to correct location
 cd ~/git/climate/countries/USA/prog/00_bash
@@ -19,7 +19,7 @@ cd ~/git/climate/countries/USA/prog/00_bash
 # 1. 2-METRE TEMPERATURE PROCESSING (t2m)
 #################################################
 
-declare dname="tapp"
+declare dname="t2m"
 
 for year in "${years[@]}"; do
 
@@ -39,9 +39,9 @@ echo "creating temperature metric for counties for $year";
 
 # creates metrics from the temperature values processed
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_2.R $year $dname $start $end &
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
-declare -a metrics=('meanc3')
+declare -a metrics=('meanc4')
 
 echo "plotting temperature metric results for $year";
 

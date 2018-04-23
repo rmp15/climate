@@ -14,6 +14,8 @@ year.end <- as.numeric(args[4])
 
 year.start = 1980 ; year.end = 2009
 
+print(year)
+
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname)), dir.create(paste0("../../output/metrics_development/",dname)), FALSE)
 
 # load county summary by day (for single year)
@@ -43,9 +45,13 @@ is.leapyear=function(year){
 
 dat.county$leap <- as.integer(is.leapyear(dat.county$year))
 
+print('data loaded')
+
 ####################################################
 # 1c. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
 ####################################################
+
+print('processing meanc3')
 
 var <- paste0('meanc3_',dname)
 
@@ -86,6 +92,8 @@ saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/st
 ########################################################################################################
 # 1d. AVERAGE VALUE CENTRED BY LONGTERM NORMAL BY COUNTY THEN BUILT TO STATE
 ########################################################################################################
+
+print('processing meanc4')
 
 var <- paste0('meanc4_',dname)
 
@@ -146,3 +154,5 @@ ggplot(data=subset(dat.compare,age==65&sex==2&!(state.fips%in%c('02','15')))) +
 
 ggplot(data=subset(temp.state.plot,!(state.fips%in%c('02','15'))),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point() + geom_abline(slope=1)
 dev.off()
+
+print(paste0(year,' done'))

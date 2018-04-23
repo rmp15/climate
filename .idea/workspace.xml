@@ -2,9 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/heatwaves_test_real.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy/heatwaves_test_real.R" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/heatwaves_test_toy.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy/heatwaves_test_toy.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1979.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1979.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1981.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1981.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1982.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1982.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1983.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1983.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1984.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1984.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1985.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1985.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1986.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1986.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1987.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1987.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1988.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1988.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1989.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1989.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1990.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1990.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1991.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1991.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1992.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1992.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1993.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1993.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1994.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1994.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1995.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1995.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1996.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1996.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1997.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1997.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1998.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1998.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1999.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1999.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2000.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2000.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2001.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2001.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2002.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2002.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2003.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2003.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2004.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2004.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2005.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2005.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2006.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2006.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2007.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2007.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2008.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2008.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2009.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2009.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2010.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2010.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2011.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2011.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2012.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2012.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2013.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2013.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2014.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2014.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2015.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2015.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1979.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1979.rds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1980.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1980.rds" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,18 +63,38 @@
       <file leaf-file-name="metric_create.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="county_weighted_mean_summary.R" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R">
+      <file leaf-file-name="metrics_compare_county_state.R" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="370">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics_statistics.R" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/13_metrics_statistics/metrics_statistics.R">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics_development_county.R" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="764">
+              <caret line="154" column="35" lean-forward="false" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -44,16 +105,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
               <caret line="224" column="18" lean-forward="false" selection-start-line="224" selection-start-column="18" selection-end-line="224" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics_development_county.R" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,6 +129,7 @@
       <find>year_start</find>
       <find>target</find>
       <find>var</find>
+      <find>t2m.meanc4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,7 +150,6 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_test_correct.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_together.py" />
         <option value="$PROJECT_DIR$/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R" />
-        <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/heatwaves_test_toy.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py" />
@@ -114,6 +165,8 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R" />
       </list>
     </option>
   </component>
@@ -196,7 +249,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="05_metrics_development" />
+              <option name="myItemId" value="13_metrics_statistics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,6 +295,9 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/countries/USA/prog/05_metrics_development" />
       <recent name="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals" />
@@ -250,15 +306,7 @@
       <recent name="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf" />
     </key>
   </component>
-  <component name="RunManager" selected="Bash.metric_correlation.sh">
-    <configuration default="false" name="metrics_correlation" type="RRunConfigurationType" factoryName="R" temporary="true">
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation.R" />
-      <option name="SCRIPT_ARGS" value="" />
-      <option name="WORKING_DIRECTORY_PATH" value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Bash.metric_create.sh">
     <configuration default="false" name="multiyear_normals.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -295,6 +343,17 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/countries/USA/prog/00_bash" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_correlation.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="climate" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="metric_create.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/countries/USA/prog/00_bash" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
       <option name="PARAMETERS" value="" />
       <module name="climate" />
       <envs />
@@ -454,19 +513,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="R.metrics_correlation" />
-      <item index="1" class="java.lang.String" itemvalue="Bash.multiyear_normals.sh" />
-      <item index="2" class="java.lang.String" itemvalue="Bash.netcdf_download.sh" />
-      <item index="3" class="java.lang.String" itemvalue="R.metrics_correlation_individual" />
-      <item index="4" class="java.lang.String" itemvalue="Bash.metric_correlation.sh" />
+      <item index="0" class="java.lang.String" itemvalue="Bash.multiyear_normals.sh" />
+      <item index="1" class="java.lang.String" itemvalue="Bash.netcdf_download.sh" />
+      <item index="2" class="java.lang.String" itemvalue="R.metrics_correlation_individual" />
+      <item index="3" class="java.lang.String" itemvalue="Bash.metric_correlation.sh" />
+      <item index="4" class="java.lang.String" itemvalue="Bash.metric_create.sh" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Bash.metric_correlation.sh" />
-        <item index="1" class="java.lang.String" itemvalue="R.metrics_correlation_individual" />
-        <item index="2" class="java.lang.String" itemvalue="Bash.multiyear_normals.sh" />
-        <item index="3" class="java.lang.String" itemvalue="Bash.netcdf_download.sh" />
-        <item index="4" class="java.lang.String" itemvalue="R.metrics_correlation" />
+        <item index="0" class="java.lang.String" itemvalue="Bash.metric_create.sh" />
+        <item index="1" class="java.lang.String" itemvalue="Bash.metric_correlation.sh" />
+        <item index="2" class="java.lang.String" itemvalue="R.metrics_correlation_individual" />
+        <item index="3" class="java.lang.String" itemvalue="Bash.multiyear_normals.sh" />
+        <item index="4" class="java.lang.String" itemvalue="Bash.netcdf_download.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -483,13 +542,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Add python script for downloading ERA-Interim files">
-      <created>1517586205944</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1517586205944</updated>
     </task>
     <task id="LOCAL-00058" summary="Add python script for downloading ERA-Interim files">
       <created>1517586225317</created>
@@ -827,32 +879,39 @@
       <option name="project" value="LOCAL" />
       <updated>1524491203581</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Add python script for downloading ERA-Interim files">
+      <created>1524491338785</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1524491338785</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1280" y="-472" width="1280" height="1024" extended-state="0" />
+    <frame x="-1280" y="-472" width="1280" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39822295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39413" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.609901" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -891,27 +950,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/app_t_input_creator.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -1058,7 +1096,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/heatwaves_test_toy.R">
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy/heatwaves_test_toy.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
@@ -1180,14 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -1196,10 +1226,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy/heatwaves_test_real.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="764">
+          <caret line="154" column="35" lean-forward="false" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/13_metrics_statistics/metrics_statistics.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
