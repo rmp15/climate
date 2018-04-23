@@ -172,6 +172,53 @@ ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), d
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
+# 1d. AVERAGE VALUE CENTRED BY LONGTERM NORMAL BY COUNTY THEN BUILT TO STATE
+####################################################
+
+var <- paste0('meanc4_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+
+# load multiyear normal for period of study
+dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/county_longterm_normals_mean_',dname,'_',year.start,'_',year.end,'.rds'))
+
+# establish number of years of study
+num.years <- 30
+
+# merge county-month mean values and subtract multiyear normal
+temp.county <- merge(dat.at,dat.multi,by=c('month','state.county.fips'))
+names(temp.county)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.county))] <- paste0(num.years,'yr.mean')
+names(temp.county)[grep(paste0('var.weighted') ,names(temp.county))] <- 'var.adj'
+temp.county$var.adj <- with(temp.county,var.adj-`30yr.mean`)
+names(temp.county)[grep('var.adj',names(temp.county))] <- paste0(dname,'.meanc4')
+
+# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+temp.county <- temp.county[,c(1:4)]
+
+# merge and create weighted mean for state
+dat.temp <- merge(temp.county,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,t2m.meanc4=(sum(pop.county*t2m.meanc4)/sum(pop.county)))
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+
+# TEMPORARY
+# library(ggplot2)
+#
+# ggplot() +
+#     geom_point(data=subset(dat.temp,age==65&sex==2&!(state.fips%in%c('02','15'))),aes(x=state.fips,y=t2m.meanc4)) +
+#     geom_point(data=subset(temp.state,age==65&sex==2&!(state.fips%in%c('02','15'))),aes(x=state.fips,y=t2m.meanc4),color='red',size=2) +
+#     geom_hline(yintercept=0,linetype='dotted') +
+#     facet_wrap(~month)
+
+# ggplot(data=subset(dat.3,!(state.fips%in%c('02','15'),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point()
+
+
+####################################################
 # 2a. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
 ####################################################
 #
