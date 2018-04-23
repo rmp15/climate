@@ -10,6 +10,7 @@ rm(list=ls())
 
 library(ggplot2)
 library(plyr)
+library(RColorBrewer)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
@@ -21,9 +22,9 @@ metric.1 <- as.character(args[5])
 metric.2 <- as.character(args[6])
 
 year.start = 1979 ; year.end = 2015 ;
-dname.1 = 'tapp' ; dname.2 = 't2m'
-metric.1 = 'meanc3'
-metric.2 = 'meanc3'
+dname.1 = 't2m' ; dname.2 = 't2m'
+metric.1 = 'mean'
+metric.2 = 'sd'
 
 # create output directory
 dir = paste0("../../output/metrics_correlation/",dname.1,"/",metric.1,"/")
@@ -37,8 +38,8 @@ dat.1 <- readRDS(paste0('../../output/metrics_development/',dname.1,'/',metric.1
 dat.2 <- readRDS(paste0('../../output/metrics_development/',dname.2,'/',metric.2,'_',dname.2,'/state_weighted_summary_',metric.2,'_',dname.2,'_',year.start,'_',year.end,'.rds'))
 
 # subset for only one age-sex group
-dat.1 <- subset(dat.1,age==85&sex==2)
-dat.2 <- subset(dat.2,age==85&sex==2)
+dat.1 <- subset(dat.1,age==85&sex==2) ; dat.1 = subset(dat.1,!(state.fips%in%c('02','15')))
+dat.2 <- subset(dat.2,age==85&sex==2) ; dat.2 = subset(dat.2,!(state.fips%in%c('02','15')))
 
 # sort columns
 dat.1 = with(dat.1,dat.1[order(sex,age,state.fips,month),])
