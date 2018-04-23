@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/heatwaves_test_real.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy/heatwaves_test_real.R" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/heatwaves_test_toy.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/zz_legacy/heatwaves_test_toy.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1979.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1979.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1981.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1981.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1982.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1982.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1983.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1983.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1984.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1984.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1985.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1985.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1986.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1986.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1987.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1987.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1988.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1988.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1989.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1989.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1990.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1990.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1991.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1991.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1992.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1992.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1993.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1993.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1994.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1994.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1995.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1995.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1996.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1996.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1997.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1997.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1998.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1998.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1999.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1999.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2000.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2000.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2001.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2001.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2002.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2002.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2003.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2003.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2004.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2004.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2005.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2005.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2006.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2006.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2007.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2007.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2008.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2008.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2009.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2009.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2010.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2010.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2011.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2011.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2012.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2012.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2013.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2013.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2014.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2014.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2015.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_2015.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1979.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1979.rds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1980.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/tapp/meanc3_tapp/state_weighted_summary_meanc3_tapp_1980.rds" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results.R" afterPath="$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,41 +29,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics_compare_county_state.R" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics_statistics.R" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/13_metrics_statistics/metrics_statistics.R">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="metrics_development_county.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="154" column="35" lean-forward="false" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="63" />
+            <state relative-caret-position="611">
+              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="152" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics_development.R" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
+      <file leaf-file-name="metrics_compare_county_state.R" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="224" column="18" lean-forward="false" selection-start-line="224" selection-start-column="18" selection-end-line="224" selection-end-column="18" />
+            <state relative-caret-position="461">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="77" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bind_results.R" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results.R">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiyear_nonnormals_plots.R" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="61" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -166,6 +125,7 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R" />
       </list>
     </option>
@@ -250,6 +210,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="13_metrics_statistics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="USA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="11_multiyear_normals" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,13 +528,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Add python script for downloading ERA-Interim files">
-      <created>1517586225317</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1517586225317</updated>
     </task>
     <task id="LOCAL-00059" summary="Add python script for downloading ERA-Interim files">
       <created>1517586503498</created>
@@ -886,7 +865,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524491338785</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Add python script for downloading ERA-Interim files">
+      <created>1524497976580</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1524497976580</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -900,7 +886,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39413" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39413" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1068,13 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/06_plots/plots.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/12_testing_normality/testing_normality.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1100,13 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1202,14 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="95" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
@@ -1234,14 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="154" column="35" lean-forward="false" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -1250,18 +1206,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="152" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/13_metrics_statistics/metrics_statistics.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="-229">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/06_plots/plots.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="61" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_compare_county_state.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="461">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="77" selection-end-column="1" />
           <folding />
         </state>
       </provider>

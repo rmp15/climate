@@ -31,4 +31,50 @@ pdf(paste0(dir,'/comparison_',year.start,'_',year.end,'.pdf'),height=0,width=0,p
 ggplot(data=subset(dat.both,!(state.fips%in%c(2,15))),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point() + geom_abline(slope=1)
 
 ggplot(data=subset(dat.both,!(state.fips%in%c(2,15,32))),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point() + geom_abline(slope=1)
+
+# load file with difference data
+dat = readRDS(paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/diff/',year.start,'_',year.end,'.rds'))
+
+dat.summary = ddply(dat,.(month,sex,age,state.fips,state.county.fips),summarize,diff=mean(diff),pop.weighted=mean(pop.weighted))
+
+pdf(paste0(dir,'/county_deviations',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
+
+# attach state names
+state.lookup <- read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lookup.csv')
+dat.summary$fips = as.numeric(dat.summary$state.fips)
+dat.summary = merge(dat.summary,state.lookup,by='fips',all.x=TRUE)
+
+ggplot(data=subset(dat.summary,age==65&sex==2&!(state.fips%in%c('02','15')))) +
+    geom_point(aes(x=state.fips,y=diff),alpha=0.5) +
+    geom_hline(yintercept=0,linetype='dotted') +
+    facet_wrap(~month)
+
+ggplot(data=subset(dat.summary,age==65&sex==2&!(state.fips%in%c('02','15')))) +
+    geom_point(aes(x=code_name,y=diff,alpha=0.5,size=(pop.weighted))) +
+    geom_hline(yintercept=0,linetype='dotted') +
+    facet_wrap(~month) +
+    ylim(c(-1,1)) +
+    theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(size=5,angle=90),
+    axis.ticks.x=element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+
+for(i in sort(unique(dat.summary$month))){
+    print(
+    ggplot(data=subset(dat.summary,month==i&age==65&sex==2&!(state.fips%in%c('02','15')))) +
+    geom_point(aes(x=code_name,y=diff,alpha=0.5,size=(pop.weighted))) +
+    geom_hline(yintercept=0,linetype='dotted') +
+    facet_wrap(~month) +
+    ylim(c(-1,1)) +
+    theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(size=5,angle=90),
+    axis.ticks.x=element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+    )
+}
+
 dev.off()

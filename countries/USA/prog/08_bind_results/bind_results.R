@@ -28,3 +28,18 @@ for (i in seq(length(years))) {
 # save output
 saveRDS(dat,paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
 
+# empty data frame to add new data to
+dat <- data.frame()
+
+# loop to add each year's data
+metric = 'meanc4'
+for (i in seq(length(years))) {
+        print(years[i])
+        file.name <- paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/diff/',years[i])
+        current.file <- readRDS(file.name)
+        dat <- rbind(dat,current.file)
+}
+
+# save output
+saveRDS(dat,paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/diff/',year.start,'_',year.end,'.rds'))
+
