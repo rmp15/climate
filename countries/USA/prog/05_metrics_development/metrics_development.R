@@ -167,13 +167,16 @@ names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
 # ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
 temp.state <- temp.state[,c(1:6)]
 
+# for temporary plotting below
+temp.state.2 = temp.state
+
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
-####################################################
+########################################################################################################
 # 1d. AVERAGE VALUE CENTRED BY LONGTERM NORMAL BY COUNTY THEN BUILT TO STATE
-####################################################
+########################################################################################################
 
 var <- paste0('meanc4_',dname)
 
@@ -206,17 +209,34 @@ temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,t2m.mean
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
-# TEMPORARY
-# library(ggplot2)
-#
-# ggplot() +
-#     geom_point(data=subset(dat.temp,age==65&sex==2&!(state.fips%in%c('02','15'))),aes(x=state.fips,y=t2m.meanc4)) +
-#     geom_point(data=subset(temp.state,age==65&sex==2&!(state.fips%in%c('02','15'))),aes(x=state.fips,y=t2m.meanc4),color='red',size=2) +
-#     geom_hline(yintercept=0,linetype='dotted') +
-#     facet_wrap(~month)
+temp.state.plot = merge(temp.state.2,temp.state)
 
-# ggplot(data=subset(dat.3,!(state.fips%in%c('02','15'),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point()
+# TEMPORARY TO EXAMINE VALUES
 
+# combine state average deviation from county-based mean with county deviations from county-based means
+dat.compare = merge(dat.temp,temp.state,by=c('year','month','sex','age','state.fips'),all.x=TRUE)
+dat.compare$diff = with(dat.compare,t2m.meanc4.x-t2m.meanc4.y)
+
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var,'/diff/')), dir.create(paste0("../../output/metrics_development/",dname,'/',var,'/diff/')), FALSE)
+saveRDS(dat.compare,paste0("../../output/metrics_development/",dname,'/',var,'/diff/',year))
+
+ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var,'/plots/')), dir.create(paste0("../../output/metrics_development/",dname,'/',var,'/plots/')), FALSE)
+
+library(ggplot2)
+pdf(paste0("../../output/metrics_development/",dname,'/',var,'/plots/',year,'.pdf'),height=0,width=0,paper='a4r')
+ggplot(data=subset(dat.compare,age==65&sex==2&!(state.fips%in%c('02','15')))) +
+    geom_point(aes(x=state.fips,y=t2m.meanc4.x,size=(pop.weighted))) +
+    geom_point(aes(x=state.fips,y=t2m.meanc4.y),color='red',size=2) +
+    geom_hline(yintercept=0,linetype='dotted') +
+    facet_wrap(~month)
+
+ggplot(data=subset(dat.compare,age==65&sex==2&!(state.fips%in%c('02','15')))) +
+    geom_point(aes(x=state.fips,y=diff,size=(pop.weighted))) +
+    geom_hline(yintercept=0,linetype='dotted') +
+    facet_wrap(~month)
+
+ggplot(data=subset(temp.state.plot,!(state.fips%in%c('02','15'))),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point() + geom_abline(slope=1)
+dev.off()
 
 ####################################################
 # 2a. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)

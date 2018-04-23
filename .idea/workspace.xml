@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_2.R" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1980.rds" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_development/t2m/meanc3_t2m/state_weighted_summary_meanc3_t2m_1980.rds" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R" />
     </list>
@@ -42,8 +42,8 @@
       <file leaf-file-name="metrics_development.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="218" column="0" lean-forward="true" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+            <state relative-caret-position="626">
+              <caret line="220" column="9" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00055" summary="Add python script for downloading ERA-Interim files">
-      <created>1517585682514</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1517585682514</updated>
-    </task>
     <task id="LOCAL-00056" summary="Add python script for downloading ERA-Interim files">
       <created>1517585974576</created>
       <option name="number" value="00056" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524474590903</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Add python script for downloading ERA-Interim files">
+      <created>1524488074460</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1524488074460</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1186,8 +1186,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="218" column="0" lean-forward="true" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+        <state relative-caret-position="626">
+          <caret line="220" column="9" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
           <folding />
         </state>
       </provider>
