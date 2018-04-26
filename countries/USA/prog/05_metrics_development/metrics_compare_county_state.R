@@ -3,6 +3,12 @@ rm(list=ls())
 library(ggplot2)
 library(foreign)
 library(plyr)
+library(maptools)
+library(mapproj)
+library(rgeos)
+library(rgdal)
+library(RColorBrewer)
+library(scales)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
@@ -36,6 +42,75 @@ ggplot(data=subset(dat.both,!(state.fips%in%c(2,15,32))),aes(x=t2m.meanc3,y=t2m.
 dat = readRDS(paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/diff/',year.start,'_',year.end,'.rds'))
 
 dat.summary = ddply(dat,.(month,sex,age,state.fips,state.county.fips),summarize,diff=mean(diff),pop.weighted=mean(pop.weighted))
+
+# load map and attach information to the map for plotting
+
+###############################################################
+# PREPARING MAP
+###############################################################
+
+# # for theme_map
+# #devtools::source_gist("33baa3a79c5cfef0f6df")
+# theme_map <- function(base_size=9, base_family=""){
+#     require(grid)
+#     theme_bw(base_size=base_size,base_family=base_family) %+replace%
+#     theme(axis.line=element_blank(),
+#     axis.text=element_blank(),
+#     axis.ticks=element_blank(),
+#     axis.title=element_blank(),
+#     panel.background=element_blank(),
+#     panel.border=element_blank(),
+#     panel.grid=element_blank(),
+#     panel.margin=unit(0,"lines"),
+#     plot.background=element_blank(),
+#     legend.justification = c(0,0),
+#     legend.position = c(0,0)
+#     )
+# }
+#
+# # load shapefile
+# us = readOGR(dsn="../../data/shapefiles",layer="cb_2017_us_county_500k")
+#
+# # convert shapefile to Albers equal area
+# us_aea <- spTransform(us, CRS("+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs"))
+# us_aea@data$id <- rownames(us_aea@data)
+#
+# # remove Alaska and Hawaii
+# us_aea <- us_aea[!us_aea$STATEFP %in% c("66","69","72","78","60","02", "15"),]
+#
+# # fortify to prepare for ggplot
+# map <- fortify(us_aea)
+#
+# # extract data from shapefile
+# shapefile.data <- us_aea@data
+#
+# # merge selected data to map dataframe for colouring of ggplot
+# USA.df = merge(map, shapefile.data, by='id')
+# USA.df$state.county.fips = as.character(paste0(USA.df$STATEFP,USA.df$COUNTYFP))
+#
+# # attach summary data to map (testing one age sex group)
+# dat.summary$state.county.fips = as.numeric(dat.summary$state.county.fips)
+# dat.test = subset(dat.summary,age==65&sex==2&month==1&!(state.fips%in%c('02','15')))
+# USA.df$state.county.fips = as.numeric(USA.df$state.county.fips)
+# dat.test = merge(USA.df,dat.test,by='state.county.fips',all.x=TRUE)
+#
+# plot <- with(dat.test, dat.test[order(piece,group,order),])
+#
+#
+# # map of the use by state in case needed
+# pdf(paste0('~/Desktop/usa_jan_map_diff.pdf'),height=0,width=0,paper='a4r')
+# print(ggplot(data=plot,aes(x=long,y=lat,group=group)) +
+# geom_polygon(aes(fill=diff),color='black',size=0.1) +
+# scale_fill_gradient2(limits=c(0.5,-0.5),low="blue", mid="white",high="red",midpoint=0,guide = guide_legend(title = '')) +
+# theme_map() +
+# theme(text = element_text(size = 15),legend.justification=c(1,0), legend.position='bottom',
+# 	legend.background = element_rect(fill = "grey95"),legend.box = "horizontal")
+# )
+# dev.off()
+
+###############################################################
+# PLOTTING
+###############################################################
 
 pdf(paste0(dir,'/county_deviations',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
 
