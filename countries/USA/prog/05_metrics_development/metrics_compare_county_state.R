@@ -69,7 +69,7 @@ theme_map <- function(base_size=9, base_family=""){
 }
 
 # load shapefile
-us = readOGR(dsn='',layer="cb_2017_us_county_500k")
+us = readOGR(dsn='../shapefiles',layer="cb_2017_us_county_500k")
 
 # convert shapefile to Albers equal area
 us_aea <- spTransform(us, CRS("+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs"))
@@ -90,23 +90,24 @@ USA.df$state.county.fips = as.character(paste0(USA.df$STATEFP,USA.df$COUNTYFP))
 
 # attach summary data to map (testing one age sex group)
 dat.summary$state.county.fips = as.numeric(dat.summary$state.county.fips)
-dat.test = subset(dat.summary,age==65&sex==2&month==1&!(state.fips%in%c('02','15')))
+dat.test = subset(dat.summary,age==65&sex==2&!(state.fips%in%c('02','15')))
 USA.df$state.county.fips = as.numeric(USA.df$state.county.fips)
 dat.test = merge(USA.df,dat.test,by='state.county.fips',all.x=TRUE)
-#
-# plot <- with(dat.test, dat.test[order(piece,group,order),])
-#
-#
-# # map of the use by state in case needed
-# pdf(paste0('~/Desktop/usa_jan_map_diff.pdf'),height=0,width=0,paper='a4r')
-# print(ggplot(data=plot,aes(x=long,y=lat,group=group)) +
-# geom_polygon(aes(fill=diff),color='black',size=0.1) +
-# scale_fill_gradient2(limits=c(0.5,-0.5),low="blue", mid="white",high="red",midpoint=0,guide = guide_legend(title = '')) +
-# theme_map() +
-# theme(text = element_text(size = 15),legend.justification=c(1,0), legend.position='bottom',
-# 	legend.background = element_rect(fill = "grey95"),legend.box = "horizontal")
-# )
-# dev.off()
+
+plot <- with(dat.test, dat.test[order(month,piece,group,order),])
+
+# map of the use by state in case needed
+pdf(paste0(dir,'/county_deviations_map_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
+for(i in c(1:12)){
+    print(ggplot(data=subset(plot,month==i),aes(x=long,y=lat,group=group)) +
+    geom_polygon(aes(fill=diff),color='black',size=0.1) +
+    scale_fill_gradient2(limits=c(0.5,-0.5),low="blue", mid="white",high="red",midpoint=0,guide = guide_legend(title = '')) +
+    theme_map() +
+    theme(text = element_text(size = 15),legend.justification=c(1,0), legend.position='bottom',
+        legend.background = element_rect(fill = "grey95"),legend.box = "horizontal")
+    )
+}
+dev.off()
 
 ###############################################################
 # PLOTTING
