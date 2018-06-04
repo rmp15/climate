@@ -28,7 +28,7 @@ echo "processing temperature variables for $year";
 echo "converting temperature netcdf file for $year";
 
 # processes net_cdf files
-#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
+Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
 
 echo "creating temperature metric for counties for $year";
 
