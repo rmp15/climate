@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions_cod.R" afterPath="$PROJECT_DIR$/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions_cod.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,21 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metrics_development_climate_regions.R" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="110" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seasonality_index_climate_regions_cod.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="seasonality_index_climate_regions_cod.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions_cod.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -532,13 +520,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00068" summary="Add python script for downloading ERA-Interim files">
-      <created>1517673317515</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1517673317515</updated>
-    </task>
     <task id="LOCAL-00069" summary="Add python script for downloading ERA-Interim files">
       <created>1517673338322</created>
       <option name="number" value="00069" />
@@ -875,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528126338156</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Add python script for downloading ERA-Interim files">
+      <created>1528806332133</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1528806332133</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1181,13 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create_malawi.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1212,14 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_statistics.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="758">
@@ -1228,10 +1201,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions_cod.R">
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_statistics.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1240,6 +1213,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="110" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions_cod.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
