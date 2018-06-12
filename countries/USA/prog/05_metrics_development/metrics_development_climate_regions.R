@@ -13,7 +13,7 @@ year.end.2 <- as.numeric(args[4])
 dname <- as.character(args[5])
 metric <- as.character(args[6])
 
-# year.start = 1979 ; year.end = 2015 ; year.start.2 = 1980 ; year.end.2 = 2013 ; dname = 't2m' ; metric = 'mean'
+# year.start = 1979 ; year.end = 2016 ; year.start.2 = 1980 ; year.end.2 = 2016 ; dname = 't2m' ; metric = 'mean'
 
 print(args)
 

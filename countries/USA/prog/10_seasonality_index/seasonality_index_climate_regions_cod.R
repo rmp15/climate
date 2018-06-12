@@ -19,8 +19,8 @@ dname <- as.character(args[5])
 metric <- as.character(args[6])
 cod <- as.character(args[7])
 
-# year.start = 1979 ; year.end = 2015 ; year.start.2 = 1980 ; year.end.2 = 2013 ; dname = 't2m' ; metric = 'mean' ;
-#  cod = 'Cancer'
+# year.start = 1979 ; year.end = 2016 ; year.start.2 = 1980 ; year.end.2 = 2016 ; dname = 't2m' ; metric = 'mean' ;
+# cod = 'Cancer'
 
 # length of analysis period
 num.years <- year.end - year.start + 1
