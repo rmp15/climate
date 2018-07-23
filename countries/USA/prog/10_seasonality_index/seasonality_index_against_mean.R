@@ -62,9 +62,9 @@ ifelse(!dir.exists(file.loc), dir.create(file.loc, recursive=TRUE), FALSE)
 # fixed max/min
 pdf(paste0(file.loc,'comparison_of_mean_against_range_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
 ggplot() +
-    geom_point(data=dat.summary,aes(x=mean,y=range,color=climate_region)) +
-    geom_point(data=dat.summary.summary,aes(x=mean,y=range),fill='black',size=7) +
-    geom_point(data=dat.summary.summary,aes(x=mean,y=range,color=climate_region),fill='black',size=5) +
+    # geom_point(data=dat.summary,aes(x=mean,y=range,color=climate_region)) +
+    geom_point(data=dat.summary.summary,aes(x=mean,y=range,color=climate_region),size=7) +
+    # geom_point(data=dat.summary.summary,aes(x=mean,y=range,color=climate_region),fill='black',size=5) +
     xlab('Mean temperature') + ylab('Temperature range') +
     theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=0),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
