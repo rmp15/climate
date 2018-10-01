@@ -31,3 +31,5 @@ colors.reg = c(mycols[c(          10,       # 0
 colors.rsq = c('white',                     # 0
                 mycols[c(       4,          # 0.5
                                 9)])        # 1
+
+month.short = c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
