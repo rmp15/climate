@@ -68,7 +68,7 @@ dat.normal = subset(dat.normal,age==65&sex==1)
 dat.merged = merge(dat,dat.normal)
 dat.merged$value=with(dat.merged,variable+t2m.30yr.mean)
 
-# isolate New York in February
+# isolate New York in July and California in January?
 pdf(paste0('../../output/plots_against_time/',dname,'/new_york_schematic.pdf'),height=0,width=0,paper='a4r')
 
     mean.value = unique(subset(dat.merged,month==7&state.fips==36)$t2m.30yr.mean)
