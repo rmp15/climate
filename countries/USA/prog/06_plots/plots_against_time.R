@@ -68,7 +68,12 @@ dat.normal$state.fips= as.numeric(dat.normal$state.fips)
 dat.merged = merge(dat,dat.normal)
 dat.merged$value=with(dat.merged,variable+t2m.30yr.mean)
 
+<<<<<<< HEAD
 plot_anomaly=function(month1,month2,state1,state2,min=-3,max=3){
+=======
+# isolate New York in July and California in January?
+pdf(paste0('../../output/plots_against_time/',dname,'/new_york_schematic.pdf'),height=0,width=0,paper='a4r')
+>>>>>>> 271d1c1d69349809bb47bd9dd88abc02b72336a6
 
     mean.value.1 = unique(subset(dat.merged,month==month1&state.fips==state1)$t2m.30yr.mean)
     mean.value.2 = unique(subset(dat.merged,month==month2&state.fips==state2)$t2m.30yr.mean)
