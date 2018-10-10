@@ -63,21 +63,30 @@ year.end.2 = 2009
 dat.normal = readRDS(paste0("../../output/multiyear_normals/",dname,"/",metric.2,'/state_longterm_95_nonnormals_',var,'_',year.start.2,'_',year.end.2,'.rds'))
 dat.normal = subset(dat.normal,!(state.fips%in%c(2,15)))
 dat.normal = subset(dat.normal,age==65&sex==1)
-
+dat.normal$state.fips= as.numeric(dat.normal$state.fips)
 
 dat.merged = merge(dat,dat.normal)
 dat.merged$value=with(dat.merged,variable+t2m.30yr.mean)
 
-# isolate New York in February
-pdf(paste0('../../output/plots_against_time/',dname,'/new_york_schematic.pdf'),height=0,width=0,paper='a4r')
+plot_anomaly=function(month1,month2,state1,state2,min=-3,max=3){
 
-    mean.value = unique(subset(dat.merged,month==7&state.fips==36)$t2m.30yr.mean)
+    mean.value.1 = unique(subset(dat.merged,month==month1&state.fips==state1)$t2m.30yr.mean)
+    mean.value.2 = unique(subset(dat.merged,month==month2&state.fips==state2)$t2m.30yr.mean)
 
-    p1 = ggplot(data=subset(dat.merged,month==7&state.fips==36&year>=1980),aes(x=year,y=(value))) +
-    geom_point(size=4,color='Blue') +
-    geom_hline(yintercept=mean.value, linetype=2,alpha=0.5,color='red') +
-    annotate('text',x=1980+7,y=mean.value+0.05,label='Long-term mean temperature') +
-    xlab('Year') +
+    p1 = ggplot() +
+
+    geom_point(data=subset(dat.merged,month==month1&state.fips==state1&year>=1980),aes(x=year,y=(value)),size=4,color='Red') +
+    geom_line(data=subset(dat.merged,month==month1&state.fips==state1&year>=1980),aes(x=year,y=(value)),color='Red',linetype='dashed',alpha=0.5) +
+    geom_hline(yintercept=mean.value.1, linetype=2,alpha=0.5,color='Red') +
+
+    geom_point(data=subset(dat.merged,month==month2&state.fips==state2&year>=1980),aes(x=year,y=(value)),size=4,color='Blue') +
+    geom_line(data=subset(dat.merged,month==month2&state.fips==state2&year>=1980),aes(x=year,y=(value)),color='Blue',linetype='dashed',alpha=0.5) +
+    geom_hline(yintercept=mean.value.2, linetype=2,alpha=0.5,color='Blue') +
+
+    geom_hline(yintercept=0, linetype=2,alpha=0.5,color='Black') +
+
+    # annotate('text',x=1980+7,y=mean.value.1+1,label='New York') +
+    xlab('Year') +# xlim(c(-1, 30)) +
     scale_y_continuous(name=expression(paste("Temperature (",degree,"C)"))) +
     scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlGn")[c(1:5,7:9)]))(colourCount),guide = FALSE) +
     theme_bw() +
@@ -88,14 +97,29 @@ pdf(paste0('../../output/plots_against_time/',dname,'/new_york_schematic.pdf'),h
     legend.position = 'bottom',legend.justification='center',
     legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
 
-    p2 = ggplot(data=subset(dat.merged,month==7&state.fips==36&year>=1980),aes(x=year,y=variable)) +
-    geom_point(size=4,color='Blue') +
-    # geom_line(arrow=arrow(length=unit(0.30,'cm'),ends='first',type='closed'))+
+    # p2 = ggplot(data=subset(dat.merged,month==7&state.fips==36&year>=1980),aes(x=year,y=(value))) +
+    # geom_point(size=4,color='Blue') +
+    # geom_hline(yintercept=mean.value.1, linetype=2,alpha=0.5,color='red') +
+    # annotate('text',x=1980+7,y=mean.value+0.05,label='Long-term mean temperature') +
+    # xlab('Year') +
+    # scale_y_continuous(name=expression(paste("Temperature (",degree,"C)"))) +
+    # scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlGn")[c(1:5,7:9)]))(colourCount),guide = FALSE) +
+    # theme_bw() +
+    # theme(panel.grid.major = element_blank(),text = element_text(size = 15),
+    # axis.ticks.x=element_blank(),
+    # panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    # panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    # legend.position = 'bottom',legend.justification='center',
+    # legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+
+    p3 = ggplot(data=subset(dat.merged,month==month1&state.fips==state1&year>=1980),aes(x=year,y=variable)) +
+    geom_point(size=4,color='Red') +
     geom_segment(aes(x=year,xend=year,y=0,yend=variable))+
     geom_hline(yintercept=0, linetype=2,alpha=0.5) +
     xlab('Year') +
-    scale_y_continuous(name=expression(paste("Temperature anomaly (",degree,"C)"))) +
+    scale_y_continuous(name=expression(paste("Temperature anomaly (",degree,"C)")),limits=c(min,max)) +
     scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlGn")[c(1:5,7:9)]))(colourCount),guide = FALSE) +
+    ggtitle('California July anomalies') +
     theme_bw() +
     theme(panel.grid.major = element_blank(),text = element_text(size = 15),
     axis.ticks.x=element_blank(),
@@ -104,6 +128,27 @@ pdf(paste0('../../output/plots_against_time/',dname,'/new_york_schematic.pdf'),h
     legend.position = 'bottom',legend.justification='center',
     legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
 
-    grid.arrange(p1,p2,nrow=1)
+    p4 = ggplot(data=subset(dat.merged,month==month2&state.fips==state2&year>=1980),aes(x=year,y=variable)) +
+    geom_point(size=4,color='Blue') +
+    geom_segment(aes(x=year,xend=year,y=0,yend=variable))+
+    geom_hline(yintercept=0, linetype=2,alpha=0.5) +
+    xlab('Year') +
+    scale_y_continuous(name=expression(paste("Temperature anomaly (",degree,"C)")),limits=c(min,max)) +
+    scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlGn")[c(1:5,7:9)]))(colourCount),guide = FALSE) +
+    ggtitle('New York January anomalies') +
+    theme_bw() +
+    theme(panel.grid.major = element_blank(),text = element_text(size = 15),
+    axis.ticks.x=element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
 
+    grid.arrange(p1,p3,p4,widths=c(1,1),layout_matrix=rbind(c(1,2),c(1,3)),nrow=2)
+
+}
+
+# isolate 2 months and 2 states
+pdf(paste0('../../output/plots_against_time/',dname,'/new_york_california_schematic.pdf'),height=0,width=0,paper='a4r')
+plot_anomaly(7,1,6,36,-5,5)
 dev.off()
