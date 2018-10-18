@@ -17,11 +17,13 @@ metric <- as.character(args[4])
 ifelse(!dir.exists("../../output/plots_against_time"), dir.create("../../output/plots_against_time"), FALSE)
 ifelse(!dir.exists(paste0("../../output/plots_against_time/",dname)), dir.create(paste0("../../output/plots_against_time/",dname)), FALSE)
 ifelse(!dir.exists(paste0("../../output/plots_against_time/",dname,'/',metric)), dir.create(paste0("../../output/plots_against_time/",dname,'/',metric)), FALSE)
+ifelse(!dir.exists(paste0("../../output/plots_against_time/schematics/")), dir.create(paste0("../../output/plots_against_time/schematics/")), FALSE)
 
 # load state fips lookup code
 fips.lookup <- read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lookup.csv')
 fips.lookup = fips.lookup[!(fips.lookup$fips%in%c(2,15)),]
 month.lookup <- c('January','February','March','April','May','June','July','August','September','October','November','December')
+month.short <- c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
 
 # load dataset with population weighted temperature values
 dat <- readRDS(paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
@@ -40,21 +42,21 @@ colourCount <- length(age.filter)
 dat = subset(dat,age==65&sex==1)
 
 # 1. over time by month and state
-pdf(paste0('../../output/plots_against_time/',dname,'/',metric,'/',dname,'_',metric,'_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
-for (i in c(1:12)){
-    print(ggplot(data=subset(dat,month==i),aes(x=year,y=variable)) +
-    geom_point(aes(color=as.factor(month))) +
-    geom_smooth(method='lm') +
-    geom_hline(yintercept=0, linetype=2,alpha=0.5) +
-    xlab('Year') +
-    ylab(paste0(dname,'.',metric)) +
-    facet_wrap(~full_name) +
-    scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlGn")[c(1:5,7:9)]))(colourCount),guide = guide_legend(title = 'Month')) +
-    ggtitle(month.short) +
-    scale_x_discrete(labels=c(1:12)) +
-    theme_bw())
-}
-dev.off()
+# pdf(paste0('../../output/plots_against_time/',dname,'/',metric,'/',dname,'_',metric,'_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
+# for (i in c(1:12)){
+#     print(ggplot(data=subset(dat,month==i),aes(x=year,y=variable)) +
+#     geom_point(aes(color=as.factor(month))) +
+#     geom_smooth(method='lm') +
+#     geom_hline(yintercept=0, linetype=2,alpha=0.5) +
+#     xlab('Year') +
+#     ylab(paste0(dname,'.',metric)) +
+#     facet_wrap(~full_name) +
+#     scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlGn")[c(1:5,7:9)]))(colourCount),guide = guide_legend(title = 'Month')) +
+#     ggtitle(month.short) +
+#     scale_x_discrete(labels=c(1:12)) +
+#     theme_bw())
+# }
+# dev.off()
 
 var <- paste0('mean_',dname)
 metric.2 = 'mean'
@@ -80,13 +82,13 @@ plot_anomaly=function(month1,month2,state1,state2,min=-3,max=3){
 
     geom_point(data=subset(dat.merged,month==month1&state.fips==state1&year>=1980),aes(x=year,y=(value)),size=4,color='Red') +
     geom_line(data=subset(dat.merged,month==month1&state.fips==state1&year>=1980),aes(x=year,y=(value)),color='Red',linetype='dashed',alpha=0.5) +
-    geom_hline(yintercept=mean.value.1, linetype=2,alpha=0.5,color='Red') +
+    geom_hline(yintercept=mean.value.1, linetype='dotted',,alpha=0.5,color='Red') +
 
     geom_point(data=subset(dat.merged,month==month2&state.fips==state2&year>=1980),aes(x=year,y=(value)),size=4,color='Blue') +
     geom_line(data=subset(dat.merged,month==month2&state.fips==state2&year>=1980),aes(x=year,y=(value)),color='Blue',linetype='dashed',alpha=0.5) +
-    geom_hline(yintercept=mean.value.2, linetype=2,alpha=0.5,color='Blue') +
+    geom_hline(yintercept=mean.value.2, linetype='dotted',alpha=0.5,color='Blue') +
 
-    geom_hline(yintercept=0, linetype=2,alpha=0.5,color='Black') +
+    geom_hline(yintercept=0, linetype=2,alpha=0,color='Black') +
 
     # annotate('text',x=1980+7,y=mean.value.1+1,label='New York') +
     xlab('Year') +# xlim(c(-1, 30)) +
@@ -152,18 +154,23 @@ plot_anomaly=function(month1,month2,state1,state2,min=-3,max=3){
 }
 
 # isolate 2 months and 2 states
-pdf(paste0('../../output/plots_against_time/',dname,'/new_york_california_schematic.pdf'),height=0,width=0,paper='a4r')
+pdf(paste0('../../output/plots_against_time/schematics/new_york_california_schematic.pdf'),height=0,width=0,paper='a4r')
 plot_anomaly(7,7,6,36,-5,5)
 dev.off()
 
 # isolate 2 months and 2 states
-states = unique(fips.lookup$fips)
-pdf(paste0('../../output/plots_against_time/',dname,'/figure3_schematic.pdf'),height=0,width=0,paper='a4r')
-for (i in c(12,6,36,53)){
-    for (j in c(12,6,36,53)) {
-            for (k in c(1:12)) {
-                if(i!=j){
-                plot_anomaly(k,k,i,j,-5,5)
-                }
-    }}}
+pdf(paste0('../../output/plots_against_time/schematics/florida_washington_july_schematic.pdf'),height=0,width=0,paper='a4r')
+plot_anomaly(7,7,12,53,-4,3)
 dev.off()
+
+# # isolate 2 months and 2 states
+# states = unique(fips.lookup$fips)
+# pdf(paste0('../../output/plots_against_time/schematics/figure3_schematic_options.pdf'),height=0,width=0,paper='a4r')
+# for (i in c(12,6,36,53)){
+#     for (j in c(12,6,36,53)) {
+#             for (k in c(1:12)) {
+#                 if(i!=j){
+#                 plot_anomaly(k,k,i,j,-5,5)
+#                 }
+#     }}}
+# dev.off()
