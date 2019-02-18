@@ -103,11 +103,26 @@ names(dat) <- dat.names
 dat.average <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`+`,x) / length(x)))
 names(dat.average) <- c(unique(t.names),'lat','lon')
 
+# fix this
+dat.min <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`pmin`,x)))
+names(dat.min) <- c(unique(t.names),'lat','lon')
+
+# fix this
+dat.max <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`pmax`,x)))
+names(dat.max) <- c(unique(t.names),'lat','lon')
+
 # write to rds file with naming according to year
 ifelse(!dir.exists("../../output/extracting_netcdf_files"), dir.create("../../output/extracting_netcdf_files"), FALSE)
 ifelse(!dir.exists(paste0('~/data/climate/net_cdf/',dname,'/processed/')), dir.create(paste0('~/data/climate/net_cdf/',dname,'/processed/')), FALSE)
+
 file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
 saveRDS(dat.average, file.name)
+
+file.name.min <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'_min.rds')
+saveRDS(dat.min, file.name.min)
+
+file.name.max <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'_max.rds')
+saveRDS(dat.max, file.name.max)
 
 # extract csv file of latitude longitude for USA if required
 #USA.lonlat <- lonlat

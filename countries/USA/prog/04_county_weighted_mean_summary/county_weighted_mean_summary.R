@@ -36,7 +36,15 @@ year <- as.numeric(args[1])
 dname <- as.character(args[2])
 freq <- as.character(args[3])
 num <- as.character(args[4])
-file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
+type <- as.character(args[5])
+
+if(type%in%c('min','max')){
+    file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'_',type,'.rds')
+}
+if(type=='mean'){
+    file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
+
+}
 grid.temp <- readRDS(file.name)
 
 print(paste0('running county_weighted_mean_summary.R for ',year))

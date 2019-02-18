@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 2016 2016))
+declare -a years=($(seq 1980 1980))
 declare freq="daily"
 declare num="four"
 declare -i start=1979
@@ -32,8 +32,14 @@ echo "converting temperature netcdf file for $year";
 
 echo "creating temperature metric for counties for $year";
 
+declare -a types=('min' 'max')
+
+for type in "${types[@]}"; do
+
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
-#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num &
+Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
+
+done;
 
 #echo "creating temperature metric for states for $year";
 
@@ -58,7 +64,7 @@ for metric in "${metrics[@]}"; do
 :
 # bind together data for each variable and metric statistics
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric
 #Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
 
 done;
