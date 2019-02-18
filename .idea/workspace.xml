@@ -33,7 +33,7 @@
       <file leaf-file-name="extracting_netcdf_files.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="277">
               <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="124" selection-end-column="31" />
               <folding />
             </state>
@@ -43,7 +43,7 @@
       <file leaf-file-name="county_weighted_mean_summary.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="781">
+            <state relative-caret-position="835">
               <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="140" />
               <folding />
             </state>
@@ -557,13 +557,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00075" summary="Add python script for downloading ERA-Interim files">
-      <created>1517674319217</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1517674319217</updated>
-    </task>
     <task id="LOCAL-00076" summary="Add python script for downloading ERA-Interim files">
       <created>1517674417316</created>
       <option name="number" value="00076" />
@@ -900,7 +893,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550494959874</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Add python script for downloading ERA-Interim files">
+      <created>1550495028012</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1550495028012</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1235,26 +1235,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/02_grid_county_intersection/grid_county_intersection_unproj_function.R">
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1793">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="277">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="124" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
+        <state relative-caret-position="835">
           <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="140" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R">
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/02_grid_county_intersection/grid_county_intersection_unproj_function.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="124" selection-end-column="31" />
+        <state relative-caret-position="-1793">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding />
         </state>
       </provider>
