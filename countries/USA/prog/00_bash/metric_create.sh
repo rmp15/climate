@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1980 1980))
+declare -a years=($(seq 1979 2016))
 declare freq="daily"
 declare num="four"
 declare -i start=1979
@@ -28,7 +28,7 @@ echo "processing temperature variables for $year";
 echo "converting temperature netcdf file for $year";
 
 # processes net_cdf files
-#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
+Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
 
 echo "creating temperature metric for counties for $year";
 
