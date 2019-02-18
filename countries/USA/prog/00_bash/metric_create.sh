@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 2001 2010))
+declare -a years=($(seq 1980 2000))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -30,8 +30,6 @@ echo "converting temperature netcdf file for $year";
 # processes net_cdf files
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
 
-done;
-
 echo "creating temperature metric for counties for $year";
 
 declare -a types=('min' 'max')
@@ -40,19 +38,16 @@ for type in "${types[@]}"; do
 
 :
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num &
-
-# do the same as above but for only max and min and for min temperatures
 Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
 
 #echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
+##Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
 Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
-done;
+done; done;
 
 declare -a metrics=('mean')
 
