@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1983 1983))
+declare -a years=($(seq 1979 2016))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -44,7 +44,7 @@ echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
 ##Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
 done; done;
