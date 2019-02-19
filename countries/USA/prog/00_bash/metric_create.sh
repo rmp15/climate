@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1980 2000))
+declare -a years=($(seq 1987 1999))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -44,7 +44,7 @@ Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_
 
 # creates metrics from the temperature values processed
 ##Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
 done; done;
