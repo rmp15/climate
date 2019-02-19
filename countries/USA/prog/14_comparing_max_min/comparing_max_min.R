@@ -45,6 +45,12 @@ dat.month.min = ddply(dat.merged,.(month),func <- function(xx){return(data.frame
 dat.state.month.max = ddply(dat.merged,.(state.fips,month),func <- function(xx){return(data.frame(COR = cor(xx$t2m.mean, xx$t2m.max)))})
 dat.state.month.min = ddply(dat.merged,.(state.fips,month),func <- function(xx){return(data.frame(COR = cor(xx$t2m.mean, xx$t2m.min)))})
 
+dat.state.month.max.range = ddply(dat.state.month.max,.(month),summarise,cor.max.mean=mean(COR),cor.max.min=min(COR),cor.max.max=max(COR))
+dat.state.month.min.range = ddply(dat.state.month.min,.(month),summarise,cor.min.mean=mean(COR),cor.min.min=min(COR),cor.min.max=max(COR))
+
+write.csv(dat.state.month.max.range,paste0(file.loc,'/',dname,'_',metric,'_',year.start,'_',year.end,'_max_correlations.csv'))
+write.csv(dat.state.month.min.range,paste0(file.loc,'/',dname,'_',metric,'_',year.start,'_',year.end,'_min_correlations.csv'))
+
 # plot overall correlation
 pdf(paste0(file.loc,'/',dname,'_',metric,'_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
 # overall plots
