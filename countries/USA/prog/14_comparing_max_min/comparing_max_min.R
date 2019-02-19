@@ -37,6 +37,12 @@ dat.merged = subset(dat.merged,!(state.fips%in%c('02','15')))
 # get rid of age and sex
 dat.merged$age = dat.merged$sex = NULL
 
+# calculate correlation per state, month, and month-state
+dat.state = ddply(dat.merged,.(state.fips),corr(t2m.mean,t2m.max))
+dat.month = ddply()
+dat.state.month = ddply()
+# dat.pois.summary <- ddply(dat.pois,.(sex,age,year), function(z)coef(summary(glm(deaths.pred ~ maxmonth + offset(log(pop.adj)),family=poisson,data=z))))
+
 # plot overall correlation
 pdf(paste0(file.loc,'/',dname,'_',metric,'_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
 # overall plots
