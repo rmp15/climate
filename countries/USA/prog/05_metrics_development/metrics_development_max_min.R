@@ -1,9 +1,7 @@
 rm(list=ls())
 
-#library(ggplot2)
 library(foreign)
 library(plyr)
-#library(lubridate)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
@@ -12,6 +10,8 @@ dname <- as.character(args[2])
 year.start <- as.numeric(args[3])
 year.end <- as.numeric(args[4])
 type <- as.character(args[5])
+
+print(args)
 
 year.start = 1980 ; year.end = 2009
 
@@ -63,80 +63,7 @@ dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=ro
 dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
 temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
 temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-
-# save output
-ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'_',type,'.rds'))
-
-####################################################
-# 1a. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
-####################################################
-# var <- paste0('meanc_',dname)
-#
-# # process for finding average temperature
-# dat.at <- dat.county
-# names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-# dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
-#
-# # merge and create weighted mean for state
-# dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-# temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-# temp.state <- na.omit(temp.state)
-# names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-#
-# # load multiyear normal for 1986-2005
-# dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_normals_mean_',dname,'_1986_2005.rds'))
-#
-# # merge state-month mean values just calculated and subtract multiyear normal
-# temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
-# names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
-# names(temp.state)[grep(paste0(dname,'.20yr.mean') ,names(temp.state))] <- '20yr.mean'
-# temp.state$var.adj <- with(temp.state,var.adj-`20yr.mean`)
-# names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc')
-#
-# # ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
-# temp.state <- temp.state[,c(1:6)]
-#
-# # save output
-# ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-# saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
-
-####################################
-# 1c. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
-####################################################
-
-var <- paste0('meanc3_',dname)
-
-# process for finding average temperature
-dat.at <- dat.county
-names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
-
-# merge and create weighted mean for state
-dat.temp <- merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-
-# load multiyear normal for period of study
-dat.multi <- readRDS(paste0('../../output/multiyear_normals/',dname,'/mean/state_longterm_normals_mean_',dname,'_',year.start,'_',year.end,'.rds'))
-
-# establish number of years of study
-num.years <- 30
-
-# merge state-month mean values just calculated and subtract multiyear normal
-temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
-names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
-names(temp.state)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.state))] <- paste0(num.years,'yr.mean')
-temp.state$var.adj <- with(temp.state,var.adj-`30yr.mean`)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
-
-# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
-temp.state <- temp.state[,c(1:6)]
-
-# for temporary plotting below
-temp.state.2 = temp.state
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.min')
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)

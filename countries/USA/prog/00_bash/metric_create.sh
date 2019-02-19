@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1979 2016))
+declare -a years=($(seq 2001 2016))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -40,7 +40,7 @@ for type in "${types[@]}"; do
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
 #Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
 
-#echo "creating temperature metric for states for $year";
+echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
 ##Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
