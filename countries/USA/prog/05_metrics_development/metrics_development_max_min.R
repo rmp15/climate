@@ -63,7 +63,7 @@ dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=ro
 dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
 temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
 temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.min')
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.',type)
 
 # save output
 ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)

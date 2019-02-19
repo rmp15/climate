@@ -32,7 +32,7 @@ echo "converting temperature netcdf file for $year";
 
 echo "creating temperature metric for counties for $year";
 
-declare -a types=('min' 'max')
+declare -a types=('max')
 
 for type in "${types[@]}"; do
 
@@ -70,7 +70,7 @@ for type in "${types[@]}"; do
 :
 # bind together data for each variable and metric statistics
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric $type
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric $type
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric $type
 
 done;
 
