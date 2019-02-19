@@ -14,10 +14,7 @@ dname <- as.character(args[3])
 metric <- as.character(args[4])
 
 # create output directory
-ifelse(!dir.exists("../../output/plots_against_time"), dir.create("../../output/plots_against_time"), FALSE)
-ifelse(!dir.exists(paste0("../../output/plots_against_time/",dname)), dir.create(paste0("../../output/plots_against_time/",dname)), FALSE)
-ifelse(!dir.exists(paste0("../../output/plots_against_time/",dname,'/',metric)), dir.create(paste0("../../output/plots_against_time/",dname,'/',metric)), FALSE)
-ifelse(!dir.exists(paste0("../../output/plots_against_time/schematics/")), dir.create(paste0("../../output/plots_against_time/schematics/")), FALSE)
+ifelse(!dir.exists(paste0("../../output/anomaly_summaries/")), dir.create(paste0("../../output/anomaly_summaries/")), FALSE)
 
 # load state fips lookup code
 fips.lookup <- read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lookup.csv')
