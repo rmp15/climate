@@ -208,6 +208,7 @@ dev.off()
 ############# ANY ANOMALY #############
 
 # process statistics
+dat = subset(dat,year>1979&year<2010&state.fips!=32)
 dat.anom = ddply(subset(dat),.(full_name,month),summarise,anom=mean(variable))
 
 # dots
@@ -216,6 +217,7 @@ ggplot(data=dat.anom) +
     geom_point(aes(x=month,y=abs(anom))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
     xlab("Month") + ylab('Average anomaly') +
+    ylim(c(0,2)) +
     theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
@@ -226,10 +228,10 @@ dev.off()
 
 # heat map
 pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_anom.pdf'),paper='a4r',height=0,width=0)
-ggplot(data=dat.anom.abs)+
-    geom_tile(aes(x=month,y=full_name,fill=abs(anom.abs))) +
+ggplot(data=dat.anom)+
+    geom_tile(aes(x=month,y=full_name,fill=abs(anom))) +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(0,5,0.5),
     # na.value = "grey98",limits = c(-0.027, 0.027),
     # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
     # na.value = "grey98",limits = c(-0.1, 0.1),
