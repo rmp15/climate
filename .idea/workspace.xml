@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_neg.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_neg.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_pos.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_pos.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_sd.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_sd.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_neg.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_neg.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_pos.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_pos.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_sd.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_sd.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R" afterPath="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R" />
     </list>
@@ -54,8 +64,8 @@
       <file leaf-file-name="anomaly_summaries.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="70" selection-end-column="48" />
+            <state relative-caret-position="570">
+              <caret line="42" column="147" lean-forward="false" selection-start-line="42" selection-start-column="147" selection-end-line="42" selection-end-column="147" />
               <folding />
             </state>
           </provider>
@@ -147,10 +157,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="-912" />
-    <option name="width" value="1600" />
-    <option name="height" value="1200" />
+    <option name="x" value="-411" />
+    <option name="y" value="-1393" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -271,7 +281,6 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -522,20 +531,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Add python script for downloading ERA-Interim files">
-      <created>1521482748957</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1521482748957</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Add python script for downloading ERA-Interim files">
-      <created>1521482946660</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1521482946660</updated>
     </task>
     <task id="LOCAL-00094" summary="Add python script for downloading ERA-Interim files">
       <created>1521483269262</created>
@@ -866,14 +861,28 @@
       <option name="project" value="LOCAL" />
       <updated>1550770148016</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Add python script for downloading ERA-Interim files">
+      <created>1550770179827</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1550770179827</updated>
+    </task>
+    <task id="LOCAL-00142" summary="Add python script for downloading ERA-Interim files">
+      <created>1550773765819</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1550773765819</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-912" width="1600" height="1200" extended-state="0" />
+    <frame x="-411" y="-1393" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19255456" sideWeight="0.4964249" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21459228" sideWeight="0.4964249" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1246,8 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="70" selection-end-column="48" />
+        <state relative-caret-position="570">
+          <caret line="42" column="147" lean-forward="false" selection-start-line="42" selection-start-column="147" selection-end-line="42" selection-end-column="147" />
           <folding />
         </state>
       </provider>

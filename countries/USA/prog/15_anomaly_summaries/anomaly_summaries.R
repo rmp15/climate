@@ -38,8 +38,21 @@ dat = subset(dat,year>1979&year<2017)
 # isolate a single age-sex combination
 dat = subset(dat,age==65&sex==1)
 
-# bespoke colourway
-colorway = c("navy","deepskyblue2","deepskyblue3","gold","orange","red","darkred")
+# to correct colours
+f <- function(pal) brewer.pal(brewer.pal.info[pal, "maxcolors"], pal)
+mycols <- c(f("Dark2"), f("Set1")[1:8], f("Set2"), f("Set3"),"#89C5DA", "#DA5724", "#74D944", "#CE50CA", "#3F4921", "#C0717C", "#CBD588", "#5F7FC7", "#673770", "#D3D93E", "#38333E", "#508578", "#D7C1B1", "#689030", "#AD6F3B", "#CD9BCD", "#D14285", "#6DDE88", "#652926", "#7FDCC0", "#C84248", "#8569D5", "#5E738F", "#D1A33D", "#8A7C64", "#599861" )
+#to make picking the number of the colour you want easier:
+# plot(1:length(mycols),col=mycols[1:length(mycols)],cex=4,pch=20); abline(v=c(10,20,30,40,50,60))
+
+# bespoke colourway (old)
+# colorway = c("navy","deepskyblue2","deepskyblue3","gold","orange","red","darkred")
+
+colorway = mycols[c(    14,  # Low
+                        41,  # Mid-low
+                        # 7,  # Mid
+                        # 9,  # Mid-high
+                        9)] # High
+
 
 ############# STANDARD DEVIATION #############
 
