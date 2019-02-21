@@ -89,9 +89,6 @@ ggplot(data=dat.sd)+
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
-    # na.value = "grey98",limits = c(-0.027, 0.027),
-    # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
-    # na.value = "grey98",limits = c(-0.1, 0.1),
     guide = guide_legend(nrow = 1,title = paste0("Standard deviation of anomalies"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Standard deviation"))) +
     scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
@@ -131,9 +128,6 @@ ggplot(data=dat.anom.pos)+
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
-    # na.value = "grey98",limits = c(-0.027, 0.027),
-    # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
-    # na.value = "grey98",limits = c(-0.1, 0.1),
     guide = guide_legend(nrow = 1,title = paste0("Average positive anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average positive anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
@@ -173,9 +167,6 @@ ggplot(data=dat.anom.neg)+
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
-    # na.value = "grey98",limits = c(-0.027, 0.027),
-    # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
-    # na.value = "grey98",limits = c(-0.1, 0.1),
     guide = guide_legend(nrow = 1,title = paste0("Average negative anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average negative anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
@@ -215,9 +206,6 @@ ggplot(data=dat.anom.abs)+
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
-    # na.value = "grey98",limits = c(-0.027, 0.027),
-    # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
-    # na.value = "grey98",limits = c(-0.1, 0.1),
     guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average absolute anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
@@ -237,9 +225,6 @@ ggplot(data=dat.anom.abs)+
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
-    # na.value = "grey98",limits = c(-0.027, 0.027),
-    # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
-    # na.value = "grey98",limits = c(-0.1, 0.1),
     guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average absolute anomaly"))) +
     scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
@@ -282,9 +267,6 @@ ggplot(data=dat.anom)+
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(0,5,0.5),
-    # na.value = "grey98",limits = c(-0.027, 0.027),
-    # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
-    # na.value = "grey98",limits = c(-0.1, 0.1),
     guide = guide_legend(nrow = 1,title = paste0("Average anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
