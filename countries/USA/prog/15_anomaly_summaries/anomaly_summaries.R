@@ -65,7 +65,7 @@ pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_sd.pdf
 ggplot(data=dat.sd)+
     geom_tile(aes(x=month,y=full_name,fill=sd)) +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
     # na.value = "grey98",limits = c(-0.027, 0.027),
     # breaks=c(-0.08, -0.06, -0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08),
     # na.value = "grey98",limits = c(-0.1, 0.1),
@@ -88,7 +88,7 @@ ggplot(data=dat.sd)+
     geom_tile(aes(y=month,x=full_name,fill=sd)) +
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
     guide = guide_legend(nrow = 1,title = paste0("Standard deviation of anomalies"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Standard deviation"))) +
     scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
@@ -127,12 +127,32 @@ ggplot(data=dat.anom.pos)+
     geom_tile(aes(x=month,y=full_name,fill=anom.pos)) +
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
     guide = guide_legend(nrow = 1,title = paste0("Average positive anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average positive anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
     coord_flip() +
     xlab("Month") + ylab('State') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+dev.off()
+
+# heat map square
+pdf(paste0(output.dir,'heatmap_square_plot_',year.start,'_',year.end,'_',dname,'_anom_pos.pdf'),paper='a4r',height=0,width=0)
+ggplot(data=dat.anom.pos)+
+    geom_tile(aes(y=month,x=full_name,fill=anom.pos)) +
+    coord_equal() +
+    scale_fill_gradientn(colours=colorway,
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
+    guide = guide_legend(nrow = 1,title = paste0("Average positive anomaly"))) +
+    guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average positive anomaly"))) +
+    scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
+    # coord_flip() +
+    ylab("Month") + xlab('State') +
     theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
@@ -166,12 +186,32 @@ ggplot(data=dat.anom.neg)+
     geom_tile(aes(x=month,y=full_name,fill=abs(anom.neg))) +
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
     guide = guide_legend(nrow = 1,title = paste0("Average negative anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average negative anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
     coord_flip() +
     xlab("Month") + ylab('State') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+dev.off()
+
+# heat map square
+pdf(paste0(output.dir,'heatmap_square_plot_',year.start,'_',year.end,'_',dname,'_anom_neg.pdf'),paper='a4r',height=0,width=0)
+ggplot(data=dat.anom.neg)+
+    geom_tile(aes(y=month,x=full_name,fill=abs(anom.neg))) +
+    coord_equal() +
+    scale_fill_gradientn(colours=colorway,
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
+    guide = guide_legend(nrow = 1,title = paste0("Average negative anomaly"))) +
+    guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average negative anomaly"))) +
+    scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
+    # coord_flip() +
+    ylab("Month") + xlab('State') +
     theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
@@ -205,7 +245,7 @@ ggplot(data=dat.anom.abs)+
     geom_tile(aes(x=month,y=full_name,fill=abs(anom.abs))) +
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
     guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average absolute anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
@@ -224,7 +264,7 @@ ggplot(data=dat.anom.abs)+
     geom_tile(aes(y=month,x=full_name,fill=anom.abs)) +
     coord_equal() +
     scale_fill_gradientn(colours=colorway,
-    breaks=seq(-0.5,5,0.5),
+    breaks=seq(-0.5,4,0.5), limits = c(0,4),
     guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average absolute anomaly"))) +
     scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
@@ -265,9 +305,9 @@ pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_anom.p
 ggplot(data=dat.anom)+
     geom_tile(aes(x=month,y=full_name,fill=abs(anom))) +
     coord_equal() +
-    scale_fill_gradientn(colours=colorway,
-    breaks=seq(0,5,0.5),
-    guide = guide_legend(nrow = 1,title = paste0("Average anomaly"))) +
+    # scale_fill_gradientn(colours=colorway,
+    # breaks=seq(0,5,0.5),
+    # guide = guide_legend(nrow = 1,title = paste0("Average anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average anomaly"))) +
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
     coord_flip() +
@@ -280,4 +320,23 @@ ggplot(data=dat.anom)+
     legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
 dev.off()
 
+# heat map square
+pdf(paste0(output.dir,'heatmap_square_plot_',year.start,'_',year.end,'_',dname,'_anom.pdf'),paper='a4r',height=0,width=0)
+ggplot(data=dat.anom)+
+    geom_tile(aes(y=month,x=full_name,fill=abs(anom))) +
+    coord_equal() +
+    # scale_fill_gradientn(colours=colorway,
+    # breaks=seq(-0.5,5,0.5),
+    # guide = guide_legend(nrow = 1,title = paste0("Average anomaly"))) +
+    guides(fill = guide_colorbar(barwidth = 30, barheight = 1,title = paste0("Average anomaly"))) +
+    scale_y_continuous(breaks=c(seq(1,12,by=1)),labels=month.short)   +
+    # coord_flip() +
+    ylab("Month") + xlab('State') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+dev.off()
 
