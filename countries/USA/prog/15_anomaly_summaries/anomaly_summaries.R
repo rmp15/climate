@@ -237,6 +237,7 @@ dev.off()
 
 # process statistics
 dat.anom.abs = ddply(subset(dat),.(full_name,month),summarise,anom.abs=mean(abs(variable)))
+write.csv(dat.anom.abs,paste0(output.dir,'anom_abs_',year.start,'_',year.end,'_',dname,'_anom_abs.csv'))
 
 # dots
 pdf(paste0(output.dir,'dots_plot_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4r',height=0,width=0)
