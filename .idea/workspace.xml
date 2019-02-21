@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_neg.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_neg.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_pos.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_anom_pos.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_sd.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/dots_plot_1979_2016_t2m_sd.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_neg.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_neg.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_pos.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_anom_pos.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_sd.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_plot_1979_2016_t2m_sd.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R" afterPath="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R" />
     </list>
@@ -24,7 +34,7 @@
       <file leaf-file-name="metric_create.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
+            <state relative-caret-position="1170">
               <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
@@ -34,7 +44,7 @@
       <file leaf-file-name="plots_against_time.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/06_plots/plots_against_time.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
+            <state relative-caret-position="1260">
               <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
               <folding />
             </state>
@@ -44,7 +54,7 @@
       <file leaf-file-name="comparing_max_min.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/14_comparing_max_min/comparing_max_min.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="750">
               <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="126" />
               <folding />
             </state>
@@ -54,8 +64,8 @@
       <file leaf-file-name="anomaly_summaries.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="234" column="21" lean-forward="true" selection-start-line="234" selection-start-column="21" selection-end-line="234" selection-end-column="21" />
+            <state relative-caret-position="712">
+              <caret line="236" column="19" lean-forward="false" selection-start-line="236" selection-start-column="19" selection-end-line="236" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -64,7 +74,7 @@
       <file leaf-file-name="metrics_development_max_min.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_max_min.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
+            <state relative-caret-position="975">
               <caret line="65" column="77" lean-forward="false" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
               <folding />
             </state>
@@ -147,10 +157,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="1440" />
+    <option name="y" value="-912" />
+    <option name="width" value="1600" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -170,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -266,11 +275,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -869,10 +880,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="1440" y="-912" width="1600" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19029233" sideWeight="0.4964249" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19255456" sideWeight="0.4964249" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1213,7 +1224,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/06_plots/plots_against_time.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
+        <state relative-caret-position="1260">
           <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
           <folding />
         </state>
@@ -1221,7 +1232,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/14_comparing_max_min/comparing_max_min.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="750">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="126" />
           <folding />
         </state>
@@ -1229,7 +1240,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_max_min.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
+        <state relative-caret-position="975">
           <caret line="65" column="77" lean-forward="false" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
           <folding />
         </state>
@@ -1237,7 +1248,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
+        <state relative-caret-position="1170">
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
@@ -1245,8 +1256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="234" column="21" lean-forward="true" selection-start-line="234" selection-start-column="21" selection-end-line="234" selection-end-column="21" />
+        <state relative-caret-position="712">
+          <caret line="236" column="19" lean-forward="false" selection-start-line="236" selection-start-column="19" selection-end-line="236" selection-end-column="19" />
           <folding />
         </state>
       </provider>

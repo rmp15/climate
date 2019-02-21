@@ -64,6 +64,7 @@ dev.off()
 pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_sd.pdf'),paper='a4r',height=0,width=0)
 ggplot(data=dat.sd)+
     geom_tile(aes(x=month,y=full_name,fill=sd)) +
+    coord_fixed() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
     # na.value = "grey98",limits = c(-0.027, 0.027),
@@ -105,6 +106,7 @@ dev.off()
 pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_anom_pos.pdf'),paper='a4r',height=0,width=0)
 ggplot(data=dat.anom.pos)+
     geom_tile(aes(x=month,y=full_name,fill=anom.pos)) +
+    coord_fixed() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
     # na.value = "grey98",limits = c(-0.027, 0.027),
@@ -145,7 +147,8 @@ dev.off()
 # heat map
 pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_anom_neg.pdf'),paper='a4r',height=0,width=0)
 ggplot(data=dat.anom.neg)+
-    geom_tile(aes(x=month,y=full_name,fill=abs(anom.neg))) +
+    geom_tile(aes(x=month,y=full_name,fill=abs(anom.neg)))
+    coord_fixed() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
     # na.value = "grey98",limits = c(-0.027, 0.027),
@@ -187,6 +190,7 @@ dev.off()
 pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4r',height=0,width=0)
 ggplot(data=dat.anom.abs)+
     geom_tile(aes(x=month,y=full_name,fill=abs(anom.abs))) +
+    coord_fixed() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(-0.5,5,0.5),
     # na.value = "grey98",limits = c(-0.027, 0.027),
@@ -230,6 +234,7 @@ dev.off()
 pdf(paste0(output.dir,'heatmap_plot_',year.start,'_',year.end,'_',dname,'_anom.pdf'),paper='a4r',height=0,width=0)
 ggplot(data=dat.anom)+
     geom_tile(aes(x=month,y=full_name,fill=abs(anom))) +
+    coord_fixed() +
     scale_fill_gradientn(colours=colorway,
     breaks=seq(0,5,0.5),
     # na.value = "grey98",limits = c(-0.027, 0.027),
