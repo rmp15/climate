@@ -66,7 +66,7 @@ pdf(paste0(output.dir,'heatmap_square_plot_',year.start,'_',year.end,'_',dname,'
 ggplot(data=dat.anom.abs)+
     geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
     coord_equal() +
-    scale_fill_gradientn(colours=colorway,
+    scale_fill_gradientn(colours=c("#ffffe5","#ffffe5","#fe9929","#fe9929","#993404","#993404","#662506"),
     breaks=seq(0,3.5,1), limits = c(0,3.5),
     guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
     guides(fill = guide_colorbar(barwidth = 5, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
