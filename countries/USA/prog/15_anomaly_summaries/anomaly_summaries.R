@@ -49,8 +49,8 @@ mycols <- c(f("Dark2"), f("Set1")[1:8], f("Set2"), f("Set3"),"#89C5DA", "#DA5724
 
 colorway = mycols[c(    33,  # Low
                         33,  # Low-mid
-                        51,  # Mid-low (28 other possibility)
-                        51,  # Mid     (28 other possibility)
+                        6,  # Mid-low (28 other possibility)
+                        6,  # Mid     (28 other possibility)
                         3,  # Mid-high
                         3,  # High-mid
                         40)] # High
