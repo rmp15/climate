@@ -73,7 +73,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -93,7 +93,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -113,7 +113,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -133,7 +133,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -153,7 +153,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -173,7 +173,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -193,7 +193,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -213,7 +213,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -233,7 +233,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -253,7 +253,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -273,7 +273,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -293,7 +293,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -313,7 +313,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -333,7 +333,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -353,7 +353,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -373,7 +373,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -393,7 +393,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -413,7 +413,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
@@ -433,7 +433,7 @@ ggplot(data=dat.anom.abs)+
     scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
     # coord_flip() +
     xlab("Month") + ylab('') +
-    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90, vjust=0.5),
     plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
