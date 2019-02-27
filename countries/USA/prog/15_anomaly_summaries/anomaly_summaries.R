@@ -301,6 +301,146 @@ ggplot(data=dat.anom.abs)+
     legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
 dev.off()
 
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt11_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('grey99',"grey90","grey80","grey70","grey60",'grey50','grey40','grey30','grey20','grey10',"grey0","black"),
+    values = c(0,0.2,0.25,0.3,0.35,0.4,0.5,0.6,0.65,0.7,0.8,0.9,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt12_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('cornsilk',"darkseagreen","darkseagreen1","darkseagreen2","darkseagreen3",'darkseagreen4','dodgerblue','dodgerblue1','dodgerblue2','dodgerblue3','dodgerblue4'),
+    values = c(0,0.2,0.25,0.3,0.35,0.4,0.5,0.6,0.65,0.7,0.8,0.9,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt13_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('cornsilk',"coral","coral1","coral2","coral3",'brown','brown1','brown2','brown3','brown4'),
+    values = c(0,0.2,0.25,0.3,0.35,0.4,0.5,0.6,0.65,0.7,0.8,0.9,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt14_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('cornsilk',"lightsteelblue","lightsteelblue1","lightsteelblue2","lightsteelblue3",'lightsteelblue4','steelblue','steelblue1','steelblue2','steelblue3'),
+    values = c(0,0.2,0.25,0.3,0.35,0.4,0.5,0.6,0.65,0.7,0.8,0.9,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt15_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('cornsilk',"springgreen","springgreen1","springgreen2","springgreen3",'springgreen4','steelblue','steelblue1','steelblue2','darkgreen'),
+    values = c(0,0.2,0.25,0.3,0.35,0.4,0.5,0.6,0.65,0.7,0.8,0.9,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt16_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('cornsilk','#F6BFF3','#E3B2E3','#D0A5D3','#BE99C3','#AD8CB4','#9C80A4','#8B7495','#7C6785','#6C5C76','#5D5068','#4F4459','#42394B'),
+    values = c(0,0.2,0.25,0.3,0.35,0.4,0.5,0.6,0.65,0.7,0.8,0.9,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
+pdf(paste0(output.dir,'heatmap_square_plot_uneven_scale_alt17_',year.start,'_',year.end,'_',dname,'_anom_abs.pdf'),paper='a4',height=0,width=0)
+ggplot(data=dat.anom.abs)+
+    geom_tile(aes(x=month,y=full_name,fill=anom.abs)) +
+    coord_equal() +
+    scale_fill_gradientn(colours = c('cornsilk','#FFECB3','#E82582','#6A1B9A'),
+    values = c(0,0.28,0.56,0.7,1),
+    breaks=seq(0,3.5,1), limits = c(0,3.5),
+    guide = guide_legend(nrow = 1,title = paste0("Average absolute anomaly"))) +
+    guides(fill = guide_colorbar(title.position="top",barwidth = 10, barheight = 1,title = expression("Average size of anomaly " (degree*C)))) +
+    scale_x_continuous(breaks=c(seq(1,12,by=1)),labels=month.short) +
+    # coord_flip() +
+    xlab("Month") + ylab('') +
+    theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
+    plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+    panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+    legend.position = 'bottom',legend.justification='center',
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
+dev.off()
+
 # LEGACY CODE BELOW
 
 # # dots
