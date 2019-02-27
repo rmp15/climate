@@ -2,6 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt10_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt10_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt11_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt11_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt12_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt12_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt13_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt13_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt14_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt14_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt15_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt15_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt16_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt16_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt17_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt17_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt18_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt18_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt3_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt3_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt4_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt4_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt5_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt5_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt6_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt6_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt7_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt7_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt8_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt8_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt9_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt9_1979_2016_t2m_anom_abs.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt_1979_2016_t2m_anom_abs.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/anomaly_summaries/t2m/meanc3/heatmap_square_plot_uneven_scale_alt_1979_2016_t2m_anom_abs.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R" afterPath="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R" />
     </list>
@@ -54,8 +73,8 @@
       <file leaf-file-name="anomaly_summaries.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="447" column="148" lean-forward="false" selection-start-line="447" selection-start-column="148" selection-end-line="447" selection-end-column="148" />
+            <state relative-caret-position="564">
+              <caret line="467" column="171" lean-forward="false" selection-start-line="467" selection-start-column="171" selection-end-line="467" selection-end-column="171" />
               <folding />
             </state>
           </provider>
@@ -147,7 +166,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3840" />
+    <option name="y" value="-1080" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -772,7 +791,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3840" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21459228" sideWeight="0.4964249" order="0" side_tool="false" content_ui="combo" />
@@ -1148,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="447" column="148" lean-forward="false" selection-start-line="447" selection-start-column="148" selection-end-line="447" selection-end-column="148" />
+        <state relative-caret-position="564">
+          <caret line="467" column="171" lean-forward="false" selection-start-line="467" selection-start-column="171" selection-end-line="467" selection-end-column="171" />
           <folding />
         </state>
       </provider>
