@@ -32,7 +32,7 @@ if(dname=='tp'){
 
 # filter for a year of interest
 year.selected <- year
-state.weighting.filter <- subset(state.weighting,year %in% year.selected)
+# state.weighting.filter <- subset(state.weighting,year %in% year.selected)
 
 # leap year test
 is.leapyear=function(year){
