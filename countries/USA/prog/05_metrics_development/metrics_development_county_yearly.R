@@ -67,6 +67,8 @@ state.lookup = state.lookup[,c(1,2)]
 dat.at$state.fips = as.numeric(dat.at$state.fips)
 dat.at = merge(dat.at,state.lookup,by.x='state.fips',by.y='fips')
 
+print(paste0(length(unique(dat.at$state.county.fips)),' counties in ',year)
+
 # save output
 dir.output = paste0("../../output/metrics_development_county/",dname,'/',var,'/')
 ifelse(!dir.exists(dir.output), dir.create(dir.output,recursive=TRUE), FALSE)
