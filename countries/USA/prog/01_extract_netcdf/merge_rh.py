@@ -26,14 +26,14 @@ for year in years:
     filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
 
     # output filename
-    filename_tapp = os.path.join(netcdf_loc, 'rh', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
+    filename_rh = os.path.join(netcdf_loc, 'rh', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
 
     # Read in the first data set.
     print('loading t2m file for ' + str(year))
     t2m = netCDF4.Dataset(filename_t2m)
 
     # Make a new dataset and give it useful high-level meta information.
-    combi = netCDF4.Dataset(filename_tapp,  'w', format='NETCDF4')
+    combi = netCDF4.Dataset(filename_rh,  'w', format='NETCDF4')
     combi.Conventions = 'Extended ' + t2m.Conventions
     combi.history = 'Merged manually from ERA - Interim downloads'
 
