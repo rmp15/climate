@@ -12,8 +12,6 @@ dname <- as.character(args[2])
 
 print(year)
 
-ifelse(!dir.exists(paste0("../../output/metrics_development/",dname)), dir.create(paste0("../../output/metrics_development/",dname)), FALSE)
-
 # load county summary by day (for single year)
 dat.county <- readRDS(paste0('../../output/county_weighted_mean_summary/county_daily/',dname,'/county_daily_',dname,'_',year,'.rds'))
 
