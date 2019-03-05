@@ -163,6 +163,11 @@ pdf(paste0('../../output/plots_against_time/schematics/florida_washington_july_s
 plot_anomaly(7,7,12,53,-4,3)
 dev.off()
 
+# isolate 2 months and 2 states
+pdf(paste0('../../output/plots_against_time/schematics/florida_minnesota_july_schematic.pdf'),height=0,width=0,paper='a4r')
+plot_anomaly(7,7,12,27,-5,3)
+dev.off()
+
 # # isolate 2 months and 2 states
 # states = unique(fips.lookup$fips)
 # pdf(paste0('../../output/plots_against_time/schematics/figure3_schematic_options.pdf'),height=0,width=0,paper='a4r')

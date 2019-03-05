@@ -49,7 +49,7 @@ echo "creating temperature metric for states for $year";
 
 done; done;
 
-declare -a metrics=('mean')
+declare -a metrics=('meanc3')
 
 echo "plotting temperature metric results for $year";
 
@@ -70,7 +70,7 @@ for type in "${types[@]}"; do
 :
 # bind together data for each variable and metric statistics
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric $type
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric $type
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric $type
 
 done;
 
