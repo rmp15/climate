@@ -47,6 +47,9 @@ echo "creating temperature metric for states for $year";
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
+# creates yearly metrics for counties (Helen's pollution paper)
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
+
 done; done;
 
 declare -a metrics=('meanc3')
