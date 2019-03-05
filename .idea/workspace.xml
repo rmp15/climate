@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f32acf46-7a3b-443f-987e-69c07ff26d9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_rh.py" afterPath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_rh.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R" afterPath="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,29 +31,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics_development_county_yearly_supercounty.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="metrics_development_county_yearly_supercounty.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="78" lean-forward="true" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
+            <state relative-caret-position="75">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="merge_tapp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1347">
-              <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-              <folding>
-                <element signature="e#122#136#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="merge_rh.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="merge_rh.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_rh.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
@@ -91,6 +79,7 @@
       <find>leap</find>
       <find>is.leapyear</find>
       <find>degree</find>
+      <find>filename_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,8 +127,8 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/06_plots/plots_against_time.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R" />
-        <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_rh.py" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R" />
       </list>
     </option>
   </component>
@@ -545,13 +534,6 @@
       <option name="presentableId" value="Default" />
       <updated>1487080738526</updated>
     </task>
-    <task id="LOCAL-00112" summary="Add python script for downloading ERA-Interim files">
-      <created>1526497752320</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1526497752320</updated>
-    </task>
     <task id="LOCAL-00113" summary="Add python script for downloading ERA-Interim files">
       <created>1526505163309</created>
       <option name="number" value="00113" />
@@ -888,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551802846587</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Add python script for downloading ERA-Interim files">
+      <created>1551803095739</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1551803095739</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1215,14 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="78" lean-forward="true" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -1271,21 +1252,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1347">
-          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-          <folding>
-            <element signature="e#122#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_usa_years_sep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/merge_tapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1347">
+          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+          <folding>
+            <element signature="e#122#136#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1296,6 +1277,14 @@
           <folding>
             <element signature="e#122#136#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

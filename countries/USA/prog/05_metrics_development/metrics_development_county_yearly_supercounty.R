@@ -7,16 +7,17 @@ library(plyr)
 args <- commandArgs(trailingOnly=TRUE)
 year <- as.numeric(args[1])
 dname <- as.character(args[2])
+var <- as.character(args[3])
 
 print(year)
 
 # load county summary by day (for single year)
-dir.input = paste0("../../output/metrics_development_county/",dname,'/',var,'/')
-dat.county <- readRDS(paste0(dir.input,'county_summary_',var,'_',year.selected,'.rds'))
+dir.input = paste0("../../output/metrics_development_county/",dname,'/',var,'_',dname,'/')
+dat.county <- readRDS(paste0(dir.input,'county_summary_',var,'_',dname,'_',year,'.rds'))
 print('weather data loaded')
 
-# load poplation data
-dat_nchs = # TO ADD FROM HELEN'S CODE
+# load population data
+dat_nchs = read.csv('~/git/pollution/countries/USA/data/population/raw/nchs_raw_annotated_withag_1990_to_2016')
 pop_nchs_allage <- as.data.frame(summarise(group_by(subset(dat_nchs,sex==id_sex),year,fips,sex),popsum=sum(popsum)))
 popsum_nchs <- subset(pop_nchs_allage,sex==id_sex)
 ap_pop_nchs <- left_join(dat.county,popsum_nchs)
