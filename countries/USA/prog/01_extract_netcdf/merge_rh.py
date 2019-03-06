@@ -10,7 +10,7 @@ import numpy as np
 k_to_c = 273.15
 
 # years to process
-years = range(1979, 2015+1)
+years = range(1979, 2016+1)
 print(years)
 
 for year in years:
