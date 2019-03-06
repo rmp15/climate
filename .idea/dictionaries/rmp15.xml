@@ -902,6 +902,7 @@
       <w>ExponentialUpperC</w>
       <w>F</w>
       <w>FAQ</w>
+      <w>FFdes</w>
       <w>FGN</w>
       <w>FXtrade.transactions</w>
       <w>Facet</w>
@@ -3999,7 +4000,9 @@
       <w>chol.spam</w>
       <w>chol2inv</w>
       <w>chol2inv.spam</w>
+      <w>choldrop</w>
       <w>cholesterol</w>
+      <w>cholup</w>
       <w>choose</w>
       <w>chooseBioCmirror</w>
       <w>chooseCRANmirror</w>
@@ -4308,6 +4311,7 @@
       <w>con2tr</w>
       <w>conTestkw</w>
       <w>concatHtmlTables</w>
+      <w>concordance</w>
       <w>concurvity</w>
       <w>condense</w>
       <w>condest</w>
@@ -4934,6 +4938,7 @@
       <w>dheft</w>
       <w>dhours</w>
       <w>dhyper</w>
+      <w>diabetic</w>
       <w>diag</w>
       <w>diag.of.spam</w>
       <w>diag.panel.splom</w>
@@ -6620,6 +6625,7 @@
       <w>gibbs</w>
       <w>gilgais</w>
       <w>gini.mean.diff</w>
+      <w>ginla</w>
       <w>ginv</w>
       <w>git2r</w>
       <w>github_document</w>
@@ -14103,6 +14109,7 @@
       <w>tune.svm</w>
       <w>turn3d</w>
       <w>tw</w>
+      <w>twlss</w>
       <w>two.colors</w>
       <w>twoSampleLinearRankTest</w>
       <w>twoSampleLinearRankTestCensored</w>
@@ -14123,6 +14130,7 @@
       <w>typeof</w>
       <w>tz</w>
       <w>ucv</w>
+      <w>udca</w>
       <w>uganda</w>
       <w>uiOutput</w>
       <w>uis</w>

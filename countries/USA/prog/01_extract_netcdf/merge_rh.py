@@ -10,7 +10,7 @@ import numpy as np
 k_to_c = 273.15
 
 # years to process
-years = range(1979, 1980+1)
+years = range(1979, 2015+1)
 print(years)
 
 for year in years:
@@ -26,7 +26,7 @@ for year in years:
     filename_d2m = os.path.join(netcdf_loc, 'd2m', 'raw', 'worldwide_d2m_daily_four_' + str(year) + '.nc')
 
     # output filename
-    filename_rh = os.path.join(netcdf_loc, 'rh', 'processed', 'worldwide_tapp_daily_four_' + str(year) + '.nc')
+    filename_rh = os.path.join(netcdf_loc, 'rh', 'processed', 'worldwide_rh_daily_four_' + str(year) + '.nc')
 
     # Read in the first data set.
     print('loading t2m file for ' + str(year))
@@ -99,8 +99,10 @@ for year in years:
     for t in range(combi.dimensions['time'].size):
         # work out rh in % using the August-Roche-Magnus approximation
         # rh[t, :, :] = -2.653 + 0.994*(t2m_var[t, :, :]-k_to_c) + 0.0153*(d2m_var[t, :, :]-k_to_c)**2
-        rh[t, :, :] = 100 * (np.exp((17.625 * (d2m_var[t, :, :]-k_to_c)) / ((d2m_var[t, :, :]-k_to_c) + 243.04)) /
-                             np.exp((17.625 * (t2m_var[t, :, :]-k_to_c)) / ((t2m_var[t, :, :]-k_to_c) + 243.04)))
+        rh[t, :, :] = 100 * (
+            np.exp((17.625 * (d2m_var[t, :, :]-k_to_c)) / ((d2m_var[t, :, :]-k_to_c) + 243.04)) /
+                             np.exp((17.625 * (t2m_var[t, :, :]-k_to_c)) / ((t2m_var[t, :, :]-k_to_c) + 243.04))
+        )
 
     print('processed and saved rh for ' + str(year))
 

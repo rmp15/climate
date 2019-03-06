@@ -6,7 +6,7 @@
 
 clear
 
-declare -a years=($(seq 1979 2016))
+declare -a years=($(seq 1979 2015))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -16,21 +16,19 @@ declare -i end=2009
 cd ~/git/climate/countries/USA/prog/00_bash
 
 #################################################
-# 1. 2-METRE TEMPERATURE PROCESSING (t2m)
+# 1. PROCESSING OF FILES (choose variable below)
 #################################################
 
-declare dname="t2m"
+declare dname="rh"
 
 for year in "${years[@]}"; do
 
-echo "processing temperature variables for $year";
-
-echo "converting temperature netcdf file for $year";
+echo "converting netcdf file for $year";
 
 # processes net_cdf files
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
 
-echo "creating temperature metric for counties for $year";
+echo "creating metric for counties for $year";
 
 declare -a types=('max')
 
@@ -38,7 +36,7 @@ for type in "${types[@]}"; do
 
 :
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
-#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
+Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
 
 echo "creating temperature metric for states for $year";
 
@@ -48,7 +46,7 @@ echo "creating temperature metric for states for $year";
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
 # creates yearly metrics for counties (Helen's pollution paper)
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
 
 done; done;
 
