@@ -30,13 +30,13 @@ echo "converting netcdf file for $year";
 
 echo "creating metric for counties for $year";
 
-declare -a types=('max')
+declare -a types=('mean')
 
 for type in "${types[@]}"; do
 
 :
 # creates a weighted mean from grid county intersection of temperature per day per county for year 
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
 
 echo "creating temperature metric for states for $year";
 
@@ -46,7 +46,7 @@ echo "creating temperature metric for states for $year";
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
 # creates yearly metrics for counties (Helen's pollution paper)
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
 
 done; done;
 
