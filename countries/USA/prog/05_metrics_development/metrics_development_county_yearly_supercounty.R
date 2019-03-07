@@ -47,20 +47,26 @@ ap_pop_nchs[ap_pop_nchs$fips == '08014' & ap_pop_nchs$year <= 1999,'popsum'] <- 
 ap_pop_nchs[ap_pop_nchs$fips == '46113' & ap_pop_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum'] <- popsum_nchs[popsum_nchs$fips == '46102' & popsum_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum']
 ap_pop_nchs[ap_pop_nchs$fips == '51515' & ap_pop_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum'] <- popsum_nchs[popsum_nchs$fips == '51515' & popsum_nchs$year %in% c(2009),'popsum']
 
-# remove sex as unnecessary
-ap_pop_nchs$sex = NULL
+# sex is defined for missing values if necessary
+# ap_pop_nchs$sex = id_sex
 
-# examine NAs in above
-ap_popnchs_na = ap_pop_nchs[rowSums(is.na(ap_pop_nchs))>0,]
+# examine NAs in above if desired to check
+# ap_popnchs_na = ap_pop_nchs[rowSums(is.na(ap_pop_nchs))>0,]
 
 # load myserious functions
 source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_sc.R')
 source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_mc.R')
 
 # merging counties with population-weighted pollution
-ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc)
+#1. make consistent over time
+ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc) # what is scloc.df.sc
 ap_pop_nchs_sctag$appop <- ap_pop_nchs_sctag$pred.wght*ap_pop_nchs_sctag$popsum
-ap_pop_nchs_sc <- data.frame(summarise(group_by(ap_pop_nchs_sctag,fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum)))
+# ap_pop_nchs_sc <- data.frame(summarise(group_by(ap_pop_nchs_sctag,fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum)))
+ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum))
+#2. make merged counties
 ap_pop_nchs_mctag <- combine_mc(ap_pop_nchs_sc,scloc.df)
 ap_pop_nchs_mctag$appop <- ap_pop_nchs_mctag$apsc.wght*ap_pop_nchs_mctag$popsum
-ap_pop_nchs_mc <- data.frame(summarise(group_by(ap_pop_nchs_mctag,fips,year),apmc.wght=sum(appop)/sum(popsum)))
+# ap_pop_nchs_mc <- data.frame(summarise(group_by(ap_pop_nchs_mctag,fips,year),apmc.wght=sum(appop)/sum(popsum)))
+ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),apmc.wght=sum(appop)/sum(popsum))
+
+# save 
