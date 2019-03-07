@@ -69,4 +69,4 @@ ap_pop_nchs_mctag$appop <- ap_pop_nchs_mctag$apsc.wght*ap_pop_nchs_mctag$popsum
 # ap_pop_nchs_mc <- data.frame(summarise(group_by(ap_pop_nchs_mctag,fips,year),apmc.wght=sum(appop)/sum(popsum)))
 ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),apmc.wght=sum(appop)/sum(popsum))
 
-# save 
+# save
