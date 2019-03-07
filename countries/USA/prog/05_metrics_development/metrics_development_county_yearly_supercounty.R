@@ -17,7 +17,7 @@ dat.county <- readRDS(paste0(dir.input,'county_summary_',var,'_',dname,'_',year,
 print('weather data loaded')
 
 # load population data
-dat_nchs = read.csv('~/git/pollution/countries/USA/data/population/raw/nchs_raw_annotated_withag_1990_to_2016')
+load('~/git/pollution/countries/USA/data/population/raw/nchs_raw_annotated_withag_1990_to_2016')
 pop_nchs_allage <- as.data.frame(summarise(group_by(subset(dat_nchs,sex==id_sex),year,fips,sex),popsum=sum(popsum)))
 popsum_nchs <- subset(pop_nchs_allage,sex==id_sex)
 ap_pop_nchs <- left_join(dat.county,popsum_nchs)
@@ -26,6 +26,10 @@ ap_pop_nchs <- left_join(dat.county,popsum_nchs)
 ap_pop_nchs[ap_pop_nchs$fips == '08014' & ap_pop_nchs$year <= 1999,'popsum'] <- popsum_nchs[popsum_nchs$fips == '08014' & popsum_nchs$year == 2000,'popsum']
 ap_pop_nchs[ap_pop_nchs$fips == '46113' & ap_pop_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum'] <- popsum_nchs[popsum_nchs$fips == '46102' & popsum_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum']
 ap_pop_nchs[ap_pop_nchs$fips == '51515' & ap_pop_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum'] <- popsum_nchs[popsum_nchs$fips == '51515' & popsum_nchs$year %in% c(2009),'popsum']
+
+# load myserious functions
+source('../../functions/combine_sc.R')
+source('../../functions/combine_rc.R')
 
 # merging counties with population-weighted pollution
 ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc) # WHAT IS combine_sc ?
