@@ -2,6 +2,7 @@ rm(list=ls())
 
 library(foreign)
 library(plyr)
+library(ggplot2)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
@@ -11,13 +12,17 @@ dname <- as.character(args[3])
 var <- as.character(args[4])
 
 # for testing code
-year.start = 1999 ; year.end = 2015 ; dname = 't2m' ; var = 'ymean'
+# year.start = 1999 ; year.end = 2015 ; dname = 'rh' ; var = 'ymean'
 
 # years of study
 years = c(year.start:year.end)
 
 # load county summary
 dir.input = paste0("../../output/metrics_development_county/",dname,'/',var,'_',dname,'/')
+
+# save output location
+dir.output = paste0("../../output/metrics_development_county_yearly_supercounty/",dname,'/',var,'_',dname,'/')
+ifelse(!dir.exists(dir.output), dir.create(dir.output,recursive=TRUE), FALSE)
 
 # cycle through years adding all data together
 dat.county = data.frame()
@@ -28,93 +33,103 @@ for(year in years) {
 }
 print('weather data loaded')
 
-# load population data
-load('~/git/pollution/countries/USA/data/population/raw/nchs_raw_annotated_withag_1990_to_2016')
-# pop_nchs_allage <- as.data.frame(summarise(group_by(subset(dat_nchs,sex==id_sex),year,fips,sex),popsum=sum(popsum)))
-id_sex=1
-dat_nchs = as.data.frame(dat_nchs)
-pop_nchs_allage = ddply(subset(dat_nchs,sex==id_sex),.(year,fips,sex),summarize,popsum=sum(popsum))
-popsum_nchs <- subset(pop_nchs_allage,sex==id_sex)
-# ap_pop_nchs <- left_join(dat.county,popsum_nchs)
+# empty dataframe to create sex separately into
+ap_pop_nchs_mc.final = data.frame()
+# cycle over both sexes separately
+for(i in c(1,2)){
 
-# fix county codes for transient fips codes
-# 46 113 to 46 102
-popsum_nchs$fips[popsum_nchs$fips=='46113'] <- '46102'
-# merge county yearly data with population
-ap_pop_nchs <- merge(dat.county,popsum_nchs,by.x=c('year','state.county.fips'),by.y=c('year','fips'),all.x=TRUE)
-ap_pop_nchs$fips = ap_pop_nchs$state.county.fips ; ap_pop_nchs$state.county.fips = NULL
-ap_pop_nchs[ap_pop_nchs$fips == '08014' & ap_pop_nchs$year <= 1999,'popsum'] <- popsum_nchs[popsum_nchs$fips == '08014' & popsum_nchs$year == 2000,'popsum']
+    # load population data
+    load('~/git/pollution/countries/USA/data/population/raw/nchs_raw_annotated_withag_1990_to_2016')
+    id_sex=i
+    dat_nchs = as.data.frame(dat_nchs)
+    pop_nchs_allage = ddply(subset(dat_nchs,sex==id_sex),.(year,fips,sex),summarize,popsum=sum(popsum))
+    popsum_nchs <- subset(pop_nchs_allage,sex==id_sex)
 
-# examine NAs in above if desired to check
-# ap_popnchs_na = ap_pop_nchs[rowSums(is.na(ap_pop_nchs))>0,]
+    # fix county codes for transient fips codes
+    # 46 113 to 46 102
+    popsum_nchs$fips[popsum_nchs$fips=='46113'] <- '46102'
+    # merge county yearly data with population
+    ap_pop_nchs <- merge(dat.county,popsum_nchs,by.x=c('year','state.county.fips'),by.y=c('year','fips'),all.x=TRUE)
+    ap_pop_nchs$fips = ap_pop_nchs$state.county.fips ; ap_pop_nchs$state.county.fips = NULL
+    ap_pop_nchs[ap_pop_nchs$fips == '08014' & ap_pop_nchs$year <= 1999,'popsum'] <- popsum_nchs[popsum_nchs$fips == '08014' & popsum_nchs$year == 2000,'popsum']
 
-# load myserious functions
-source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_sc.R')
-source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_mc.R')
+    # examine NAs in above if desired to check
+    ap_popnchs_na = ap_pop_nchs[rowSums(is.na(ap_pop_nchs))>0,]
 
-# load information for merged/super counties
-scloc.sc <- read.dta('~/git/pollution/countries/USA/data/super_counties/scfips.dta')
-scloc.df.sc <- data.frame(lapply(scloc.sc, as.character), stringsAsFactors=FALSE)
+    # load myserious functions
+    source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_sc.R')
+    source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_mc.R')
 
-scloc <- readRDS('~/git/pollution/countries/USA/data/super_counties/mfips_25000')
-scloc.df <- data.frame(lapply(scloc, as.character), stringsAsFactors=FALSE)
+    # load information for merged/super counties
+    scloc.sc <- read.dta('~/git/pollution/countries/USA/data/super_counties/scfips.dta')
+    scloc.df.sc <- data.frame(lapply(scloc.sc, as.character), stringsAsFactors=FALSE)
 
-# merging counties with population-weighted pollution TO FINISH FROM HERE
+    scloc <- readRDS('~/git/pollution/countries/USA/data/super_counties/mfips_25000')
+    scloc.df <- data.frame(lapply(scloc, as.character), stringsAsFactors=FALSE)
 
-#1. make consistent over time
-ap_pop_nchs$fips.old = ap_pop_nchs$fips
-ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc)
+    # merging counties with population-weighted pollution TO FINISH FROM HERE
 
-# create summary table to get state populations
-pop.county.wm <- ddply(ap_pop_nchs_sctag,.(year,fips),summarize,popsum.merged=sum(popsum))
-pop.county.wm <- merge(ap_pop_nchs_sctag,pop.county.wm,by=c('year','fips'),all.x=1)
-pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
-pop.county.wm = pop.county.wm[,c(1,3,8,10)]
+    #1. make consistent over time
+    ap_pop_nchs$fips.old = ap_pop_nchs$fips
+    ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc)
 
-# examine NAs in above if desired to check
-pop.county.wm.na = pop.county.wm.na[rowSums(is.na(pop.county.wm))>0,]
+    # create summary table to get state populations
+    pop.county.wm <- ddply(ap_pop_nchs_sctag,.(year,fips),summarize,popsum.merged=sum(popsum))
+    pop.county.wm <- merge(ap_pop_nchs_sctag,pop.county.wm,by=c('year','fips'),all.x=1)
+    pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
+    pop.county.wm = pop.county.wm[,c(1,3,8,10)]
 
-ap_pop_nchs_sctag = merge(ap_pop_nchs_sctag,pop.county.wm,by.x=c('year','state.fips','fips.old'),by.y=c('year','state.fips','fips.old'),all.x=TRUE)
+    # examine NAs in above if desired to check
+    pop.county.wm.na = pop.county.wm[rowSums(is.na(pop.county.wm))>0,]
+    print(pop.county.wm.na)
 
-# get rid of sex column
-ap_pop_nchs_sctag$sex = NULL
+    ap_pop_nchs_sctag = merge(ap_pop_nchs_sctag,pop.county.wm,by.x=c('year','state.fips','fips.old'),by.y=c('year','state.fips','fips.old'),all.x=TRUE)
 
-# examine NAs in above if desired to check
-ap_pop_nchs_sctag_na = ap_pop_nchs_sctag[rowSums(is.na(ap_pop_nchs_sctag))>0,]
+    # get rid of sex column
+    ap_pop_nchs_sctag$sex = NULL
 
-ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(pred.wght*ymean),popsum=sum(popsum))
+    # examine NAs in above if desired to check
+    ap_pop_nchs_sctag_na = ap_pop_nchs_sctag[rowSums(is.na(ap_pop_nchs_sctag))>0,]
+    print(ap_pop_nchs_sctag_na)
 
-# OLD BELOW
-# ap_pop_nchs_sctag$appop <- ap_pop_nchs_sctag$pred.wght*ap_pop_nchs_sctag$popsum
-# ap_pop_nchs_sc <- data.frame(summarise(group_by(ap_pop_nchs_sctag,fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum)))
-# ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum))
+    # weighted mean
+    ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(pred.wght*ymean),popsum=sum(popsum))
 
-#2. make merged counties
-ap_pop_nchs_mctag <- combine_mc(ap_pop_nchs_sc,scloc.df)
+    #2. make merged counties
+    ap_pop_nchs_sc$fips.old = ap_pop_nchs_sc$fips
+    ap_pop_nchs_mctag <- combine_mc(ap_pop_nchs_sc,scloc.df)
 
-# create summary table to get state populations
-pop.county.wm <- ddply(ap_pop_nchs_mctag,.(year,fips),summarize,popsum.merged=sum(popsum))
-pop.county.wm <- merge(ap_pop_nchs_mctag,pop.county.wm,by=c('year','fips'),all.x=1)
-pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
-pop.county.wm = pop.county.wm[,c(1,5,7)]
+    # create summary table to get state populations
+    pop.county.wm <- ddply(ap_pop_nchs_mctag,.(year,fips),summarize,popsum.merged=sum(popsum))
+    pop.county.wm <- merge(ap_pop_nchs_mctag,pop.county.wm,by=c('year','fips'),all.x=1)
+    pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
+    pop.county.wm = pop.county.wm[,c(1,5,7)]
 
-# examine NAs in above if desired to check
-pop.county.wm.na = pop.county.wm.na[rowSums(is.na(pop.county.wm))>0,]
+    # examine NAs in above if desired to check
+    pop.county.wm.na = pop.county.wm[rowSums(is.na(pop.county.wm))>0,]
+    print(pop.county.wm.na)
 
-ap_pop_nchs_mctag = merge(ap_pop_nchs_mctag,pop.county.wm,by.x=c('year','fips.old'),by.y=c('year','fips.old'),all.x=TRUE)
+    ap_pop_nchs_mctag = merge(ap_pop_nchs_mctag,pop.county.wm,by.x=c('year','fips.old'),by.y=c('year','fips.old'),all.x=TRUE)
 
-# examine NAs in above if desired to check
-ap_pop_nchs_mctag.na = ap_pop_nchs_mctag[rowSums(is.na(ap_pop_nchs_mctag))>0,]
+    # examine NAs in above if desired to check
+    ap_pop_nchs_mctag.na = ap_pop_nchs_mctag[rowSums(is.na(ap_pop_nchs_mctag))>0,]
+    print(ap_pop_nchs_mctag.na)
 
-ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),summarize,apsc.wght=sum(pred.wght*apsc.wght),popsum=sum(popsum))
-ap_pop_nchs_mc$state.fips = substr(ap_pop_nchs_mc$fips,1,2)
+    ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),summarize,apsc.wght=sum(pred.wght*apsc.wght),popsum=sum(popsum))
+    ap_pop_nchs_mc$state.fips = substr(ap_pop_nchs_mc$fips,1,2)
 
-# save
-dir.output = paste0("../../output/metrics_development_county_yearly_supercounty/",dname,'/',var,'_',dname,'/')
-ifelse(!dir.exists(dir.output), dir.create(dir.output,recursive=TRUE), FALSE)
-saveRDS(ap_pop_nchs_mc,paste0(dir.output,'supercounty_summary_',var,'_',dname,'_',year.start,'_',year.end,'.rds'))
+    ap_pop_nchs_mc.current = ap_pop_nchs_mc
+    ap_pop_nchs_mc.current$sex = i
 
-# test plot to see if any weird things obvious by eye
-pdf(paste0(dir.output,'supercounty_summary_',var,'_',dname,'_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
-ggplot(ap_pop_nchs_mc) + geom_line(aes(x=year,y=apsc.wght,group=fips)) + facet_wrap(~state.fips)
-dev.off()
+    ap_pop_nchs_mc.final = rbind(ap_pop_nchs_mc.final,ap_pop_nchs_mc.current)
+
+    # test plot to see if any weird things obvious by eye
+    pdf(paste0(dir.output,'supercounty_summary_',var,'_',dname,'_',year.start,'_',year.end,'_',i,'.pdf'),height=0,width=0,paper='a4r')
+    print(ggplot(ap_pop_nchs_mc.current) + geom_line(aes(x=year,y=apsc.wght,group=fips)) + facet_wrap(~state.fips))
+    dev.off()
+
+}
+
+# save dataframe with sexes separately
+saveRDS(ap_pop_nchs_mc.final,paste0(dir.output,'supercounty_summary_',var,'_',dname,'_',year.start,'_',year.end,'.rds'))
+

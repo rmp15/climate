@@ -4,6 +4,8 @@
 # processes monthly temperature metrics at state level using population-weighted means 
 # processes monthly precipitation metrics at state level using population-weighted means
 
+# I NEED TO TIDY THIS UP. BREAK UP INTO THESIS FORMATTING, PAPERS ETC.
+
 clear
 
 declare -a years=($(seq 1979 2015))
@@ -19,7 +21,7 @@ cd ~/git/climate/countries/USA/prog/00_bash
 # 1. PROCESSING OF FILES (choose variable below)
 #################################################
 
-declare dname="rh"
+declare dname="t2m"
 
 for year in "${years[@]}"; do
 
@@ -46,9 +48,12 @@ echo "creating temperature metric for states for $year";
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
 # creates yearly metrics for counties (Helen's pollution paper)
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
 
 done; done;
+
+# (to place somewhere for Helen's pollution paper)
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly_supercounty.R 1999 2015 $dname 'ymean'
 
 declare -a metrics=('meanc3')
 
