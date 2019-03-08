@@ -39,7 +39,6 @@ popsum_nchs <- subset(pop_nchs_allage,sex==id_sex)
 
 # fix county codes for transient fips codes
 # 46 113 to 46 102
-# 08 013 to 08 014 (?)
 popsum_nchs$fips[popsum_nchs$fips=='46113'] <- '46102'
 # merge county yearly data with population
 ap_pop_nchs <- merge(dat.county,popsum_nchs,by.x=c('year','state.county.fips'),by.y=c('year','fips'),all.x=TRUE)
@@ -61,33 +60,61 @@ scloc <- readRDS('~/git/pollution/countries/USA/data/super_counties/mfips_25000'
 scloc.df <- data.frame(lapply(scloc, as.character), stringsAsFactors=FALSE)
 
 # merging counties with population-weighted pollution TO FINISH FROM HERE
+
 #1. make consistent over time
 ap_pop_nchs$fips.old = ap_pop_nchs$fips
 ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc)
 
-
-# # create summary table to get state populations
+# create summary table to get state populations
 pop.county.wm <- ddply(ap_pop_nchs_sctag,.(year,fips),summarize,popsum.merged=sum(popsum))
 pop.county.wm <- merge(ap_pop_nchs_sctag,pop.county.wm,by=c('year','fips'),all.x=1)
 pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
 pop.county.wm = pop.county.wm[,c(1,3,8,10)]
 
 # examine NAs in above if desired to check
-# pop.county.wm.na = ap_pop_nchs[rowSums(is.na(pop.county.wm))>0,]
+pop.county.wm.na = pop.county.wm.na[rowSums(is.na(pop.county.wm))>0,]
 
-#
-# # TO FINISH BELOW
-# ap_pop_nchs_sctag_test = merge(ap_pop_nchs_sctag,pop.county.wm,by.x=c('year','state.fips','fips.old'),by.y=c('year','state.fips','fips.old'),all.x=TRUE)
-ap_pop_nchs_sctag$appop <- ap_pop_nchs_sctag$pred.wght*ap_pop_nchs_sctag$popsum
+ap_pop_nchs_sctag = merge(ap_pop_nchs_sctag,pop.county.wm,by.x=c('year','state.fips','fips.old'),by.y=c('year','state.fips','fips.old'),all.x=TRUE)
 
+# get rid of sex column
+ap_pop_nchs_sctag$sex = NULL
+
+# examine NAs in above if desired to check
+ap_pop_nchs_sctag_na = ap_pop_nchs_sctag[rowSums(is.na(ap_pop_nchs_sctag))>0,]
+
+ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(pred.wght*ymean),popsum=sum(popsum))
+
+# OLD BELOW
+# ap_pop_nchs_sctag$appop <- ap_pop_nchs_sctag$pred.wght*ap_pop_nchs_sctag$popsum
 # ap_pop_nchs_sc <- data.frame(summarise(group_by(ap_pop_nchs_sctag,fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum)))
-ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum))
-
+# ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum))
 
 #2. make merged counties
 ap_pop_nchs_mctag <- combine_mc(ap_pop_nchs_sc,scloc.df)
-ap_pop_nchs_mctag$appop <- ap_pop_nchs_mctag$apsc.wght*ap_pop_nchs_mctag$popsum
-# ap_pop_nchs_mc <- data.frame(summarise(group_by(ap_pop_nchs_mctag,fips,year),apmc.wght=sum(appop)/sum(popsum)))
-ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),summarize,apmc.wght=sum(appop)/sum(popsum))
+
+# create summary table to get state populations
+pop.county.wm <- ddply(ap_pop_nchs_mctag,.(year,fips),summarize,popsum.merged=sum(popsum))
+pop.county.wm <- merge(ap_pop_nchs_mctag,pop.county.wm,by=c('year','fips'),all.x=1)
+pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
+pop.county.wm = pop.county.wm[,c(1,5,7)]
+
+# examine NAs in above if desired to check
+pop.county.wm.na = pop.county.wm.na[rowSums(is.na(pop.county.wm))>0,]
+
+ap_pop_nchs_mctag = merge(ap_pop_nchs_mctag,pop.county.wm,by.x=c('year','fips.old'),by.y=c('year','fips.old'),all.x=TRUE)
+
+# examine NAs in above if desired to check
+ap_pop_nchs_mctag.na = ap_pop_nchs_mctag[rowSums(is.na(ap_pop_nchs_mctag))>0,]
+
+ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),summarize,apsc.wght=sum(pred.wght*apsc.wght),popsum=sum(popsum))
+ap_pop_nchs_mc$state.fips = substr(ap_pop_nchs_mc$fips,1,2)
 
 # save
+dir.output = paste0("../../output/metrics_development_county_yearly_supercounty/",dname,'/',var,'_',dname,'/')
+ifelse(!dir.exists(dir.output), dir.create(dir.output,recursive=TRUE), FALSE)
+saveRDS(ap_pop_nchs_mc,paste0(dir.output,'supercounty_summary_',var,'_',dname,'_',year.start,'_',year.end,'.rds'))
+
+# test plot to see if any weird things obvious by eye
+pdf(paste0(dir.output,'supercounty_summary_',var,'_',dname,'_',year.start,'_',year.end,'.pdf'),height=0,width=0,paper='a4r')
+ggplot(ap_pop_nchs_mc) + geom_line(aes(x=year,y=apsc.wght,group=fips)) + facet_wrap(~state.fips)
+dev.off()
