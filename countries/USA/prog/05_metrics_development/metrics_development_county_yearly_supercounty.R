@@ -42,14 +42,6 @@ popsum_nchs$fips[popsum_nchs$fips=='46113'] <- '46102'
 ap_pop_nchs <- merge(dat.county,popsum_nchs,by.x=c('year','state.county.fips'),by.y=c('year','fips'),all.x=TRUE)
 ap_pop_nchs$fips = ap_pop_nchs$state.county.fips ; ap_pop_nchs$state.county.fips = NULL
 
-# account for missing data due to merging/splitting counties
-ap_pop_nchs[ap_pop_nchs$fips == '08014' & ap_pop_nchs$year <= 1999,'popsum'] <- popsum_nchs[popsum_nchs$fips == '08014' & popsum_nchs$year == 2000,'popsum']
-ap_pop_nchs[ap_pop_nchs$fips == '46113' & ap_pop_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum'] <- popsum_nchs[popsum_nchs$fips == '46102' & popsum_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum']
-ap_pop_nchs[ap_pop_nchs$fips == '51515' & ap_pop_nchs$year %in% c(2010,2011,2012,2013,2014,2015),'popsum'] <- popsum_nchs[popsum_nchs$fips == '51515' & popsum_nchs$year %in% c(2009),'popsum']
-
-# sex is defined for missing values if necessary
-# ap_pop_nchs$sex = id_sex
-
 # examine NAs in above if desired to check
 # ap_popnchs_na = ap_pop_nchs[rowSums(is.na(ap_pop_nchs))>0,]
 
@@ -57,16 +49,36 @@ ap_pop_nchs[ap_pop_nchs$fips == '51515' & ap_pop_nchs$year %in% c(2010,2011,2012
 source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_sc.R')
 source('~/git/pollution/countries/USA/prog/04_supercounty_functions/combine_mc.R')
 
-# merging counties with population-weighted pollution
+# load information for merged/super counties
+library(foreign)
+scloc.sc <- read.dta('~/git/pollution/countries/USA/data/super_counties/scfips.dta')
+scloc.df.sc <- data.frame(lapply(scloc.sc, as.character), stringsAsFactors=FALSE)
+
+scloc <- readRDS('~/git/pollution/countries/USA/data/super_counties/mfips_25000')
+scloc.df <- data.frame(lapply(scloc, as.character), stringsAsFactors=FALSE)
+
+# merging counties with population-weighted pollution TO FINISH FROM HERE
 #1. make consistent over time
-ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc) # what is scloc.df.sc
+ap_pop_nchs$fips.old = ap_pop_nchs$fips
+ap_pop_nchs_sctag <- combine_sc(ap_pop_nchs,scloc.df.sc)
+
+# create summary table to get state populations
+pop.county.wm <- ddply(ap_pop_nchs_sctag,.(year,fips),summarize,popsum.merged=sum(popsum))
+pop.county.wm <- merge(ap_pop_nchs_sctag,pop.county.wm,by=c('year','fips'),all.x=1)
+pop.county.wm$pred.wght <- with(pop.county.wm,popsum/popsum.merged)
+
+# TO FINISH BELOW
 ap_pop_nchs_sctag$appop <- ap_pop_nchs_sctag$pred.wght*ap_pop_nchs_sctag$popsum
+
+
+
+
 # ap_pop_nchs_sc <- data.frame(summarise(group_by(ap_pop_nchs_sctag,fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum)))
-ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum))
+ap_pop_nchs_sc = ddply(ap_pop_nchs_sctag,.(fips,year),summarize,apsc.wght=sum(appop)/sum(popsum),popsum=sum(popsum))
 #2. make merged counties
 ap_pop_nchs_mctag <- combine_mc(ap_pop_nchs_sc,scloc.df)
 ap_pop_nchs_mctag$appop <- ap_pop_nchs_mctag$apsc.wght*ap_pop_nchs_mctag$popsum
 # ap_pop_nchs_mc <- data.frame(summarise(group_by(ap_pop_nchs_mctag,fips,year),apmc.wght=sum(appop)/sum(popsum)))
-ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),apmc.wght=sum(appop)/sum(popsum))
+ap_pop_nchs_mc = ddply(ap_pop_nchs_mctag,.(fips,year),summarize,apmc.wght=sum(appop)/sum(popsum))
 
 # save
