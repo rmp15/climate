@@ -56,11 +56,11 @@ library(ggplot2)
 
 # plot by average values by month
 pdf(paste0(directory,'/longterm_nonnormals.pdf'),height=0,width=0,paper='a4r')
-ggplot(data=dat) +
+ggplot(data=subset(dat,!(fips%in%c(2,15)))) +
     geom_point(aes(x=code_name,y=variable)) +
     geom_hline(yintercept=0,linetype='dotted') +
     geom_errorbar(aes(x=code_name,ymin=variable.min,ymax=variable.max)) +
-    ylab(toupper(metric)) + xlab('State') +
+    ylab('Mean temperature (degrees Celsius)') + xlab('State') +
     facet_wrap(~month.short) +
     theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(size=5,angle=90),
     axis.ticks.x=element_blank(),
@@ -69,11 +69,11 @@ ggplot(data=dat) +
     legend.position = 'bottom',legend.justification='center',
     legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
 
-ggplot(data=dat) +
+ggplot(data=subset(dat,!(fips%in%c(2,15)))) +
     geom_point(aes(x=month.short,y=variable)) +
     geom_hline(yintercept=0,linetype='dotted') +
     geom_errorbar(aes(x=month.short,ymin=variable.min,ymax=variable.max)) +
-    ylab(toupper(metric)) + xlab('State') +
+    ylab('Mean temperature (degrees Celsius)') + xlab('Month') +
     facet_wrap(~full_name) +
     theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
     axis.ticks.x=element_blank(),
@@ -153,10 +153,19 @@ f <- function(pal) brewer.pal(brewer.pal.info[pal, "maxcolors"], pal)
 mycols <- c(f("Dark2"), f("Set1")[1:8], f("Set2"), f("Set3"),"#89C5DA", "#DA5724", "#74D944", "#CE50CA", "#3F4921", "#C0717C", "#CBD588", "#5F7FC7", "#673770", "#D3D93E", "#38333E", "#508578", "#D7C1B1", "#689030", "#AD6F3B", "#CD9BCD", "#D14285", "#6DDE88", "#652926", "#7FDCC0", "#C84248", "#8569D5", "#5E738F", "#D1A33D", "#8A7C64", "#599861" )
 #plot(1:length(mycols),col=mycols[1:length(mycols)],cex=4,pch=20); abline(v=c(10,20,30,40,50,60))
 
+# find limits for map
+min.plot <- min(USA.df.month$variable)
+max.plot <- max(USA.df.month$variable)
+
+colorfunc = colorRampPalette(c('dark blue','light blue', 'orange','red'))
+ASDRpalette = colorfunc(max.plot-min.plot)
+
 pdf(paste0(directory,'/longterm_nonnormals_map.pdf'),height=0,width=0,paper='a4r')
 print(ggplot(data=subset(USA.df.month),aes(x=long,y=lat,group=group)) +
 geom_polygon(aes(fill=variable),color='black',size=0.01) +
-scale_fill_gradient2(high="dark red",mid="light blue",low="dark blue",guide = 'colorbar',guide_legend(title="Temperature (°C)")) +
+# scale_fill_gradient2(high="dark red",mid="light blue",low="dark blue",guide = 'colorbar',guide_legend(title="Temperature (°C)")) +
+scale_fill_gradientn(colors=ASDRpalette,guide_legend(title="Mean temperature (°C)")) +
+guides(fill=guide_colorbar(barwidth=30)) +
 facet_wrap(~month.short) +
 xlab('') +
 ylab('') +
