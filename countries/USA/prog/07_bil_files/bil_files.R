@@ -72,7 +72,7 @@ dat.output$month <- as.numeric(as.character(dat.output$month))
 # load ERA-Interim values
 dname <- 't2m'
 freq <- 'daily'
-num <- 'twice'
+num <- 'four'
 file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
 dat.era <- readRDS(file.name)
 

@@ -17,21 +17,38 @@ for(i in c(1:12)){
     dat.merged <- rbind(dat.merged,dummy)
 }
 
-# carry out linear regression
-fit <- lm(prism.temp ~ era.temp, data=dat.merged)
+# load lookup tables for polygons grid points and lon lat
+poly.lookup <- readRDS('../../output/grid_county_intersection/point_poly_lookup.rds')
 
-# get R squared values
-r.squared <- summary(fit)$r.squared
-print(paste0('R squared value is ',round(r.squared,2)))
+# merge poly lookup with file to get rid of everything apart from contiguous USA
+dat.merged = merge(dat.merged,poly.lookup,by='poly.id')
+dat.merged = subset(dat.merged,)
+
+# carry out linear regression
+# fit <- lm(prism.temp ~ era.temp, data=dat.merged)
+#
+# # get R squared values
+# r.squared <- summary(fit)$r.squared
+# print(paste0('R squared value is ',round(r.squared,2)))
+
+# figure out correlation value
+correlation = with(dat.merged,cor(prism.temp,era.temp))
 
 # plot with line of best fit overlaid
 pdf(paste0("../../output/bil_files/era_prism_correlation_all_months_",year,'.pdf'))
 ggplot() +
 geom_point(data=dat.merged,aes(color=as.factor(month),x=prism.temp,y=era.temp)) +
-geom_abline(intercept=coef(fit)[1],slope=coef(fit)[2],color='red') +
-ggtitle(paste0('ERA-Interim derived values against PRISM derived values ',year,':\n R^2=',round(r.squared,2))) +
+geom_abline() +
+# geom_abline(intercept=coef(fit)[1],slope=coef(fit)[2],color='red') +
+# ggtitle(paste0('ERA-Interim derived values against PRISM derived values ',year,':\n R^2=',round(r.squared,2))) +
 scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlBu")[c(9:10,2:1,1:2,10:9)]))(12),guide = guide_legend(title = 'month'),labels=month.short) +
 xlab('PRISM Temperature') +
 ylab('ERA Temperature') +
-theme_bw()
+guides(colour = guide_legend(nrow = 2,title='Month')) +
+theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=0),
+plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
+panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
+panel.border = element_rect(colour = "black"),strip.background = element_blank(),
+legend.position = 'bottom',legend.justification='center',
+legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
 dev.off()
