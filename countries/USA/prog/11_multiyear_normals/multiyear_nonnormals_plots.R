@@ -166,6 +166,7 @@ geom_polygon(aes(fill=variable),color='black',size=0.01) +
 # scale_fill_gradient2(high="dark red",mid="light blue",low="dark blue",guide = 'colorbar',guide_legend(title="Temperature (°C)")) +
 scale_fill_gradientn(colors=ASDRpalette,guide_legend(title="Mean temperature (°C)")) +
 guides(fill=guide_colorbar(barwidth=30)) +
+coord_fixed() +
 facet_wrap(~month.short) +
 xlab('') +
 ylab('') +
