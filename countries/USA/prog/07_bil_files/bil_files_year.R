@@ -37,7 +37,7 @@ correlation = with(dat.merged,cor(prism.temp,era.temp))
 # plot with line of best fit overlaid
 pdf(paste0("../../output/bil_files/era_prism_correlation_all_months_",year,'.pdf'))
 ggplot() +
-geom_point(data=dat.merged,aes(color=as.factor(month),x=prism.temp,y=era.temp)) +
+geom_point(data=dat.merged,aes(color=as.factor(month),x=prism.temp,y=era.temp),alpha=0.6) +
 geom_abline() +
 # geom_abline(intercept=coef(fit)[1],slope=coef(fit)[2],color='red') +
 # ggtitle(paste0('ERA-Interim derived values against PRISM derived values ',year,':\n R^2=',round(r.squared,2))) +
