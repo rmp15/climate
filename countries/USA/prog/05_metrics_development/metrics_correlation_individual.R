@@ -70,6 +70,9 @@ state.lookup = read.csv('~/git/mortality/USA/state/data/fips_lookup/name_fips_lo
 dat.plot$fips = as.numeric(as.character(dat.plot$state.fips))
 dat.plot = merge(dat.plot,state.lookup,by=c('fips'),all.X=TRUE)
 
+# Make DC's name shorter
+dat.plot$full_name <- gsub('District of Columbia','Dist. Columbia',dat.plot$full_name)
+
 # plot metric 1 against metric 2 for an individual state
 pdf(paste0(dir,dname.1,'_',metric.2,'_against_',dname.2,'_',metric.2,'_against_',metric.1,'_by_state_',year.start,'_',year.end,'.pdf'), paper='a4r',height=0,width=0)
 
