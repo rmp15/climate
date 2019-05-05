@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Plots">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/bil_files/era_prism_correlation_all_months_1982.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/bil_files/era_prism_correlation_all_months_1982.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/multiyear_normals_plots/t2m/mean/longterm_nonnormals.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/multiyear_normals_plots/t2m/mean/longterm_nonnormals.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R" afterPath="$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" afterPath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" />
-    </list>
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Plots" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +72,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-970" />
-    <option name="y" value="-1412" />
+    <option name="y" value="-1413" />
     <option name="width" value="1471" />
     <option name="height" value="1277" />
   </component>
@@ -401,7 +395,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-970" y="-1412" width="1471" height="1277" extended-state="0" />
+    <frame x="-970" y="-1413" width="1471" height="1277" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23045547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
