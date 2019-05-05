@@ -42,13 +42,15 @@ geom_abline() +
 # geom_abline(intercept=coef(fit)[1],slope=coef(fit)[2],color='red') +
 # ggtitle(paste0('ERA-Interim derived values against PRISM derived values ',year,':\n R^2=',round(r.squared,2))) +
 scale_colour_manual(values=colorRampPalette(rev(brewer.pal(12,"RdYlBu")[c(9:10,2:1,1:2,10:9)]))(12),guide = guide_legend(title = 'month'),labels=month.short) +
-xlab('PRISM Temperature') +
-ylab('ERA Temperature') +
+xlab(expression(paste("PRISM temperature  (",degree,"C)"))) +
+ylab(expression(paste("ERA-Interim temperature  (",degree,"C)"))) +
 guides(colour = guide_legend(nrow = 2,title='Month')) +
 theme_bw() + theme(panel.grid.major = element_blank(),axis.text.x = element_text(angle=0),
 plot.title = element_text(hjust = 0.5),panel.background = element_blank(),
 panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
 panel.border = element_rect(colour = "black"),strip.background = element_blank(),
 legend.position = 'bottom',legend.justification='center',
-legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
 dev.off()
+
+# expression(paste("Temperature anomaly (",degree,"C)"))

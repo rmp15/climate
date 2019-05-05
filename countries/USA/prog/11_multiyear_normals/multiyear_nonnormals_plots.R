@@ -54,33 +54,36 @@ names(dat)[8]='variable.max'
 
 library(ggplot2)
 
+# ylab(expression(paste("ERA-Interim temperature  (",degree,"C)"))) +
+
+
 # plot by average values by month
 pdf(paste0(directory,'/longterm_nonnormals.pdf'),height=0,width=0,paper='a4r')
 ggplot(data=subset(dat,!(fips%in%c(2,15)))) +
     geom_point(aes(x=code_name,y=variable)) +
     geom_hline(yintercept=0,linetype='dotted') +
     geom_errorbar(aes(x=code_name,ymin=variable.min,ymax=variable.max)) +
-    ylab('Mean temperature (degrees Celsius)') + xlab('State') +
+    ylab(expression(paste("Mean temperature  (",degree,"C)"))) + xlab('State') +
     facet_wrap(~month.short) +
     theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(size=5,angle=90),
     axis.ticks.x=element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
     legend.position = 'bottom',legend.justification='center',
-    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
 
 ggplot(data=subset(dat,!(fips%in%c(2,15)))) +
     geom_point(aes(x=month.short,y=variable)) +
     geom_hline(yintercept=0,linetype='dotted') +
     geom_errorbar(aes(x=month.short,ymin=variable.min,ymax=variable.max)) +
-    ylab('Mean temperature (degrees Celsius)') + xlab('Month') +
+    ylab(expression(paste("Mean temperature  (",degree,"C)"))) + xlab('Month') +
     facet_wrap(~full_name) +
     theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(angle=90),
     axis.ticks.x=element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
     panel.border = element_rect(colour = "black"),strip.background = element_blank(),
     legend.position = 'bottom',legend.justification='center',
-    legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"))
+    legend.background = element_rect(fill="white", size=.5, linetype="dotted"))
 dev.off()
 
 ###############################################################
@@ -171,5 +174,6 @@ facet_wrap(~month.short) +
 xlab('') +
 ylab('') +
 theme_map() +
-theme(text = element_text(size = 15),legend.position = 'bottom',legend.justification=c(0.5,0.5),strip.background = element_blank(),legend.background = element_rect(fill = "grey95")))
+theme(text = element_text(size = 15),legend.position = 'bottom',legend.justification=c(0.5,0.5),strip.background = element_blank(),legend.background = element_rect(fill = "white")))
 dev.off()
+

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Plots">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/metrics_correlation/t2m/meanc3/t2m_meanc3_against_tapp_meanc3_against_meanc3_facet_by_state_1979_2015.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/metrics_correlation/t2m/meanc3/t2m_meanc3_against_tapp_meanc3_against_meanc3_facet_by_state_1979_2015.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/bil_files/era_prism_correlation_all_months_1982.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/bil_files/era_prism_correlation_all_months_1982.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/output/multiyear_normals_plots/t2m/mean/longterm_nonnormals.pdf" afterPath="$PROJECT_DIR$/countries/USA/output/multiyear_normals_plots/t2m/mean/longterm_nonnormals.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R" afterPath="$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" afterPath="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +24,7 @@
       <file leaf-file-name="metrics_correlation_individual.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
+            <state relative-caret-position="1080">
               <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="73" selection-end-column="86" />
               <folding />
             </state>
@@ -31,27 +34,27 @@
       <file leaf-file-name="metrics_development_county.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="540">
               <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="47" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiyear_nonnormals_plots.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multiyear_nonnormals_plots.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1463">
-              <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+            <state relative-caret-position="839">
+              <caret line="162" column="73" lean-forward="true" selection-start-line="162" selection-start-column="73" selection-end-line="162" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bil_files_year.R" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bil_files_year.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="150">
               <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
@@ -68,16 +71,16 @@
       <list>
         <option value="$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R" />
-        <option value="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1985" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="-970" />
+    <option name="y" value="-1412" />
+    <option name="width" value="1471" />
+    <option name="height" value="1277" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -94,6 +97,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,7 +219,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunManager">
@@ -398,10 +401,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="-970" y="-1412" width="1471" height="1277" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2305141" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23045547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -434,6 +437,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="73" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="47" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1296">
@@ -531,7 +566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
+        <state relative-caret-position="1080">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="73" selection-end-column="86" />
           <folding />
         </state>
@@ -541,30 +576,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="540">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="47" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1463">
-          <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/07_bil_files/bil_files_year.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="150">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="839">
+          <caret line="162" column="73" lean-forward="true" selection-start-line="162" selection-start-column="73" selection-end-line="162" selection-end-column="73" />
           <folding />
         </state>
       </provider>
