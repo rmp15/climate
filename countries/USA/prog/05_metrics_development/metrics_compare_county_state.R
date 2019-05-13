@@ -160,6 +160,7 @@ for(i in sort(unique(dat.summary$month))){
     print(
     ggplot(data=subset(dat.summary,month==i&age==65&sex==2&!(state.fips%in%c('02','15')))) +
     geom_point(aes(x=code_name,y=diff,alpha=0.5,size=(pop.weighted))) +
+    geom_point(data=subset(dat.summary,abs(diff)>=0.1&month==i&age==65&sex==2&!(state.fips%in%c('02','15'))),aes(x=code_name,y=diff,alpha=0.5,size=(pop.weighted)),color='red') +
     geom_hline(yintercept=0,linetype='dotted') +
     facet_wrap(~month.short) +
     ylim(c(-1,1)) +
@@ -174,3 +175,7 @@ for(i in sort(unique(dat.summary$month))){
     )
 }
 dev.off()
+
+# if needed summary again for thesis
+dat.sub =subset(dat.summary,age==65&sex==2&!(state.fips%in%c('02','15')))
+dim(subset(dat.sub,abs(diff)<0.1)) / dim(dat.sub)
