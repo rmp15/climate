@@ -21,7 +21,7 @@ dat <- data.frame()
 
 # loop to add each year's data
 for (i in seq(length(years))) {
-        if(type=='min'){
+        if(type=='mean'){
                 file.name <- paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',years[i],'.rds')
         }
         if(type%in%c('max','min')) {

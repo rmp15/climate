@@ -39,9 +39,22 @@ ggplot(data=subset(dat.both,!(state.fips%in%c(2,15))),aes(x=t2m.meanc3,y=t2m.mea
 ggplot(data=subset(dat.both,!(state.fips%in%c(2,15,32))),aes(x=t2m.meanc3,y=t2m.meanc4)) + facet_wrap(~month) + geom_point() + geom_abline(slope=1)
 
 # load file with difference data
-dat = readRDS(paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/diff/',year.start,'_',year.end,'.rds'))
+# dat = readRDS(paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/diff/',year.start,'_',year.end,'.rds'))
+
+dat <- data.frame()
+years=year.start:year.end
+for (i in seq(length(years))) {
+        file.name <- paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/diff/',years[i])
+        current.file <- readRDS(file.name)
+        dat <- rbind(dat,current.file)
+}
 
 dat.summary = ddply(dat,.(month,sex,age,state.fips,state.county.fips),summarize,diff=mean(diff),pop.weighted=mean(pop.weighted))
+month.short <- c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
+dat.summary$month.short <- mapvalues(dat.summary$month,from=sort(unique(dat.summary$month)),to=c(as.character(month.short)))
+dat.summary$month.short <- reorder(dat.summary$month.short,dat.summary$month)
+
+saveRDS(dat.summary,paste0('../../output/metrics_development/',dname,'/',metric.1,'_',dname,'/diff/summary_',year.start,'_',year.end))
 
 # load map and attach information to the map for plotting
 
@@ -128,8 +141,9 @@ ggplot(data=subset(dat.summary,age==65&sex==2&!(state.fips%in%c('02','15')))) +
 ggplot(data=subset(dat.summary,age==65&sex==2&!(state.fips%in%c('02','15')))) +
     geom_point(aes(x=code_name,y=diff,alpha=0.5,size=(pop.weighted))) +
     geom_hline(yintercept=0,linetype='dotted') +
-    facet_wrap(~month) +
+    facet_wrap(~month.short) +
     ylim(c(-1,1)) +
+    xlab('State') + ylab('')
     theme_bw() + theme( panel.grid.major = element_blank(),axis.text.x = element_text(size=5,angle=90),
     axis.ticks.x=element_blank(),
     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"),
