@@ -8,7 +8,7 @@
 
 clear
 
-declare -a years=($(seq 2016 2016))
+declare -a years=($(seq 1979 1979))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -45,10 +45,15 @@ echo "creating temperature metric for states for $year";
 # creates metrics from the temperature values processed
 ##Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development.R $year $dname $start $end &
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_max_min.R $year $dname $start $end $type &
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county.R $year $dname $start $end
 
 # creates yearly metrics for counties (Helen's pollution paper)
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_yearly.R $year $dname
+
+# (revisions to injury paper)
+
+# creates monthly metrics for counties
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_county_monthly.R $year $dname
 
 done; done;
 
@@ -77,8 +82,12 @@ for type in "${types[@]}"; do
 # bind together data for each variable and metric statistics
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric $type
 #Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric $type
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_county.R 1979 2016 $dname "mmean" $type
 
 done;
+
+# detrend monthly metrics for counties
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/detrend_county_monthly.R $year $dname
 
 #Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
 
