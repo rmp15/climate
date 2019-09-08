@@ -19,7 +19,7 @@ param = param_dic[dname]
 
 # define directory to place files
 home = os.getenv("HOME")
-path = home + '/data/climate/net_cdf/' + dname + '/raw/'
+path = home + '/data/climate/net_cdf/' + dname + '/raw_era5/'
 
 # check if file directory exists
 if not os.path.exists(path):

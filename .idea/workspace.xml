@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py" afterPath="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="downloading_netcdf_files_worldwide_years_sep_era5.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="69" column="24" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+            <state relative-caret-position="-308">
+              <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -76,8 +75,8 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/metric_create.sh" />
         <option value="$PROJECT_DIR$/countries/USA/prog/08_bind_results/bind_results_county.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/detrend_county_monthly.R" />
-        <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py" />
         <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py" />
       </list>
     </option>
   </component>
@@ -443,14 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567889065646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New plots">
+      <created>1567985017888</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567985017888</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22916667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22916667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -836,6 +842,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="107" lean-forward="false" selection-start-line="43" selection-start-column="107" selection-end-line="43" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -846,18 +860,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/netcdf_download.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="107" lean-forward="false" selection-start-line="43" selection-start-column="107" selection-end-line="43" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_worldwide_years_sep_era5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="69" column="24" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state relative-caret-position="-308">
+          <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
           <folding />
         </state>
       </provider>
