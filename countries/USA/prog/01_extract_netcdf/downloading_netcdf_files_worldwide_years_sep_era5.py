@@ -70,7 +70,7 @@ def interim_request_worldwide(requestDates, target):
         "dataset": "era5",
         "date": requestDates,
         "expver": "1",
-        "grid": "0.75/0.75",
+        # "grid": "0.75/0.75",
         "levtype": "sfc",
         "param": param,
         "step": "0",
