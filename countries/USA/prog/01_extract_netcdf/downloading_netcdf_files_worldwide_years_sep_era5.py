@@ -66,7 +66,7 @@ def interim_request_worldwide(requestDates, target):
     f = open(target, 'w+')
 
     server.retrieve({
-        "class": "ei",
+        "class": "ea",
         "dataset": "era5",
         "date": requestDates,
         "expver": "1",
