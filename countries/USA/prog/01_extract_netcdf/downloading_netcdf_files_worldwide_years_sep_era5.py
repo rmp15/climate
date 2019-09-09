@@ -61,7 +61,7 @@ def retrieve_interim_worldwide_together_onevar(year_start, year_end):
 
 def interim_request_worldwide(requestDates, target):
     """      
-        An ERA interim request from server.
+        An ERA5 request from server.
     """
     f = open(target, 'w+')
 
@@ -70,7 +70,7 @@ def interim_request_worldwide(requestDates, target):
         "dataset": "era5",
         "date": requestDates,
         "expver": "1",
-        "grid": "0.75/0.75",
+        "grid": "0.25/0.25",
         "levtype": "sfc",
         "param": param,
         "step": "0",
