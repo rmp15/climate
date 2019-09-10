@@ -12,7 +12,7 @@ year_start = pd.to_numeric(args[1])
 year_end = pd.to_numeric(args[2])
 dname = args[3]
 
-param_dic = {'t2m': '167.128', 'd2m': '168.128'}
+param_dic = {'t2m': '2m_temperature', 'd2m': 'XX'}
 
 # define metrics to download
 param = param_dic[dname]
@@ -28,6 +28,7 @@ if not os.path.exists(path):
 # change directory to desired file location
 os.chdir(path)
 
+
 def retrieve_era5_worldwide_sep_onevar(start, end):
     """      
        A function to demonstrate how to iterate efficiently over several years and months etc    
@@ -35,14 +36,11 @@ def retrieve_era5_worldwide_sep_onevar(start, end):
     """
 
     for year in list(range(start, end + 1)):
-        startDate = '%04d%02d%02d' % (year, 1, 1)
-        lastDate = '%04d%02d%02d' % (year, 12, 31)
         target = "worldwide_" + dname + "_daily_four_%04d.nc" % year
-        requestDates = (startDate + "/TO/" + lastDate)
-        era5_request_worldwide(requestDates, target)
+        era5_request_worldwide(year, target)
 
 
-def era5_request_worldwide(requestDates, target):
+def era5_request_worldwide(year, target):
     """
         An ERA5 request from server.
     """
@@ -52,8 +50,8 @@ def era5_request_worldwide(requestDates, target):
         'reanalysis-era5-single-levels',
         {
             'product_type': 'reanalysis',
-            'variable': '2m_temperature',
-            'year': '1980',
+            'variable': param,
+            'year': year,
             'month': [
                 '01', '02', '03',
                 '04', '05', '06',
