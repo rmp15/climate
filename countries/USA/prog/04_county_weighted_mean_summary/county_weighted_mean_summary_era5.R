@@ -40,10 +40,10 @@ type <- as.character(args[5])
 
 # load data
 if(type=='mean'){
-    file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
+    file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed_era5/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
 }
 if(type%in%c('min','max')){
-    file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed/','worldwide_',dname,'_',freq,'_',num,'_',year,'_',type,'.rds')
+    file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed_era5/','worldwide_',dname,'_',freq,'_',num,'_',year,'_',type,'.rds')
 }
 grid.temp <- readRDS(file.name)
 
@@ -83,11 +83,11 @@ dat.long$month <- as.numeric(as.character(dat.long$month))
 dat.long$day <- as.numeric(as.character(dat.long$day))
 
 # save output
-ifelse(!dir.exists(paste0("../../output/county_weighted_mean_summary/county_daily/",dname)), dir.create(paste0("../../output/county_weighted_mean_summary/county_daily/",dname)), FALSE)
+ifelse(!dir.exists(paste0("../../output/county_weighted_mean_summary/county_daily_era5/",dname)), dir.create(paste0("../../output/county_weighted_mean_summary/county_daily_era5/",dname),recursive=TRUE), FALSE)
 
 if(type=='mean'){
-    saveRDS(dat.long,paste0('../../output/county_weighted_mean_summary/county_daily/',dname,'/county_daily_',dname,'_',year,'.rds'))
+    saveRDS(dat.long,paste0('../../output/county_weighted_mean_summary/county_daily_era5/',dname,'/county_daily_',dname,'_',year,'.rds'))
 }
 if(type%in%c('min','max')){
-    saveRDS(dat.long,paste0('../../output/county_weighted_mean_summary/county_daily/',dname,'/county_daily_',dname,'_',year,'_',type,'.rds'))
+    saveRDS(dat.long,paste0('../../output/county_weighted_mean_summary/county_daily_era5/',dname,'/county_daily_',dname,'_',year,'_',type,'.rds'))
 }
