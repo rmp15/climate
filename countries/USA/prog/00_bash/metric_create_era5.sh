@@ -33,7 +33,7 @@ echo "converting netcdf file for $year";
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $freq $num &
 
 #################################################
-# 1. CREATE WEIGHTED MEAN SUMMARY OF COUNTIES
+# 2. CREATE WEIGHTED MEAN SUMMARY OF COUNTIES
 #################################################
 
 echo "creating metric for counties for $year";
@@ -48,17 +48,17 @@ for type in "${types[@]}"; do
 #Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
 
 #################################################
-# 1. CREATE WEIGHTED MEAN SUMMARY OF STATES
+# 3. CREATE WEIGHTED MEAN SUMMARY OF STATES
 #################################################
 
 echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-##Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end &
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end &
 
 done; done;
 
-declare -a metrics=('meanc3')
+declare -a metrics=('meanc3') #  CHANGE AS APPROPRIATE ONCE DECIDED
 
 echo "plotting temperature metric results for $year";
 
