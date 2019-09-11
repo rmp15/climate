@@ -30,6 +30,9 @@ echo "converting netcdf file for $year";
 # processes net_cdf files
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
 
+# processes net_cdf files ERA5
+Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $freq $num &
+
 echo "creating metric for counties for $year";
 
 declare -a types=('mean')
@@ -41,7 +44,7 @@ for type in "${types[@]}"; do
 #Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year ERA5
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
 
 echo "creating temperature metric for states for $year";
 
