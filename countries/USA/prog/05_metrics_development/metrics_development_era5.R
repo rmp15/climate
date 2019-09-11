@@ -46,22 +46,22 @@ dat.county$leap <- as.integer(is.leapyear(dat.county$year))
 ####################################################
 # 1. AVERAGE VALUE
 ####################################################
-var <- paste0('mean_',dname)
-
-# process for finding average temperature
-dat.at <- dat.county
-names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
-
-# merge and create weighted mean for state
-dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-
-# save output
-ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+# var <- paste0('mean_',dname)
+#
+# # process for finding average temperature
+# dat.at <- dat.county
+# names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+# dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+#
+# # merge and create weighted mean for state
+# dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+# temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+# temp.state <- na.omit(temp.state)
+# names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
+#
+# # save output
+# ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
+# saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
 # 1a. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
@@ -137,43 +137,43 @@ saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/st
 ####################################################
 # 1c. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (chosen period of study)
 ####################################################
-
-var <- paste0('meanc3_',dname)
-
-# process for finding average temperature
-dat.at <- dat.county
-names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
-
-# merge and create weighted mean for state
-dat.temp <- merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-temp.state <- na.omit(temp.state)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-
-# load multiyear normal for period of study
-dat.multi <- readRDS(paste0('../../output/multiyear_normals_era5/',dname,'/mean/state_longterm_nonnormals_mean_',dname,'_',year.start,'_',year.end,'.rds'))
-names(dat.multi) = c('month','state.fips','sex','age','t2m.10yr.mean','t2m.10yr.ll','t2m.10yr.ul')
-
-# establish number of years of study
-num.years <- 30
-
-# merge state-month mean values just calculated and subtract multiyear normal
-temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
-names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
-# names(temp.state)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.state))] <- paste0(num.years,'yr.mean')
-temp.state$var.adj <- with(temp.state,var.adj-t2m.10yr.mean)
-names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
-
-# ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
-temp.state <- temp.state[,c(1:6)]
-
-# for temporary plotting below
-temp.state.2 = temp.state
-
-# save output
-ifelse(!dir.exists(paste0("../../output/metrics_development_era5/",dname,'/',var)), dir.create(paste0("../../output/metrics_development_era5/",dname,'/',var)), FALSE)
-saveRDS(temp.state,paste0('../../output/metrics_development_era5/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+#
+# var <- paste0('meanc3_',dname)
+#
+# # process for finding average temperature
+# dat.at <- dat.county
+# names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+# dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+#
+# # merge and create weighted mean for state
+# dat.temp <- merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+# temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+# temp.state <- na.omit(temp.state)
+# names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
+#
+# # load multiyear normal for period of study
+# dat.multi <- readRDS(paste0('../../output/multiyear_normals_era5/',dname,'/mean/state_longterm_nonnormals_mean_',dname,'_',year.start,'_',year.end,'.rds'))
+# names(dat.multi) = c('month','state.fips','sex','age','t2m.10yr.mean','t2m.10yr.ll','t2m.10yr.ul')
+#
+# # establish number of years of study
+# num.years <- 30
+#
+# # merge state-month mean values just calculated and subtract multiyear normal
+# temp.state <- merge(temp.state,dat.multi,by=c('month','state.fips','sex','age'))
+# names(temp.state)[grep(paste0(dname,'.mean') ,names(temp.state))] <- 'var.adj'
+# # names(temp.state)[grep(paste0(dname,'.',num.years,'yr.mean') ,names(temp.state))] <- paste0(num.years,'yr.mean')
+# temp.state$var.adj <- with(temp.state,var.adj-t2m.10yr.mean)
+# names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.meanc3')
+#
+# # ONLY SAVE THE FIRST 6 COLUMNS!!!! I HAVE DONE THIS MANUALLY AND NEED TO FIX
+# temp.state <- temp.state[,c(1:6)]
+#
+# # for temporary plotting below
+# temp.state.2 = temp.state
+#
+# # save output
+# ifelse(!dir.exists(paste0("../../output/metrics_development_era5/",dname,'/',var)), dir.create(paste0("../../output/metrics_development_era5/",dname,'/',var)), FALSE)
+# saveRDS(temp.state,paste0('../../output/metrics_development_era5/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ########################################################################################################
 # 1d. AVERAGE VALUE CENTRED BY LONGTERM NORMAL BY COUNTY THEN BUILT TO STATE
