@@ -12,7 +12,7 @@ dname <- as.character(args[2])
 year.start <- as.numeric(args[3])
 year.end <- as.numeric(args[4])
 
-year.start = 1995 ; year.end = 2004
+year.start = 1980 ; year.end = 2017
 
 ifelse(!dir.exists(paste0("../../output/metrics_development_era5/",dname)), dir.create(paste0("../../output/metrics_development_era5/",dname),recursive=TRUE), FALSE)
 
