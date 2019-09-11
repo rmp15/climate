@@ -60,27 +60,13 @@ done; done;
 
 declare -a metrics=('meanc3') #  CHANGE AS APPROPRIATE ONCE DECIDED
 
-echo "plotting temperature metric results for $year";
-
-for metric in "${metrics[@]}"; do
-#declare -a metrics=("mean" "meanc" "meanc2" "days_below_10" "days_above_30" "sd" "days_changing_by_5" "days_increasing_by_5" "days_decreasing_by_5" "number_of_min_3_day_above_99_upwaves" "number_of_min_3_day_above_95_upwaves" "number_of_min_3_day_above_90_upwaves" "number_of_min_3_day_below_99_downwaves" "number_of_min_3_day_below_95_downwaves" "number_of_min_3_day_below_90_downwaves")
-
-: # plots
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots.R $year $dname $metric
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots_against_time.R 1979 2016 $dname $metric
-#Rscript ~/git/climate/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R 1979 2016 $dname $metric
-
-done;
-
 for metric in "${metrics[@]}"; do
 
 for type in "${types[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R ${years[0]} ${years[-1]} $dname $metric $type
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results.R 1979 2016 $dname $metric $type
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_county.R 1979 2016 $dname "mmean" $type
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
 
 done;
 
