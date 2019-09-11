@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" afterPath="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,24 +41,24 @@
       <file leaf-file-name="multiyear_normals.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiyear_nonnormals.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multiyear_nonnormals.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="240">
               <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiyear_nonnormals_era5.R" pinned="false" current-in-tab="true">
+      <file leaf-file-name="multiyear_nonnormals_era5.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_era5.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
@@ -145,6 +146,7 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_county_monthly_era5.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_development_era5.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals.R" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh" />
       </list>
     </option>
   </component>
@@ -802,7 +804,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568217216431</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="New plots">
+      <created>1568217338166</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1568217338166</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1214,26 +1223,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_era5.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/multiyear_normals.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="240">
           <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_era5.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding />
         </state>
       </provider>
