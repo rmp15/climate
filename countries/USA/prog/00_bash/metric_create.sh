@@ -8,8 +8,8 @@
 
 clear
 
-#declare -a years=($(seq 1980 2017))
-declare -a years=(1981 1984 1994 2008)
+declare -a years=($(seq 1980 2017))
+#declare -a years=(1981 1984 1994 2008)
 #declare -a years=(1984)
 declare freq="daily"
 declare num="four"
@@ -46,7 +46,7 @@ for type in "${types[@]}"; do
 #Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary.R $year $dname $freq $num $type &
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year ERA5
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
 
 echo "creating temperature metric for states for $year";
 
