@@ -40,7 +40,7 @@ for year in "${years[@]}"; do
 
 #for type in "${types[@]}"; do
 
-#:
+:
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year ERA5
 #Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
@@ -52,11 +52,11 @@ for year in "${years[@]}"; do
 echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end
 
 done; #done;
 
-declare -a metrics=('meanc3') #  CHANGE AS APPROPRIATE ONCE DECIDED
+declare -a metrics=('meanc4') #  CHANGE AS APPROPRIATE ONCE DECIDED
 
 for metric in "${metrics[@]}"; do
 
@@ -64,16 +64,16 @@ for type in "${types[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
 
-done;
+done; done;
 
 # detrend monthly metrics for counties
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/detrend_county_monthly.R $year $dname
 
 #Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
 
-done;
+#done;
 
 # SEE ABOVE ABOUT LOCATION OF VARIABLES FOR PLOTTING FUNCTION
 
