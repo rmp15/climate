@@ -14,7 +14,7 @@ declare -a years=($(seq 1980 2017))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
-declare -i end=2009
+declare -i end=2017
 
 # go to correct location
 cd ~/git/climate/countries/USA/prog/00_bash
@@ -66,7 +66,7 @@ for type in "${types[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
+#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
 
 done;
 

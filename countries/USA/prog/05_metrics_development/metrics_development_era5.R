@@ -210,24 +210,24 @@ temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,t2m.mean
 ifelse(!dir.exists(paste0("../../output/metrics_development_era5/",dname,'/',var)), dir.create(paste0("../../output/metrics_development_era5/",dname,'/',var)), FALSE)
 saveRDS(temp.state,paste0('../../output/metrics_development_era5/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
-temp.state.plot = merge(temp.state.2,temp.state)
-
-library(ggplot2)
-pdf(paste0("../../output/metrics_development_era5/",dname,'/',var,'/plots/',year,'.pdf'),height=0,width=0,paper='a4r')
-ggplot(data=subset(temp.state.plot,age==0&sex==2&!(state.fips%in%c('02','15','32')))) +
-    geom_point(aes(x=t2m.meanc3,y=t2m.meanc4)) +
-    geom_abline() +
-    facet_wrap(~month)
-
-ggplot(data=subset(temp.state.plot,age==65&sex==2&!(state.fips%in%c('02','15','32')))) +
-    geom_point(aes(x=t2m.meanc3,y=t2m.meanc4)) +
-    geom_abline() +
-    facet_wrap(~state.fips)
-
-ggplot(data=subset(temp.state.plot,age==65&sex==2&!(state.fips%in%c('02','15','32'))),aes(x=t2m.meanc3,y=t2m.meanc4)) +
-    facet_wrap(~month) + geom_point() +
-    geom_abline(slope=1)
-dev.off()
+# temp.state.plot = merge(temp.state.2,temp.state)
+#
+# library(ggplot2)
+# pdf(paste0("../../output/metrics_development_era5/",dname,'/',var,'/plots/',year,'.pdf'),height=0,width=0,paper='a4r')
+# ggplot(data=subset(temp.state.plot,age==0&sex==2&!(state.fips%in%c('02','15','32')))) +
+#     geom_point(aes(x=t2m.meanc3,y=t2m.meanc4)) +
+#     geom_abline() +
+#     facet_wrap(~month)
+#
+# ggplot(data=subset(temp.state.plot,age==65&sex==2&!(state.fips%in%c('02','15','32')))) +
+#     geom_point(aes(x=t2m.meanc3,y=t2m.meanc4)) +
+#     geom_abline() +
+#     facet_wrap(~state.fips)
+#
+# ggplot(data=subset(temp.state.plot,age==65&sex==2&!(state.fips%in%c('02','15','32'))),aes(x=t2m.meanc3,y=t2m.meanc4)) +
+#     facet_wrap(~month) + geom_point() +
+#     geom_abline(slope=1)
+# dev.off()
 
 ####################################################
 # 2a. 10TH PERCENTILE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
