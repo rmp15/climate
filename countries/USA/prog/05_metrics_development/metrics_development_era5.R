@@ -12,7 +12,9 @@ dname <- as.character(args[2])
 year.start <- as.numeric(args[3])
 year.end <- as.numeric(args[4])
 
-year.start = 1980 ; year.end = 2017
+print(paste0('Now developing metrics for ERA5 for ',year))
+# manually set for testing. This is the period over which to take the average temperature over
+# year.start = 1980 ; year.end = 2017
 
 ifelse(!dir.exists(paste0("../../output/metrics_development_era5/",dname)), dir.create(paste0("../../output/metrics_development_era5/",dname),recursive=TRUE), FALSE)
 

@@ -8,9 +8,7 @@
 
 clear
 
-declare -a years=($(seq 1980 2017))
-#declare -a years=(1981 1984 1994 2008)
-#declare -a years=(1984)
+declare -a years=($(seq 2013 2017))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -27,7 +25,7 @@ declare dname="t2m"
 
 for year in "${years[@]}"; do
 
-echo "converting netcdf file for $year";
+#echo "converting netcdf file for $year";
 
 # processes net_cdf files ERA5
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $freq $num &
@@ -36,13 +34,13 @@ echo "converting netcdf file for $year";
 # 2. CREATE WEIGHTED MEAN SUMMARY OF COUNTIES
 #################################################
 
-echo "creating metric for counties for $year";
+#echo "creating metric for counties for $year";
 
-declare -a types=('mean')
+#declare -a types=('mean')
 
-for type in "${types[@]}"; do
+#for type in "${types[@]}"; do
 
-:
+#:
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year ERA5
 #Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
@@ -54,9 +52,9 @@ for type in "${types[@]}"; do
 echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end &
+Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end
 
-done; done;
+done; #done;
 
 declare -a metrics=('meanc3') #  CHANGE AS APPROPRIATE ONCE DECIDED
 
