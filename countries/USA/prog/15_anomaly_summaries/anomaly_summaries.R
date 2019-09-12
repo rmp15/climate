@@ -24,7 +24,7 @@ month.lookup <- c('January','February','March','April','May','June','July','Augu
 month.short <- c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
 
 # load dataset with population weighted temperature values
-dat <- readRDS(paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
+dat <- readRDS(paste0('../../output/metrics_development_era5/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
 dat$state.fips <- as.numeric(dat$state.fips)
 dat <- merge(dat,fips.lookup,by.x='state.fips',by.y='fips',all.x=1)
 names(dat)[grep(dname,names(dat))] <- 'variable'
@@ -33,7 +33,7 @@ names(dat)[grep(dname,names(dat))] <- 'variable'
 dat = subset(dat,!(state.fips%in%c(2,15)))
 
 # restrict to years of study
-dat = subset(dat,year>1979&year<2017)
+# dat = subset(dat,year>1979&year<=2017)
 
 # isolate a single age-sex combination
 dat = subset(dat,age==65&sex==1)

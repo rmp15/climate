@@ -26,7 +26,7 @@ month.lookup <- c('January','February','March','April','May','June','July','Augu
 month.short <- c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
 
 # load dataset with population weighted temperature values
-dat <- readRDS(paste0('../../output/metrics_development/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
+dat <- readRDS(paste0('../../output/metrics_development_era5/',dname,'/',metric,'_',dname,'/state_weighted_summary_',metric,'_',dname,'_',year.start,'_',year.end,'.rds'))
 dat$state.fips <- as.numeric(dat$state.fips)
 dat <- merge(dat,fips.lookup,by.x='state.fips',by.y='fips',all.x=1)
 names(dat)[grep(dname,names(dat))] <- 'variable'
@@ -61,7 +61,7 @@ dat = subset(dat,age==65&sex==1)
 var <- paste0('mean_',dname)
 metric.2 = 'mean'
 year.start.2 = 1980
-year.end.2 = 2009
+year.end.2 = 2017
 
 # load long-term average values
 dat.normal = readRDS(paste0("../../output/multiyear_normals/",dname,"/",metric.2,'/state_longterm_95_nonnormals_',var,'_',year.start.2,'_',year.end.2,'.rds'))
