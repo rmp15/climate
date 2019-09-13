@@ -8,7 +8,7 @@
 
 clear
 
-declare -a years=($(seq 1980 2017))
+declare -a years=($(seq 2017 2017))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
@@ -36,14 +36,14 @@ for year in "${years[@]}"; do
 
 #echo "creating metric for counties for $year";
 
-#declare -a types=('mean')
+declare -a types=('mean')
 
-#for type in "${types[@]}"; do
+for type in "${types[@]}"; do
 
 :
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year ERA5
-#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type &
+Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type
 
 #################################################
 # 3. CREATE WEIGHTED MEAN SUMMARY OF STATES
@@ -54,7 +54,7 @@ echo "creating temperature metric for states for $year";
 # creates metrics from the temperature values processed
 #Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end
 
-done; #done;
+done; done;
 
 #################################################
 # 4. PLOT VALUES FOR EACH YEAR
@@ -67,7 +67,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-Rscript ~/git/climate/countries/USA/prog/06_plots/plots_era5.R $year $dname $metric
+#Rscript ~/git/climate/countries/USA/prog/06_plots/plots_era5.R $year $dname $metric
 
 done; done;
 
