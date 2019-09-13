@@ -48,22 +48,22 @@ dat.county$leap <- as.integer(is.leapyear(dat.county$year))
 ####################################################
 # 1. AVERAGE VALUE
 ####################################################
-# var <- paste0('mean_',dname)
-#
-# # process for finding average temperature
-# dat.at <- dat.county
-# names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
-# dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
-#
-# # merge and create weighted mean for state
-# dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
-# temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
-# temp.state <- na.omit(temp.state)
-# names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
-#
-# # save output
-# ifelse(!dir.exists(paste0("../../output/metrics_development/",dname,'/',var)), dir.create(paste0("../../output/metrics_development/",dname,'/',var)), FALSE)
-# saveRDS(temp.state,paste0('../../output/metrics_development/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
+var <- paste0('mean_',dname)
+
+# process for finding average temperature
+dat.at <- dat.county
+names(dat.at)[grep(dname,names(dat.at))] <- 'variable'
+dat.at <- ddply(dat.at,.(year,month,state.county.fips),summarize,var.weighted=round(mean(variable),1))
+
+# merge and create weighted mean for state
+dat.temp <-merge(dat.at,state.weighting.filter,by=c('year','month','state.county.fips'))
+temp.state <- ddply(dat.temp,.(year,month,state.fips,sex,age),summarize,var.adj=sum(pop.weighted*var.weighted))
+temp.state <- na.omit(temp.state)
+names(temp.state)[grep('var.adj',names(temp.state))] <- paste0(dname,'.mean')
+
+# save output
+ifelse(!dir.exists(paste0("../../output/metrics_development_era5/",dname,'/',var)), dir.create(paste0("../../output/metrics_development_era5/",dname,'/',var)), FALSE)
+saveRDS(temp.state,paste0('../../output/metrics_development_era5/',dname,'/',var,'/state_weighted_summary_',var,'_',year.selected,'.rds'))
 
 ####################################################
 # 1a. AVERAGE VALUE CENTRED BY LONGTERM NORMAL (1986-2005)
