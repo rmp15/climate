@@ -8,7 +8,7 @@
 
 clear
 
-declare -a years=($(seq 1980 2017))
+declare -a years=($(seq 2017 2017))
 declare freq="daily"
 declare num="four"
 declare -i start=1980
