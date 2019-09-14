@@ -43,7 +43,7 @@ for type in "${types[@]}"; do
 :
 
 # creates a weighted mean from grid county intersection of temperature per day per county for year ERA5
-Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type
+#Rscript ~/git/climate/countries/USA/prog/04_county_weighted_mean_summary/county_weighted_mean_summary_era5.R $year $dname $freq $num $type
 
 #################################################
 # 3. CREATE WEIGHTED MEAN SUMMARY OF STATES
@@ -83,31 +83,6 @@ for type in "${types[@]}"; do
 
 :
 # plot each year of chosen variable
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
 
 done; done;
-
-# detrend monthly metrics for counties
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/detrend_county_monthly.R $year $dname
-
-#Rscript ~/git/climate/countries/USA/prog/13_metrics_statistics/metrics_statistics.R ${years[0]} ${years[-1]} $dname $metric
-
-#done;
-
-# SEE ABOVE ABOUT LOCATION OF VARIABLES FOR PLOTTING FUNCTION
-
-for metric in "${metrics[@]}"; do
-
-:
-# create climate region values
-#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_climate_regions.R 1979 2015 1982 2013 $dname $metric
-
-done;
-
-for metric in "${metrics[@]}"; do
-
-:
-# create seasonality index climate values
-#Rscript ~/git/climate/countries/USA/prog/10_seasonality_index/seasonality_index_climate_regions.R 1982 2013 1982 2013 $dname $metric
-
-done;
