@@ -52,7 +52,7 @@ for type in "${types[@]}"; do
 echo "creating temperature metric for states for $year";
 
 # creates metrics from the temperature values processed
-Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end
+#Rscript ~/git/climate/countries/USA/prog/05_metrics_development/metrics_development_era5.R $year $dname $start $end
 
 done; done;
 
@@ -67,7 +67,7 @@ for metric in "${metrics[@]}"; do
 
 :
 # bind together data for each variable and metric statistics
-#Rscript ~/git/climate/countries/USA/prog/06_plots/plots_era5.R $year $dname $metric
+Rscript ~/git/climate/countries/USA/prog/06_plots/plots_era5.R $year $dname $metric
 
 done; done;
 
@@ -83,6 +83,6 @@ for type in "${types[@]}"; do
 
 :
 # plot each year of chosen variable
-#Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R 1980 2017 $dname $metric $type
+Rscript ~/git/climate/countries/USA/prog/08_bind_results/bind_results_era5.R $start $end $dname $metric $type
 
 done; done;
