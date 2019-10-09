@@ -59,6 +59,9 @@ colorway = mycols[c(    33,  # Low
 
 # process statistics
 dat.anom.abs = ddply(subset(dat),.(full_name,month),summarise,anom.abs=mean(abs(variable)))
+
+
+
 write.csv(dat.anom.abs,paste0(output.dir,'anom_abs_',year.start,'_',year.end,'_',dname,'_anom_abs.csv'))
 
 # heat map square
