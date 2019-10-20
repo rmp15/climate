@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R" afterPath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R" afterPath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_eastern_map_correction.R" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R">
+      <file leaf-file-name="code_fixes.R" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+              <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
                 <element signature="e#339#4814#0" expanded="false" />
                 <element signature="e#4998#5995#0" expanded="false" />
@@ -783,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571591248756</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="New plots">
+      <created>1571591457946</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1571591457946</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1180,10 +1187,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R">
+    <entry file="file://$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding>
             <element signature="e#339#4814#0" expanded="false" />
             <element signature="e#4998#5995#0" expanded="false" />
