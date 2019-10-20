@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R" afterPath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R" afterPath="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,13 +41,13 @@
       <file leaf-file-name="code_fixes.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="92" lean-forward="false" selection-start-line="3" selection-start-column="92" selection-end-line="3" selection-end-column="92" />
               <folding>
-                <element signature="e#339#4814#0" expanded="false" />
-                <element signature="e#4998#5995#0" expanded="false" />
-                <element signature="e#6169#7772#0" expanded="false" />
-                <element signature="e#8020#10034#0" expanded="false" />
+                <element signature="e#475#4950#0" expanded="false" />
+                <element signature="e#5134#6131#0" expanded="false" />
+                <element signature="e#6305#7908#0" expanded="false" />
+                <element signature="e#8156#10170#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,6 +104,7 @@
         <option value="$PROJECT_DIR$/countries/Bangladesh/prog/01_extract_netcdf/extracting_netcdf_files_bangladesh.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_easter_map_correction.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/get_eastern_map_correction.R" />
+        <option value="$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R" />
       </list>
     </option>
   </component>
@@ -790,7 +791,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571591457946</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="New plots">
+      <created>1571591498319</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1571591498319</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1189,13 +1197,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/16_hurricaneexposure/code_fixes.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="92" lean-forward="false" selection-start-line="3" selection-start-column="92" selection-end-line="3" selection-end-column="92" />
           <folding>
-            <element signature="e#339#4814#0" expanded="false" />
-            <element signature="e#4998#5995#0" expanded="false" />
-            <element signature="e#6169#7772#0" expanded="false" />
-            <element signature="e#8020#10034#0" expanded="false" />
+            <element signature="e#475#4950#0" expanded="false" />
+            <element signature="e#5134#6131#0" expanded="false" />
+            <element signature="e#6305#7908#0" expanded="false" />
+            <element signature="e#8156#10170#0" expanded="false" />
           </folding>
         </state>
       </provider>

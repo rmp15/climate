@@ -1,5 +1,8 @@
 rm(list=ls())
 
+# corrections to code based on guide here
+# https://cran.r-project.org/web/packages/hurricaneexposure/vignettes/hurricaneexposure.html
+
 library(drat)
 addRepo("geanders")
 library(hurricaneexposure) ; library(hurricaneexposuredata)
