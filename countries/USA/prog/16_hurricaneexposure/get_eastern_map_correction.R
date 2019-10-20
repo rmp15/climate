@@ -165,8 +165,6 @@ get_eastern_map <- function(map  = "county"){
 # this should now work
 map_counties(storm = "Floyd-1999", metric = "rainfall")
 
-
-
 # rejigged map function for event map_exposurefunction (storm_id, event_type, add_track = TRUE)
 map_event_exposure = function (storm_id, event_type, add_track = TRUE){
     # hasData()
@@ -205,3 +203,7 @@ map_event_exposure = function (storm_id, event_type, add_track = TRUE){
     }
     return(out)
 }
+
+# this should now work
+map_event_exposure(storm = "Floyd-1999", event_type = "flood")
+
