@@ -58,8 +58,9 @@ colorway = mycols[c(    33,  # Low
 ############# ABSOLUTE ANOMALY #############
 
 # process statistics
-dat.anom.abs = ddply(subset(dat),.(full_name,month),summarise,anom.abs=mean(abs(variable)))
-
+# dat.anom.abs = ddply(subset(dat),.(full_name,month),summarise,anom.abs=mean(abs(variable)))
+dat.anom.pos = ddply(subset(dat,variable>0),.(full_name,month),summarise,anom.pos=mean(variable))
+dat.anom.neg = ddply(subset(dat,variable<0),.(full_name,month),summarise,anom.neg=mean(variable))
 
 
 write.csv(dat.anom.abs,paste0(output.dir,'anom_abs_',year.start,'_',year.end,'_',dname,'_anom_abs.csv'))
