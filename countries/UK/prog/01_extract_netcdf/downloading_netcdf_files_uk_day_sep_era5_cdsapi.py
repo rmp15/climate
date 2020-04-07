@@ -10,9 +10,25 @@ print(sys.argv)
 
 args = sys.argv
 
-date_start = pd.to_numeric(args[1])
-date_end = pd.to_numeric(args[2])
-dname = args[3]
+start_day = pd.to_numeric(args[1])
+start_month = pd.to_numeric(args[2])
+start_year = pd.to_numeric(args[3])
+end_day = pd.to_numeric(args[4])
+end_month = pd.to_numeric(args[5])
+end_year = pd.to_numeric(args[6])
+dname = args[7]
+
+# create list of dates
+def date_range(start, end):
+    r = (end+timedelta(days=1)-start).days
+    return [start+timedelta(days=i) for i in range(r)]
+
+
+start = date(start_year,start_month,start_day)
+end = date(end_year,end_month,end_day)
+dateList = date_range(start, end)
+
+print('\n'.join([str(date) for date in dateList]))
 
 param_dic = {'t2m': '2m_temperature', 'd2m': 'XX'}
 
@@ -37,16 +53,21 @@ def retrieve_era5_worldwide_sep_onevar(start, end):
        for a particular interim_request.
     """
 
-    for year in list(range(start, end + 1)):
+    for date in dateList:
+        date = str(date)
         target = "uk_" + dname + "_daily_four_%04d.nc" % date
-        era5_request_worldwide(year, target)
+        era5_request_worldwide(date, target)
 
 
-def era5_request_worldwide(year, target):
+def era5_request_worldwide(date, target):
     """
         An ERA5 request from server.
     """
     c = cdsapi.Client()
+
+    day =
+    month =
+    year =
 
     c.retrieve(
         'reanalysis-era5-single-levels',

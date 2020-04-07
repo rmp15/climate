@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" afterPath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,21 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="netcdf_download.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="netcdf_download.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="89" lean-forward="false" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
               </folding>
@@ -97,8 +96,8 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries_one_state_all_months.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/06_plots/plots_against_time_one_state_all_months.R" />
         <option value="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots_era5.R" />
-        <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
+        <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
       </list>
     </option>
   </component>
@@ -878,7 +877,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586287308935</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="New plots">
+      <created>1586287786162</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1586287786162</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1269,21 +1275,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#23#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="89" lean-forward="false" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
