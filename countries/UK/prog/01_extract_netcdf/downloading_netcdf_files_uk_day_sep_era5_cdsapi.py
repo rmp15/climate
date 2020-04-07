@@ -8,8 +8,8 @@ print(sys.argv)
 
 args = sys.argv
 
-year_start = pd.to_numeric(args[1])
-year_end = pd.to_numeric(args[2])
+date_start = pd.to_numeric(args[1])
+date_end = pd.to_numeric(args[2])
 dname = args[3]
 
 param_dic = {'t2m': '2m_temperature', 'd2m': 'XX'}
@@ -19,7 +19,7 @@ param = param_dic[dname]
 
 # define directory to place files
 home = os.getenv("HOME")
-path = home + '/data/climate/net_cdf/' + dname + '/raw_era5/'
+path = home + '/data/climate/net_cdf/' + dname + '/raw_era5_daily/'
 
 # check if file directory exists
 if not os.path.exists(path):
@@ -36,7 +36,7 @@ def retrieve_era5_worldwide_sep_onevar(start, end):
     """
 
     for year in list(range(start, end + 1)):
-        target = "worldwide_" + dname + "_daily_four_%04d.nc" % year
+        target = "uk_" + dname + "_daily_four_%04d.nc" % date
         era5_request_worldwide(year, target)
 
 
