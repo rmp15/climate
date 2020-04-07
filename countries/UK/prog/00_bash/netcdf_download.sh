@@ -14,4 +14,4 @@ declare -i end_year='2020'
 declare -a dnames=("t2m")
 
 
-python ~/git/climate/countries/USA/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py $start_day $start_month $start_year $end_day $end_month $end_year 't2m';
+python ~/git/climate/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py $start_day $start_month $start_year $end_day $end_month $end_year 't2m';
