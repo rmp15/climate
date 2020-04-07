@@ -53,7 +53,6 @@ def retrieve_era5_worldwide_sep_onevar(start, end):
        for a particular interim_request.
     """
     dateList = date_range(start, end)
-
     for date in dateList:
         date = str(date)
         target = "uk_" + dname + "_daily_four_" + date + ".nc"
@@ -86,4 +85,4 @@ def era5_request_worldwide(date, target):
 
 
 if __name__ == '__main__':
-    retrieve_era5_worldwide_sep_onevar(year_start, year_end)
+    retrieve_era5_worldwide_sep_onevar(start, end)

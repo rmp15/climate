@@ -9,7 +9,7 @@ declare -i start_day='01'
 declare -i start_month='01'
 declare -i start_year='2020'
 declare -i end_day='01'
-declare -i end_month='02'
+declare -i end_month='04'
 declare -i end_year='2020'
 declare -a dnames=("t2m")
 
