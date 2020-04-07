@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" afterPath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +22,8 @@
       <file leaf-file-name="netcdf_download.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="130" lean-forward="true" selection-start-line="12" selection-start-column="130" selection-end-line="12" selection-end-column="135" />
+            <state relative-caret-position="240">
+              <caret line="16" column="89" lean-forward="false" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -32,8 +32,8 @@
       <file leaf-file-name="downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
               </folding>
@@ -871,7 +871,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586286510173</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="New plots">
+      <created>1586287308935</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1586287308935</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1264,8 +1271,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="e#23#36#0" expanded="true" />
           </folding>
@@ -1274,8 +1281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="130" lean-forward="true" selection-start-line="12" selection-start-column="130" selection-end-line="12" selection-end-column="135" />
+        <state relative-caret-position="240">
+          <caret line="16" column="89" lean-forward="false" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
           <folding />
         </state>
       </provider>
