@@ -24,11 +24,11 @@ def date_range(start, end):
     return [start+timedelta(days=i) for i in range(r)]
 
 
-start = date(start_year,start_month,start_day)
+start = date(start_year, start_month, start_day)
 end = date(end_year,end_month,end_day)
-dateList = date_range(start, end)
 
-print('\n'.join([str(date) for date in dateList]))
+# if you want to test out by printing out all the dates
+# print('\n'.join([str(date) for date in dateList]))
 
 param_dic = {'t2m': '2m_temperature', 'd2m': 'XX'}
 
@@ -48,14 +48,15 @@ os.chdir(path)
 
 
 def retrieve_era5_worldwide_sep_onevar(start, end):
-    """      
-       A function to demonstrate how to iterate efficiently over several years and months etc    
+    """
+       A function to demonstrate how to iterate efficiently over several years and months etc
        for a particular interim_request.
     """
+    dateList = date_range(start, end)
 
     for date in dateList:
         date = str(date)
-        target = "uk_" + dname + "_daily_four_%04d.nc" % date
+        target = "uk_" + dname + "_daily_four_" + date + ".nc"
         era5_request_worldwide(date, target)
 
 
@@ -64,36 +65,17 @@ def era5_request_worldwide(date, target):
         An ERA5 request from server.
     """
     c = cdsapi.Client()
-
-    day =
-    month =
-    year =
-
+    year = str(date)[:4]
+    month = str(date)[5:7]
+    day = str(date)[8:10]
     c.retrieve(
         'reanalysis-era5-single-levels',
         {
             'product_type': 'reanalysis',
             'variable': param,
             'year': year,
-            'month': [
-                '01', '02', '03',
-                '04', '05', '06',
-                '07', '08', '09',
-                '10', '11', '12'
-            ],
-            'day': [
-                '01', '02', '03',
-                '04', '05', '06',
-                '07', '08', '09',
-                '10', '11', '12',
-                '13', '14', '15',
-                '16', '17', '18',
-                '19', '20', '21',
-                '22', '23', '24',
-                '25', '26', '27',
-                '28', '29', '30',
-                '31'
-            ],
+            'month': month,
+            'day': day,
             'time': [
                 '00:00', '06:00', '12:00',
                 '18:00'
@@ -102,30 +84,6 @@ def era5_request_worldwide(date, target):
         },
         target)
 
-
-def interim_request_worldwide(requestDates, target):
-    """      
-        An ERA5 request from server.
-    """
-    f = open(target, 'w+')
-
-    server.retrieve({
-        "class": "ea",
-        "dataset": "era5",
-        "date": requestDates,
-        "expver": "1",
-        "grid": "0.25/0.25",
-        "levtype": "sfc",
-        "param": param,
-        "step": "0",
-        "stream": "oper",
-        "time": "00:00:00/06:00:00/12:00:00/18:00:00",
-        "type": "an",
-        "target": target,
-        "format": "netcdf"
-    })
-
-    f.close()
 
 if __name__ == '__main__':
     retrieve_era5_worldwide_sep_onevar(year_start, year_end)
