@@ -55,7 +55,7 @@ def retrieve_era5_worldwide_sep_onevar(start, end):
     dateList = date_range(start, end)
     for date in dateList:
         date = str(date)
-        target = "uk_" + dname + "_daily_four_" + date + ".nc"
+        target = "worldwide_" + dname + "_daily_four_" + date + ".nc"
         era5_request_worldwide(date, target)
 
 
