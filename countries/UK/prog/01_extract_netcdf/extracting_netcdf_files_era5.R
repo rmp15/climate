@@ -23,14 +23,14 @@ date <- as.character(args[1]) # date = '2020-01-01'
 print(paste0('running extracting_netcdf_files.R for ',date))
 
 # names for files
-#dname <- 't2m'
 dname <- as.character(args[2])
-#freq <- 'daily'
 freq <- as.character(args[3])
-#num <- 'four'
 num <- as.character(args[4])
+date <- as.character(args[5])
+
+dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2020-01-01'
+
 ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
-date <- '2020-01-01'
 
 # FROM HERE MAYBE TRY TO UPDATE LIKE POLLUTION
 #http://geog.uoregon.edu/GeogR/topics/netcdf-to-raster.html
@@ -38,8 +38,8 @@ date <- '2020-01-01'
 file.input = paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/',ncname)
 
 # open NetCDF file
-# ncin <- raster(file.input)
-ncin <- nc_open(file.input)
+ncin <- raster(file.input)
+# ncin <- nc_open(file.input)
 
 # # get long and lat data
 # lon <- ncvar_get(ncin, 'longitude')
