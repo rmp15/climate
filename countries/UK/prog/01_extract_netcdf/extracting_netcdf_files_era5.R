@@ -1,6 +1,6 @@
 # NOT STARTED YET
 
-# Extracting NetCDF files for ERA-5
+# Extracting daily NetCDF files for ERA-5
 
 # From:
 # https://github.com/rmp15/climate/blob/master/extract_netcdf_data.R
@@ -17,7 +17,7 @@ library(lubridate)
 args <- commandArgs(trailingOnly=TRUE)
 
 # year of interest
-year <- as.numeric(args[1])
+date <- as.character(args[1]) # date = '2020-01-01'
 
 print(paste0('running extracting_netcdf_files.R for ',date))
 
@@ -28,14 +28,16 @@ dname <- as.character(args[2])
 freq <- as.character(args[3])
 #num <- 'four'
 num <- as.character(args[4])
-ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',year,'.nc')
+ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
 
-year <- unlist(strsplit(ncname, "_"))
-year <- year[5]
-year <- unlist(strsplit(year, ".nc"))
+# FROM HERE MAYBE TRY TO UPDATE LIKE POLLUTION
+#http://geog.uoregon.edu/GeogR/topics/netcdf-to-raster.html
+
+file.input = paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/',ncname)
 
 # open NetCDF file
-ncin <- nc_open(paste0('~/data/climate/net_cdf/',dname,'/raw_era5/',ncname))
+ncin <- raster(file.input)
+ncin <- nc_open(file.input)
 
 # get long and lat data
 lon <- ncvar_get(ncin, 'longitude')
