@@ -32,7 +32,7 @@ space.res <- as.character(args[6])
 uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
 
 # fix long to match raster
-uk.national$long = uk.national$long + 360
+uk.national$long = ifelse(uk.national$long<0, uk.national$long + 360, uk.national$long)
 
 print(paste0('running extracting_netcdf_files.R for ',date))
 
@@ -42,11 +42,10 @@ dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='l
 original.proj = proj4string(uk.national)
 
 # function to perform analysis for entire country
-uk.analysis = function(uk.national,output=0) {
+uk.analysis = function(uk.national,raster.input,output=0) {
 
     # plot state with highlighted county and grids that overlap
-    if(output==1){
-        pdf(paste0(dir.output,'county_graticule_highlighted_unproj_',state.fips,'.pdf'))}
+    # if(output==1){pdf(paste0(dir.output,'county_graticule_highlighted_unproj_',state.fips,'.pdf'))}
 
     if(space.res=='lad'){
         # obtain a list of zip codes in a particular state
@@ -58,7 +57,7 @@ uk.analysis = function(uk.national,output=0) {
 
     for(lad in lads) {
 
-        # process zip preamble
+        # process lad preamble
         lad      = as.character(lad)
 
         # isolate zip to highlight
@@ -92,8 +91,6 @@ if(freq=='daily'){
 
         print(format(as.Date(date), "%Y-%m-%d"))
 
-        print(date)
-
         # load raster for relevant date
         raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',date,'.nc'))
         raster.full = projectRaster(raster.full, crs=original.proj) # ERROR HERE WHY???
@@ -103,8 +100,7 @@ if(freq=='daily'){
 
         # perform loop across all states
         system.time(
-        for(i in states){
-        analysis.dummy = state.analysis(i)
+        analysis.dummy = uk.analysis(uk.national,raster.input)
         analysis.dummy$date = format(as.Date(date), "%d/%m/%Y")
         analysis.dummy$day = day
         analysis.dummy$month = month
