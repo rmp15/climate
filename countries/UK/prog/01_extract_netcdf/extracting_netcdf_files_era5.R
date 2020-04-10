@@ -25,121 +25,96 @@ args <- commandArgs(trailingOnly=TRUE)
 dname <- as.character(args[2])
 freq <- as.character(args[3])
 num <- as.character(args[4])
-date <- as.character(args[5])
+year <- as.character(args[5])
+space.res <- as.character(args[6])
 
-# load shapefile of entire United States
-us.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
+# load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
+uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
+
+# fix long to match raster
+uk.national$long = uk.national$long + 360
 
 print(paste0('running extracting_netcdf_files.R for ',date))
 
-dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2010-01-01'
-ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
-file.input = paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/',ncname)
+dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
 
-# open NetCDF file
-ncin <- raster(file.input)
-# ncin <- nc_open(file.input)
+# get projection of shapefile
+original.proj = proj4string(uk.national)
 
-# # get long and lat data
-# lon <- ncvar_get(ncin, 'longitude')
-# nlon <- dim(lon)
-#
-# lat <- ncvar_get(ncin, "latitude", verbose = F)
-# nlat <- dim(lat)
-#
-# # get time variable and convert to days
-# t <- ncvar_get(ncin, "time")
-#
-# # adjust to make gmt
-# t = t + 5
-#
-# t.hours <- t / 24
-# t.sec <- t * 3600
-# tunits <- ncatt_get(ncin, "time", "units")
-# nt <- dim(t)
-#
-# # extract climate variable
-# tmp.array <- ncvar_get(ncin, dname)
-# dlname <- ncatt_get(ncin, dname, "long_name")
-# dunits <- ncatt_get(ncin, dname, "units")
-# fillvalue <- ncatt_get(ncin, dname, "_FillValue")
-#
-# # global attributes
-# title <- ncatt_get(ncin, 0, "title")
-# institution <- ncatt_get(ncin, 0, "institution")
-# datasource <- ncatt_get(ncin, 0, "source")
-# references <- ncatt_get(ncin, 0, "references")
-# history <- ncatt_get(ncin, 0, "history")
-# Conventions <- ncatt_get(ncin, 0, "Conventions")
-#
-# # close NetCDF file
-# nc_close(ncin)
-#
-# # split the time units string into fields
-# tustr <- strsplit(tunits$value, " ")
-# tdstr <- strsplit(unlist(tustr)[3], "-")
-# tmonth = as.integer(unlist(tdstr)[2])
-# tday = as.integer(unlist(tdstr)[3])
-# tyear = as.integer(unlist(tdstr)[1])
-# t.names <- as.POSIXct(t.sec, origin = "1900-01-01")
-#
-# # stamp as character names
-# timeStamp <-  strptime(t.names,"%Y-%m-%d %H:%M:%S")
-#
-# # round to days
-# t.names <- as.character(floor_date(timeStamp, 'day'))
-#
-# # convert tmp.array into long file
-# tmp.vec.long <- as.vector(tmp.array)
-#
-# # reshape file into matrix
-# tmp.mat <- matrix(tmp.vec.long, nrow = nlon * nlat, ncol = nt)
-#
-# # create second data frame
-# lonlat <- expand.grid(lon, lat)
-# tmp.df02 <- data.frame(cbind(lonlat, tmp.mat))
-# names(tmp.df02) <- c('lon','lat',t.names)
-# head(colnames(tmp.df02))
-#
-# # fixing longitude values so range is -180 to 180, not 0 to 360
-# # transform makes something weird happen with names, so fix
-# dat <- as.data.frame(tmp.df02)
-# dat.names <- names(dat)
-# dat <- transform(dat,lon=ifelse(lon>180,lon-360,lon))
-# names(dat) <- dat.names
-#
-# # find average of temperatures which occur on the same days
-# dat.average <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`+`,x) / length(x)))
-# names(dat.average) <- c(unique(t.names),'lat','lon')
-#
-# # fix this
-# dat.min <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`pmin`,x)))
-# names(dat.min) <- c(unique(t.names),'lat','lon')
-#
-# # fix this
-# dat.max <- as.data.frame(lapply(split(as.list(dat),f = colnames(dat)),function(x) Reduce(`pmax`,x)))
-# names(dat.max) <- c(unique(t.names),'lat','lon')
-#
-# # write to rds file with naming according to year
-# ifelse(!dir.exists("../../output/extracting_netcdf_files"), dir.create("../../output/extracting_netcdf_files"), FALSE)
-# ifelse(!dir.exists(paste0('~/data/climate/net_cdf/',dname,'/processed_era5/')), dir.create(paste0('~/data/climate/net_cdf/',dname,'/processed_era5/')), FALSE)
-#
-# file.name <- paste0('~/data/climate/net_cdf/',dname,'/processed_era5/','worldwide_',dname,'_',freq,'_',num,'_',year,'.rds')
-# saveRDS(dat.average, file.name)
+# function to perform analysis for entire country
+uk.analysis = function(uk.national,output=0) {
 
-# file.name.min <- paste0('~/data/climate/net_cdf/',dname,'/processed_era5/','worldwide_',dname,'_',freq,'_',num,'_',year,'_min.rds')
-# saveRDS(dat.min, file.name.min)
-#
-# file.name.max <- paste0('~/data/climate/net_cdf/',dname,'/processed_era5/','worldwide_',dname,'_',freq,'_',num,'_',year,'_max.rds')
-# saveRDS(dat.max, file.name.max)
+    # plot state with highlighted county and grids that overlap
+    if(output==1){
+        pdf(paste0(dir.output,'county_graticule_highlighted_unproj_',state.fips,'.pdf'))}
 
-# extract csv file of latitude longitude for USA if required
-# USA.lonlat <- lonlat
-# names(USA.lonlat) <- c('lon','lat')
-# USA.lonlat$lon <- as.numeric(USA.lonlat$lon)
-# USA.lonlat$lat <- as.numeric(USA.lonlat$lat)
-# #USA.lonlat <- subset(lonlat, lon>231)# & lon<296 & lat>23 & lat<50)
-# #USA.lonlat <- subset(lonlat, lon<296)
-# #USA.lonlat <- subset(lonlat, lat>23)
-# #USA.lonlat <- subset(lonlat, lat<50)
-# write.csv(USA.lonlat,'global_lon_lat_era5.csv')
+    if(space.res=='lad'){
+        # obtain a list of zip codes in a particular state
+        lads = sort(unique(as.character(uk.national$lad17cd)))
+    }
+
+    # create empty dataframe to fill with zip code summary information
+    weighted.area = data.frame()
+
+    for(lad in lads) {
+
+        # process zip preamble
+        lad      = as.character(lad)
+
+        # isolate zip to highlight
+        uk.lad = uk.national[uk.national$lad17cd %in% lad,]
+
+        current.value = extract(x=ncin,weights = TRUE,normalizeWeights=TRUE,y=uk.lad,fun=mean,df=TRUE,na.rm=TRUE)
+        #
+        # to.add = data.frame(zip,value=current.value[1,2])
+        # weighted.area = rbind(weighted.area,to.add)
+
+        plot(uk.lad)
+    }
+
+    names(weighted.area) = c('lad',dname)
+
+    return(weighted.area)
+
+}
+
+# perform analysis across every day of selected year
+if(freq=='daily'){
+    # loop through each raster file for each day and summarise
+    dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)
+
+    # empty dataframe to load summarised national daily values into
+    weighted.area.national.total = data.frame()
+
+    # loop through each day of the year and perform analysis
+    print(paste0('Processing dates in ',year))
+    for(date in dates){
+
+        print(format(as.Date(date), "%Y-%m-%d"))
+
+        print(date)
+
+        # load raster for relevant date
+        raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',date,'.nc'))
+        raster.full = projectRaster(raster.full, crs=original.proj) # ERROR HERE WHY???
+
+        # create empty dataframe to fill with zip code summary information
+        weighted.area.national = data.frame()
+
+        # perform loop across all states
+        system.time(
+        for(i in states){
+        analysis.dummy = state.analysis(i)
+        analysis.dummy$date = format(as.Date(date), "%d/%m/%Y")
+        analysis.dummy$day = day
+        analysis.dummy$month = month
+        analysis.dummy$year = year
+
+        weighted.area.national = rbind(weighted.area.national,analysis.dummy)
+        }
+        )
+
+        # weighted.area.national = weighted.area.national[,c(3,1,2)]
+        weighted.area.national.total = rbind(weighted.area.national.total,weighted.area.national)
+    }
+}
