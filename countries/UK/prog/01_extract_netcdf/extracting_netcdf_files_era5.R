@@ -8,11 +8,15 @@
 
 rm(list=ls())
 
+library(maptools)
+library(mapproj)
+library(rgeos)
+library(rgdal)
 library(RColorBrewer)
-library(lattice)
-library(ncdf4)
-library(lubridate)
+library(ggplot2)
 library(raster)
+library(sp)
+library(plyr)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
