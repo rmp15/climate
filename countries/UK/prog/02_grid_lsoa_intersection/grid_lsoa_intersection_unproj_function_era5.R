@@ -19,10 +19,8 @@ library(spatialEco)
 # create directory to place output files into
 ifelse(!dir.exists("../../output/grid_county_intersection"), dir.create("../../output/grid_county_intersection"), FALSE)
 
-# load shapefile
-uk.national <- readOGR(dsn="../../data/shapefiles/cb_2015_us_county_500k",layer="cb_2015_us_county_500k")
-# us.national <- read.shapefile("../../data/shapefiles/cb_2015_us_county_500k/cb_2015_us_county_500k")
-# us.national <- st_read("../../data/shapefiles/cb_2015_us_county_500k/cb_2015_us_county_500k")
+# load shapefile of entire UK
+us.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
 original.proj <- proj4string(us.national)
 

@@ -28,7 +28,7 @@ freq <- as.character(args[3])
 num <- as.character(args[4])
 date <- as.character(args[5])
 
-dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2020-01-01'
+dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2020-04-01'
 
 ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
 
