@@ -32,8 +32,8 @@ dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2020-04-01'
 
 ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
 
-# FROM HERE MAYBE TRY TO UPDATE LIKE POLLUTION
-#http://geog.uoregon.edu/GeogR/topics/netcdf-to-raster.html
+# load shapefile of entire United States
+us.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
 file.input = paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/',ncname)
 
