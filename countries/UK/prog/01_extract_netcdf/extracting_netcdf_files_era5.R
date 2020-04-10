@@ -21,24 +21,19 @@ library(plyr)
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
 
-# year of interest
-date <- as.character(args[1]) # date = '2020-01-01'
-
-print(paste0('running extracting_netcdf_files.R for ',date))
-
 # names for files
 dname <- as.character(args[2])
 freq <- as.character(args[3])
 num <- as.character(args[4])
 date <- as.character(args[5])
 
-dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2020-04-01'
-
-ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
-
 # load shapefile of entire United States
 us.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
+print(paste0('running extracting_netcdf_files.R for ',date))
+
+dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; date <- '2010-01-01'
+ncname <- paste0('worldwide_',dname,'_',freq,'_',num,'_',date,'.nc')
 file.input = paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/',ncname)
 
 # open NetCDF file
