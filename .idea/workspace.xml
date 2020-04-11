@@ -31,8 +31,8 @@
       <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="102" column="74" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+            <state relative-caret-position="495">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -475,13 +475,6 @@
       <option name="presentableId" value="Default" />
       <updated>1554566164240</updated>
     </task>
-    <task id="LOCAL-00017" summary="New plots">
-      <created>1568164684390</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1568164684390</updated>
-    </task>
     <task id="LOCAL-00018" summary="New plots">
       <created>1568174057231</created>
       <option name="number" value="00018" />
@@ -818,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586562032751</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="covid 19 work">
+      <created>1586563852627</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1586563852627</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1217,8 +1217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="102" column="74" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="495">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
