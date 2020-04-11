@@ -29,7 +29,8 @@ year <- as.character(args[5])
 space.res <- as.character(args[6])
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
-uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
+# uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
+uk.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
 # fix long to match raster
 uk.national$long = ifelse(uk.national$long<0, uk.national$long + 360, uk.national$long)
@@ -44,9 +45,6 @@ original.proj = proj4string(uk.national)
 # function to perform analysis for entire country
 uk.analysis = function(uk.national,raster.input,output=0) {
 
-    # plot state with highlighted county and grids that overlap
-    # if(output==1){pdf(paste0(dir.output,'county_graticule_highlighted_unproj_',state.fips,'.pdf'))}
-
     if(space.res=='lad'){
         # obtain a list of zip codes in a particular state
         lads = sort(unique(as.character(uk.national$lad17cd)))
@@ -58,15 +56,21 @@ uk.analysis = function(uk.national,raster.input,output=0) {
     for(lad in lads) {
 
         # process lad preamble
-        lad      = as.character(lad)
+        lad = as.character(lad)
 
         # isolate zip to highlight
         uk.lad = uk.national[uk.national$lad17cd %in% lad,]
 
-        current.value = extract(x=ncin,weights = TRUE,normalizeWeights=TRUE,y=uk.lad,fun=mean,df=TRUE,na.rm=TRUE)
-        #
-        # to.add = data.frame(zip,value=current.value[1,2])
-        # weighted.area = rbind(weighted.area,to.add)
+        plot.map=fortify(uk.national)
+        proj4string(uk.national) = proj4string(us.national)
+        coordinates(uk.national) <- c('lon', 'lat')
+        print(ggplot() +
+        geom_polygon(data=subset(plot.map),aes(x=long,y=lat,group=group),color='white',size=0.01))
+
+        current.value = extract(x=raster.input,weights = TRUE,normalizeWeights=TRUE,y=uk.lad,fun=mean,df=TRUE,na.rm=TRUE)
+
+        to.add = data.frame(zip,value=current.value[1,2])
+        weighted.area = rbind(weighted.area,to.add)
 
         plot(uk.lad)
     }
@@ -77,6 +81,9 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 
 }
 
+
+
+# FINISH LATER
 # perform analysis across every day of selected year
 if(freq=='daily'){
     # loop through each raster file for each day and summarise
@@ -100,7 +107,7 @@ if(freq=='daily'){
 
         # perform loop across all states
         system.time(
-        analysis.dummy = uk.analysis(uk.national,raster.input)
+        analysis.dummy = uk.analysis(uk.national,raster.full)
         analysis.dummy$date = format(as.Date(date), "%d/%m/%Y")
         analysis.dummy$day = day
         analysis.dummy$month = month
