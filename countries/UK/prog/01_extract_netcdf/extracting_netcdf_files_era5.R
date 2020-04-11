@@ -97,7 +97,7 @@ for(date in dates){
     raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',date,'.nc'))
     raster.full = projectRaster(raster.full, crs=original.proj) # ERROR HERE WHY???
 
-    # flatten the raster's x values per day TO FINISH
+    # flatten the raster's x values per day TO FINISHHHHHh
     # raster.full <- calc(raster.full, fun = mean)
 
     # create empty dataframe to fill with zip code summary information
