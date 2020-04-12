@@ -1,10 +1,4 @@
-# NOT STARTED YET
-
 # Extracting daily NetCDF files for ERA-5
-
-# From:
-# https://github.com/rmp15/climate/blob/master/extract_netcdf_data.R
-# http://geog.uoregon.edu/bartlein/courses/geog607/Rmd/netCDF_01.htm
 
 rm(list=ls())
 
@@ -28,21 +22,25 @@ num <- as.character(args[4])
 year <- as.character(args[5])
 space.res <- as.character(args[6])
 
+dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
+
 # create directory to place output files into
 dir.output = "../../output/grid_county_intersection_raster/"
-if(space.res=='lad'){dir.output=paste0(dir.output,'lads/',state,'/')}
+if(space.res=='lad'){dir.output=paste0(dir.output,'lads/')}
 ifelse(!dir.exists(dir.output), dir.create(dir.output), FALSE)
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
 uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
+uk.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
+
+# transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
+uk.national <- spTransform(uk.national, CRS("+init=epsg:4326"))
 
 # get projection of shapefile
-original.proj = proj4string(uk.national)
+# original.proj = proj4string(uk.national)
 
-# fix long to match raster (is this right?)
+# fix long to match raster (is this right?) IF THIS WORKS THEN GREAT BUT IF NOT THEN NEED TO THINK AGAIN TO OVERLAY RASTER
 # uk.national$long = ifelse(uk.national$long<0, uk.national$long + 360, uk.national$long)
-
-dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
 
 print(paste0('running extracting_netcdf_files.R for ',year))
 
@@ -79,7 +77,6 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 
 }
 
-# FINISH LATER
 # perform analysis across every day of selected year
 # loop through each raster file for each day and summarise
 dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)
@@ -95,7 +92,8 @@ for(date in dates){
 
     # load raster for relevant date
     raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',date,'.nc'))
-    raster.full = projectRaster(raster.full, crs=original.proj) # ERROR HERE WHY???
+    # EITHER CHANGE THE RASTER TO GO FROM -180 to 180 HERE
+    # raster.full = projectRaster(raster.full, crs=original.proj) # ERROR HERE WHY???
 
     # flatten the raster's x values per day TO FINISHHHHHh
     # raster.full <- calc(raster.full, fun = mean)
