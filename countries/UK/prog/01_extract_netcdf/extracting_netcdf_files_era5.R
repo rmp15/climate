@@ -31,16 +31,13 @@ ifelse(!dir.exists(dir.output), dir.create(dir.output), FALSE)
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
 uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
-uk.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
+# uk.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
 uk.national <- spTransform(uk.national, CRS("+init=epsg:4326"))
 
 # get projection of shapefile
-# original.proj = proj4string(uk.national)
-
-# fix long to match raster (is this right?) IF THIS WORKS THEN GREAT BUT IF NOT THEN NEED TO THINK AGAIN TO OVERLAY RASTER
-# uk.national$long = ifelse(uk.national$long<0, uk.national$long + 360, uk.national$long)
+original.proj = proj4string(uk.national)
 
 print(paste0('running extracting_netcdf_files.R for ',year))
 
@@ -90,18 +87,20 @@ for(date in dates){
 
     print(format(as.Date(date), "%Y-%m-%d"))
 
-    # load raster for relevant date
+    # load raster for relevant date and change co-ordinates to -180 to 180
     raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',date,'.nc'))
-    # EITHER CHANGE THE RASTER TO GO FROM -180 to 180 HERE
-    # raster.full = projectRaster(raster.full, crs=original.proj) # ERROR HERE WHY???
+    raster.full <- rotate(raster.full)
 
-    # flatten the raster's x values per day TO FINISHHHHHh
-    # raster.full <- calc(raster.full, fun = mean)
+    # plot
+    raster.full = projectRaster(raster.full, crs=original.proj)
+
+    # flatten the raster's x values per day
+    raster.full <- calc(raster.full, fun = mean)
 
     # create empty dataframe to fill with zip code summary information
     weighted.area.national = data.frame()
 
-    # perform loop across all states
+    # perform analysis
     system.time(
     analysis.dummy = uk.analysis(uk.national,raster.full)
     analysis.dummy$date = format(as.Date(date), "%d/%m/%Y")
