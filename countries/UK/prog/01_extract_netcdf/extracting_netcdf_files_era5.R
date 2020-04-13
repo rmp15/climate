@@ -54,6 +54,8 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 
     for(lad in lads) {
 
+        print(lad)
+
         # process lad preamble
         lad = as.character(lad)
 
@@ -62,10 +64,13 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 
         current.value = extract(x=raster.input,weights = TRUE,normalizeWeights=TRUE,y=uk.lad,fun=mean,df=TRUE,na.rm=TRUE)
 
-        to.add = data.frame(zip,value=current.value[1,2])
+        # turn into centigrade
+        current.value = current.value - 273.15
+
+        to.add = data.frame(lad,value=current.value[1,2])
         weighted.area = rbind(weighted.area,to.add)
 
-        plot(uk.lad)
+        # plot(uk.lad)
     }
 
     names(weighted.area) = c('lad',dname)
@@ -77,6 +82,9 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 # perform analysis across every day of selected year
 # loop through each raster file for each day and summarise
 dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)
+dates = as.character(dates)
+
+# dates = c("2010-01-07","2010-01-08")
 
 # empty dataframe to load summarised national daily values into
 weighted.area.national.total = data.frame()
@@ -85,13 +93,15 @@ weighted.area.national.total = data.frame()
 print(paste0('Processing dates in ',year))
 for(date in dates){
 
-    print(format(as.Date(date), "%Y-%m-%d"))
+    print(as.character(date))
 
     # load raster for relevant date and change co-ordinates to -180 to 180
-    raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',date,'.nc'))
+    raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',as.character(date),'.nc'))
     raster.full <- rotate(raster.full)
 
-    # plot
+    plot(raster.full)
+
+    # projet to be the same as the uk map
     raster.full = projectRaster(raster.full, crs=original.proj)
 
     # flatten the raster's x values per day
@@ -101,21 +111,13 @@ for(date in dates){
     weighted.area.national = data.frame()
 
     # perform analysis
-    system.time(
     analysis.dummy = uk.analysis(uk.national,raster.full)
-    analysis.dummy$date = format(as.Date(date), "%d/%m/%Y")
-    analysis.dummy$day = day
-    analysis.dummy$month = month
-    analysis.dummy$year = year
-
+    analysis.dummy$date = format(as.Date(date), "%Y-%m-%d")
     weighted.area.national = rbind(weighted.area.national,analysis.dummy)
-    }
-    )
 
     # weighted.area.national = weighted.area.national[,c(3,1,2)]
     weighted.area.national.total = rbind(weighted.area.national.total,weighted.area.national)
 }
 
 # save file
-# dir.output = ???
 saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.rds'))
