@@ -22,7 +22,8 @@ freq <- as.character(args[3])
 num <- as.character(args[4])
 space.res <- as.character(args[5])
 
-dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
+# for code testing
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
 
 # create directory to place output files into
 dir.output = "../../output/grid_county_intersection_raster/"
@@ -31,7 +32,6 @@ ifelse(!dir.exists(dir.output), dir.create(dir.output), FALSE)
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
 uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
-# uk.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
 uk.national <- sp::spTransform(uk.national, CRS("+init=epsg:4326"))
@@ -83,8 +83,6 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 # loop through each raster file for each day and summarise
 dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)
 dates = as.character(dates)
-
-# dates = c("2010-01-07","2010-01-08")
 
 # empty dataframe to load summarised national daily values into
 weighted.area.national.total = data.frame()
