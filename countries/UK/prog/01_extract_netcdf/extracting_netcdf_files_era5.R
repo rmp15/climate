@@ -34,7 +34,7 @@ uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_Dece
 # uk.national <- readOGR(dsn="../../data/shapefiles/infuse_uk_2011_clipped",layer="infuse_uk_2011_clipped")
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
-uk.national <- spTransform(uk.national, CRS("+init=epsg:4326"))
+uk.national <- sp::spTransform(uk.national, CRS("+init=epsg:4326"))
 
 # get projection of shapefile
 original.proj = proj4string(uk.national)
