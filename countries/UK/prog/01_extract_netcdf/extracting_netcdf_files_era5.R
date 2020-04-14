@@ -65,7 +65,7 @@ uk.analysis = function(uk.national,raster.input,output=0) {
         current.value = extract(x=raster.input,weights = TRUE,normalizeWeights=TRUE,y=uk.lad,fun=mean,df=TRUE,na.rm=TRUE)
 
         # turn into centigrade
-        current.value = current.value - 273.15
+        current.value = round((current.value - 273.15),2)
 
         to.add = data.frame(lad,value=current.value[1,2])
         weighted.area = rbind(weighted.area,to.add)
@@ -89,8 +89,8 @@ weighted.area.national.total = data.frame()
 
 # loop through each day of the year and perform analysis
 print(paste0('Processing dates in ',year))
-for(date in dates){
-# for(date in dates[1:59]){
+# for(date in dates){
+for(date in dates[1:2]){
 
     print(as.character(date))
 
