@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" afterPath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="netcdf_download.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="240">
+              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -44,8 +43,8 @@
       <file leaf-file-name="grid_county_intersection_raster_prism_fips.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="137" lean-forward="false" selection-start-line="27" selection-start-column="137" selection-end-line="27" selection-end-column="137" />
+            <state relative-caret-position="480">
+              <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -112,8 +111,8 @@
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection/grid_lsoa_intersection_unproj_function_era5.R" />
-        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
+        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
       </list>
     </option>
   </component>
@@ -181,6 +180,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="01_extract_netcdf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,13 +485,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554566164240</updated>
-    </task>
-    <task id="LOCAL-00024" summary="New plots">
-      <created>1568175921655</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1568175921655</updated>
     </task>
     <task id="LOCAL-00025" summary="New plots">
       <created>1568198940731</created>
@@ -804,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586866511201</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="covid 19 work">
+      <created>1586866814235</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1586866814235</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1181,8 +1206,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="240">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -1199,8 +1224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="137" lean-forward="false" selection-start-line="27" selection-start-column="137" selection-end-line="27" selection-end-column="137" />
+        <state relative-caret-position="480">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding />
         </state>
       </provider>
