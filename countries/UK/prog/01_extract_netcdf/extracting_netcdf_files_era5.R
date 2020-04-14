@@ -89,7 +89,8 @@ weighted.area.national.total = data.frame()
 
 # loop through each day of the year and perform analysis
 print(paste0('Processing dates in ',year))
-for(date in dates){
+# for(date in dates){
+for(date in dates[1:59]){
 
     print(as.character(date))
 
@@ -116,6 +117,9 @@ for(date in dates){
     # weighted.area.national = weighted.area.national[,c(3,1,2)]
     weighted.area.national.total = rbind(weighted.area.national.total,weighted.area.national)
 }
+
+print(head(weighted.area.national.total))
+print(tail(weighted.area.national.total))
 
 # save file
 saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.rds'))
