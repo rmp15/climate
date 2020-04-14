@@ -16,11 +16,11 @@ library(plyr)
 args <- commandArgs(trailingOnly=TRUE)
 
 # names for files
+year <- as.character(args[1])
 dname <- as.character(args[2])
 freq <- as.character(args[3])
 num <- as.character(args[4])
-year <- as.character(args[5])
-space.res <- as.character(args[6])
+space.res <- as.character(args[5])
 
 dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
 

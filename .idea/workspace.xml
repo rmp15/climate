@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection/grid_lsoa_intersection_unproj_function_era5.R" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" afterPath="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
     </list>
@@ -29,14 +29,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="true">
+      <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="330">
+              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
               <folding>
                 <element signature="e#1618#2499#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid_county_intersection_raster_prism_fips.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="137" lean-forward="false" selection-start-line="27" selection-start-column="137" selection-end-line="27" selection-end-column="137" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,6 +112,7 @@
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection/grid_lsoa_intersection_unproj_function_era5.R" />
+        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
       </list>
     </option>
@@ -150,8 +161,26 @@
               <option name="myItemId" value="countries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="USA" />
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -168,6 +197,36 @@
               <option name="myItemId" value="countries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="00_bash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -181,9 +240,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/countries/UK/prog/00_bash" />
       <recent name="$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection" />
       <recent name="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf" />
-      <recent name="$PROJECT_DIR$/countries/UK/prog/00_bash" />
       <recent name="$PROJECT_DIR$/countries/USA/prog/06_plots" />
       <recent name="$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries" />
     </key>
@@ -401,13 +460,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554566164240</updated>
-    </task>
-    <task id="LOCAL-00023" summary="New plots">
-      <created>1568175541821</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1568175541821</updated>
     </task>
     <task id="LOCAL-00024" summary="New plots">
       <created>1568175921655</created>
@@ -745,14 +797,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586739188165</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="covid 19 work">
+      <created>1586866511200</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1586866511201</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20757021" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25579977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -789,13 +848,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/countries/USA/prog/00_bash/metric_statistics.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/05_metrics_development/metrics_correlation_individual.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1091,14 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection/grid_lsoa_intersection_unproj_function_era5.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1135,13 +1179,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="330">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding>
             <element signature="e#1618#2499#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="137" lean-forward="false" selection-start-line="27" selection-start-column="137" selection-end-line="27" selection-end-column="137" />
+          <folding />
         </state>
       </provider>
     </entry>
