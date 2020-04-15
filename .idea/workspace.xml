@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grid_county_intersection_raster_prism_lads.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="grid_county_intersection_raster_prism_lads.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="225">
+              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -116,7 +116,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1680" />
+    <option name="width" value="956" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
@@ -498,13 +498,6 @@
       <option name="presentableId" value="Default" />
       <updated>1554566164240</updated>
     </task>
-    <task id="LOCAL-00031" summary="New plots">
-      <created>1568229357224</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1568229357224</updated>
-    </task>
     <task id="LOCAL-00032" summary="New plots">
       <created>1568230002479</created>
       <option name="number" value="00032" />
@@ -841,11 +834,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586898254951</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="covid 19 work">
+      <created>1586923449597</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1586923449597</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="956" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36021507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1218,18 +1218,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh">
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="300">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
