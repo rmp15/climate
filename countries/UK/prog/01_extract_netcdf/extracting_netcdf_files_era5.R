@@ -89,8 +89,8 @@ weighted.area.national.total = data.frame()
 
 # loop through each day of the year and perform analysis
 print(paste0('Processing dates in ',year))
-for(date in dates){
-# for(date in dates[1:2]){
+# for(date in dates){
+for(date in dates[1:2]){
 
     print(as.character(date))
 
