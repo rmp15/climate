@@ -123,3 +123,4 @@ print(tail(weighted.area.national.total))
 
 # save file
 saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.rds'))
+write.csv(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.csv'))

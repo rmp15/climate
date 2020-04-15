@@ -28,6 +28,4 @@ echo $year;
 # identifies the overlap between grids and LADs codes and creates weighted means
 Rscript ~/git/climate/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $time $num $space &
 
-echo "Hello";
-
 done; done; done; done; done;
