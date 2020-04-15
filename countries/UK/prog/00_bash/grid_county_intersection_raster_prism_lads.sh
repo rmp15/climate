@@ -5,7 +5,7 @@
 
 clear
 
-declare -a years=($(seq 2010 2019))
+declare -a years=($(seq 2012 2019))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
