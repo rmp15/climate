@@ -28,7 +28,7 @@ space.res <- as.character(args[5])
 # create directory to place output files into
 dir.output = "../../output/grid_county_intersection_raster/"
 if(space.res=='lad'){dir.output=paste0(dir.output,'lads/')}
-ifelse(!dir.exists(dir.output), dir.create(dir.output), FALSE)
+ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
 uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
