@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/Rplots.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +21,18 @@
       <file leaf-file-name="netcdf_download.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -31,8 +41,8 @@
       <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="2" />
+            <state relative-caret-position="206">
+              <caret line="83" column="85" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +51,8 @@
       <file leaf-file-name="grid_county_intersection_raster_prism_lads.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -107,16 +117,16 @@
         <option value="$PROJECT_DIR$/countries/USA/prog/11_multiyear_normals/multiyear_nonnormals_plots_era5.R" />
         <option value="$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection/grid_county_intersection_unproj_function_era5.R" />
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py" />
-        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/02_grid_lsoa_intersection/grid_lsoa_intersection_unproj_function_era5.R" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_fips.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
+        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="956" />
+    <option name="width" value="1261" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
@@ -134,8 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -256,6 +264,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -497,13 +507,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554566164240</updated>
-    </task>
-    <task id="LOCAL-00035" summary="New plots">
-      <created>1568412297437</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1568412297437</updated>
     </task>
     <task id="LOCAL-00036" summary="New plots">
       <created>1568641548613</created>
@@ -841,14 +844,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586962647615</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="covid 19 work">
+      <created>1586963201218</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1586963201218</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="956" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1261" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35995623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35958487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1199,37 +1209,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
+        <state relative-caret-position="371">
           <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="2" />
+        <state relative-caret-position="206">
+          <caret line="83" column="85" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding />
         </state>
       </provider>
