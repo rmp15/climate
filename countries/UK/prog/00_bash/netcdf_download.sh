@@ -6,7 +6,7 @@
 clear
 
 declare -i start_day='01'
-declare -i start_month='01'
+declare -i start_month='04'
 declare -i start_year='2020'
 declare -i end_day='16'
 declare -i end_month='04'
