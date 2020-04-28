@@ -82,7 +82,7 @@ uk.analysis = function(uk.national,raster.input,output=0) {
 # perform analysis across every day of selected year
 # loop through each raster file for each day and summarise
 if(year<2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)}
-if(year==2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('1104',year),format="%d%m%Y"), by=1)}
+if(year==2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('2304',year),format="%d%m%Y"), by=1)}
 dates = as.character(dates)
 
 # empty dataframe to load summarised national daily values into
