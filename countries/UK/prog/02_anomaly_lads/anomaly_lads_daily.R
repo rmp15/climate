@@ -25,11 +25,11 @@ num <- as.character(args[5])
 space.res <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year_start <- '2010' ; year_end<- '2019' ; space.res='lad'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year_start <- '2010' ; year_end<- '2020' ; space.res='lad'
 
 years = c(year_start:year_end)
 
-# create directory to place output files into
+# directory to load year files
 dir.input = "../../output/grid_county_intersection_raster/lads/"
 
 # load files for all years of long-term average calculation
@@ -43,7 +43,31 @@ for(year in years){
 # get rid of pointless columns
 dat.lads$X = NULL
 
-# attach week ID
-dat.week = read.csv('~/git/climate/countries/UK/data/weeks_table/weeks_table.csv')
+# make date column into date format
+dat.lads$date = as.Date(dat.lads$date, format="%Y-%m-%d")
 
-# do the scaling thing without FALSE as the second option by week
+# attach week and month ID
+library(lubridate)
+dat.week = read.csv('~/git/climate/countries/UK/data/weeks_table/weeks_table.csv')
+dat.week$date = as.Date(dat.week$date, format="%Y-%m-%d")
+dat.week$month_of_year = month(dat.week$date)
+dat.week$year = year(dat.week$date)
+dat.unique = unique(dat.week[c("month_of_year", "year")])
+dat.unique$month_id = 1:nrow(dat.unique)
+dat.week = merge(dat.week, dat.unique, by=c("year","month_of_year"),all.X=TRUE)
+dat.week = dat.week[order(dat.week$date),]
+rownames(dat.week) = 1:nrow(dat.week)
+
+# merge temperature and week of year dataframes
+dat.lads.week = merge(dat.lads,dat.week,by=c('date'),all.X=TRUE)
+
+# do the scaling thing without FALSE as the second option by week to get anomalies measured against weekly averages
+dat.lads.anomaly = ddply(dat.lads.week,.(lad,week_of_year), transform, anomaly=scale(t2m,scale = FALSE))
+dat.lads.anomaly.weekly = ddply(dat.lads.anomaly,.(lad,week_id), summarize, anomaly=mean(anomaly))
+
+# do the scaling thing without FALSE as the second option by month to get anomalies measured against monthly averages
+dat.lads.anomaly.2 = ddply(dat.lads.week,.(lad,month_of_year), transform, anomaly=scale(t2m,scale = FALSE))
+dat.lads.anomaly.monthly = ddply(dat.lads.anomaly.2,.(lad,month_id), summarize, anomaly=mean(anomaly))
+
+# save dat.lads.anomaly.weekly and dat.lads.anomaly.monthly
+write.csv(dat.lads.anomaly.weekly,paste0(dir.input,'weekly_anomalies_weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'))
