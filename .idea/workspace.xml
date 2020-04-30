@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="covid 19 work">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/anomaly_lads.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/03_anomaly_lads.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/02_grid_county_intersection_raster_prism_lads.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/01_netcdf_download.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/UK/prog/02_anomaly_lads/anomaly_lads_daily.R" afterPath="$PROJECT_DIR$/countries/UK/prog/02_anomaly_lads/anomaly_lads_daily.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="anomaly_lads.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/anomaly_lads.sh">
+      <file leaf-file-name="03_anomaly_lads.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/03_anomaly_lads.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="98" lean-forward="false" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
+              <caret line="25" column="86" lean-forward="false" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -31,7 +33,7 @@
       <file leaf-file-name="anomaly_lads_daily.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/UK/prog/02_anomaly_lads/anomaly_lads_daily.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
+            <state relative-caret-position="1125">
               <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
@@ -103,9 +105,10 @@
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh" />
-        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/anomaly_lads.sh" />
         <option value="$PROJECT_DIR$/countries/UK/prog/02_anomaly_lads/extracting_netcdf_files_era5.R" />
         <option value="$PROJECT_DIR$/countries/UK/prog/02_anomaly_lads/anomaly_lads_daily.R" />
+        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/anomaly_lads.sh" />
+        <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/03_anomaly_lads.sh" />
       </list>
     </option>
   </component>
@@ -225,6 +228,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="01_extract_netcdf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="00_bash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,13 +520,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554566164240</updated>
-    </task>
-    <task id="LOCAL-00044" summary="New plots">
-      <created>1580405883830</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1580405883830</updated>
     </task>
     <task id="LOCAL-00045" summary="New plots">
       <created>1581979909539</created>
@@ -835,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588267580870</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="covid 19 work">
+      <created>1588268982725</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1588268982725</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1148,7 +1177,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/netcdf_download.sh">
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/01_netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
@@ -1156,7 +1185,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/grid_county_intersection_raster_prism_lads.sh">
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/02_grid_county_intersection_raster_prism_lads.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="121" lean-forward="true" selection-start-line="28" selection-start-column="121" selection-end-line="28" selection-end-column="121" />
@@ -1212,14 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/anomaly_lads.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="98" lean-forward="false" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/USA/prog/15_anomaly_summaries/anomaly_summaries.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4541">
@@ -1228,9 +1249,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/UK/prog/00_bash/03_anomaly_lads.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="86" lean-forward="false" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/UK/prog/02_anomaly_lads/anomaly_lads_daily.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
+        <state relative-caret-position="1125">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>

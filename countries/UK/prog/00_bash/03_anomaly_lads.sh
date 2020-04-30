@@ -19,10 +19,10 @@ for time in "${times[@]}"; do
 for num in "${nums[@]}"; do
 for space in "${spaces[@]}"; do
 
-echo "Identifying overlap between rasters and LADs codes for temperature processing";
+echo "Calculating anomalies by LAD for week or month scale";
 
 :
 # identifies the overlap between grids and LADs codes and creates weighted means
-Rscript ~/git/climate/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R 2010 2019 $dname $time $num $space &
+Rscript ~/git/climate/countries/UK/prog/02_anomaly_lads/anomaly_lads_daily.R 2010 2020 $dname $time $num $space &
 
 done; done; done; done; done;
