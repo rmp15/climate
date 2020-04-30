@@ -30,15 +30,20 @@ space.res <- as.character(args[6])
 years = c(year_start:year_end)
 
 # create directory to place output files into
-dir.input = "../../output/grid_county_intersection_raster/"
+dir.input = "../../output/grid_county_intersection_raster/lads/"
 
 # load files for all years of long-term average calculation
 dat.lads = data.frame()
 for(year in years){
+    print(paste0(year,' loading'))
     weighted.area.national.total = read.csv(paste0(dir.input,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.csv'))
     dat.lads = rbind(dat.lads, weighted.area.national.total)
 }
 
-# do the scaling thing without FALSE as the second option
-# 1. by week
-# 2. by month
+# get rid of pointless columns
+dat.lads$X = NULL
+
+# attach week ID
+dat.week = read.csv('~/git/climate/countries/UK/data/weeks_table/weeks_table.csv')
+
+# do the scaling thing without FALSE as the second option by week
