@@ -1,4 +1,5 @@
-# Extracting daily NetCDF files for ERA-5
+# Finding weekly long-term averages
+# and anomalies based on long-term averages
 
 rm(list=ls())
 
@@ -24,7 +25,9 @@ num <- as.character(args[5])
 space.res <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year_start <- '2010' ; year_start <- '2019' ; space.res='lad'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year_start <- '2010' ; year_end<- '2019' ; space.res='lad'
+
+years = c(year_start:year_end)
 
 # create directory to place output files into
 dir.input = "../../output/grid_county_intersection_raster/"
