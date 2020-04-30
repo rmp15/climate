@@ -62,12 +62,21 @@ rownames(dat.week) = 1:nrow(dat.week)
 dat.lads.week = merge(dat.lads,dat.week,by=c('date'),all.X=TRUE)
 
 # do the scaling thing without FALSE as the second option by week to get anomalies measured against weekly averages
-dat.lads.anomaly = ddply(dat.lads.week,.(lad,week_of_year), transform, anomaly=scale(t2m,scale = FALSE))
-dat.lads.anomaly.weekly = ddply(dat.lads.anomaly,.(lad,week_id), summarize, anomaly=mean(anomaly))
+dat.lads.anomaly = ddply(dat.lads.week,.(lad,week_of_year), transform, anomaly.t2m=scale(t2m,scale = FALSE),mean.t2m=mean(t2m))
+dat.lads.anomaly = dat.lads.anomaly[order(dat.lads.anomaly$lad,dat.lads.anomaly$date),]
+rownames(dat.lads.anomaly) = 1:nrow(dat.lads.anomaly)
+dat.lads.anomaly.weekly = ddply(dat.lads.anomaly,.(lad,week_id), summarize, anomaly.t2m.weekly=mean(anomaly.t2m))
 
 # do the scaling thing without FALSE as the second option by month to get anomalies measured against monthly averages
-dat.lads.anomaly.2 = ddply(dat.lads.week,.(lad,month_of_year), transform, anomaly=scale(t2m,scale = FALSE))
-dat.lads.anomaly.monthly = ddply(dat.lads.anomaly.2,.(lad,month_id), summarize, anomaly=mean(anomaly))
+dat.lads.anomaly.2 = ddply(dat.lads.week,.(lad,month_of_year), transform, anomaly=scale(t2m,scale = FALSE),mean.t2m=mean(t2m))
+dat.lads.anomaly.2 = dat.lads.anomaly.2[order(dat.lads.anomaly.2$lad,dat.lads.anomaly.2$date),]
+rownames(dat.lads.anomaly.2) = 1:nrow(dat.lads.anomaly.2)
+dat.lads.anomaly.monthly = ddply(dat.lads.anomaly.2,.(lad,month_id), summarize, anomaly.t2m.monthly=mean(anomaly))
 
 # save dat.lads.anomaly.weekly and dat.lads.anomaly.monthly
-write.csv(dat.lads.anomaly.weekly,paste0(dir.input,'weekly_anomalies_weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'))
+write.csv(dat.lads.anomaly.weekly,paste0(dir.input,'weekly_anomalies_weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+write.csv(dat.lads.anomaly.monthly,paste0(dir.input,'monthly_anomalies_weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+
+# also save dat.lads.anomaly and dat.lads.anomaly.2 for full save in case
+write.csv(dat.lads.anomaly,paste0(dir.input,'full_weekly_anomalies_weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+write.csv(dat.lads.anomaly.2,paste0(dir.input,'full_monthly_anomalies_weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
