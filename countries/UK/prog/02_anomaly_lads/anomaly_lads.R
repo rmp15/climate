@@ -48,7 +48,7 @@ dat.lads$date = as.Date(dat.lads$date, format="%Y-%m-%d")
 
 # attach week and month ID
 library(lubridate)
-dat.week = read.csv('~/git/climate/countries/UK/data/weeks_table/weeks_table.csv')
+dat.week = read.csv('~/git/climate/countries/UK/data/weeks_table/day_to_week_table.csv')
 dat.week$date = as.Date(dat.week$date, format="%Y-%m-%d")
 dat.week$month_of_year = month(dat.week$date)
 dat.week$year = year(dat.week$date)
