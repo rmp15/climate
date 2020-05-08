@@ -24,58 +24,37 @@ space.res <- as.character(args[5])
 country.id <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad' ; country.id = 'BEL'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='adm2' ; country.id = 'BEL'
 
 # create directory to place output files into
-dir.output = "../../output/grid_county_intersection_raster/"
-if(space.res=='lad'){dir.output=paste0(dir.output,'lads/')}
+dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/',space.res,'/')
 ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
-uk.national <- readOGR(dsn="../../data/shapefiles/Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain",layer="Local_Authority_Districts_December_2017_Full_Clipped_Boundaries_in_Great_Britain")
+shapefile <- readOGR(dsn="../../data/shapefiles/BEL_adm",layer="BEL_adm2")
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
-uk.national <- sp::spTransform(uk.national, CRS("+init=epsg:4326"))
+shapefile <- sp::spTransform(shapefile, CRS("+init=epsg:4326"))
 
 # get projection of shapefile
-original.proj = proj4string(uk.national)
+original.proj = proj4string(shapefile)
 
-print(paste0('running extracting_netcdf_files.R for ',year))
+print(paste0('running extracting_netcdf_files.R for ',country.id,' ',space.res,' ',year))
 
 # function to perform analysis for entire country
-uk.analysis = function(uk.national,raster.input,output=0) {
+country.analysis = function(shapefile,raster.input,output=0) {
 
-    if(space.res=='lad'){
-        # obtain a list of zip codes in a particular state
-        lads = sort(unique(as.character(uk.national$lad17cd)))
+    if(space.res=='adm2'){
+        # obtain a list of names in a particular state
+        ids = sort(unique(as.numeric(shapefile$ID_2)))
     }
 
-    # create empty dataframe to fill with zip code summary information
-    weighted.area = data.frame()
+    # dataframe with values for each region for particular day
+    weighted.area = extract(x=raster.input,weights = TRUE,normalizeWeights=TRUE,y=shapefile,fun=mean,df=TRUE,na.rm=TRUE)
 
-    for(lad in lads) {
-
-        print(lad)
-
-        # process lad preamble
-        lad = as.character(lad)
-
-        # isolate zip to highlight
-        uk.lad = uk.national[uk.national$lad17cd %in% lad,]
-
-        current.value = extract(x=raster.input,weights = TRUE,normalizeWeights=TRUE,y=uk.lad,fun=mean,df=TRUE,na.rm=TRUE)
-
-        # turn into centigrade
-        current.value = round((current.value - 273.15),2)
-
-        to.add = data.frame(lad,value=current.value[1,2])
-        weighted.area = rbind(weighted.area,to.add)
-
-        # plot(uk.lad)
-    }
-
-    names(weighted.area) = c('lad',dname)
-
+    # convert to centigrade
+    weighted.area$layer = round((weighted.area$layer - 273.15),2)
+    names(weighted.area) = c('id',dname)
     return(weighted.area)
 
 }
@@ -91,8 +70,8 @@ weighted.area.national.total = data.frame()
 
 # loop through each day of the year and perform analysis
 print(paste0('Processing dates in ',year))
-for(date in dates){
-# for(date in dates[1:2]){
+# for(date in dates){
+for(date in dates[1:10]){
 
     print(as.character(date))
 
@@ -100,29 +79,27 @@ for(date in dates){
     raster.full <- raster(paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',as.character(date),'.nc'))
     raster.full <- rotate(raster.full)
 
-    plot(raster.full)
-
-    # projet to be the same as the uk map
+    # projet to be the same as the chosen country map
     raster.full = projectRaster(raster.full, crs=original.proj)
 
     # flatten the raster's x values per day
     raster.full <- calc(raster.full, fun = mean)
 
+    # plot(raster.full)
+
     # create empty dataframe to fill with zip code summary information
     weighted.area.national = data.frame()
 
     # perform analysis
-    analysis.dummy = uk.analysis(uk.national,raster.full)
+    analysis.dummy =  country.analysis(shapefile,raster.full)
     analysis.dummy$date = format(as.Date(date), "%Y-%m-%d")
     weighted.area.national = rbind(weighted.area.national,analysis.dummy)
 
-    # weighted.area.national = weighted.area.national[,c(3,1,2)]
+    weighted.area.national = weighted.area.national[,c(3,1,2)]
     weighted.area.national.total = rbind(weighted.area.national.total,weighted.area.national)
 }
 
-print(head(weighted.area.national.total))
-print(tail(weighted.area.national.total))
 
 # save file
-saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.rds'))
-write.csv(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_lads_',dname,'_',freq,'_',as.character(year),'.csv'))
+saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',space.res,'_',dname,'_',freq,'_',as.character(year),'.rds'))
+write.csv(weighted.area.national.total,paste0(dir.output,'weighted_area_raster',space.res,'_',dname,'_',freq,'_',as.character(year),'.csv'))
