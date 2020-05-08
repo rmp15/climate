@@ -23,9 +23,11 @@ dname <- as.character(args[3])
 freq <- as.character(args[4])
 num <- as.character(args[5])
 space.res <- as.character(args[6])
+country.id <- as.character(args[7])
+
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year_start <- '2010' ; year_end<- '2020' ; space.res='lad'
+# dname = 't2m' ; freq = 'daily' ; num = 'four' ; year_start = '2010' ; year_end = '2020' ; space.res='0' ; country.id = 'DNK'
 
 years = c(year_start:year_end)
 
