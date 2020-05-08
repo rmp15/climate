@@ -6,12 +6,12 @@
 clear
 
 # arguments for running script
-declare -a countries=("BEL" "NOR" "FRA") # also "CAN" UK Denmark Austria Netherlands USA
-declare -a years=($(seq 2011 2011))
+declare -a countries=("BEL" "NOR" "FRA" "DNK" "GBR") # also "CAN" Austria Netherlands USA
+declare -a years=($(seq 2010 2020))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
-declare -a admin_levels=("1")
+declare -a admin_levels=("0")
 
 # location of home location TO FINISH
 #root_directory = $HOME
