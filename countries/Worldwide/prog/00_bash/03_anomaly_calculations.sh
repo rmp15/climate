@@ -18,15 +18,16 @@ declare -a admin_levels=("0")
 # 1. ANOMALY CALCULATION
 #################################################
 
+for country in "${countries[@]}"; do
 for dname in "${dnames[@]}"; do
 for time in "${times[@]}"; do
 for num in "${nums[@]}"; do
 for admin_level in "${admin_levels[@]}"; do
 
-echo "Calculating anomalies by LAD for week or month scale";
+echo "Calculating anomalies by admin units for week or month scale";
 
 :
 # identifies the overlap between grids and LADs codes and creates weighted means
-Rscript ~/git/climate/countries/Worldwide/prog/02_anomalies/anomalies.R $year_start $year_end $dname $time $num $space &
+Rscript ~/git/climate/countries/Worldwide/prog/02_anomalies/anomalies.R $year_start $year_end $dname $time $num $admin_level &
 
-done; done; done; done;
+done; done; done; done; done;
