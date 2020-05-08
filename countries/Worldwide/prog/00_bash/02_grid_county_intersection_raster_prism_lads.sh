@@ -11,7 +11,7 @@ declare -a years=($(seq 2011 2011))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
-declare -a spaces=("1")
+declare -a admin_levels=("1")
 
 # location of home location TO FINISH
 #root_directory = $HOME
@@ -27,13 +27,13 @@ for year in "${years[@]}"; do
 for dname in "${dnames[@]}"; do
 for time in "${times[@]}"; do
 for num in "${nums[@]}"; do
-for space in "${spaces[@]}"; do
+for admin_level in "${admin_levels[@]}"; do
 
 echo "Identifying overlap between rasters and admin codes for temperature processing";
 echo $year;
 
 :
 # identifies the overlap between grids and LADs codes and creates weighted means
-Rscript ~/git/climate/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $time $num $space $country &
+Rscript ~/git/climate/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $time $num $admin_level $country &
 
 done; done; done; done; done; done;
