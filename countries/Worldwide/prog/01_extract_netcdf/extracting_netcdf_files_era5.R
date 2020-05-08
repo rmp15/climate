@@ -24,7 +24,7 @@ space.res <- as.character(args[5])
 country.id <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='1' ; country.id = 'BEL'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='0' ; country.id = 'DNK'
 
 # create directory to place output files into
 dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/adm',space.res,'/')
