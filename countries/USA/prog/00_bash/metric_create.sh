@@ -33,7 +33,7 @@ echo "converting netcdf file for $year";
 #Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/extracting_netcdf_files.R $year $dname $freq $num &
 
 # processes net_cdf files ERA5
-#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/population_grid_summary.R $year $dname $freq $num &
+#Rscript ~/git/climate/countries/USA/prog/01_extract_netcdf/population_weighted_mean.R $year $dname $freq $num &
 
 echo "creating metric for counties for $year";
 

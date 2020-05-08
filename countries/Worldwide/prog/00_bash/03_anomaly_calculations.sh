@@ -15,7 +15,7 @@ declare -a nums=("four")
 declare -a admin_levels=("0")
 
 #################################################
-# 1. ANOMALY CALCULATION
+# ANOMALY CALCULATION
 #################################################
 
 for country in "${countries[@]}"; do

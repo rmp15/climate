@@ -14,7 +14,7 @@ declare -a nums=("four")
 declare -a admin_levels=("0")
 
 #################################################
-# 1. WEIGHTED MEAN CALCULATION
+# WEIGHTED MEAN CALCULATION
 #################################################
 
 for country in "${countries[@]}"; do

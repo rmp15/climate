@@ -14,7 +14,7 @@ declare -i end_year='2020'
 declare -a dnames=("t2m")
 
 #################################################
-# 1. DOWNLOAD DAILY WORLDWIDE VALUES
+# DOWNLOAD DAILY WORLDWIDE VALUES
 #################################################
 
 python ~/git/climate/countries/Worldwide/prog/01_extract_netcdf/downloading_netcdf_files_uk_day_sep_era5_cdsapi.py $start_day $start_month $start_year $end_day $end_month $end_year 't2m';

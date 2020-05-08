@@ -11,7 +11,7 @@ declare -i year_pop=2010
 declare -a admin_levels=("0")
 
 #################################################
-# POPULATION GRID SUMMARY
+# POPULATION WEIGHTED MEAN
 #################################################
 
 for country in "${countries[@]}"; do
@@ -21,6 +21,6 @@ echo "Calculating anomalies by admin units for week or month scale";
 
 :
 # identifies the overlap between grids and LADs codes and creates weighted means
-Rscript ~/git/climate/countries/Worldwide/prog/03_populaltion_grid/population_grid_summary.R $year_pop $admin_level $country &
+Rscript ~/git/climate/countries/Worldwide/prog/04_populaltion_weighted_mean/population_weighted_mean.R $year_pop $admin_level $country &
 
 done; done;
