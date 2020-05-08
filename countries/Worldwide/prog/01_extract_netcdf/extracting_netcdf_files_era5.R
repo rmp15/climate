@@ -24,7 +24,7 @@ space.res <- as.character(args[5])
 country.id <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='adm2' ; country.id = 'BEL'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='adm2' ; country.id = 'NOR'
 
 # create directory to place output files into
 dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/',space.res,'/')
@@ -62,7 +62,7 @@ country.analysis = function(shapefile,raster.input,output=0) {
 # perform analysis across every day of selected year
 # loop through each raster file for each day and summarise
 if(year<2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)}
-if(year==2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('2304',year),format="%d%m%Y"), by=1)}
+if(year==2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('0505',year),format="%d%m%Y"), by=1)}
 dates = as.character(dates)
 
 # empty dataframe to load summarised national daily values into
