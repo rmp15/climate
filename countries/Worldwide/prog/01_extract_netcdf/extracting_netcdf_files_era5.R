@@ -24,14 +24,14 @@ space.res <- as.character(args[5])
 country.id <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='adm2' ; country.id = 'NOR'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='1' ; country.id = 'BEL'
 
 # create directory to place output files into
-dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/',space.res,'/')
+dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/adm',space.res,'/')
 ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
 
 # load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
-shapefile <- readOGR(dsn="../../data/shapefiles/BEL_adm",layer="BEL_adm2")
+shapefile <- readOGR(dsn=paste0("../../data/shapefiles/",country.id,"_adm"),layer=paste0(country.id,"_adm",space.res))
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
 shapefile <- sp::spTransform(shapefile, CRS("+init=epsg:4326"))
@@ -41,12 +41,18 @@ original.proj = proj4string(shapefile)
 
 print(paste0('running extracting_netcdf_files.R for ',country.id,' ',space.res,' ',year))
 
+# perform analysis across every day of selected year
+# loop through each raster file for each day and summarise
+if(year<2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)}
+if(year==2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('0505',year),format="%d%m%Y"), by=1)}
+dates = as.character(dates)
+
 # function to perform analysis for entire country
 country.analysis = function(shapefile,raster.input,output=0) {
 
     if(space.res=='adm2'){
         # obtain a list of names in a particular state
-        ids = sort(unique(as.numeric(shapefile$ID_2)))
+        ids = sort(unique(as.numeric(shapefile$ID_1)))
     }
 
     # dataframe with values for each region for particular day
@@ -54,16 +60,10 @@ country.analysis = function(shapefile,raster.input,output=0) {
 
     # convert to centigrade
     weighted.area$layer = round((weighted.area$layer - 273.15),2)
-    names(weighted.area) = c('id',dname)
+    names(weighted.area) = c(paste0('ID_',space.res),dname)
     return(weighted.area)
 
 }
-
-# perform analysis across every day of selected year
-# loop through each raster file for each day and summarise
-if(year<2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('3112',year),format="%d%m%Y"), by=1)}
-if(year==2020){dates <- seq(as.Date(paste0('0101',year),format="%d%m%Y"), as.Date(paste0('0505',year),format="%d%m%Y"), by=1)}
-dates = as.character(dates)
 
 # empty dataframe to load summarised national daily values into
 weighted.area.national.total = data.frame()
@@ -103,3 +103,4 @@ for(date in dates[1:10]){
 # save file
 saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year),'.rds'))
 write.csv(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year),'.csv'))
+
