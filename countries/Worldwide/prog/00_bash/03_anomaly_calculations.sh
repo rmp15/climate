@@ -28,6 +28,6 @@ echo "Calculating anomalies by admin units for week or month scale";
 
 :
 # identifies the overlap between grids and LADs codes and creates weighted means
-Rscript ~/git/climate/countries/Worldwide/prog/02_anomalies/anomalies.R $year_start $year_end $dname $time $num $admin_level &
+Rscript ~/git/climate/countries/Worldwide/prog/02_anomalies/anomalies.R $year_start $year_end $dname $time $num $admin_level $country &
 
 done; done; done; done; done;
