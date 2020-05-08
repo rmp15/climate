@@ -21,9 +21,10 @@ dname <- as.character(args[2])
 freq <- as.character(args[3])
 num <- as.character(args[4])
 space.res <- as.character(args[5])
+country.id <- as.character(args[6])
 
 # for code testing
-# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad'
+# dname <- 't2m' ; freq <- 'daily' ; num <- 'four' ; year <- '2010' ; space.res='lad' ; country.id = 'BEL'
 
 # create directory to place output files into
 dir.output = "../../output/grid_county_intersection_raster/"
