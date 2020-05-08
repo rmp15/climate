@@ -11,7 +11,7 @@ declare -a years=($(seq 2010 2010))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
-declare -a spaces=("adm2")
+declare -a spaces=("1")
 
 # location of home location TO FINISH
 #root_directory = $HOME
