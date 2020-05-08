@@ -13,11 +13,6 @@ declare -a times=("daily")
 declare -a nums=("four")
 declare -a admin_levels=("0")
 
-# location of home location TO FINISH
-#root_directory = $HOME
-#next_level = "/git/climate/countries/Worldwide/"
-#combined = "$root_directory$next_level"
-
 #################################################
 # 1. WEIGHTED MEAN CALCULATION
 #################################################
@@ -33,7 +28,7 @@ echo "Identifying overlap between rasters and admin codes for temperature proces
 echo $year;
 
 :
-# identifies the overlap between grids and LADs codes and creates weighted means
+# identifies the overlap between grids and administrative codes and creates weighted means
 Rscript ~/git/climate/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $time $num $admin_level $country &
 
 done; done; done; done; done; done;
