@@ -101,5 +101,5 @@ for(date in dates[1:10]){
 
 
 # save file
-saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',space.res,'_',dname,'_',freq,'_',as.character(year),'.rds'))
-write.csv(weighted.area.national.total,paste0(dir.output,'weighted_area_raster',space.res,'_',dname,'_',freq,'_',as.character(year),'.csv'))
+saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year),'.rds'))
+write.csv(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year),'.csv'))

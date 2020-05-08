@@ -7,7 +7,7 @@ clear
 
 # arguments for running script
 declare -a countries=("BEL")
-declare -a years=($(seq 2020 2020))
+declare -a years=($(seq 2010 2010))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
@@ -29,7 +29,7 @@ for time in "${times[@]}"; do
 for num in "${nums[@]}"; do
 for space in "${spaces[@]}"; do
 
-echo "Identifying overlap between rasters and LADs codes for temperature processing";
+echo "Identifying overlap between rasters and admin codes for temperature processing";
 echo $year;
 
 :
