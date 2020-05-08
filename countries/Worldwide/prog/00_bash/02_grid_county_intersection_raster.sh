@@ -25,7 +25,6 @@ for num in "${nums[@]}"; do
 for admin_level in "${admin_levels[@]}"; do
 
 echo "Identifying overlap between rasters and admin codes for temperature processing";
-echo $year;
 
 :
 # identifies the overlap between grids and administrative codes and creates weighted means
