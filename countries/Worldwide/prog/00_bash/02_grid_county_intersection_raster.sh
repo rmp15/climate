@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # this script
-# identifies overlap between counties and temperature grids and outputs county-level summaries
+# identifies overlap between administrative and temperature grids and outputs administrative summaries
 
 clear
 
