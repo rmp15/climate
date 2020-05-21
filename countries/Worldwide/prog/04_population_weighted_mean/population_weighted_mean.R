@@ -30,4 +30,4 @@ country.id <- as.character(args[7])
 
 years = c(year_start:year_end)
 
-# TO FINISH BASED ON THEO'S CODE FOR WEIGHTED MEAN
+# attach

@@ -26,7 +26,7 @@ space.res <- as.character(args[6])
 country.id <- as.character(args[7])
 
 # for code testing
-# dname = 't2m' ; freq = 'daily' ; num = 'four' ; year_start = '2010' ; year_end = '2020' ; space.res='0' ; country.id = 'BEL'
+# dname = 't2m' ; freq = 'daily' ; num = 'four' ; year_start = '2011' ; year_end = '2020' ; space.res='1' ; country.id = 'BEL'
 
 years = c(year_start:year_end)
 
@@ -57,28 +57,35 @@ dat.week = merge(dat.week, dat.unique, by=c("year","month_of_year"),all.X=TRUE)
 dat.week = dat.week[order(dat.week$date),]
 rownames(dat.week) = 1:nrow(dat.week)
 
+# get rid of these as these are legacy variables
+dat.week$week_id = dat.week$month_id = NULL
+
 # merge temperature and week of year dataframes
 dat.adm.week = merge(dat.adm,dat.week,by=c('date'),all.X=TRUE)
 
 # column of ID
 names(dat.adm.week)[2] = 'region'
+# names(dat.adm.week)[3] = 'region_name'
 
 # do the scaling thing without FALSE as the second option by week to get anomalies measured against weekly averages
-dat.adm.anomaly = ddply(dat.adm.week,.(region,week_of_year), transform, anomaly.t2m=scale(t2m,scale = FALSE),mean.t2m=mean(t2m))
+dat.adm.anomaly = ddply(dat.adm.week,.(region,week_of_year), transform, anomaly.t2m=round(scale(t2m,scale = FALSE),2),mean.t2m=round(mean(t2m),2))
 dat.adm.anomaly = dat.adm.anomaly[order(dat.adm.anomaly$region,dat.adm.anomaly$date),]
 rownames(dat.adm.anomaly) = 1:nrow(dat.adm.anomaly)
-dat.adm.anomaly.weekly = ddply(dat.adm.anomaly,.(region,week_id), summarize, anomaly.t2m.weekly=mean(anomaly.t2m))
+# dat.adm.anomaly.weekly = ddply(dat.adm.anomaly,.(region,week_id), summarize, anomaly.t2m.weekly=mean(anomaly.t2m))
 
 # do the scaling thing without FALSE as the second option by month to get anomalies measured against monthly averages
-dat.adm.anomaly.2 = ddply(dat.adm.week,.(region,month_of_year), transform, anomaly=scale(t2m,scale = FALSE),mean.t2m=mean(t2m))
+dat.adm.anomaly.2 = ddply(dat.adm.week,.(region,month_of_year), transform, anomaly.t2m=round(scale(t2m,scale = FALSE),2),mean.t2m=round(mean(t2m),2))
 dat.adm.anomaly.2 = dat.adm.anomaly.2[order(dat.adm.anomaly.2$region,dat.adm.anomaly.2$date),]
 rownames(dat.adm.anomaly.2) = 1:nrow(dat.adm.anomaly.2)
-dat.adm.anomaly.monthly = ddply(dat.adm.anomaly.2,.(region,month_id), summarize, anomaly.t2m.monthly=mean(anomaly))
+# dat.adm.anomaly.monthly = ddply(dat.adm.anomaly.2,.(region,month_id), summarize, anomaly.t2m.monthly=mean(anomaly))
+
+# rename region variable to match the input files for merging with population weights later
+names(dat.adm.anomaly)[2] = names(dat.adm.anomaly.2)[2] = paste0('ID_',space.res)
 
 # save dat.adm.anomaly.weekly and dat.adm.anomaly.monthly
-write.csv(dat.adm.anomaly.weekly,paste0(dir.input,'weekly_anomalies_weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
-write.csv(dat.adm.anomaly.monthly,paste0(dir.input,'monthly_anomalies_weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+# write.csv(dat.adm.anomaly.weekly,paste0(dir.input,'weekly_anomalies_weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+# write.csv(dat.adm.anomaly.monthly,paste0(dir.input,'monthly_anomalies_weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
 
 # also save dat.adm.anomaly and dat.adm.anomaly.2 for full save in case
-# write.csv(dat.adm.anomaly,paste0(dir.input,'full_weekly_anomalies_weighted_area_raster_adm_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
-# write.csv(dat.adm.anomaly.2,paste0(dir.input,'full_monthly_anomalies_weighted_area_raster_adm_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+write.csv(dat.adm.anomaly,paste0(dir.input,'full_weekly_anomalies_weighted_area_raster_adm_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+write.csv(dat.adm.anomaly.2,paste0(dir.input,'full_monthly_anomalies_weighted_area_raster_adm_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
