@@ -103,7 +103,7 @@ for(date in dates){
         analysis.dummy = cbind(analysis.dummy,names)
         weighted.area.national = rbind(weighted.area.national,analysis.dummy)
 
-        weighted.area.national = weighted.area.national[,c(3,1,2)]
+        weighted.area.national = weighted.area.national[,c(3,1,4,2)]
         weighted.area.national.total = rbind(weighted.area.national.total,weighted.area.national)
     }
     if(!(file.exists(raster.current))){
@@ -111,6 +111,7 @@ for(date in dates){
     }
 }
 
+names(weighted.area.national.total)[3] = paste0('NAME_',space.res)
 
 # save file
 saveRDS(weighted.area.national.total,paste0(dir.output,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year),'.rds'))

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="02_grid_county_intersection_raster.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="02_grid_county_intersection_raster.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -29,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="true">
+      <file leaf-file-name="extracting_netcdf_files_era5.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="103" column="77" lean-forward="true" selection-start-line="103" selection-start-column="77" selection-end-line="103" selection-end-column="77" />
+            <state relative-caret-position="719">
+              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="731">
-              <caret line="83" column="46" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+              <caret line="83" column="60" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -858,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590084959097</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="covid 19 work">
+      <created>1590085392945</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1590085392945</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1231,26 +1237,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
-          <caret line="83" column="46" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <caret line="83" column="60" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="103" column="77" lean-forward="true" selection-start-line="103" selection-start-column="77" selection-end-line="103" selection-end-column="77" />
+        <state relative-caret-position="719">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding />
         </state>
       </provider>
