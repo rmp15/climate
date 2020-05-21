@@ -2,6 +2,8 @@
 
 # this script
 # identifies overlap between administrative regions and population grids and outputs administrative summaries
+# shapefiles downloaded from
+# http://www.diva-gis.org/gdata
 
 clear
 
@@ -14,6 +16,7 @@ declare -a admin_levels=("0" "1")
 # POPULATION GRID SUMMARY
 #################################################
 
+for year in "${years[@]}"; do
 for country in "${countries[@]}"; do
 for admin_level in "${admin_levels[@]}"; do
 
@@ -21,6 +24,6 @@ echo "Calculating anomalies by admin units for week or month scale";
 
 :
 # identifies the overlap between grids and LADs codes and creates weighted means
-Rscript ~/git/climate/countries/Worldwide/prog/03_populaltion_grid/population_grid_summary.R $year_pop $admin_level $country &
+Rscript ~/git/climate/countries/Worldwide/prog/03_populaltion_grid/population_grid_summary.R $year $admin_level $country &
 
-done; done;
+done; done; done;
