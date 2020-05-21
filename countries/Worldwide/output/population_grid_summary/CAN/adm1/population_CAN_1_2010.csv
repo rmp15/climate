@@ -1,16 +1,16 @@
-"ID_1","NAME_1","population_2010","population"
-1,"Alberta",3574424.67403554,3574425
-2,"British Columbia",3607334.26354105,3607334
-3,"Manitoba",1194932.28174127,1194932
-4,"New Brunswick",668795.751067832,668796
-5,"Newfoundland and Labrador",266993.621801047,266994
-6,"Northwest Territories",40699.2127191127,40699
-7,"Nova Scotia",758595.531425476,758596
-8,"Nunavut",11344.3387002079,11344
-9,"Nunavut",5625.56645435248,5626
-10,"Nunavut",2.75043221079818,3
-11,"Ontario",12649444.5679809,12649445
-12,"Prince Edward Island",83116.8310546875,83117
-13,"Québec",5735847.38154802,5735847
-14,"Saskatchewan",1016308.00034992,1016308
-15,"Yukon",33159.5140725338,33160
+"ID_1","NAME_1","population_2010"
+1,"Alberta",3574425
+2,"British Columbia",3607334
+3,"Manitoba",1194932
+4,"New Brunswick",668796
+5,"Newfoundland and Labrador",266994
+6,"Northwest Territories",40699
+7,"Nova Scotia",758596
+8,"Nunavut",11344
+9,"Nunavut",5626
+10,"Nunavut",3
+11,"Ontario",12649445
+12,"Prince Edward Island",83117
+13,"Québec",5735847
+14,"Saskatchewan",1016308
+15,"Yukon",33160
