@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +22,18 @@
       <file leaf-file-name="02_grid_county_intersection_raster.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="225">
+              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="population_weighted_mean.R" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -32,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
-              <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+              <caret line="75" column="17" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -188,6 +199,10 @@
               <option name="myItemId" value="prog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="04_population_weighted_mean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -236,8 +251,56 @@
               <option name="myItemId" value="prog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Worldwide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="01_extract_netcdf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="climate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="countries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Worldwide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="00_bash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -521,13 +584,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="covid 19 work">
-      <created>1588956641835</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1588956641835</updated>
-    </task>
     <task id="LOCAL-00002" summary="covid 19 work">
       <created>1588956898004</created>
       <option name="number" value="00002" />
@@ -871,7 +927,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590085495833</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="covid 19 work">
+      <created>1590085667217</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1590085667218</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1153,13 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -1244,6 +1300,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -1254,8 +1318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="225">
+          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1263,7 +1327,7 @@
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
-          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+          <caret line="75" column="17" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
           <folding />
         </state>
       </provider>
