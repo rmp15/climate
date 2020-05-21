@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/BEL/adm0/monthly_anomalies_weighted_area_raster_BEL_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/BEL/adm0/weekly_anomalies_weighted_area_raster_BEL_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/BEL/adm1/full_weekly_anomalies_weighted_area_raster_adm_t2m_daily_2011_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/DNK/adm0/monthly_anomalies_weighted_area_raster_DNK_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/DNK/adm0/weekly_anomalies_weighted_area_raster_DNK_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/FRA/adm0/monthly_anomalies_weighted_area_raster_FRA_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/FRA/adm0/weekly_anomalies_weighted_area_raster_FRA_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/GBR/adm0/monthly_anomalies_weighted_area_raster_GBR_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/GBR/adm0/weekly_anomalies_weighted_area_raster_GBR_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/NOR/adm0/monthly_anomalies_weighted_area_raster_NOR_0_t2m_daily_2010_2020.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/countries/Worldwide/output/grid_county_intersection_raster/NOR/adm0/weekly_anomalies_weighted_area_raster_NOR_0_t2m_daily_2010_2020.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="population_weighted_mean.R" pinned="false" current-in-tab="true">
+      <file leaf-file-name="population_weighted_mean.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="750">
@@ -40,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="anomalies.R" pinned="false" current-in-tab="false">
+      <file leaf-file-name="anomalies.R" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="116">
+              <caret line="49" column="68" lean-forward="false" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -124,8 +112,8 @@
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/03_anomaly_calculations.sh" />
-        <option value="$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R" />
+        <option value="$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R" />
       </list>
     </option>
   </component>
@@ -488,13 +476,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00007" summary="covid 19 work">
-      <created>1588958370324</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1588958370324</updated>
-    </task>
     <task id="LOCAL-00008" summary="covid 19 work">
       <created>1588959038263</created>
       <option name="number" value="00008" />
@@ -838,7 +819,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590092853835</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="covid 19 work">
+      <created>1590093869724</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1590093869724</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1221,18 +1209,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/04_population_weighted_mean/population_weighted_mean.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="49" column="68" lean-forward="false" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
           <folding />
         </state>
       </provider>
