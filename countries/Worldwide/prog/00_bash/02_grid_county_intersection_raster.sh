@@ -8,12 +8,12 @@
 clear
 
 # arguments for running script
-declare -a countries=("GBR" "FRA" "NOR" "BEL" "DNK" "AUT" "NLD" "ITA" "CAN")
+declare -a countries=("GBR") # "FRA" "NOR" "BEL" "DNK" "AUT" "NLD" "ITA" "CAN")
 declare -a years=($(seq 2010 2020))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
-declare -a admin_levels=("0" "1")
+declare -a admin_levels=("0") # "1")
 
 #################################################
 # WEIGHTED MEAN CALCULATION
