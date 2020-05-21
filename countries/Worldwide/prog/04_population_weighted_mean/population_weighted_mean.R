@@ -45,3 +45,7 @@ dat.merged = merge(dat.adm.anomaly, weighted.area.national, by='ID_1',all.x=TRUE
 
 # create national means of absolute values as well as anomaly values, weighted by population of subnational regions
 dat.weighted.mean = ddply(dat.merged, .(date), summarize, t2m.weighted=weighted.mean(t2m,population))
+
+# save processed absolute temperature weighted means
+write.csv(dat.weighted.mean,paste0(dir.input,'national_weighted_area_raster_adm_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+saveRDS(dat.weighted.mean,paste0(dir.input,'national_weighted_area_raster_adm_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.rds'))

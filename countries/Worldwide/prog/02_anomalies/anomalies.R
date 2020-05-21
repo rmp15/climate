@@ -42,6 +42,11 @@ for(year in years){
     dat.adm = rbind(dat.adm, weighted.area.national.total)
 }
 
+# save concatenated files for all years
+# also save dat.adm.anomaly and dat.adm.anomaly.2 for full save in case
+saveRDS(dat.adm,paste0(dir.input,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.rds'))
+write.csv(dat.adm,paste0(dir.input,'weighted_area_raster_',country.id,'_',space.res,'_',dname,'_',freq,'_',as.character(year_start),'_',as.character(year_end),'.csv'), row.names=FALSE)
+
 # make date column into date format
 dat.adm$date = as.Date(dat.adm$date, format="%Y-%m-%d")
 
