@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,17 +48,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="04_population_grid_summaries.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="04_population_grid_summaries.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            <state relative-caret-position="195">
+              <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="population_grid_summary.R" pinned="false" current-in-tab="true">
+      <file leaf-file-name="population_grid_summary.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="791">
@@ -141,8 +141,8 @@
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/03_anomaly_calculations.sh" />
-        <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R" />
+        <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" />
       </list>
     </option>
   </component>
@@ -839,7 +839,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590080373082</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="covid 19 work">
+      <created>1590081170303</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1590081170303</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1220,18 +1227,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/03_population_grid/population_grid_summary.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="791">
           <caret line="87" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding />
         </state>
       </provider>
