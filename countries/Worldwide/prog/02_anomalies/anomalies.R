@@ -49,7 +49,6 @@ write.csv(dat.adm,paste0(dir.input,'weighted_area_raster_',country.id,'_',space.
 
 # below to run for anomalies but currently being processed elsewhere
 run = 0
-
 if(run==1){
     # make date column into date format
     dat.adm$date = as.Date(dat.adm$date, format="%Y-%m-%d")
