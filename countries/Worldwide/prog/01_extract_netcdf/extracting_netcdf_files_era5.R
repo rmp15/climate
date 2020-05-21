@@ -73,7 +73,7 @@ names = name.lookup[,which(colnames(name.lookup)==paste0('NAME_',space.res))]
 
 # loop through each day of the year and perform analysis
 print(paste0('Processing dates in ',year))
-for(date in dates){
+for(date in dates[c(1:2)]){
 
     # load raster for relevant date and change co-ordinates to -180 to 180
     raster.current = paste0('~/data/climate/net_cdf/',dname,'/raw_era5_daily/','worldwide_',dname,'_',freq,'_',num,'_',as.character(date),'.nc')
