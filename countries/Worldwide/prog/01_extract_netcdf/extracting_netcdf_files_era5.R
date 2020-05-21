@@ -24,7 +24,7 @@ space.res <- as.character(args[5])
 country.id <- as.character(args[6])
 
 # for code testing
-# dname = 't2m' ; freq = 'daily' ; num = 'four' ; year = '2010' ; space.res='0' ; country.id = 'DNK'
+# dname = 't2m' ; freq = 'daily' ; num = 'four' ; year = '2010' ; space.res='1' ; country.id = 'BEL'
 
 # create directory to place output files into
 dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/adm',space.res,'/')
@@ -66,6 +66,11 @@ country.analysis = function(shapefile,raster.input,output=0) {
 # empty dataframe to load summarised national daily values into
 weighted.area.national.total = data.frame()
 
+# get lookup for names
+name.lookup = shapefile@data
+# names = get(paste0('name.lookup$NAME_',space.res))
+names = name.lookup[,which(colnames(name.lookup)==paste0('NAME_',space.res))]
+
 # loop through each day of the year and perform analysis
 print(paste0('Processing dates in ',year))
 for(date in dates){
@@ -95,6 +100,7 @@ for(date in dates){
         # perform analysis
         analysis.dummy =  country.analysis(shapefile,raster.full)
         analysis.dummy$date = format(as.Date(date), "%Y-%m-%d")
+        analysis.dummy = cbind(analysis.dummy,names)
         weighted.area.national = rbind(weighted.area.national,analysis.dummy)
 
         weighted.area.national = weighted.area.national[,c(3,1,2)]
