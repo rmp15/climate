@@ -57,7 +57,7 @@ country.analysis = function(shapefile,raster.input,output=0) {
 
 # load raster for relevant date and change co-ordinates to -180 to 180
 # via https://rpubs.com/markpayne/358146
-raster.current = paste0("../../data/population/",year,'/gpw-v4-basic-demographic-characteristics-rev11_bt_cntm_15_min_nc/gpw_v4_basic_demographic_characteristics_rev11_bt_',year,'_cntm_15_min.nc')
+raster.current = paste0("~/data/climate/population_gridded/",year,'/gpw-v4-basic-demographic-characteristics-rev11_bt_cntm_15_min_nc/gpw_v4_basic_demographic_characteristics_rev11_bt_',year,'_cntm_15_min.nc')
 
 # perform analysis
 raster.full = brick(raster.current)
