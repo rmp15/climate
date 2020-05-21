@@ -22,7 +22,7 @@ space.res = as.character(args[2])
 country.id = as.character(args[3])
 
 # for code testing
-# year = '2010' ; space.res='1' ; country.id = 'CAN'
+# year = '2010' ; space.res='1' ; country.id = 'FRA'
 
 # create directory to place output files into
 dir.output = paste0("../../output/population_grid_summary/",country.id,'/adm',space.res,'/')
@@ -46,7 +46,7 @@ print(paste0('running population_grid_summary.R for ',country.id,' ',space.res,'
 country.analysis = function(shapefile,raster.input,output=0) {
 
     # dataframe with values for each region for particular day
-    weighted.area = extract(x=raster.input,y=shapefile,fun=sum,df=TRUE,na.rm=TRUE)
+    weighted.area = round(extract(x=raster.input,y=shapefile,fun=sum,df=TRUE,na.rm=TRUE))
 
     # fix names
     names(weighted.area) = c(paste0('ID_',space.res),paste0('population_',year))
@@ -85,9 +85,6 @@ names(weighted.area.national)[3] = paste0('NAME_',space.res)
 
 # rearrange to sensible order of columns
 weighted.area.national = weighted.area.national[,c(1,3,2)]
-
-# round population
-weighted.area.national$population = round(weighted.area.national$population)
 
 # save file
 saveRDS(weighted.area.national,paste0(dir.output,'population_',country.id,'_',space.res,'_',as.character(year),'.rds'))
