@@ -8,7 +8,7 @@
 clear
 
 # arguments for running script
-declare -a countries=("GBR") # "FRA" "NOR" "BEL" "DNK" "AUT" "NLD" "ITA" "CAN")
+declare -a countries=("FRA" "NOR" "BEL" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR")
 declare -a years=($(seq 2010 2020))
 declare -a dnames=("t2m")
 declare -a times=("daily")

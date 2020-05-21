@@ -6,7 +6,7 @@
 clear
 
 # arguments for running script
-declare -a countries=("BEL" "DNK" "FRA" "GBR" "NOR") # also "AUS" "AUT" "CAN" "DEU" "ESP" "NLD" "NZL" "USA"
+declare -a countries=("FRA" "NOR" "BEL" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR")
 declare -i year_start=2010
 declare -i year_end=2020
 declare -a dnames=("t2m")
