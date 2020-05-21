@@ -574,13 +574,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00004" summary="covid 19 work">
-      <created>1588958115812</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1588958115812</updated>
-    </task>
     <task id="LOCAL-00005" summary="covid 19 work">
       <created>1588958186418</created>
       <option name="number" value="00005" />
@@ -924,7 +917,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590090612828</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="covid 19 work">
+      <created>1590090666850</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1590090666850</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
