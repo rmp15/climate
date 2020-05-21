@@ -30,7 +30,7 @@ country.id <- as.character(args[6])
 dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/adm',space.res,'/')
 ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
 
-# load shapefile of entire United Kingdom originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
+# load shapefile of chosen country originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
 shapefile <- readOGR(dsn=paste0("../../data/shapefiles/",country.id,"_adm"),layer=paste0(country.id,"_adm",space.res))
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
@@ -48,11 +48,6 @@ dates = as.character(dates)
 
 # function to perform analysis for entire country
 country.analysis = function(shapefile,raster.input,output=0) {
-
-    if(space.res=='adm2'){
-        # obtain a list of names in a particular state
-        ids = sort(unique(as.numeric(shapefile$ID_1)))
-    }
 
     # dataframe with values for each region for particular day
     weighted.area = extract(x=raster.input,weights = TRUE,normalizeWeights=TRUE,y=shapefile,fun=mean,df=TRUE,na.rm=TRUE)
