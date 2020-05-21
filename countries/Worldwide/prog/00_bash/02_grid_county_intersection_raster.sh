@@ -2,11 +2,13 @@
 
 # this script
 # identifies overlap between administrative and temperature grids and outputs administrative summaries
+# shapefiles downloaded from
+# http://www.diva-gis.org/gdata
 
 clear
 
 # arguments for running script
-declare -a countries=("BEL" "DNK" "FRA" "GBR" "NOR") # also "AUS" "AUT" "CAN" "DEU" "ESP" "NLD" "NZL" "USA"
+declare -a countries=("GBR" "FRA" "NOR" "BEL" "DNK" "AUT" "NLD" "ITA" "CAN")
 declare -a years=($(seq 2010 2020))
 declare -a dnames=("t2m")
 declare -a times=("daily")

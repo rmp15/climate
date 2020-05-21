@@ -31,7 +31,7 @@ dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'
 ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
 
 # load shapefile of chosen country originally from http://geoportal.statistics.gov.uk/datasets/ae90afc385c04d869bc8cf8890bd1bcd_1
-shapefile <- readOGR(dsn=paste0("../../data/shapefiles/",country.id,"_adm"),layer=paste0(country.id,"_adm",space.res))
+shapefile <- readOGR(dsn=paste0("~/data/climate/shapefiles/",country.id,"_adm"),layer=paste0(country.id,"_adm",space.res))
 
 # transform into WSG84 (via https://rpubs.com/nickbearman/r-google-map-making)
 shapefile <- sp::spTransform(shapefile, CRS("+init=epsg:4326"))
