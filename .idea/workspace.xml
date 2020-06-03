@@ -4,6 +4,7 @@
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,21 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="01_netcdf_download.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="02_grid_county_intersection_raster.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="134">
+              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +32,8 @@
       <file leaf-file-name="04_population_grid_summaries.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -122,8 +113,8 @@
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies/anomalies.R" />
         <option value="$PROJECT_DIR$/countries/UK/prog/00_bash/01_netcdf_download.sh" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" />
-        <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" />
         <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" />
+        <option value="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" />
       </list>
     </option>
   </component>
@@ -540,13 +531,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00020" summary="covid 19 work">
-      <created>1588976453961</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1588976453961</updated>
-    </task>
     <task id="LOCAL-00021" summary="covid 19 work">
       <created>1588976618678</created>
       <option name="number" value="00021" />
@@ -890,7 +874,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591212533546</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="covid 19 work">
+      <created>1591213512865</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1591213512865</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1261,15 +1252,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh">
+    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh">
+    <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
@@ -1279,8 +1270,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="134">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
