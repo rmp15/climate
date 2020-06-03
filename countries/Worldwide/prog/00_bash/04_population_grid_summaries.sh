@@ -24,7 +24,7 @@ for admin_level in "${admin_levels[@]}"; do
 echo "Calculating anomalies by admin units for week or month scale";
 
 :
-# identifies the overlap between grids and LADs codes and creates weighted means
+# identifies the overlap between grids and administrative codes and creates weighted means
 Rscript ~/git/climate/countries/Worldwide/prog/03_population_grid/population_grid_summary.R $year $admin_level $country &
 
 done; done; done;

@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # this script
-# identifies overlap between administrative and temperature grids and outputs administrative summaries
+# identifies overlap between administrative regions and temperature grids and outputs administrative summaries
 # shapefiles downloaded from
 # http://www.diva-gis.org/gdata
 
 clear
 
 # arguments for running script
-declare -a countries=("ESP" "SWE" "ISL") # also "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR"
-declare -a years=($(seq 2010 2020))
+declare -a countries=("ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR")
+declare -a years=($(seq 2020 2020))
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
