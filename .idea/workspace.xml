@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Updated bash files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterDir="false" />
@@ -56,7 +56,7 @@
       <recent name="$PROJECT_DIR$/countries/Worldwide/prog" />
     </key>
   </component>
-  <component name="RunManager" selected="Bash.03_anomaly_calculations.sh">
+  <component name="RunManager" selected="Bash.02_grid_county_intersection_raster_prism_lads.sh">
     <configuration default="true" type="RRunConfigurationType" factoryName="R">
       <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_ARGS" value="" />
@@ -150,34 +150,11 @@
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Bash.02_grid_county_intersection_raster_prism_lads.sh" />
-      <item itemvalue="Bash.03_anomaly_calculations.sh" />
-      <item itemvalue="Bash.03_anomaly_lads.sh" />
-      <item itemvalue="Bash.grid_county_intersection_raster_prism_fips.sh" />
-      <item itemvalue="Bash.metric_create_era5.sh" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Bash.03_anomaly_calculations.sh" />
-        <item itemvalue="Bash.02_grid_county_intersection_raster_prism_lads.sh" />
-        <item itemvalue="Bash.03_anomaly_lads.sh" />
-        <item itemvalue="Bash.grid_county_intersection_raster_prism_fips.sh" />
-        <item itemvalue="Bash.metric_create_era5.sh" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00023" summary="covid 19 work">
-      <created>1588977387515</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1588977387515</updated>
-    </task>
     <task id="LOCAL-00024" summary="covid 19 work">
       <created>1588977564772</created>
       <option name="number" value="00024" />
@@ -521,14 +498,30 @@
       <option name="project" value="LOCAL" />
       <updated>1591215160011</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Updated bash files">
+      <created>1591642672140</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1591642672140</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="covid 19 work" />
-    <option name="LAST_COMMIT_MESSAGE" value="covid 19 work" />
+    <MESSAGE value="Updated bash files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated bash files" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="173" key="#Plugins" timestamp="1591712260140">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="173" key="#Plugins/-1920.-391.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1591712260140" />
+    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1591642677540">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1591642677540" />
     <state x="349" y="164" key="SettingsEditor" timestamp="1591642321999">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
