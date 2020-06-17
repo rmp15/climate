@@ -13,7 +13,7 @@ clear
 #declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE")
 #declare -a years=($(seq 2020 2020))
 
-#if new country and need 2010 to 2020
+#if new country and need 2010 to 2019
 declare -a countries=("BGR" "CZE" "FIN" "HUN" "PRT" "CHE")
 declare -a years=($(seq 2010 2019))
 

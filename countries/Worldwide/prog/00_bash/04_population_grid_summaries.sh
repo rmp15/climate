@@ -9,8 +9,7 @@ clear
 
 # arguments for running script
 declare -a years=("2010")
-#declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE")
-declare -a countries=("BGR" "CZE" "FIN" "HUN" "PRT" "CHE")
+declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE")
 declare -i year_pop=2010
 declare -a admin_levels=("0" "1")
 
@@ -22,7 +21,7 @@ for year in "${years[@]}"; do
 for country in "${countries[@]}"; do
 for admin_level in "${admin_levels[@]}"; do
 
-echo "Calculating anomalies by admin units for week or month scale";
+echo "Calculating populations by admin units";
 
 :
 # identifies the overlap between grids and administrative codes and creates weighted means
