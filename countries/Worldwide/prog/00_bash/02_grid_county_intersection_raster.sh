@@ -10,7 +10,7 @@ clear
 # arguments for running script
 
 # if updating 2020
-#declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE")
+#declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE" "POL" "SVK")
 #declare -a years=($(seq 2020 2020))
 
 #if new country and need 2010 to 2019
