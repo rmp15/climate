@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Updated bash files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
-    </list>
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Updated bash files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,13 +153,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00030" summary="covid 19 work">
-      <created>1589281626227</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1589281626227</updated>
     </task>
     <task id="LOCAL-00031" summary="covid 19 work">
       <created>1589281788789</created>
@@ -500,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597064541799</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Updated bash files">
+      <created>1597065488342</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1597065488343</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -514,12 +511,12 @@
     </state>
     <state x="440" y="192" key="#Plugins/-1920.-368.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1592231015427" />
     <state x="440" y="173" key="#Plugins/-1920.-391.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1591712260140" />
-    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1597064541462">
+    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1597065488095">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1432" y="-288" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1592421635455" />
     <state x="427" y="100" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1591712446199" />
-    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597064541462" />
+    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597065488095" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1591712768344">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
