@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Updated bash files" />
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Updated bash files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,20 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00031" summary="covid 19 work">
-      <created>1589281788789</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1589281788789</updated>
-    </task>
-    <task id="LOCAL-00032" summary="covid 19 work">
-      <created>1589291420865</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1589291420865</updated>
     </task>
     <task id="LOCAL-00033" summary="covid 19 work">
       <created>1589848969955</created>
@@ -497,7 +485,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597065488343</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Updated bash files">
+      <created>1597068932688</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1597068932688</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Updated bash files">
+      <created>1597069040231</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1597069040231</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -511,12 +513,13 @@
     </state>
     <state x="440" y="192" key="#Plugins/-1920.-368.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1592231015427" />
     <state x="440" y="173" key="#Plugins/-1920.-391.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1591712260140" />
-    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1597065488095">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="427" y="121" key="CommitChangelistDialog2" timestamp="1597069040028">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="-1432" y="-288" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1592421635455" />
     <state x="427" y="100" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1591712446199" />
     <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597065488095" />
+    <state x="427" y="121" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1597069040028" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1591712768344">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -526,12 +529,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="349" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1591642321999" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597064543389">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="440" y="282" key="Vcs.Push.Dialog.v2" timestamp="1597069041315">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="-1417" y="-118" key="Vcs.Push.Dialog.v2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1592421638535" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/-1920.-391.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1591712448264" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597064543389" />
+    <state x="440" y="282" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1597069041315" />
     <state x="631" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591642650382">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
