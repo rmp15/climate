@@ -17,6 +17,11 @@ declare -a years=($(seq 2020 2020))
 #declare -a countries=("AUS")
 #declare -a years=($(seq 2010 2019))
 
+# For Africa children hospital study (by default should be commented out
+#declare -a countries=("AFR")
+#declare -a years=($(seq 2010 2019))
+#declare -a admin_levels=("3")
+
 declare -a dnames=("t2m")
 declare -a times=("daily")
 declare -a nums=("four")
