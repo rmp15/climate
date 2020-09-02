@@ -88,7 +88,7 @@ for(country.id in countries){
     shapefile_matched = shapefile[shapefile@data$ID_2%in%shapefile_matched_ids,]
 
     #plot(shapefile);
-    plot(shapefile[shapefile@data$ID_2%in%shapefile_matched_ids,],border='blue',lwd=2,add=TRUE)
+    #plot(shapefile[shapefile@data$ID_2%in%shapefile_matched_ids,],border='blue',lwd=2,add=TRUE)
 
     # bind to master shapefile
     shapefile_matched_master = bind(shapefile_matched_master, shapefile_matched)
@@ -96,9 +96,10 @@ for(country.id in countries){
 }
 
 # create unique ID across countries
-shapefile_matched_master@data$ID_3 = with(shapefile_matched_master,paste0(shapefile_matched_master$NAME_0, '_',shapefile_matched_master$ID_2))
+shapefile_matched_master@data$NAME_3 = with(shapefile_matched_master,paste0(shapefile_matched_master$NAME_0, '_',shapefile_matched_master$NAME_1))
+shapefile_matched_master@data$ID_3 = 1:nrow(shapefile_matched_master)
 
-# save shapefile TO FINISH
+# save shapefile
 dir.output = "~/data/climate/shapefiles/AFR_adm/"
 ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
 writeOGR(obj=shapefile_matched_master, dsn=dir.output, layer="AFR_adm3", driver="ESRI Shapefile") # this is in geographical projection
