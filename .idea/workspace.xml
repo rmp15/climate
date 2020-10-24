@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added Greece">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added Romania" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,20 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00042" summary="covid 19 work">
-      <created>1590080285241</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1590080285241</updated>
-    </task>
-    <task id="LOCAL-00043" summary="covid 19 work">
-      <created>1590080373082</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1590080373082</updated>
     </task>
     <task id="LOCAL-00044" summary="covid 19 work">
       <created>1590081170303</created>
@@ -501,14 +485,29 @@
       <option name="project" value="LOCAL" />
       <updated>1602347284997</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Added Romania">
+      <created>1603545089582</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1603545089582</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Added Romania">
+      <created>1603545134973</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1603545134973</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="covid 19 work" />
     <MESSAGE value="Updated bash files" />
     <MESSAGE value="Added Greece" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Greece" />
+    <MESSAGE value="Added Romania" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Romania" />
   </component>
   <component name="WindowStateProjectService">
     <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1602347284824">
