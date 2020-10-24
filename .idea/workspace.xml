@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Updated bash files">
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterDir="false" />
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added Greece">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,20 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00040" summary="covid 19 work">
-      <created>1590080217540</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1590080217540</updated>
-    </task>
-    <task id="LOCAL-00041" summary="covid 19 work">
-      <created>1590080226085</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1590080226085</updated>
     </task>
     <task id="LOCAL-00042" summary="covid 19 work">
       <created>1590080285241</created>
@@ -501,30 +487,49 @@
       <option name="project" value="LOCAL" />
       <updated>1602346776787</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Updated bash files">
+      <created>1602347036434</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1602347036435</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Added Greece">
+      <created>1602347284997</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1602347284997</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="covid 19 work" />
     <MESSAGE value="Updated bash files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated bash files" />
+    <MESSAGE value="Added Greece" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Greece" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1602347036190">
+    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1602347284824">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1432" y="-288" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1599075013557" />
-    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602347036190" />
+    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602347284824" />
     <state x="427" y="121" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1597069040028" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1602347041379">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1602347286342">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1417" y="-118" key="Vcs.Push.Dialog.v2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1599075015359" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1602347041379" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1602347286342" />
     <state x="440" y="282" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1597069041315" />
     <state x="638" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602346946088">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="638" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1602346946088" />
+    <state x="234" y="182" width="1659" height="1025" key="dock-window-1" timestamp="1602365207924">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="234" y="182" width="1659" height="1025" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1602365207924" />
   </component>
 </project>
