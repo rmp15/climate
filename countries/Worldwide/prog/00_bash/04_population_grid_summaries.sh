@@ -9,10 +9,10 @@ clear
 
 # arguments for running script
 declare -a years=("2010")
-#declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE" "POL" "SVK" "GRC" "ROU" "USA" "DEU")
-declare -a countries=("USA")
+declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE" "POL" "SVK" "GRC" "ROU" "USA" "DEU")
+#declare -a countries=("USA")
 declare -i year_pop=2010
-declare -a admin_levels=("2")
+declare -a admin_levels=("0" "1")
 
 #################################################
 # POPULATION GRID SUMMARY
