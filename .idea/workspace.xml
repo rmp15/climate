@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added USA and Germany">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,13 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00048" summary="covid 19 work">
-      <created>1590085392945</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1590085392945</updated>
     </task>
     <task id="LOCAL-00049" summary="covid 19 work">
       <created>1590085495833</created>
@@ -503,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605724823489</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Added USA and Germany">
+      <created>1605741111347</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1605741111347</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -516,18 +514,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added USA and Germany" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1432" y="-60" key="CommitChangelistDialog2" timestamp="1605724823172">
-      <screen x="-1920" y="-163" width="1920" height="1080" />
+    <state x="651" y="137" key="CommitChangelistDialog2" timestamp="1605741111164">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="-1432" y="-60" key="CommitChangelistDialog2/-1920.-163.1920.1080/0.0.1680.1050@-1920.-163.1920.1080" timestamp="1605724823172" />
     <state x="-1432" y="-288" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1599075013557" />
     <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1603573658792" />
-    <state x="-1417" y="110" key="Vcs.Push.Dialog.v2" timestamp="1605724864170">
-      <screen x="-1920" y="-163" width="1920" height="1080" />
+    <state x="651" y="137" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1605741111164" />
+    <state x="671" y="364" key="Vcs.Push.Dialog.v2" timestamp="1605741112439">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="-1417" y="110" key="Vcs.Push.Dialog.v2/-1920.-163.1920.1080/0.23.1680.1027@-1920.-163.1920.1080" timestamp="1605724864170" />
     <state x="-1417" y="-118" key="Vcs.Push.Dialog.v2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1599075015359" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1603573660223" />
+    <state x="671" y="364" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1605741112439" />
     <state x="972" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605741073821">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
