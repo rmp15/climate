@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added USA and Germany">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="USA and Germany now included" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,20 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00049" summary="covid 19 work">
-      <created>1590085495833</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1590085495833</updated>
-    </task>
-    <task id="LOCAL-00050" summary="covid 19 work">
-      <created>1590085667217</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1590085667218</updated>
     </task>
     <task id="LOCAL-00051" summary="covid 19 work">
       <created>1590086008995</created>
@@ -501,7 +485,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605741111347</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="USA adm 2">
+      <created>1606344797377</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1606344797377</updated>
+    </task>
+    <task id="LOCAL-00099" summary="USA and Germany now included">
+      <created>1606344979734</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1606344979735</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -511,22 +509,24 @@
     <MESSAGE value="Added Romania" />
     <MESSAGE value="Added new dates" />
     <MESSAGE value="Added USA and Germany" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added USA and Germany" />
+    <MESSAGE value="USA adm 2" />
+    <MESSAGE value="USA and Germany now included" />
+    <option name="LAST_COMMIT_MESSAGE" value="USA and Germany now included" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="651" y="137" key="CommitChangelistDialog2" timestamp="1605741111164">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="427" y="100" key="CommitChangelistDialog2" timestamp="1606344979576">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1432" y="-60" key="CommitChangelistDialog2/-1920.-163.1920.1080/0.0.1680.1050@-1920.-163.1920.1080" timestamp="1605724823172" />
     <state x="-1432" y="-288" key="CommitChangelistDialog2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1599075013557" />
-    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1603573658792" />
+    <state x="427" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1606344979576" />
     <state x="651" y="137" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1605741111164" />
-    <state x="671" y="364" key="Vcs.Push.Dialog.v2" timestamp="1605741112439">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1606344980582">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1417" y="110" key="Vcs.Push.Dialog.v2/-1920.-163.1920.1080/0.23.1680.1027@-1920.-163.1920.1080" timestamp="1605724864170" />
     <state x="-1417" y="-118" key="Vcs.Push.Dialog.v2/-1920.-391.1920.1080/0.0.1680.1050@-1920.-391.1920.1080" timestamp="1599075015359" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1603573660223" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1606344980582" />
     <state x="671" y="364" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1605741112439" />
     <state x="972" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605741073821">
       <screen x="0" y="0" width="2560" height="1440" />
