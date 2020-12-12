@@ -11,17 +11,18 @@ library(ggplot2)
 library(raster)
 library(sp)
 library(plyr)
+library(sf)
 
 # arguments from Rscript
 args <- commandArgs(trailingOnly=TRUE)
 
 # names for files
-year <- as.character(args[1])
-dname <- as.character(args[2])
-freq <- as.character(args[3])
-num <- as.character(args[4])
-space.res <- as.character(args[5])
-country.id <- as.character(args[6])
+# year <- as.character(args[1])
+# dname <- as.character(args[2])
+# freq <- as.character(args[3])
+# num <- as.character(args[4])
+space.res <- 2
+# country.id <- as.character(args[6])
 
 # create dataframe with hospitals and countries in
 country = c('South Africa','Zambia','Zimbabwe','Lesotho','Botswana','South Africa','Uganda','Ethiopia','Ethiopia','Sierra Leone','Liberia','Liberia','Kenya','Zimbabwe','Zambia','Nigeria','Nigeria','Malawi','Tanzania','Kenya','Cameroon','Rwanda','Kenya','Ghana','Ghana')
