@@ -10,17 +10,17 @@ clear
 # arguments for running script
 
 # if updating 2020
-declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE" "POL" "SVK" "AUS" "GRC" "ROU" "USA" "DEU")
-declare -a years=($(seq 2020 2020))
+#declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE" "POL" "SVK" "AUS" "GRC" "ROU" "USA" "DEU")
+#declare -a years=($(seq 2020 2020))
 
 # if new country and need 2010 to 2019
 #declare -a countries=("USA")
 #declare -a years=($(seq 2010 2019))
 
-# For Africa children hospital study (by default should be commented out
-#declare -a countries=("AFR")
-#declare -a years=($(seq 2010 2019))
-#declare -a admin_levels=("3")
+# For Africa children hospital study (by default should be commented out)
+declare -a countries=("AFR")
+declare -a years=($(seq 2010 2019))
+declare -a admin_levels=("3")
 
 declare -a dnames=("t2m")
 declare -a times=("daily")
