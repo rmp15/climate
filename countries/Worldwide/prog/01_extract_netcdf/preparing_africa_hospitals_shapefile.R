@@ -24,8 +24,8 @@ space.res <- as.character(args[5])
 country.id <- as.character(args[6])
 
 # create dataframe with hospitals and countries in
-country = c('South Africa','Zambia','Zimbabwe','Lesotho','Botswana','South Africa','Uganda','Ethiopia','Ethiopia','Sierra Leone','Liberia','Liberia','Kenya','Zimbabwe','Zambia','Nigeria','Nigeria','Malawi','Tanzania','Kenya','Cameroon','Rwanda','Kenya','Ghana')
-city = c('Johannesburg','Lusaka','Harare','Maseru','Gaborone','Cape Town','Kampala','Addis Ababa','Addis Ababa','Freetown','Monrovia','Monrovia','Nairobi','Harare','Ndola','Benin City','Ibadan','Blantyre','Mwanza','Eldoret','Yaounde','Kigali','Nairobi','Accra')
+country = c('South Africa','Zambia','Zimbabwe','Lesotho','Botswana','South Africa','Uganda','Ethiopia','Ethiopia','Sierra Leone','Liberia','Liberia','Kenya','Zimbabwe','Zambia','Nigeria','Nigeria','Malawi','Tanzania','Kenya','Cameroon','Rwanda','Kenya','Ghana','Ghana')
+city = c('Johannesburg','Lusaka','Harare','Maseru','Gaborone','Cape Town','Kampala','Addis Ababa','Addis Ababa','Freetown','Monrovia','Monrovia','Nairobi','Harare','Ndola','Benin City','Ibadan','Blantyre','Mwanza','Eldoret','Yaounde','Kigali','Nairobi','Accra','Kumasi')
 hospital_name = c('*Rahima Moosa Mother and Child Hospital',
                  '*University Teaching Hospital',
                  '*Parirenyatwa group of Hospitals',
@@ -49,9 +49,10 @@ hospital_name = c('*Rahima Moosa Mother and Child Hospital',
                  'Mother and Child Center of Chantal BIYAs Foundation',
                  'University Teaching Hospital of Kigali (CHUK)',
                  'University of Nairobi Hospital',
-                 'Korle-Bu Teaching Hospital')
-location_lat = c(-26.187398,-15.431543,-17.811184,-29.341818,-24.656016,-33.953836,0.339008,0.363727,9.021039,8.490749,6.287651,6.388209,-1.257323,-17.851081,-12.946553,6.391495,7.357835,-15.802134,-2.527098,0.517979,3.871420,-1.955097,-1.272102,5.537633)
-location_lon = c(27.973990,28.313470,31.042651,27.528745,25.923976,18.487381,32.576174,32.569650,38.749581,-13.216649,-10.773950,-10.792348,36.824570,31.012784,28.647463,5.611804,3.874229,35.021825,32.907712,35.280811,11.511161,30.060561,36.808693,-0.226440)
+                 'Korle-Bu Teaching Hospital',
+                  'Ku Komfo Anokye Teaching Hospital')
+location_lat = c(-26.187398,-15.431543,-17.811184,-29.341818,-24.656016,-33.953836,0.339008,0.363727,9.021039,8.490749,6.287651,6.388209,-1.257323,-17.851081,-12.946553,6.391495,7.357835,-15.802134,-2.527098,0.517979,3.871420,-1.955097,-1.272102,5.537633,6.69771)
+location_lon = c(27.973990,28.313470,31.042651,27.528745,25.923976,18.487381,32.576174,32.569650,38.749581,-13.216649,-10.773950,-10.792348,36.824570,31.012784,28.647463,5.611804,3.874229,35.021825,32.907712,35.280811,11.511161,30.060561,36.808693,-0.226440,-1.631705)
 dat_hospital = data.frame(country=country, city=city,hospital_name=hospital_name,lon=location_lon,lat=location_lat)
 
 # project co-ordinates to 4326 (from https://geocompr.robinlovelace.net/reproj-geo-data.html)
@@ -65,7 +66,7 @@ dat_hospital = as_Spatial(dat_hospital)
 # load shapefiles of chosen countries
 #plot(dat_hospital,col='red')
 shapefile_matched_master = SpatialPolygons(list())
-countries = c('ZAF','ZMB', 'ZWE', 'BWA', 'UGA', 'ETH', 'SLE', 'LBR', 'KEN', 'NGA', 'MWI', 'TZA', 'CMR', 'RWA','GHA', 'LSO')
+countries = c('ZAF','ZMB', 'ZWE', 'BWA', 'UGA', 'ETH', 'SLE', 'LBR', 'KEN', 'NGA', 'MWI', 'TZA', 'CMR', 'RWA','GHA','LSO')
 for(country.id in countries){
     print(paste0('finding overlap for ',country.id,' administrative level ',space.res))
 
