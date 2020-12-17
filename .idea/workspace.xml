@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Add Kumasi hospital in Ghana" />
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Add Kumasi hospital in Ghana">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/03_anomaly_calculations.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/zz_legacy/03_anomaly_calculations.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/zz_legacy/04_population_grid_summaries.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/05_population_weighted_mean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/zz_legacy/05_population_weighted_mean.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +53,9 @@
       <recent name="$PROJECT_DIR$/countries/Worldwide/prog/00_bash" />
       <recent name="$PROJECT_DIR$/countries/Worldwide/prog/02_anomalies" />
       <recent name="$PROJECT_DIR$/countries/Worldwide/prog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/zz_legacy" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00055" summary="covid 19 work">
-      <created>1590092853835</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1590092853835</updated>
     </task>
     <task id="LOCAL-00056" summary="covid 19 work">
       <created>1590093869724</created>
@@ -499,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607794750107</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Add Kumasi hospital in Ghana">
+      <created>1607794836728</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1607794836728</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
