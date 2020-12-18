@@ -15,7 +15,7 @@ clear
 #declare -a admin_levels=("1")
 
 # if new country and need 2010 to 2019
-declare -a countries=("KOR")
+declare -a countries=("KOR") # ALSO c("ALB", "ARM", "CYP", "EST", "GEO", "HRV", "KOR", "LTU","LVA", "MLT", "MNE", "SRB", "SVN")
 declare -a years=($(seq 2010 2020))
 declare -a admin_levels=("1")
 #declare -a admin_levels=("0" "2")
