@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added S Korea">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added rest of 2020 to end of year">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/UK/prog/00_bash/02_grid_county_intersection_raster_prism_lads.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/UK/prog/00_bash/02_grid_county_intersection_raster_prism_lads.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterDir="false" />
     </list>
@@ -163,13 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00061" summary="covid 19 work">
-      <created>1590673575756</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1590673575757</updated>
     </task>
     <task id="LOCAL-00062" summary="covid 19 work">
       <created>1591109067794</created>
@@ -507,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608323384938</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Added rest of 2020 to end of year">
+      <created>1609883776521</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1609883776521</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -522,6 +522,7 @@
     <MESSAGE value="Add Kumasi hospital in Ghana" />
     <MESSAGE value="Added new dates" />
     <MESSAGE value="Added S Korea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added S Korea" />
+    <MESSAGE value="Added rest of 2020 to end of year" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rest of 2020 to end of year" />
   </component>
 </project>

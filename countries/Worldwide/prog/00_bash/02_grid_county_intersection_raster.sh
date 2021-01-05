@@ -9,12 +9,15 @@ clear
 
 # arguments for running script
 
-# if updating 2020
-declare -a countries=("NZL" "ESP" "SWE" "ISL" "BEL" "FRA" "NOR" "DNK" "AUT" "NLD" "ITA" "CAN" "GBR" "BGR" "CZE" "FIN" "HUN" "PRT" "CHE" "POL" "SVK" "AUS" "GRC" "ROU" "USA" "DEU" "KOR")
-declare -a years=($(seq 2020 2020))
+# if updating 2021
+declare -a countries=("ALB" "ARM" "AUT" "AUS" "BEL" "BGR" "CAN" "CHE" "CYP" "CZE"
+                      "DEU" "DNK" "ESP" "EST" "FIN" "FRA" "GBR" "GEO" "GRC" "HRV"
+                      "HUN" "ISL" "ITA" "KOR" "LTU" "LVA" "MLT" "MNE" "NLD" "NOR"
+                      "NZL" "POL" "PRT" "ROU" "SRB" "SVK" "SVN" "SWE" "USA")
+declare -a years=($(seq 2021 2021))
 declare -a admin_levels=("1")
 
-# if new country and need 2010 to 2020
+# if new country and need 2010 to 2020 (by default should be commented out)
 #declare -a countries=("ALB" "ARM" "CYP" "EST" "GEO" "HRV" "LTU" "LVA" "MLT" "MNE" "SRB" "SVN")
 #declare -a years=($(seq 2010 2020))
 #declare -a admin_levels=("1")
