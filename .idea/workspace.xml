@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added 2021 to run and new countries to run">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Adding new countries">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00063" summary="covid 19 work">
-      <created>1591109167522</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1591109167522</updated>
     </task>
     <task id="LOCAL-00064" summary="covid 19 work">
       <created>1591109329280</created>
@@ -504,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609887122133</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Adding new countries">
+      <created>1610030504521</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1610030504521</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -521,6 +521,7 @@
     <MESSAGE value="Added S Korea" />
     <MESSAGE value="Added rest of 2020 to end of year" />
     <MESSAGE value="Added 2021 to run and new countries to run" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 2021 to run and new countries to run" />
+    <MESSAGE value="Adding new countries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding new countries" />
   </component>
 </project>
