@@ -159,13 +159,6 @@
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
     </task>
-    <task id="LOCAL-00065" summary="covid 19 work">
-      <created>1591205167721</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1591205167721</updated>
-    </task>
     <task id="LOCAL-00066" summary="covid 19 work">
       <created>1591205190946</created>
       <option name="number" value="00066" />
@@ -502,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610118409530</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Adding new countries">
+      <created>1610212449593</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1610212449597</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
