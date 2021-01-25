@@ -53,7 +53,17 @@
       <recent name="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/zz_legacy" />
     </key>
   </component>
-  <component name="RunManager" selected="Legacy BashSupport.02_grid_county_intersection_raster_prism_lads.sh">
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="RRunConfigurationType" factoryName="R">
       <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_ARGS" value="" />
@@ -111,16 +121,6 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/countries/UK/prog/00_bash" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/countries/UK/prog/00_bash/03_anomaly_lads.sh" />
-      <option name="PARAMETERS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
