@@ -7,10 +7,10 @@ clear
 
 declare -i start_day='01'
 declare -i start_month='01'
-declare -i start_year='1980'
+declare -i start_year='2021'
 declare -i end_day='31'
 declare -i end_month='12'
-declare -i end_year='2009'
+declare -i end_year='2021'
 declare -a dnames=("t2m")
 
 #################################################
