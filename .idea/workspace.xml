@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Edited to download historical ERA 5 data from 1980 - 2009">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added France to process for time series study">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00068" summary="covid 19 work">
-      <created>1591212533546</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1591212533546</updated>
     </task>
     <task id="LOCAL-00069" summary="covid 19 work">
       <created>1591213512865</created>
@@ -504,8 +497,18 @@
       <option name="project" value="LOCAL" />
       <updated>1612193949371</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Added France to process for time series study">
+      <created>1612197301006</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1612197301007</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="covid 19 work" />
@@ -524,6 +527,7 @@
     <MESSAGE value="Adding new countries" />
     <MESSAGE value="Adding new dates" />
     <MESSAGE value="Edited to download historical ERA 5 data from 1980 - 2009" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited to download historical ERA 5 data from 1980 - 2009" />
+    <MESSAGE value="Added France to process for time series study" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added France to process for time series study" />
   </component>
 </project>
