@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added France to process for time series study">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Reset to periodically updating current year (2021)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00069" summary="covid 19 work">
-      <created>1591213512865</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1591213512865</updated>
     </task>
     <task id="LOCAL-00070" summary="covid 19 work">
       <created>1591214787044</created>
@@ -504,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612197301007</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Reset to periodically updating current year (2021)">
+      <created>1612459492869</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1612459492869</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -528,6 +530,7 @@
     <MESSAGE value="Adding new dates" />
     <MESSAGE value="Edited to download historical ERA 5 data from 1980 - 2009" />
     <MESSAGE value="Added France to process for time series study" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added France to process for time series study" />
+    <MESSAGE value="Reset to periodically updating current year (2021)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset to periodically updating current year (2021)" />
   </component>
 </project>

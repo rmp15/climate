@@ -9,11 +9,12 @@ clear
 
 # arguments for running script
 declare -a years=("2010")
-declare -a countries=("ALB" "ARM" "AUT" "AUS" "BEL" "BGR" "CAN" "CHE" "CYP" "CZE"
-                      "DEU" "DNK" "ESP" "EST" "FIN" "FRA" "GBR" "GEO" "GRC" "HRV"
-                      "HUN" "ISL" "ITA" "KOR" "LTU" "LVA" "MLT" "MNE" "NLD" "NOR"
-                      "NZL" "POL" "PRT" "ROU" "SRB" "SVK" "SVN" "SWE" "USA")
-#declare -a countries=("") # if single country
+# declare -a countries=("ALB" "ARM" "AUT" "AUS" "BEL" "BGR" "CAN" "CHE" "CHL" "CYP"
+#                       "CZE" "DEU" "DNK" "ESP" "EST" "FIN" "FRA" "GBR" "GEO" "GRC"
+#                       "HRV" "HUN" "ISL" "ITA" "KOR" "LIE" "LTU" "LVA" "LUX" "MLT"
+#                       "MNE" "NLD" "NOR" "NZL" "POL" "PRT" "ROU" "SRB" "SVK" "SVN"
+#                       "SWE" "TWN" "USA")
+declare -a countries=("CHL" "LIE" "LUX" "MLT" "TWN") # if new countries
 declare -i year_pop=2010
 declare -a admin_levels=("0" "1")
 
