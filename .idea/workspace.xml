@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Added Malta to countries (for some reason didn't work before)" />
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Malta is so small it doesn't have adm1 (that's why it didn't work before)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/02_grid_county_intersection_raster.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/04_population_grid_summaries.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Updated bash files">
-      <created>1591712446394</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1591712446395</updated>
     </task>
     <task id="LOCAL-00074" summary="Updated bash files">
       <created>1592412245478</created>
@@ -502,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614697763249</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Malta is so small it doesn't have adm1 (that's why it didn't work before)">
+      <created>1614698060753</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1614698060753</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -530,6 +534,7 @@
     <MESSAGE value="Added new countries" />
     <MESSAGE value="Reverted to updating 2021" />
     <MESSAGE value="Added Malta to countries (for some reason didn't work before)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Malta to countries (for some reason didn't work before)" />
+    <MESSAGE value="Malta is so small it doesn't have adm1 (that's why it didn't work before)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Malta is so small it doesn't have adm1 (that's why it didn't work before)" />
   </component>
 </project>

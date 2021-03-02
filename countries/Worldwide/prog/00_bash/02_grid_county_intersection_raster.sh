@@ -10,18 +10,18 @@ clear
 # arguments for running script
 
 # if updating 2021
-# declare -a countries=("ALB" "ARM" "AUT" "AUS" "BEL" "BGR" "CAN" "CHE" "CHL" "CYP"
-#                       "CZE" "DEU" "DNK" "ESP" "EST" "FIN" "FRA" "GBR" "GEO" "GRC"
-#                       "HRV" "HUN" "ISL" "ITA" "KOR" "LIE" "LTU" "LVA" "LUX" "MLT"
-#                       "MNE" "NLD" "NOR" "NZL" "POL" "PRT" "ROU" "SRB" "SVK" "SVN"
-#                       "SWE" "TWN" "USA")
-# declare -a years=($(seq 2021 2021))
-# declare -a admin_levels=("1")
+declare -a countries=("ALB" "ARM" "AUT" "AUS" "BEL" "BGR" "CAN" "CHE" "CHL" "CYP"
+                      "CZE" "DEU" "DNK" "ESP" "EST" "FIN" "FRA" "GBR" "GEO" "GRC"
+                      "HRV" "HUN" "ISL" "ITA" "KOR" "LIE" "LTU" "LVA" "LUX" "MLT"
+                      "MNE" "NLD" "NOR" "NZL" "POL" "PRT" "ROU" "SRB" "SVK" "SVN"
+                      "SWE" "TWN" "USA")
+declare -a years=($(seq 2021 2021))
+declare -a admin_levels=("1")
 
 # if new country and need 2010 to 2020 (by default should be commented out)
-declare -a countries=("MLT")
-declare -a years=($(seq 2010 2020))
-declare -a admin_levels=("0")
+# declare -a countries=()
+# declare -a years=($(seq 2010 2020))
+# declare -a admin_levels=("1")
 
 # if want other levels of admin (by default should be commented out)
 ##declare -a admin_levels=("0" "2")
