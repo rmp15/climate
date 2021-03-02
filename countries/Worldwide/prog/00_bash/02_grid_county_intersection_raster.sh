@@ -21,7 +21,7 @@ clear
 # if new country and need 2010 to 2020 (by default should be commented out)
 declare -a countries=("MLT")
 declare -a years=($(seq 2010 2020))
-declare -a admin_levels=("1")
+declare -a admin_levels=("0")
 
 # if want other levels of admin (by default should be commented out)
 ##declare -a admin_levels=("0" "2")
