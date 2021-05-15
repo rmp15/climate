@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Reverted to updating 2021">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,17 +57,7 @@
       <recent name="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/zz_legacy" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Legacy BashSupport.02_grid_county_intersection_raster_prism_lads.sh">
     <configuration default="true" type="RRunConfigurationType" factoryName="R">
       <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_ARGS" value="" />
@@ -126,6 +118,16 @@
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="grid_county_intersection_raster_prism_fips.sh" type="BashConfigurationType" temporary="true" factoryName="Bash">
       <module name="climate" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Updated bash files">
-      <created>1592412349719</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1592412349719</updated>
     </task>
     <task id="LOCAL-00076" summary="Updated bash files">
       <created>1592420439027</created>
@@ -504,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614700333298</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Reverted to updating 2021">
+      <created>1618927938681</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1618927938682</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="UnknownFeatures">

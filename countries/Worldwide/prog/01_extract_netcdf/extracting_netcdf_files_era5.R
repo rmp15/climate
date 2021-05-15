@@ -26,6 +26,9 @@ country.id <- as.character(args[6])
 # for code testing
 # dname = 't2m' ; freq = 'daily' ; num = 'four' ; year = '2010' ; space.res='1' ; country.id = 'BEL'
 
+# exception for Malta
+if(country.id=='MLT'){space.res="0"}
+
 # create directory to place output files into
 dir.output = paste0("../../output/grid_county_intersection_raster/",country.id,'/adm',space.res,'/')
 ifelse(!dir.exists(dir.output), dir.create(dir.output, recursive=TRUE), FALSE)
