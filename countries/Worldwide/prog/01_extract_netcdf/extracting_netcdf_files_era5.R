@@ -26,7 +26,7 @@ country.id <- as.character(args[6])
 # for code testing
 # dname = 't2m' ; freq = 'daily' ; num = 'four' ; year = '2010' ; space.res='1' ; country.id = 'BEL'
 
-# exception for Malta
+# exception for Malta and other small countries
 if(country.id=='MLT'){space.res="0"}
 
 # create directory to place output files into
