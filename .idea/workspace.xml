@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Reverted to updating 2021">
+    <list default="true" id="72ae72e4-ab15-41f8-a1bc-db4bd2f55f00" name="Default" comment="Fixed Malta exception to run updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/00_bash/01_netcdf_download.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" beforeDir="false" afterPath="$PROJECT_DIR$/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,20 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588978378177</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Updated bash files">
-      <created>1592420439027</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1592420439027</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Updated bash files">
-      <created>1592421635590</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1592421635590</updated>
     </task>
     <task id="LOCAL-00078" summary="Updated bash files">
       <created>1597064541798</created>
@@ -506,7 +490,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618927938682</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Fixed Malta exception to run updates">
+      <created>1621080421382</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1621080421383</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Fixed Malta exception to run updates">
+      <created>1621080570483</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1621080570483</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -535,6 +533,7 @@
     <MESSAGE value="Added Malta to countries (for some reason didn't work before)" />
     <MESSAGE value="Malta is so small it doesn't have adm1 (that's why it didn't work before)" />
     <MESSAGE value="Reverted to updating 2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverted to updating 2021" />
+    <MESSAGE value="Fixed Malta exception to run updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Malta exception to run updates" />
   </component>
 </project>

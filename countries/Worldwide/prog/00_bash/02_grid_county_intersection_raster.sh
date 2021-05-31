@@ -58,3 +58,22 @@ echo "Identifying overlap between rasters and admin codes for temperature proces
 Rscript ~/git/climate/countries/Worldwide/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $time $num $admin_level $country &
 
 done; done; done; done; done; done;
+
+# and for UK too! (slightly different as by LAD specifically)
+
+declare -a spaces=("lad")
+
+for year in "${years[@]}"; do
+for dname in "${dnames[@]}"; do
+for time in "${times[@]}"; do
+for num in "${nums[@]}"; do
+for space in "${spaces[@]}"; do
+
+echo "Identifying overlap between rasters and LADs codes for temperature processing";
+echo $year;
+
+:
+# identifies the overlap between grids and LADs codes and creates weighted means
+Rscript ~/git/climate/countries/UK/prog/01_extract_netcdf/extracting_netcdf_files_era5.R $year $dname $time $num $space &
+
+done; done; done; done; done;
